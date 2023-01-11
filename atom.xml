@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-10T16:56:14.240Z</updated>
+  <updated>2023-01-11T10:55:24.542Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,11 +18,18 @@
   
   <entry>
     <title>hello world</title>
-    <link href="http://example.com/2023/01/11/hello-world/"/>
-    <id>http://example.com/2023/01/11/hello-world/</id>
-    <published>2023-01-10T16:56:14.000Z</published>
-    <updated>2023-01-10T16:56:14.240Z</updated>
+    <link href="http://example.com/2023/01/12/hello-world/"/>
+    <id>http://example.com/2023/01/12/hello-world/</id>
+    <published>2023-01-12T09:56:14.000Z</published>
+    <updated>2023-01-11T10:55:24.542Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="关于-endless-times-的诞生"><a href="#关于-endless-times-的诞生" class="headerlink" title="关于 endless times 的诞生"></a>关于 endless times 的诞生</h2><h4 id="从好久之前说起"><a href="#从好久之前说起" class="headerlink" title="从好久之前说起"></a>从好久之前说起</h4><p>得不到的永远在骚动，自从我小学期没有选上 python + QT，我就一直渴望拥有一个自己的博客。<br>原因有很多，一是我觉得这样很酷（这就是我的内心想法 咳咳），二是我发现学过的新东西确实需要做一些记录（让一年之后自己需要捡起来时可以迅速回忆），三是我真的很喜欢学了新东西和人分享（但是线下社交和微信显然都不能满足我的需求）</p><h4 id="做一个吧！"><a href="#做一个吧！" class="headerlink" title="做一个吧！"></a>做一个吧！</h4><p>这学期就已经尝试过一次了，但是由于我的 python 水平非常有限，最终还是没能做成。前几天凯文告诉我可以用 <strong>hexo + github</strong> 来做，而且比较简单，于是我大手一挥，开干！</p><h4 id="《比较简单》"><a href="#《比较简单》" class="headerlink" title="《比较简单》"></a>《比较简单》</h4><p>教程确实挺简单的，但是我的电脑貌似和教程没啥关系了TAT</p><p>记录几个卡了我很久的坑：</p><ul><li><p>github 从2022年8月开始就已经取消了 github pages 里的 themes 设置，所以如果用 github pages 的静态网页来做的话，需要学习一下 jekyll ，我学习了大概3个小时，评价是“拉倒”。</p></li><li><p>hexo 确实整体来说比较简单，但是也有一个问题是，博客是链接在本地的服务器上的，所以所有修改都要在本地上进行再 push 上去，有一点点不是很方便呢</p></li><li><p>github 你为什么不让我 git clone 您</p><ul><li><code>git clone from github</code> 非常慢，所以大多时候会连接失败，或者报一个更奇怪的错误，譬如在 <code>hexo init</code> 的时候，他实际上是调用了 <code>git clone</code> ，而且加速和更改DNS都不是很管用，不过学会改 hosts 也是一种收获（雾）</li><li>所以最后选择用国内的网站，用 <strong>Gitee</strong> 会快很多，而且直接从github拷仓库很快。</li></ul></li><li><p>管理员身份是个好身份，有两个奇怪的错误通过这个解决了</p><ul><li>一是 <code>npm install</code> 相关的报错，很怪！但是用管理员身份打开解决了！耶！</li><li>二是 <code>hexo d</code> push到github的时候，ssh 出了一些奇怪的问题，同样，管理员！</li></ul></li></ul><h4 id="还会长大"><a href="#还会长大" class="headerlink" title="还会长大"></a>还会长大</h4><p>忘记是谁和我讲过，代码能跑的时候就不要动了。<br>果然，我试图向模板里加入插件的时候，出了一些错误，苦看3个小时，看不太懂。所以博客现在还是非常简陋的呀，等下一次闲一点的时候我会做一下美化和修改的！  </p><p>最后<br>hello world!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关于-endless-times-的诞生&quot;&gt;&lt;a href=&quot;#关于-endless-times-的诞生&quot; class=&quot;headerlink&quot; title=&quot;关于 endless times 的诞生&quot;&gt;&lt;/a&gt;关于 endless times 的诞生&lt;/h2&gt;&lt;</summary>
+      
     
     
     
