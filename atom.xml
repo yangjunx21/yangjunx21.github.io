@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-14T14:10:09.876Z</updated>
+  <updated>2023-01-26T05:29:45.057Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络问题小记</title>
+    <link href="http://example.com/2023/01/26/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/"/>
+    <id>http://example.com/2023/01/26/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/</id>
+    <published>2023-01-26T04:59:50.000Z</published>
+    <updated>2023-01-26T05:29:45.057Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="最近遇到的几个网络问题，浅浅记录一下"><a href="#最近遇到的几个网络问题，浅浅记录一下" class="headerlink" title="最近遇到的几个网络问题，浅浅记录一下"></a>最近遇到的几个网络问题，浅浅记录一下</h1><h2 id="“远程计算机或设备将不接受连接”"><a href="#“远程计算机或设备将不接受连接”" class="headerlink" title="“远程计算机或设备将不接受连接”"></a>“远程计算机或设备将不接受连接”</h2><ul><li><strong>产生原因</strong>：不是很清楚具体原理，但是我三次出现这个问题通通是因为梯子挂太久了。大胆揣测原因如下，代理服务器挂太久了把电脑上网络设置里的端口自动开开了，就坏事了。  咱只能希望学完网络原理能搞清楚为什么</li><li><strong>解决方案</strong>：网上的很多帖子都一样，方法没有问题</li></ul><ol><li><code>inetcpl.cpl</code>打开命令行，跳出<code>Internet</code>属性的界面</li><li>进入<code>连接</code>选项，点击<code>局域网设置</code>，把出现的三个小方框里的勾勾去掉（我每次都是第三个出现勾勾）</li><li>解决！</li></ol><h2 id="ssh连接太久自动断开"><a href="#ssh连接太久自动断开" class="headerlink" title="ssh连接太久自动断开"></a>ssh连接太久自动断开</h2><ul><li>这个问题网上有很多解答，大多是更改<code>/etc/ssh/ssh_config</code>这类的配置文件，但是呢但是呢，这个事情不一定成功，比如说我的服务器上<code>yangjunxiao is not in the sudoers file.  This incident will be reported.</code>，也就是说咱没有权限更改服务器的设置。所以可以考虑不用命令行去做，别的软件可以通过自带的功能每隔一段时间就向服务器发送一个心跳，比如说vscode(但是感觉不是很优雅），暂时没有找到更好的办法（道理很明白，就是发送心跳）</li></ul><p>还有很多关于<code>服务器</code>和<code>git clone</code>和<code>pip</code>的问题，打算后面专门写一篇“小白遇上服务器”来记录一下我坎坷的路程</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;最近遇到的几个网络问题，浅浅记录一下&quot;&gt;&lt;a href=&quot;#最近遇到的几个网络问题，浅浅记录一下&quot; class=&quot;headerlink&quot; title=&quot;最近遇到的几个网络问题，浅浅记录一下&quot;&gt;&lt;/a&gt;最近遇到的几个网络问题，浅浅记录一下&lt;/h1&gt;&lt;h2 id=&quot;“</summary>
+      
+    
+    
+    
+    
+    <category term="cs" scheme="http://example.com/tags/cs/"/>
+    
+  </entry>
   
   <entry>
     <title>死亡是个什么味道的糖果</title>
