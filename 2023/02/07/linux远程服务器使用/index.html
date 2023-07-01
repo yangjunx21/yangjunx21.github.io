@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>linux远程服务器使用 | Endless Times</title><meta name="author" content="Junxiao Yang"><meta name="copyright" content="Junxiao Yang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="一些关于linux远程服务器的记录tmux使用 可以参考这个 http:&#x2F;&#x2F;c.biancheng.net&#x2F;linux&#x2F;tmux.html   做总结的话： 12345tmux new -s roclinux   #创建名为roclinux的窗口tmux ls     #查看目前窗口tmux a -t roclinux     #重新打开窗口Ctrl B  + D    #退出当前窗口tmux k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux远程服务器使用">
+<meta property="og:url" content="http://example.com/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="Endless Times">
+<meta property="og:description" content="一些关于linux远程服务器的记录tmux使用 可以参考这个 http:&#x2F;&#x2F;c.biancheng.net&#x2F;linux&#x2F;tmux.html   做总结的话： 12345tmux new -s roclinux   #创建名为roclinux的窗口tmux ls     #查看目前窗口tmux a -t roclinux     #重新打开窗口Ctrl B  + D    #退出当前窗口tmux k">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg">
+<meta property="article:published_time" content="2023-02-07T09:32:07.000Z">
+<meta property="article:modified_time" content="2023-02-07T11:59:32.000Z">
+<meta property="article:author" content="Junxiao Yang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg"><link rel="shortcut icon" href="/img/forest.jpg"><link rel="canonical" href="http://example.com/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'linux远程服务器使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-07 19:59:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Endless Times" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/me.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Endless Times"><span class="site-name">Endless Times</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux远程服务器使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-02-07T09:32:07.000Z" title="Created 2023-02-07 17:32:07">2023-02-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-02-07T11:59:32.000Z" title="Updated 2023-02-07 19:59:32">2023-02-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux远程服务器使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一些关于linux远程服务器的记录"><a href="#一些关于linux远程服务器的记录" class="headerlink" title="一些关于linux远程服务器的记录"></a>一些关于linux远程服务器的记录</h1><h2 id="tmux使用"><a href="#tmux使用" class="headerlink" title="tmux使用"></a>tmux使用</h2><ul>
+<li>可以参考这个 <code>http://c.biancheng.net/linux/tmux.html</code></li>
+</ul>
+<ol>
+<li><p>做总结的话：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s roclinux   #创建名为roclinux的窗口</span><br><span class="line">tmux ls     #查看目前窗口</span><br><span class="line">tmux a -t roclinux     #重新打开窗口</span><br><span class="line">Ctrl B  + D    #退出当前窗口</span><br><span class="line">tmux kill-session -t roclinux  #杀死会话</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>目前来看是非常好用的，但是感觉速度性能上有一定损失，如果不加速gitclone，创建窗口失败的概率比正常命令行的效果要高一点点（但是并没有依据）</p>
+</li>
+</ol>
+<h2 id="git-clone-加速"><a href="#git-clone-加速" class="headerlink" title="git clone 加速"></a>git clone 加速</h2><p><strong>这个可太重要了</strong>(参考了一篇博客，链接在本节最后)<br>全网我试过唯一有用的方法如下：<em><strong>gitclone.com</strong></em>！！！！！<br>gitclone.com是一个提供下载缓存的代码下载网站，使用方法十分简单，只需要在仓库地址前面加上 gitclone.com，就可以使速度提升几倍。</p>
+<p>例如要克隆github上仓库地址<code>https://github.com/killer-p/ctool.git</code><br>只需将地址改为<code>https://gitclone.com/github.com/killer-p/ctool.git</code>，在命令行中执行<code>git clone https://gitclone.com/github.com/killer-p/ctool.git</code>，速度直接起飞！芜湖！<br>官网首页：<code>https://gitclone.com/</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitclone的工作机理是：当开发者第一次经gitclone.com代理clone项目时，gitclone.com异步镜像项目，以后有开发者clone该项目时，就会利用上gitclone.com的本地镜像，而不是从github.com上clone。gitclone.com会在每天夜间与github.com同步。为了解决不断增长的镜像对硬盘资源的需求，gitclone.com采用区块链集群方式扩展，每次的镜像操作都会广播到集群中所有服务器，各服务器可选择生成镜像并登记以便以响应后续的clone请求。同时，gitclone.com还对stackoverflow.com和go get等的加速访问进行了说明，做到“为开发者服务”。</span><br></pre></td></tr></table></figure>
+
+<p><strong>原文链接：<code>https://blog.csdn.net/weixin_44821644/article/details/107574297</code></strong></p>
+<h2 id="fairseq"><a href="#fairseq" class="headerlink" title="fairseq"></a>fairseq</h2><h3 id="fairseq安装"><a href="#fairseq安装" class="headerlink" title="fairseq安装"></a>fairseq安装</h3><ol>
+<li><p>按照github上面的流程走就好，但是有一个大坑，<code>pip install --editable ./</code>这个本地安装指令不是很好用的，需要连接到pypi，所以必须要指令一下url，要不然会因为非常慢卡在依赖建立那里，应该用：<code>pip install --index-url https://pypi.tuna.tsinghua.edu.cn/simple --editable ./</code></p>
+</li>
+<li><p>fairseq的clone也不是很快，保证下载完整没有问题，要不然会报奇怪的错的</p>
+</li>
+</ol>
+<h3 id="wmt14-en-de复现"><a href="#wmt14-en-de复现" class="headerlink" title="wmt14 en-de复现"></a>wmt14 en-de复现</h3></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Junxiao Yang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/">http://example.com/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/02/07/fairseq%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="fairseq学习笔记"><img class="cover" src="/img/cs.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">fairseq学习笔记</div></div></a></div><div class="next-post pull-right"><a href="/2023/01/26/%E7%BD%91%E7%BB%9C%E9%97%AE%E9%A2%98%E5%B0%8F%E8%AE%B0/" title="网络问题小记"><img class="cover" src="/img/cs.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">网络问题小记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/me.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Junxiao Yang</div><div class="author-info__description">this is a blog supported by hexo, updating some articles about cs learning</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%85%B3%E4%BA%8Elinux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E8%AE%B0%E5%BD%95"><span class="toc-number">1.</span> <span class="toc-text">一些关于linux远程服务器的记录</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#tmux%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">tmux使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#git-clone-%E5%8A%A0%E9%80%9F"><span class="toc-number">1.2.</span> <span class="toc-text">git clone 加速</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#fairseq"><span class="toc-number">1.3.</span> <span class="toc-text">fairseq</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fairseq%E5%AE%89%E8%A3%85"><span class="toc-number">1.3.1.</span> <span class="toc-text">fairseq安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#wmt14-en-de%E5%A4%8D%E7%8E%B0"><span class="toc-number">1.3.2.</span> <span class="toc-text">wmt14 en-de复现</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/08/LLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2023/06/08/LLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title">No title</a><time datetime="2023-06-07T16:03:29.921Z" title="Created 2023-06-08 00:03:29">2023-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/18/fairseq%E9%97%AE%E9%A2%98/" title="No title"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2023/03/18/fairseq%E9%97%AE%E9%A2%98/" title="No title">No title</a><time datetime="2023-03-18T02:02:44.000Z" title="Created 2023-03-18 10:02:44">2023-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/21/django-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="django 学习笔记"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="django 学习笔记"/></a><div class="content"><a class="title" href="/2023/02/21/django-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="django 学习笔记">django 学习笔记</a><time datetime="2023-02-21T09:14:43.000Z" title="Created 2023-02-21 17:14:43">2023-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/fairseq%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="fairseq学习笔记"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fairseq学习笔记"/></a><div class="content"><a class="title" href="/2023/02/07/fairseq%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="fairseq学习笔记">fairseq学习笔记</a><time datetime="2023-02-07T15:09:53.000Z" title="Created 2023-02-07 23:09:53">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" title="linux远程服务器使用"><img src="https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux远程服务器使用"/></a><div class="content"><a class="title" href="/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" title="linux远程服务器使用">linux远程服务器使用</a><time datetime="2023-02-07T09:32:07.000Z" title="Created 2023-02-07 17:32:07">2023-02-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Junxiao Yang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

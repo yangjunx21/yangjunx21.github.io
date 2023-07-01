@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Endless Times | Endless Times</title><meta name="author" content="Junxiao Yang"><meta name="copyright" content="Junxiao Yang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="123456789101112131415161718192021222324\# TODO: a dry run on validation set to pin the memory  valid_subsets &#x3D; cfg.dataset.valid_subset.split(&quot;,&quot;)  if not cfg.dataset.disable_validation:​">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Endless Times">
+<meta property="og:url" content="http://example.com/2023/03/18/fairseq%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Endless Times">
+<meta property="og:description" content="123456789101112131415161718192021222324\# TODO: a dry run on validation set to pin the memory  valid_subsets &#x3D; cfg.dataset.valid_subset.split(&quot;,&quot;)  if not cfg.dataset.disable_validation:​">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/img/cs.jpg">
+<meta property="article:published_time" content="2023-03-18T02:02:44.000Z">
+<meta property="article:modified_time" content="2023-03-18T02:02:44.000Z">
+<meta property="article:author" content="Junxiao Yang">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/cs.jpg"><link rel="shortcut icon" href="/img/forest.jpg"><link rel="canonical" href="http://example.com/2023/03/18/fairseq%E9%97%AE%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Endless Times',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-18 10:02:44'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Endless Times" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/me.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cs.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Endless Times"><span class="site-name">Endless Times</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">No title</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-03-18T02:02:44.000Z" title="Created 2023-03-18 10:02:44">2023-03-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-03-18T02:02:44.000Z" title="Updated 2023-03-18 10:02:44">2023-03-18</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">\# TODO: a dry run on validation set to pin the memory</span><br><span class="line">  valid_subsets = cfg.dataset.valid_subset.split(&quot;,&quot;)</span><br><span class="line">  if not cfg.dataset.disable_validation:</span><br><span class="line"></span><br><span class="line">​    for subset in valid_subsets:</span><br><span class="line"></span><br><span class="line">​      logger.info(&#x27;begin dry-run validation on &quot;&#123;&#125;&quot; subset&#x27;.format(subset))</span><br><span class="line"></span><br><span class="line">​      itr = trainer.get_valid_iterator(subset).next_epoch_itr(</span><br><span class="line"></span><br><span class="line">​        shuffle=False, set_dataset_epoch=False  # use a fixed valid set</span><br><span class="line"></span><br><span class="line">​      )</span><br><span class="line"></span><br><span class="line">​      if cfg.common.tpu:</span><br><span class="line"></span><br><span class="line">​        itr = utils.tpu_data_loader(itr)</span><br><span class="line"></span><br><span class="line">​      for _ in itr:</span><br><span class="line"></span><br><span class="line">​        pass</span><br><span class="line"></span><br><span class="line">  \# TODO: end of dry run section</span><br></pre></td></tr></table></figure>
+
+<p>train.py 干啥的没搞懂</p>
+<p>装饰器怎么用的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@metrics.aggregate(&quot;train&quot;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">update_freq = (</span><br><span class="line">        cfg.optimization.update_freq[epoch_itr.epoch - 1]</span><br><span class="line">        if epoch_itr.epoch &lt;= len(cfg.optimization.update_freq)</span><br><span class="line">        else cfg.optimization.update_freq[-1]</span><br><span class="line">    )</span><br><span class="line">   update_freq的设置是怎么实现的</span><br></pre></td></tr></table></figure>
+
+
+
+<p>train的流程：</p>
+<p>train.py-&gt;fairseq_cli.train</p>
+<p>处理logging，输出模型信息，gpu_worker等等</p>
+<p>然后处理数据，量化（这是怎么实现的</p>
+<p>-》train函数-》</p>
+<p>trainer类（begin-epoch</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># only use first validation loss to update the learning rate</span><br><span class="line">        lr = trainer.lr_step(epoch_itr.epoch, valid_losses[0])</span><br><span class="line"># 为啥只用第一次的</span><br></pre></td></tr></table></figure>
+
+
+
+<p>钩子函数是什么意思：</p>
+<p>消息到达目的地以前，进行拦截，处理消息，比如tcmalloc 就hook了glibc的malloc和new等内存分配函数</p>
+<p>trainer.begin_epoch(epoch_itr.epoch) hook function</p>
+<p>log_output &#x3D; trainer.train_step(samples)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def train_step(self, samples, raise_oom=False):</span><br><span class="line">        &quot;&quot;&quot;Do forward, backward and parameter update.&quot;&quot;&quot;</span><br><span class="line">        self._set_seed()</span><br><span class="line">        self.model.train()</span><br><span class="line">        self.criterion.train()</span><br><span class="line">        self.zero_grad()</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">-- Process 1 terminated with the following error:</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File &quot;/home/yangjunxiao/anaconda3/envs/py38/lib/python3.8/site-packages/torch/multiprocessing/spawn.py&quot;, line 69, in _wrap</span><br><span class="line">    fn(i, *args)</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq/distributed/utils.py&quot;, line 362, in distributed_main</span><br><span class="line">    main(cfg, **kwargs)</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq_cli/train.py&quot;, line 205, in main</span><br><span class="line">    valid_losses, should_stop = train(cfg, trainer, task, epoch_itr)</span><br><span class="line">  File &quot;/home/yangjunxiao/anaconda3/envs/py38/lib/python3.8/contextlib.py&quot;, line 75, in inner</span><br><span class="line">    return func(*args, **kwds)</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq_cli/train.py&quot;, line 331, in train</span><br><span class="line">    log_output = trainer.train_step(samples)</span><br><span class="line">  File &quot;/home/yangjunxiao/anaconda3/envs/py38/lib/python3.8/contextlib.py&quot;, line 75, in inner</span><br><span class="line">    return func(*args, **kwds)</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq/trainer.py&quot;, line 974, in train_step</span><br><span class="line">    self.task.optimizer_step(</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq/tasks/fairseq_task.py&quot;, line 545, in optimizer_step</span><br><span class="line">    optimizer.step()</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq/optim/fairseq_optimizer.py&quot;, line 135, in step</span><br><span class="line">    self.optimizer.step(closure)</span><br><span class="line">  File &quot;/home/yangjunxiao/anaconda3/envs/py38/lib/python3.8/site-packages/torch/optim/optimizer.py&quot;, line 88, in wrapper</span><br><span class="line">    return func(*args, **kwargs)</span><br><span class="line">  File &quot;/home/yangjunxiao/fairseq/fairseq/optim/fused_adam.py&quot;, line 300, in step</span><br><span class="line">    bias_correction = 1 if group[&quot;bias_correction&quot;] else 0</span><br><span class="line">KeyError: &#x27;bias_correction&#x27;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net_output = model(**sample[&quot;net_input&quot;])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">load_checkpoints</span><br><span class="line">trainer.get_train_iterator</span><br><span class="line">self.task.load_dataset</span><br><span class="line">看translation这里到底做的啥操作</span><br><span class="line"></span><br><span class="line">get_batch_iterator</span><br><span class="line">iterator里包装的trainingdata，但是怎么改</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">save_path=checkpoint/en_de2</span><br><span class="line">CUDA_VISIBLE_DEVICES=0,4,5,6 python train.py data-binary/wmt14_en2de --arch glat --noise full_mask --share-all-embeddings \</span><br><span class="line">    --criterion glat_loss --label-smoothing 0.1 --lr 5e-4 --warmup-init-lr 1e-7 --stop-min-lr 1e-9 \</span><br><span class="line">    --lr-scheduler inverse_sqrt --warmup-updates 4000 --optimizer adam --adam-betas &#x27;(0.9, 0.999)&#x27; \</span><br><span class="line">    --adam-eps 1e-6 --task translation_lev_modified --max-tokens 1024 --weight-decay 0.01 --dropout 0.1 \</span><br><span class="line">    --encoder-layers 6 --encoder-embed-dim 512 --decoder-layers 6 --decoder-embed-dim 512 --fp16 \</span><br><span class="line">    --max-source-positions 1000 --max-target-positions 1000 --max-update 320000 --seed 0 --clip-norm 5\</span><br><span class="line">    --save-dir $&#123;save_path&#125; --src-embedding-copy --length-loss-factor 0.05 --log-interval 1000 \</span><br><span class="line">    --eval-bleu --eval-bleu-args &#x27;&#123;&quot;iter_decode_max_iter&quot;: 0, &quot;iter_decode_with_beam&quot;: 1&#125;&#x27; \</span><br><span class="line">    --eval-tokenized-bleu --eval-bleu-remove-bpe --best-checkpoint-metric bleu \</span><br><span class="line">    --maximize-best-checkpoint-metric --decoder-learned-pos --encoder-learned-pos \</span><br><span class="line">    --apply-bert-init --activation-fn gelu --user-dir glat_plugins --update-freq 8\</span><br><span class="line">    --tensorboard-logdir ./tensorboard_re/en_de | tee tensorboard_re/en_de.log</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">UserWarning: resource_tracker: There appear to be 4 leaked semaphore objects to clean up at shutdown</span><br><span class="line">  warnings.warn(&#x27;resource_tracker: There appear to be %d &#x27;</span><br><span class="line">  </span><br><span class="line">占用内存过多 改小tokens</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Python Multiprocessing error: AttributeError: module &#x27;__main__&#x27; has no attribute &#x27;__spec__&#x27;</span><br><span class="line"></span><br><span class="line">解决方案：在pdb里输入：</span><br><span class="line">__spec__ = None</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1、batch的传递，为什么batchsize似乎改变了</span><br><span class="line">prev_size</span><br><span class="line">torch.Size([72, 12])</span><br><span class="line">bzc = 48</span><br><span class="line">glat_prev_size</span><br><span class="line">torch.Size([48, 18])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>fairseq&#x2F;data&#x2F;dictionary.py</p>
+<p>查看参数请使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">CUDA_VISIBLE_DEVICES=0 python train.py data-bin/wmt14en2de \</span><br><span class="line">    --arch transformer_wmt_en_de --share-all-embeddings \</span><br><span class="line">      --optimizer adam --adam-betas &#x27;(0.9, 0.98)&#x27; --clip-norm 0.0 \</span><br><span class="line">        --lr-scheduler inverse_sqrt --warmup-init-lr 1e-07 --warmup-updates 4000 \</span><br><span class="line">        --dropout 0.1 --lr 0.0007 \</span><br><span class="line">        --criterion label_smoothed_cross_entropy --label-smoothing 0.1 --weight-decay 0.0\</span><br><span class="line">        --max-tokens 2048   --save-dir checkpoints/en-de-2\</span><br><span class="line">        --update-freq 4 --no-progress-bar --log-format json --log-interval 50\</span><br><span class="line">        --save-interval-updates  1000 --keep-interval-updates 20\</span><br><span class="line">        --tensorboard-logdir Fairseq_Data-transformer-en_de | tee Fairseq_Data-transformer-en_de.log</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">数据预处理</span><br><span class="line">input_dir=examples/translation/wmt14.en_de/wmt14_ende2</span><br><span class="line">data_dir=data-bin/class_en2de</span><br><span class="line">src=en</span><br><span class="line">tgt=de</span><br><span class="line">python3 fairseq_cli/preprocess.py --source-lang $&#123;src&#125; --target-lang $&#123;tgt&#125; \</span><br><span class="line">    --trainpref $&#123;input_dir&#125;/train.en-de \</span><br><span class="line">    --validpref $&#123;input_dir&#125;/valid.en-de --testpref $&#123;input_dir&#125;/test.en-de --destdir $&#123;data_dir&#125;/ \</span><br><span class="line">    --workers 32 --srcdict $&#123;input_dir&#125;/dict.$&#123;src&#125;.txt --tgtdict $&#123;input_dir&#125;/dict.$&#123;tgt&#125;.txt</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">训练命令：</span><br><span class="line">    CUDA_VISIBLE_DEVICES=0,1,2,4 python train.py data-bin/class_en2de \</span><br><span class="line">        --arch transformer_wmt_en_de --share-all-embeddings \</span><br><span class="line">          --optimizer adam --adam-betas &#x27;(0.9, 0.98)&#x27; --clip-norm 0.0 \</span><br><span class="line">          --criterion class_loss  --label-smoothing 0.1 --lr 5e-4 --warmup-init-lr 1e-7 --stop-min-lr 1e-9\</span><br><span class="line">            --lr-scheduler inverse_sqrt --warmup-init-lr 1e-07 --warmup-updates 4000 \</span><br><span class="line">            --dropout 0.1\</span><br><span class="line">            --max-tokens 2048   --save-dir checkpoints/en-de-lab2\</span><br><span class="line">            --update-freq 4 --no-progress-bar --log-format json --log-interval 50\</span><br><span class="line">            --save-interval-updates  1000 --keep-interval-updates 20\</span><br><span class="line">            --tensorboard-logdir en2de/lab2 | tee en2de/lab2.log</span><br><span class="line">        </span><br><span class="line">CUDA_VISIBLE_DEVICES=0 python -m pdb train.py data-bin/class_en2de \</span><br><span class="line">    --arch transformer_wmt_en_de --share-all-embeddings \</span><br><span class="line">      --optimizer adam --adam-betas &#x27;(0.9, 0.98)&#x27; --clip-norm 0.0 \</span><br><span class="line">      --criterion class_loss  --label-smoothing 0.1 --lr 5e-4 --warmup-init-lr 1e-7 --stop-min-lr 1e-9\</span><br><span class="line">        --lr-scheduler inverse_sqrt --warmup-init-lr 1e-07 --warmup-updates 4000 \</span><br><span class="line">        --dropout 0.1\</span><br><span class="line">        --max-tokens 2048   --save-dir checkpoints/en-de-2\</span><br><span class="line">        --update-freq 4 --no-progress-bar --log-format json --log-interval 50\</span><br><span class="line">        --save-interval-updates  1000 --keep-interval-updates 20\</span><br><span class="line">        --tensorboard-logdir Fairseq_Data-transformer-en_de</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dict_added</span><br><span class="line">[DIFF1] : 40624</span><br><span class="line">[DIFF2] : 40625</span><br><span class="line">[DIFF3] : 40626</span><br><span class="line">[DIFF4] : 40627</span><br><span class="line">[DIFF5] : 40628</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(Pdb) p sample[&quot;net_input&quot;]</span><br><span class="line">&#123;&#x27;src_tokens&#x27;: tensor([[   37,   108,    69,  ...,  4344,     5,     2],</span><br><span class="line">        [   12,  2891, 17996,  ...,    17,    44,     2],</span><br><span class="line">        [ 4437,     4,     6,  ...,  8419,     5,     2],</span><br><span class="line">        ...,</span><br><span class="line">        [29393,  8703,  5817,  ...,  3323,     5,     2],</span><br><span class="line">        [   38,   954,  1055,  ...,   427,     5,     2],</span><br><span class="line">        [   37,  1735,    16,  ..., 11351,     5,     2]], device=&#x27;cuda:0&#x27;), &#x27;src_lengths&#x27;: tensor([15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,</span><br><span class="line">        15, 15, 15, 15], device=&#x27;cuda:0&#x27;), &#x27;prev_output_tokens&#x27;: tensor([[    2,   134,    22,  ...,  5476,    66,     5],</span><br><span class="line">        [    2,     9,  4852,  ...,     4,    50,    44],</span><br><span class="line">        [    2,  3344,    22,  ...,    18,  9276,     5],</span><br><span class="line">        ...,</span><br><span class="line">        [    2,    58,  8896,  ...,  9080,  5857,     5],</span><br><span class="line">        [    2,    96,  4216,  ...,    10,  2568,     5],</span><br><span class="line">        [    2,   131, 11767,  ...,   170,   219,     5]], device=&#x27;cuda:0&#x27;)&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">trainer.py 611 有问题吗</span><br><span class="line"># assert (</span><br><span class="line">            #     last_optim[&quot;criterion_name&quot;] == self.get_criterion().__class__.__name__</span><br><span class="line">            # ), f&quot;Criterion does not match; please reset the optimizer (--reset-optimizer). &#123;last_optim[&#x27;criterion_name&#x27;]&#125; vs &#123;self.get_criterion().__class__.__name__&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">File &quot;/home/yangjunxiao/fairseq/fairseq/criterions/class_loss.py&quot;, line 72, in forward</span><br><span class="line">    sample[&quot;net_input&quot;][&quot;src_tokens&quot;] = input</span><br><span class="line">IndexError: index 1 is out of bounds for dimension 0 with size 1</span><br><span class="line">Uncaught exception. Entering post mortem debugging</span><br><span class="line">Running &#x27;cont&#x27; or &#x27;step&#x27; will restart the program</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ValueError: offset must be non-negative and no greater than buffer length (5183682) 数据集下载不完整</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">b fairseq/criterions/class_loss.py:73</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tensorboard --logdir=./en2de/lab1</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CUDA_VISIBLE_DEVICES=2 </span><br><span class="line">fairseq-generate data-bin/class_en2de \</span><br><span class="line">    --path checkpoints/en-de-lab1/checkpoint_best.pt \</span><br><span class="line">    --batch-size 64 --beam 5 --remove-bpe --lenpen 0.6</span><br></pre></td></tr></table></figure>
+
+<p>where</p>
+<p>flag * label_dict[3] +!falg * label[4] 。。。。。。flag &#x3D; score &gt; 0.5</p>
+<p>(f &gt; 0.95) + (f &gt; 0.95) + … + </p>
+<p>select</p>
+<p>advance index</p>
+<p>index_select</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Junxiao Yang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/18/fairseq%E9%97%AE%E9%A2%98/">http://example.com/2023/03/18/fairseq%E9%97%AE%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/cs.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/06/08/LLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title=""><img class="cover" src="/img/cs.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2023/02/21/django-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="django 学习笔记"><img class="cover" src="/img/cs.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">django 学习笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/me.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Junxiao Yang</div><div class="author-info__description">this is a blog supported by hexo, updating some articles about cs learning</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/06/08/LLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2023/06/08/LLM%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="No title">No title</a><time datetime="2023-06-07T16:03:29.921Z" title="Created 2023-06-08 00:03:29">2023-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/03/18/fairseq%E9%97%AE%E9%A2%98/" title="No title"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="No title"/></a><div class="content"><a class="title" href="/2023/03/18/fairseq%E9%97%AE%E9%A2%98/" title="No title">No title</a><time datetime="2023-03-18T02:02:44.000Z" title="Created 2023-03-18 10:02:44">2023-03-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/21/django-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="django 学习笔记"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="django 学习笔记"/></a><div class="content"><a class="title" href="/2023/02/21/django-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="django 学习笔记">django 学习笔记</a><time datetime="2023-02-21T09:14:43.000Z" title="Created 2023-02-21 17:14:43">2023-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/fairseq%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="fairseq学习笔记"><img src="/img/cs.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="fairseq学习笔记"/></a><div class="content"><a class="title" href="/2023/02/07/fairseq%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="fairseq学习笔记">fairseq学习笔记</a><time datetime="2023-02-07T15:09:53.000Z" title="Created 2023-02-07 23:09:53">2023-02-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" title="linux远程服务器使用"><img src="https://s2.loli.net/2023/01/11/nRSENogwt6z4AO3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="linux远程服务器使用"/></a><div class="content"><a class="title" href="/2023/02/07/linux%E8%BF%9C%E7%A8%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%BF%E7%94%A8/" title="linux远程服务器使用">linux远程服务器使用</a><time datetime="2023-02-07T09:32:07.000Z" title="Created 2023-02-07 17:32:07">2023-02-07</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Junxiao Yang</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
