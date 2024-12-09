@@ -12,6 +12,7 @@ I am a 4th year undergraduate student of Dept. of Computer Science and Technolog
 
 Publications
 ======
+
 Conference Papers
 ------
 - Zhang, Z.*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). [Defending large language models against jailbreaking attacks through goal prioritization](https://arxiv.org/abs/2311.09096). **ACL 2024 (Long Paper)**.
