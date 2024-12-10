@@ -20,7 +20,7 @@ Conference Papers
 Preprints
 ------
 - Zhang, Z.*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). [Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks](https://arxiv.org/abs/2407.02855).
-- Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). [Global Challenge for Safe and Secure LLMs Track 1](https://arxiv.org/pdf/2411.14502). (I was in charge of technique report of Team ModelCrackers: Junxiao Yang\*, Zhexin Zhang\*, Leqi Lei, Renmiao Chen, Yida Lu, and Shiyao Cui)
+- Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). [Global Challenge for Safe and Secure LLMs Track 1](https://arxiv.org/pdf/2411.14502). (I was in charge of technique report of Team ModelCrackers: Junxiao Yang\*, Zhexin Zhang\*, Leqi Lei, Renmiao Chen, Yida Lu, and Shiyao Cui, CoAI Group)
 
 Foundation
 ======
@@ -28,6 +28,7 @@ Foundation
 
 Teaching
 ======
+I was a TA for the following undergraduate courses:
 - **Artificial Neural Network** (2024 Fall)
 - **Linear Algebra** (2024 Fall)
 
