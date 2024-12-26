@@ -15,11 +15,12 @@ Publications
 
 Conference Papers
 ------
-- Zhang, Z.*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). [Defending large language models against jailbreaking attacks through goal prioritization](https://arxiv.org/abs/2311.09096). **ACL 2024 (Long Paper)**.
+- Zhang, Z.\*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). [Defending large language models against jailbreaking attacks through goal prioritization](https://arxiv.org/abs/2311.09096). **ACL 2024 (Long Paper)**.
 
 Preprints
 ------
-- Zhang, Z.*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). [Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks](https://arxiv.org/abs/2407.02855).
+- Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). [Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks](https://arxiv.org/abs/2407.02855).
+- Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). [Agent-SafetyBench: Evaluating the Safety of LLM Agents](https://arxiv.org/abs/2412.14470).
 - Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). [Global Challenge for Safe and Secure LLMs Track 1](https://arxiv.org/pdf/2411.14502). (I was in charge of technique report of Team ModelCrackers: **Junxiao Yang\***, Zhexin Zhang\*, Leqi Lei, Renmiao Chen, Yida Lu, and Shiyao Cui, CoAI Group)
 
 Foundation
