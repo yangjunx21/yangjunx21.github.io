@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. I'm now an research intern at A*STAR's Centre for Frontier AI Research (CFAR), under the supervision of Prof. [Ong Yew-Soon](https://scholar.google.com/citations?user=h9oWOsEAAAAJ&hl=en). My research interests lie in LLM safety and alignment, and I’m recently working on the mechanism of jailbreak attack and defense of large language models, and the safety issues of Reasoning-based LLMs.
+I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. I'm now a research intern at A*STAR's Centre for Frontier AI Research (CFAR), under the supervision of Prof. [Ong Yew-Soon](https://scholar.google.com/citations?user=h9oWOsEAAAAJ&hl=en). My research interests lie in LLM safety and alignment, and I’m recently working on the mechanism of jailbreak attack and defense of large language models, and the safety issues of Reasoning-based LLMs.
 
 Publications
 ======
