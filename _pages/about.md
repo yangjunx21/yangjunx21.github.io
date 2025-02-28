@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. My research interests lie in LLM safety and alignment, and I’m recently working on the mechanism of jailbreak attack and defense of large language models.
+I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. I'm now an research intern at A*STAR's Centre for Frontier AI Research (CFAR), under the supervision of Prof. [Ong Yew-Soon](https://scholar.google.com/citations?user=h9oWOsEAAAAJ&hl=en). My research interests lie in LLM safety and alignment, and I’m recently working on the mechanism of jailbreak attack and defense of large language models, and the safety issues of Reasoning-based LLMs.
 
 Publications
 ======
@@ -19,6 +19,7 @@ Conference Papers
 
 Preprints
 ------
+- Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... , & Huang, M. (2025). [AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement](https://arxiv.org/abs/2502.16776).
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). [Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks](https://arxiv.org/abs/2407.02855).
 - Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). [Agent-SafetyBench: Evaluating the Safety of LLM Agents](https://arxiv.org/abs/2412.14470).
 - Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). [Global Challenge for Safe and Secure LLMs Track 1](https://arxiv.org/pdf/2411.14502). (I was in charge of technique report of Team ModelCrackers: **Junxiao Yang\***, Zhexin Zhang\*, Leqi Lei, Renmiao Chen, Yida Lu, and Shiyao Cui, CoAI Group)
