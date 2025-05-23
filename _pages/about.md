@@ -15,6 +15,8 @@ News
 
 - 🎉 Our Paper `Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints` is accepted by ACL 2025 Main! Please refer to our [code](https://github.com/thu-coai/TransferAttack) and [paper](https://arxiv.org/abs/2503.01865) for more details.
 
+- 🎉 Our Paper `BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs` is released.
+
 - 🎉 After months of hard work and collaboration, http://CAMEL-AI.org just release its new project Loong🐉. I'm delighted to be an contributor in it, mainly leading the safety and security domain team. I believe verifiable synthesis for complex questions will be an highly important issue for future LLM development. Here is our project [link](https://github.com/camel-ai/loong).
 
 - 🎉 AISafetyLab github [repo](https://github.com/thu-coai/AISafetyLab) released, please give us a star QwQ.
@@ -29,6 +31,7 @@ Conference Papers
 
 Preprints
 ------
+- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. [link](https://arxiv.org/abs/2505.13529)
 - Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... , & Huang, M. (2025). AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement. [link](https://arxiv.org/abs/2502.16776)
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. [link](https://arxiv.org/abs/2407.02855)
 - Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. [link](https://arxiv.org/abs/2412.14470).
