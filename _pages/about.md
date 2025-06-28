@@ -17,10 +17,6 @@ News
 
 - 🎉 Our Paper `BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs` is released.
 
-- 🎉 After months of hard work and collaboration, http://CAMEL-AI.org just release its new project Loong🐉. I'm delighted to be an contributor in it, mainly leading the safety and security domain team. I believe verifiable synthesis for complex questions will be an highly important issue for future LLM development. Here is our project [link](https://github.com/camel-ai/loong).
-
-- 🎉 AISafetyLab github [repo](https://github.com/thu-coai/AISafetyLab) released, please give us a star QwQ.
-
 Publications
 ======
 
@@ -37,6 +33,10 @@ Preprints
 - Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. [link](https://arxiv.org/abs/2412.14470).
 - Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). Global Challenge for Safe and Secure LLMs Track 1. [link](https://arxiv.org/pdf/2411.14502)
 
+Resources:
+======
+- AISafetyLab: a comprehensive framework for AI safety evaluation and improvement. [code](https://github.com/thu-coai/AISafetyLab) [paper](https://arxiv.org/abs/2502.16776)
+
 Teaching
 ======
 I was a TA for the following undergraduate courses:
@@ -45,6 +45,7 @@ I was a TA for the following undergraduate courses:
 
 Honors and Awards
 ======
+- Excellent Graduate, Tsinghua University, 2025
 - 3rd Prize Winner of the Global Challenge for Safe and Secure LLMs (Track 1)
 - Academic Excellence in Research Award of Tsinghua University, 2023.09-2024.09
 - Meritorious Winner of Mathematical Contest In Modeling Certificate of Achievement, 2023
