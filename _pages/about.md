@@ -28,6 +28,8 @@ Conference Papers
 Preprints
 ------
 - **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. [link](https://arxiv.org/abs/2505.13529)
+- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. [link](https://arxiv.org/abs/2505.15656)
+- Zhang, Z., Loye, X. Q., Huang, V. S. J., **Yang, J.**, Zhu, Q., Cui, S., ... & Huang, M. (2025). How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study.\ [link](https://arxiv.org/abs/2505.15404)
 - Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... , & Huang, M. (2025). AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement. [link](https://arxiv.org/abs/2502.16776)
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. [link](https://arxiv.org/abs/2407.02855)
 - Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. [link](https://arxiv.org/abs/2412.14470).
