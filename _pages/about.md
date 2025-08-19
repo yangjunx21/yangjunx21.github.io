@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. I'm now a research intern at A*STAR's Centre for Frontier AI Research (CFAR), under the supervision of Prof. [Yew-Soon Ong](https://scholar.google.com/citations?user=h9oWOsEAAAAJ&hl=en). My research interests lie in LLM safety and trustworthy, and I’m recently working on the mechanism of jailbreaking attack & defense, hallucination and knowledge boundary of LRMs.
+I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. My research interests lie in LLM safety and trustworthy, and I’m recently working on the mechanism of jailbreaking attack & defense, hallucination and knowledge boundary of LLMs.
 
 News
 ======
@@ -16,6 +16,10 @@ News
 - 🎉 Our Paper `Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints` is accepted by ACL 2025 Main! Please refer to our [code](https://github.com/thu-coai/TransferAttack) and [paper](https://arxiv.org/abs/2503.01865) for more details.
 
 - 🎉 Our Paper `BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs` is released.
+
+Working Experiences
+======
+- Research intern at A*STAR's Centre for Frontier AI Research (CFAR), from Feb 2025 to May 2025, under the supervision of Prof. [Yew-Soon Ong](https://scholar.google.com/citations?user=h9oWOsEAAAAJ&hl=en).
 
 Publications
 ======
