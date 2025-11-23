@@ -13,9 +13,9 @@ I am a 4th year undergraduate student of Dept. of Computer Science and Technolog
 News
 ======
 
-- 🎉 Our Paper `Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints` is accepted by ACL 2025 Main! Please refer to our [code](https://github.com/thu-coai/TransferAttack) and [paper](https://arxiv.org/abs/2503.01865) for more details.
+- 🎉 Meet Paper Pulse: The open-source framework that delivers the papers you actually care about, straight to your inbox with LLM-generated summaries! 🔍 Smart Filtering 📖 Deep Analysis 📧 Wake up to a beautiful Markdown briefing in your email. Read the day's best in 1 minute. ☕️ [link](https://github.com/yangjunx21/Paper-Pulse)
 
-- 🎉 Our Paper `BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs` is released.
+- 🎉 Our Paper `Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints` is accepted by ACL 2025 Main! Please refer to our [code](https://github.com/thu-coai/TransferAttack) and [paper](https://arxiv.org/abs/2503.01865) for more details.
 
 Working Experiences
 ======
@@ -24,19 +24,15 @@ Working Experiences
 Publications
 ======
 
-Conference Papers
-------
 - **Yang, J.\***, Zhang, Z.\*, Cui, S., Wang, H., & Huang, M. (2025). Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints. **ACL 2025 (Long Paper)**. [link](https://arxiv.org/abs/2503.01865)
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). Defending large language models against jailbreaking attacks through goal prioritization. **ACL 2024 (Long Paper)**. [link](https://arxiv.org/abs/2311.09096)
-
-Preprints
-------
-- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. [link](https://arxiv.org/abs/2505.13529)
-- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. [link](https://arxiv.org/abs/2505.15656)
+- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2505.13529)
+- Cui, S., Feng, X., Wang, Y., **Yang, J.**, Zhang, Z., Sikdar, B., ... & Huang, M. (2025). When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity. **AAAI (Oral)**. [link](https://arxiv.org/abs/2509.11141)
+- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2505.15656)
+- Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. ResponsibleFM @ NeurIPS 2025. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2407.02855)
+- Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. TrustAgent@AAAI [link](https://arxiv.org/abs/2412.14470).
 - Zhang, Z., Loye, X. Q., Huang, V. S. J., **Yang, J.**, Zhu, Q., Cui, S., ... & Huang, M. (2025). How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study.\ [link](https://arxiv.org/abs/2505.15404)
 - Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... , & Huang, M. (2025). AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement. [link](https://arxiv.org/abs/2502.16776)
-- Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. [link](https://arxiv.org/abs/2407.02855)
-- Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. [link](https://arxiv.org/abs/2412.14470).
 - Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). Global Challenge for Safe and Secure LLMs Track 1. [link](https://arxiv.org/pdf/2411.14502)
 
 Resources:
@@ -46,7 +42,7 @@ Resources:
 Teaching
 ======
 I was a TA for the following undergraduate courses:
-- Artificial Neural Network (2024 Fall)
+- Artificial Neural Network (2024 Fall, 2025 Fall)
 - Linear Algebra (2024 Fall)
 
 Honors and Awards
