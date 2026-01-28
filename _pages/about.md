@@ -7,13 +7,14 @@ redirect_from:
   - /about.html
 ---
 
-
-I am a 4th year undergraduate student of Dept. of Computer Science and Technology of Tsinghua University, Beijing, PRC. I am also an incomming Ph.D Student of Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml) @ [Conversational AI Group](https://coai.cs.tsinghua.edu.cn/) starting from 2025 Fall. My research interests lie in LLM safety and trustworthy, and I’m recently working on the mechanism of jailbreaking attack & defense, hallucination and knowledge boundary of LLMs.
+I am a 1st year Ph.D. student in [CoAI Group](https://coai.cs.tsinghua.edu.cn/), Dept. of Computer Science and Technology of Tsinghua University. I’m advised by Prof. [Minlie Huang](https://coai.cs.tsinghua.edu.cn/hml). My research interests lie in LLM safety and trustworthy, and I’m recently working on the mechanism of jailbreaking attack & defense, hallucination and knowledge boundary of LLMs.
 
 News
 ======
 
-- 🎉 Meet Paper Pulse: The open-source framework that delivers the papers you actually care about, straight to your inbox with LLM-generated summaries! 🔍 Smart Filtering 📖 Deep Analysis 📧 Wake up to a beautiful Markdown briefing in your email. Read the day's best in 1 minute. ☕️ [link](https://github.com/yangjunx21/Paper-Pulse)
+- 🎉 Our Papers `BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs` and `Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!` are accepted by ICLR 2026.
+
+- 🎉 We built Open Cowork - Opensource Claude Cowork for Windows & macOS. [code](https://github.com/OpenCoworkAI/open-cowork)
 
 - 🎉 Our Paper `Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints` is accepted by ACL 2025 Main! Please refer to our [code](https://github.com/thu-coai/TransferAttack) and [paper](https://arxiv.org/abs/2503.01865) for more details.
 
@@ -25,10 +26,10 @@ Publications
 ======
 
 - **Yang, J.\***, Zhang, Z.\*, Cui, S., Wang, H., & Huang, M. (2025). Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints. **ACL 2025 (Long Paper)**. [link](https://arxiv.org/abs/2503.01865)
+- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. **ICLR 2026**. [link](https://arxiv.org/abs/2505.13529)
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). Defending large language models against jailbreaking attacks through goal prioritization. **ACL 2024 (Long Paper)**. [link](https://arxiv.org/abs/2311.09096)
-- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2505.13529)
 - Cui, S., Feng, X., Wang, Y., **Yang, J.**, Zhang, Z., Sikdar, B., ... & Huang, M. (2025). When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity. **AAAI (Oral)**. [link](https://arxiv.org/abs/2509.11141)
-- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2505.15656)
+- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. **ICLR 2026**. [link](https://arxiv.org/abs/2505.15656)
 - Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. ResponsibleFM @ NeurIPS 2025. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2407.02855)
 - Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. TrustAgent@AAAI [link](https://arxiv.org/abs/2412.14470).
 - Zhang, Z., Loye, X. Q., Huang, V. S. J., **Yang, J.**, Zhu, Q., Cui, S., ... & Huang, M. (2025). How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study.\ [link](https://arxiv.org/abs/2505.15404)
@@ -38,6 +39,7 @@ Publications
 Resources:
 ======
 - AISafetyLab: a comprehensive framework for AI safety evaluation and improvement. [code](https://github.com/thu-coai/AISafetyLab) [paper](https://arxiv.org/abs/2502.16776)
+- Open Cowork: Opensource Claude Cowork for Windows & macOS. [code](https://github.com/OpenCoworkAI/open-cowork)
 
 Teaching
 ======
@@ -56,5 +58,6 @@ Honors and Awards
 
 Educations
 ======
-- 2021.09-now, Tsinghua University, Beijing, China. Undergraduate Student.
+- 2025.09-now, Tsinghua University, Beijing, China. Ph.D. Student.
+- 2021.09-2025.06, Tsinghua University, Beijing, China. Undergraduate Student.
 - 2018.09-2021.06, Urumqi No.1 Senior High School, Xinjiang, China. High school Student.
