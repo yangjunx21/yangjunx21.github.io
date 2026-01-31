@@ -25,21 +25,21 @@ Working Experiences
 Publications
 ======
 
-- **Yang, J.\***, Zhang, Z.\*, Cui, S., Wang, H., & Huang, M. (2025). Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints. **ACL 2025 (Long Paper)**. [link](https://arxiv.org/abs/2503.01865)
-- **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M. (2025). BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. **ICLR 2026**. [link](https://arxiv.org/abs/2505.13529)
-- Zhang, Z.\*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M. (2023). Defending large language models against jailbreaking attacks through goal prioritization. **ACL 2024 (Long Paper)**. [link](https://arxiv.org/abs/2311.09096)
-- Cui, S., Feng, X., Wang, Y., **Yang, J.**, Zhang, Z., Sikdar, B., ... & Huang, M. (2025). When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity. **AAAI (Oral)**. [link](https://arxiv.org/abs/2509.11141)
-- Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M. (2025). Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!. **ICLR 2026**. [link](https://arxiv.org/abs/2505.15656)
-- Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M. (2024). Safe unlearning: A surprisingly effective and generalizable solution to defend against jailbreak attacks. ResponsibleFM @ NeurIPS 2025. ResponsibleFM @ NeurIPS 2025. [link](https://arxiv.org/abs/2407.02855)
-- Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J**., Wang, H., & Huang, M. (2024). Agent-SafetyBench: Evaluating the Safety of LLM Agents. TrustAgent@AAAI [link](https://arxiv.org/abs/2412.14470).
-- Zhang, Z., Loye, X. Q., Huang, V. S. J., **Yang, J.**, Zhu, Q., Cui, S., ... & Huang, M. (2025). How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study.\ [link](https://arxiv.org/abs/2505.15404)
-- Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... , & Huang, M. (2025). AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement. [link](https://arxiv.org/abs/2502.16776)
-- Jia, X., ... , **Yang, J.**, ... , & Zhao, Z. (2024). Global Challenge for Safe and Secure LLMs Track 1. [link](https://arxiv.org/pdf/2411.14502)
+- **[ICLR 2026]** [BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs](https://arxiv.org/abs/2505.13529). **Yang, J.**, Tu, J., Liu, H., Wang, X., Zheng, C., Zhang, Z., ... & Huang, M.
+- **[ACL 2025]** [Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints](https://arxiv.org/abs/2503.01865). **Yang, J.\***, Zhang, Z.\*, Cui, S., Wang, H., & Huang, M.
+- **[ACL 2024]** [Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization](https://arxiv.org/abs/2311.09096). Zhang, Z.\*, **Yang, J.\***, Ke, P., Mi, F., Wang, H., & Huang, M.
+- **[AAAI 2025 Oral]** [When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity](https://arxiv.org/abs/2509.11141). Cui, S., Feng, X., Wang, Y., **Yang, J.**, Zhang, Z., Sikdar, B., ... & Huang, M.
+- **[ICLR 2026]** [Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!](https://arxiv.org/abs/2505.15656). Zhang, Z., Sun, Y., **Yang, J.**, Cui, S., Wang, H., & Huang, M.
+- **[NeurIPS 2025 Workshop]** [Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks](https://arxiv.org/abs/2407.02855). Zhang, Z.\*, **Yang, J.\***, Ke, P., Cui, S., Zheng, C., Wang, H., & Huang, M.
+- **[AAAI 2025 Workshop]** [Agent-SafetyBench: Evaluating the Safety of LLM Agents](https://arxiv.org/abs/2412.14470). Zhang, Z., Cui, S., Lu, Y., Zhou, J., **Yang, J.**, Wang, H., & Huang, M.
+- **[Preprint]** [How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study](https://arxiv.org/abs/2505.15404). Zhang, Z., Loye, X. Q., Huang, V. S. J., **Yang, J.**, Zhu, Q., Cui, S., ... & Huang, M.
+- **[Preprint]** [AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement](https://arxiv.org/abs/2502.16776). Zhang, Z.\*, Lei, L.\*, **Yang, J.\***, ... & Huang, M.
+- **[Preprint]** [Global Challenge for Safe and Secure LLMs Track 1](https://arxiv.org/pdf/2411.14502). Jia, X., ... , **Yang, J.**, ... & Zhao, Z.
 
 Resources:
 ======
-- AISafetyLab: a comprehensive framework for AI safety evaluation and improvement. [code](https://github.com/thu-coai/AISafetyLab) [paper](https://arxiv.org/abs/2502.16776)
-- Open Cowork: Opensource Claude Cowork for Windows & macOS. [code](https://github.com/OpenCoworkAI/open-cowork)
+- [**AISafetyLab**: A comprehensive framework for AI safety evaluation and improvement.]((https://arxiv.org/abs/2502.16776)) [![GitHub stars](https://img.shields.io/github/stars/thu-coai/AISafetyLab?style=social)](https://github.com/thu-coai/AISafetyLab)
+- **Open Cowork**: Opensource Claude Cowork for Windows & macOS. [![GitHub stars](https://img.shields.io/github/stars/OpenCoworkAI/open-cowork?style=social)](https://github.com/OpenCoworkAI/open-cowork)
 
 Teaching
 ======
