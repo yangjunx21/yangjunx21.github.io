@@ -25,25 +25,25 @@ Working Experiences
 Publications
 ======
 
-- **[ICLR 2026]** ***BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs.*** [[paper]](https://arxiv.org/abs/2505.13529)
+- **[ICLR 2026]** BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs. [[paper]](https://arxiv.org/abs/2505.13529)
   - **Junxiao Yang**, Jinzhe Tu, Haoran Liu, Xiaoce Wang, Chujie Zheng, Zhexin Zhang, Shiyao Cui, Caishun Chen, Tiantian He, Hongning Wang, Yew-Soon Ong, Minlie Huang.
-- **[ACL 2025]** ***Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints.*** [[paper]](https://arxiv.org/abs/2503.01865)
+- **[ACL 2025]** Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints. [[paper]](https://arxiv.org/abs/2503.01865)
   - **Junxiao Yang\***, Zhexin Zhang\*, Shiyao Cui, Hongning Wang, Minlie Huang.
-- **[ACL 2024]** ***Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization.*** [[paper]](https://arxiv.org/abs/2311.09096)
+- **[ACL 2024]** Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization. [[paper]](https://arxiv.org/abs/2311.09096)
   - Zhexin Zhang\*, **Junxiao Yang\***, Pei Ke, Fei Mi, Hongning Wang, Minlie Huang.
-- **[AAAI 2025 Oral]** ***When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity.*** [[paper]](https://arxiv.org/abs/2509.11141)
+- **[AAAI 2025 Oral]** When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity. [[paper]](https://arxiv.org/abs/2509.11141)
   - Shiyao Cui, Xijia Feng, Yingkang Wang, **Junxiao Yang**, Zhexin Zhang, Biplab Sikdar, Hongning Wang, Han Qiu, Minlie Huang.
-- **[ICLR 2026]** ***Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!*** [[paper]](https://arxiv.org/abs/2505.15656)
+- **[ICLR 2026]** Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen! [[paper]](https://arxiv.org/abs/2505.15656)
   - Zhexin Zhang, Yuhao Sun, **Junxiao Yang**, Shiyao Cui, Hongning Wang, Minlie Huang.
-- **[NeurIPS 2025 Workshop]** ***Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks.*** [[paper]](https://arxiv.org/abs/2407.02855)
+- **[NeurIPS 2025 Workshop]** Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks. [[paper]](https://arxiv.org/abs/2407.02855)
   - Zhexin Zhang\*, **Junxiao Yang\***, Yida Lu, Pei Ke, Shiyao Cui, Chujie Zheng, Hongning Wang, Minlie Huang.
-- **[AAAI 2025 Workshop]** ***Agent-SafetyBench: Evaluating the Safety of LLM Agents.*** [[paper]](https://arxiv.org/abs/2412.14470)
+- [AAAI 2025 Workshop] Agent-SafetyBench: Evaluating the Safety of LLM Agents. [[paper]](https://arxiv.org/abs/2412.14470)
   - Zhexin Zhang, Shiyao Cui, Yida Lu, Jingzhuo Zhou, **Junxiao Yang**, Hongning Wang, Minlie Huang.
-- **[Preprint]** ***How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study.*** [[paper]](https://arxiv.org/abs/2505.15404)
+- [Preprint] How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study. [[paper]](https://arxiv.org/abs/2505.15404)
   - Zhexin Zhang, Xian Qi Loye, Victor Shea-Jay Huang, **Junxiao Yang**, Qi Zhu, Shiyao Cui, Fei Mi, Lifeng Shang, Yingkang Wang, Hongning Wang, Minlie Huang.
-- **[Preprint]** ***AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement.*** [[paper]](https://arxiv.org/abs/2502.16776)
+- [Preprint] AISafetyLab: A Comprehensive Framework for AI Safety Evaluation and Improvement. [[paper]](https://arxiv.org/abs/2502.16776)
   - Zhexin Zhang\*, Leqi Lei\*, **Junxiao Yang\***, Xijie Huang, Yida Lu, Shiyao Cui, et al.
-- **[Preprint]** ***Global Challenge for Safe and Secure LLMs Track 1.*** [[paper]](https://arxiv.org/abs/2411.14502)
+- [Preprint] Global Challenge for Safe and Secure LLMs Track 1. [[paper]](https://arxiv.org/abs/2411.14502)
   - Xiaojun Jia, Yihao Huang, Yang Liu, ..., **Junxiao Yang**, Zhexin Zhang, ..., Zhe Zhao.
 
 Resources:
