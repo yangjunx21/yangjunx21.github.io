@@ -51,7 +51,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ICLR 2026</span> <span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ICLR 2026</span></div>
       <h3>BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs</h3>
       <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Jinzhe Tu, Haoran Liu, Xiaoce Wang, Chujie Zheng, Zhexin Zhang, Shiyao Cui, Caishun Chen, Tiantian He, Hongning Wang, Yew-Soon Ong, Minlie Huang.</p>
     </div>
