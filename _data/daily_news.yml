@@ -1,93 +1,21 @@
-updated_at: '2026-05-10T06:52:32.023743Z'
+updated_at: '2026-05-10T23:55:38.873600Z'
 window_days: 14
 items:
-- title: Sawtooth Problems
-  url: https://www.lesswrong.com/posts/iyLirpAeQotmZK4QC/sawtooth-problems
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T06:33:41Z'
-  summary: 'Red Button, Blue Button On April 24th, 2026, Tim Urban put forth the following poll on Twitter/X : Everyone in the world has to take a private vote by pressing a red or blue button. If more than 50% of people press the...'
-- title: Control Debt
-  url: https://www.lesswrong.com/posts/rqmg4JfCZ8mukpwxo/control-debt-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T05:27:07Z'
-  summary: 'Notes on the gap: what control evaluations assume <> implementation in labs. It is 2027, and a frontier lab grew suspicions: plausibly, their model is scheming. Not a surprise for the control team. For more than a year,...'
-- title: Could Frontier AI Researchers Collectively Slow the Race? A Conditional Pledge Mechanism
-  url: https://www.lesswrong.com/posts/rCvyfKZfeaDDkTHjB/could-frontier-ai-researchers-collectively-slow-the-race-a
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T03:29:36Z'
-  summary: Overview This is a project proposal and early research on the question of how and whether Frontier AI researchers (not companies themselves) might take on personal risk and pledge to conditionally pause AI development....
-- title: The Goblins Are the Paperclips
-  url: https://www.lesswrong.com/posts/W9gqTPw47jNycmt4v/the-goblins-are-the-paperclips
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T01:57:27Z'
-  summary: 'Last week OpenAI published Where the goblins came from , explaining why their models started slipping creature metaphors into unrelated outputs. The story has been treated as a quirky anecdote: endearing, slightly embar...'
-- title: Avoid alienating the marginal audience member
-  url: https://www.lesswrong.com/posts/nDeHmzqydACaXsn9h/avoid-alienating-the-marginal-audience-member
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T01:56:58Z'
-  summary: I urge everyone reading this to improve their public speaking and presentation skills. If you think your presentations have even a small chance of reducing existential risk, whether directly or indirectly, it is worth i...
-- title: Somerville Porchfest 2026
-  url: https://www.lesswrong.com/posts/2ZHjqHRjTW6irGTfk/somerville-porchfest-2026
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T01:20:41Z'
-  summary: 'This afternoon Cecilia and I played for Somerville Porchfest , with Harris calling and Danner running sound. There was rain, but not enough keep us from playing, or to keep folks from dancing: We were originally plannin...'
-- title: 'The AI Industrial Explosion — Part 2: Transition Dynamics'
-  url: https://www.lesswrong.com/posts/HHrwDFhwZFmACeBRS/the-ai-industrial-explosion-part-2-transition-dynamics
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-10T01:02:19Z'
-  summary: This is Part 2 of a series on post-AGI economic growth. Part 1 established that a fully automated economy could double roughly every year using current technology. But the US economy does not currently look like a self-...
-- title: International Law Cannot Prevent Extinction Either
-  url: https://www.lesswrong.com/posts/Z377spboBjyFAAYAz/international-law-cannot-prevent-extinction-either
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-09T22:34:31Z'
-  summary: The context for this post is primarily Only Law Can Prevent Extinction , but after first drafting a half-assed comment, I decided to get off my ass and write a whole-assed post. I agree with Eliezer's main thesis that i...
-- title: Do capabilities generalize across propensities?
-  url: https://www.lesswrong.com/posts/uH5oo57r24xGXQGKM/do-capabilities-generalize-across-propensities
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-09T21:39:22Z'
-  summary: Thanks to Alex Mallen, Arjun Khandelwal, Arun Jose, Keshav Shenoy, & Sam Marks for helpful discussion on this experiment. This experiment is inspired by a proposal by Sam Marks. Summary These are some results from an ex...
-- title: Neural Networks learn Bloom Filters
-  url: https://www.lesswrong.com/posts/buxBdp8NtHGgBwabv/neural-networks-learn-bloom-filters
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-09T20:32:32Z'
-  summary: 'Overview: We train a tiny ReLU network to output sparse top- mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust...'
-- title: '"OncoAgent: A Dual-Tier Multi-Agent Framework for Privacy-Preserving Oncology Clinical Decision Support"'
-  url: https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/oncoagent-official-paper
+- title: ‘Your Career Starts at the Beginning of the AI Revolution,’ NVIDIA CEO Tells Graduates
+  url: https://blogs.nvidia.com/blog/nvidia-ceo-carnegie-mellon-commencement-address/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-10T22:00:50Z'
+  summary: “You are entering the world at an extraordinary moment,” NVIDIA founder and CEO Jensen Huang told graduates as he delivered the keynote address at Carnegie Mellon University’s 128th commencement ceremony on Sunday. “A n...
+- title: 'MachinaCheck: Building a Multi-Agent CNC Manufacturability System on AMD MI300X'
+  url: https://huggingface.co/blog/lablab-ai-amd-developer-hackathon/machinacheck
   source: Hugging Face Blog
   source_url: https://huggingface.co/blog
   source_group: AI Companies and Research Labs
   source_tone: industry
-  published_at: '2026-05-09T18:09:28Z'
+  published_at: '2026-05-10T18:44:11Z'
   summary: ''
 - title: '[AINews] Anthropic growing 10x/year while everyone else is laying off >10% of their workforce'
   url: https://www.latent.space/p/ainews-anthropic-growing-10xyear
@@ -425,6 +353,14 @@ items:
   source_tone: industry
   published_at: '2026-05-05T15:20:54Z'
   summary: In this post, you will learn how you can use Amazon Nova Foundation Models in Amazon Bedrock to apply generative AI techniques for both business protection and enhancement. You can identify obvious and disguised attempt...
+- title: Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)
+  url: https://openai.com/index/mrc-supercomputer-networking
+  source: OpenAI Engineering
+  source_url: https://openai.com/news/engineering
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-05-05T10:00:00Z'
+  summary: OpenAI introduces MRC (Multipath Reliable Connection), a new supercomputer networking protocol released via OCP to improve resilience and performance in large-scale AI training clusters.
 - title: '[AINews] The Other vs The Utility'
   url: https://www.latent.space/p/ainews-the-other-vs-the-utility
   source: Latent Space
@@ -449,14 +385,6 @@ items:
   source_tone: community
   published_at: '2026-05-04T15:56:44Z'
   summary: ‘Distillation attacks’ is a horrible term for what is happening right now.
-- title: 'Import AI 455: AI systems are about to start building themselves.'
-  url: https://importai.substack.com/p/import-ai-455-automating-ai-research
-  source: Import AI Substack
-  source_url: https://importai.substack.com
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-04T12:32:09Z'
-  summary: The first step towards recursive self improvement
 - title: 'Import AI 455: Automating AI Research'
   url: https://jack-clark.net/2026/05/04/import-ai-455-automating-ai-research/
   source: Import AI
@@ -465,6 +393,14 @@ items:
   source_tone: community
   published_at: '2026-05-04T12:32:09Z'
   summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv and feedback from readers. If you’d like to support this, please subscribe. Subscribe now AI systems are about to start building themselves....
+- title: How OpenAI delivers low-latency voice AI at scale
+  url: https://openai.com/index/delivering-low-latency-voice-ai-at-scale
+  source: OpenAI Engineering
+  source_url: https://openai.com/news/engineering
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-05-04T00:00:00Z'
+  summary: How OpenAI rebuilt its WebRTC stack to power real-time Voice AI with low latency, global scale, and seamless conversational turn-taking.
 - title: '[AINews] AI Engineer World''s Fair — Autoresearch, Memory, World Models, Tokenmaxxing, Agentic Commerce, and Vertical AI Call for Speakers'
   url: https://www.latent.space/p/ainews-ai-engineer-worlds-fair-autoresearch
   source: Latent Space
@@ -641,29 +577,70 @@ items:
   source_tone: industry
   published_at: '2026-04-28T13:00:33Z'
   summary: 'Manufacturing’s traditional design-build-test cycle rested on a single assumption: Real-world testing was the only reliable test environment.'
+- title: Fail safe(r) at alignment by channeling reward-hacking into a "spillway" motivation
+  url: https://blog.redwoodresearch.org/p/fail-safer-at-alignment-by-channeling
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-04-27T17:42:05Z'
+  summary: A controlled reward-seeking motivation could make AI safer and more useful
+- title: AI companies should publish security assessments
+  url: https://blog.redwoodresearch.org/p/ai-companies-should-publish-security
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-04-27T12:03:38Z'
+  summary: Third-party experts should assess defenses against tampering and theft — and publish high-level findings
+- title: Announcing our partnership with the Republic of Korea
+  url: https://deepmind.google/blog/announcing-our-partnership-with-the-republic-of-korea/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-04-27T07:00:06Z'
+  summary: Google DeepMind and Korea partner to accelerate scientific breakthroughs using frontier AI models
+- title: 'An open-source spec for orchestration: Symphony'
+  url: https://openai.com/index/open-source-codex-orchestration-symphony
+  source: OpenAI Engineering
+  source_url: https://openai.com/news/engineering
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-04-27T00:00:00Z'
+  summary: Learn how Symphony, an open-source spec for Codex orchestration, turns issue trackers into always-on agent systems—boosting engineering output and reducing context switching.
+- title: How to build scalable web apps with OpenAI's Privacy Filter
+  url: https://huggingface.co/blog/openai-privacy-filter-web-apps
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-04-27T00:00:00Z'
+  summary: ''
 unavailable_sources:
 - AI Alignment Forum
 - AI Alignment
-- OpenAI Engineering
+- LessWrong
 - Anthropic Alignment Science
-- FAR.AI Blog
-- CAIS Blog
-- Apollo Research Blog
-- Goodfire Blog
-- Apple Machine Learning Research
 - METR
-- Anthropic Engineering
-- xAI News
-- Hugging Face Daily Papers
+- FAR.AI Blog
 - Epoch AI Blog
-- METR Evaluations
 - Epoch AI Latest
+- Hugging Face Daily Papers
+- CAIS Blog
+- Apple Machine Learning Research
+- Goodfire Blog
+- Apollo Research Blog
+- xAI News
 - MIT LINGO Blog
-- Meta AI Blog
-- Amazon Science Blog
 - Stanford HAI News
-- DeepLearning.AI - The Batch
-- Mistral AI News
+- Meta AI Blog
 - Cohere Research
+- Amazon Science Blog
+- Import AI Substack
 - Cohere Blog
+- DeepLearning.AI - The Batch
+- METR Evaluations
+- Mistral AI News
 - Anthropic Research
+- Anthropic Engineering
