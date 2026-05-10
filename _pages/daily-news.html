@@ -1,0 +1,77 @@
+---
+layout: single
+title: "Daily News"
+permalink: /daily-news/
+author_profile: true
+---
+
+{% assign news_items = site.data.daily_news.items | default: empty %}
+{% assign source_groups = site.data.ai_blog_sources.groups | default: empty %}
+
+<section class="daily-news-hero">
+  <p class="daily-news-kicker">AI research, safety, product, and engineering links</p>
+  <h2>Daily News</h2>
+  {% if site.data.daily_news.window_days %}
+    <p class="daily-news-window">Source-dated posts from the last {{ site.data.daily_news.window_days }} days</p>
+  {% endif %}
+  {% if site.data.daily_news.updated_at %}
+    <p class="daily-news-updated">Updated {{ site.data.daily_news.updated_at | date: "%Y-%m-%d %H:%M UTC" }}</p>
+  {% endif %}
+</section>
+
+{% if news_items.size > 0 %}
+  <div class="daily-news-timeline">
+    {% assign current_day = "" %}
+    {% for item in news_items %}
+      {% assign item_day = item.published_at | date: "%Y-%m-%d" %}
+      {% if item_day != current_day %}
+        {% unless forloop.first %}
+          </div>
+        </section>
+        {% endunless %}
+        <section class="timeline-day">
+          <div class="timeline-date">
+            <time datetime="{{ item_day }}">{{ item.published_at | date: "%b %-d, %Y" }}</time>
+          </div>
+          <div class="timeline-items">
+        {% assign current_day = item_day %}
+      {% endif %}
+          <article class="daily-news-card">
+            <div class="daily-news-card__meta">
+              <a href="{{ item.source_url }}">{{ item.source }}</a>
+            </div>
+            <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+            {% if item.summary %}
+              <p>{{ item.summary }}</p>
+            {% endif %}
+            <a class="daily-news-card__link" href="{{ item.url }}">Read original</a>
+          </article>
+      {% if forloop.last %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="notice">No source-dated posts were found in the current window. Run <code>python scripts/fetch_daily_news.py --days 14</code> locally, or trigger the GitHub Actions workflow after pushing the site.</p>
+{% endif %}
+
+<h2 class="home-section-title">Sources</h2>
+
+<div class="source-directory">
+  {% for group in source_groups %}
+    <details class="source-group" {% if forloop.first %}open{% endif %}>
+      <summary>{{ group.name }}</summary>
+      <div class="source-grid">
+        {% for source in group.sources %}
+          <article class="source-card">
+            <h3><a href="{{ source.url }}">{{ source.name }}</a></h3>
+            {% if source.note %}
+              <p>{{ source.note }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </details>
+  {% endfor %}
+</div>

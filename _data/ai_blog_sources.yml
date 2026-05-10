@@ -1,0 +1,171 @@
+groups:
+  - name: Frontier Labs
+    sources:
+      - name: OpenAI Alignment Research Blog
+        url: https://alignment.openai.com
+        note: OpenAI alignment research.
+      - name: OpenAI Engineering
+        url: https://openai.com/news/engineering
+        note: OpenAI engineering articles and system-building notes.
+      - name: Anthropic Research
+        url: https://www.anthropic.com/research
+        note: Anthropic research on alignment, interpretability, evaluations, and societal impacts.
+      - name: Anthropic Engineering
+        url: https://www.anthropic.com/engineering
+        note: Anthropic engineering team posts and system-building articles.
+      - name: Anthropic Alignment Science
+        url: https://alignment.anthropic.com
+        note: Anthropic alignment science, interpretability, and risk evaluation articles.
+      - name: Google DeepMind Blog
+        url: https://deepmind.google/blog
+        note: Google DeepMind official blog.
+      - name: Google Research Blog
+        url: https://research.google/blog
+        note: Official Google Research blog.
+      - name: Meta AI Blog
+        url: https://ai.meta.com/blog
+        note: Meta AI official blog.
+      - name: Microsoft Research Blog
+        url: https://www.microsoft.com/en-us/research/blog
+        note: Microsoft Research blog.
+
+  - name: AI Safety and Governance
+    sources:
+      - name: LessWrong
+        url: https://www.lesswrong.com
+        note: AI alignment, rationality, and AI risk discussion.
+      - name: AI Alignment Forum
+        url: https://www.alignmentforum.org
+        note: Technical AI alignment research community.
+      - name: AI Alignment
+        url: https://ai-alignment.com
+        note: Alignment essays and research posts.
+      - name: MIRI Blog
+        url: https://intelligence.org/blog
+        note: Machine Intelligence Research Institute blog.
+      - name: METR
+        url: https://metr.org
+        note: Model evaluation and frontier-risk research.
+      - name: METR Evaluations
+        url: https://metr.org/evaluations
+        note: METR evaluation reports.
+      - name: Apollo Research Blog
+        url: https://www.apolloresearch.ai/blog
+        note: Frontier AI risk, scheming, and evaluations.
+      - name: Redwood Research Blog
+        url: https://blog.redwoodresearch.org
+        note: AI risk and safety research.
+      - name: FAR.AI Blog
+        url: https://far.ai/blog
+        note: AI safety and alignment research.
+      - name: CAIS Blog
+        url: https://safe.ai/blog
+        note: Center for AI Safety updates.
+      - name: Goodfire Blog
+        url: https://www.goodfire.ai/blog
+        note: Interpretability and model control.
+      - name: Goodfire Research
+        url: https://www.goodfire.ai/research
+        note: Goodfire research index.
+      - name: Epoch AI Blog
+        url: https://epoch.ai/blog
+        note: AI trends, compute, data, economics, and forecasting.
+      - name: Epoch AI Latest
+        url: https://epoch.ai/latest
+        note: Unified stream for papers, newsletters, data insights, and podcasts.
+
+  - name: AI Companies and Research Labs
+    sources:
+      - name: Hugging Face Blog
+        url: https://huggingface.co/blog
+        note: Open-source models, Transformers, applications, and research.
+      - name: Hugging Face Daily Papers
+        url: https://huggingface.co/papers
+        note: Daily AI paper discovery.
+      - name: NVIDIA Technical Blog
+        url: https://developer.nvidia.com/blog
+        note: GPU, CUDA, AI systems, and technical engineering posts.
+      - name: NVIDIA Blog
+        url: https://blogs.nvidia.com
+        note: NVIDIA news and applications.
+      - name: Amazon Science Blog
+        url: https://www.amazon.science/blog
+        note: Amazon research posts, including AI and machine learning.
+      - name: AWS Machine Learning Blog
+        url: https://aws.amazon.com/blogs/machine-learning
+        note: AWS ML engineering, product, and practice posts.
+      - name: Apple Machine Learning Research
+        url: https://machinelearning.apple.com
+        note: Apple machine learning research.
+      - name: Cohere Blog
+        url: https://cohere.com/blog
+        note: Cohere official blog.
+      - name: Cohere Research
+        url: https://cohere.com/research
+        note: Cohere research posts.
+      - name: Mistral AI News
+        url: https://mistral.ai/news
+        note: Mistral official news and releases.
+      - name: xAI News
+        url: https://x.ai/news
+        note: xAI official news.
+
+  - name: Academic Labs
+    sources:
+      - name: BAIR Blog
+        url: https://bair.berkeley.edu/blog
+        note: Berkeley AI Research blog.
+      - name: Stanford AI Lab Blog
+        url: https://ai.stanford.edu/blog
+        note: Stanford AI Lab blog.
+      - name: Stanford HAI News
+        url: https://hai.stanford.edu/news
+        note: Stanford HAI news and blog posts.
+      - name: MIT CSAIL News
+        url: https://www.csail.mit.edu/news
+        note: MIT CSAIL news.
+      - name: MIT LINGO Blog
+        url: https://lingo.csail.mit.edu/blog
+        note: MIT Language and Intelligence group blog.
+
+  - name: Personal Blogs and Newsletters
+    sources:
+      - name: Lilian Weng - Lil'Log
+        url: https://lilianweng.github.io
+        note: Long-form posts on reinforcement learning, LLMs, agents, and alignment.
+      - name: Jay Alammar Blog
+        url: https://jalammar.github.io
+        note: Visual explanations for machine learning and Transformers.
+      - name: Andrej Karpathy - Bear Blog
+        url: https://karpathy.bearblog.dev/blog
+        note: Andrej Karpathy's newer blog.
+      - name: Andrej Karpathy - Old Blog
+        url: https://karpathy.github.io
+        note: Older Karpathy blog posts.
+      - name: Sebastian Ruder Blog
+        url: https://www.ruder.io
+        note: NLP and machine learning blog.
+      - name: Sebastian Ruder Newsletter
+        url: https://newsletter.ruder.io
+        note: NLP news and newsletter.
+      - name: Import AI
+        url: https://jack-clark.net
+        note: Jack Clark's AI research and industry newsletter.
+      - name: Import AI Substack
+        url: https://importai.substack.com
+        note: Substack version of Import AI.
+      - name: Interconnects
+        url: https://www.interconnects.ai
+        note: Nathan Lambert's frontier AI research and industry newsletter.
+      - name: Latent Space
+        url: https://www.latent.space
+        note: AI Engineer newsletter and podcast.
+      - name: DeepLearning.AI - The Batch
+        url: https://www.deeplearning.ai/the-batch
+        note: AI news digest.
+      - name: Distill
+        url: https://distill.pub
+        note: Classic visual and explanatory machine learning articles.
+      - name: The Gradient
+        url: https://thegradient.pub
+        note: AI research, society, and commentary.

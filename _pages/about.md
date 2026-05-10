@@ -35,7 +35,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ACL 2026</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ACL 2026</span> <span>Main Conference</span></div>
       <h3>LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety</h3>
       <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Haoran Liu, Jinzhe Tu, Jiale Cheng, Zhexin Zhang, Shiyao Cui, Jiaqi Weng, Jialing Tao, Hui Xue, Hongning Wang, Han Qiu, Minlie Huang</p>
     </div>
@@ -51,7 +51,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ICLR 2026</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ICLR 2026</span> <span>Main Conference</span></div>
       <h3>BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs</h3>
       <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Jinzhe Tu, Haoran Liu, Xiaoce Wang, Chujie Zheng, Zhexin Zhang, Shiyao Cui, Caishun Chen, Tiantian He, Hongning Wang, Yew-Soon Ong, Minlie Huang.</p>
     </div>
@@ -67,7 +67,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ACL 2025</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ACL 2025</span> <span>Main Conference</span></div>
       <h3>Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints</h3>
       <p class="publication-card__authors"><strong>Junxiao Yang*</strong>, Zhexin Zhang*, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
     </div>
@@ -83,7 +83,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ACL 2024</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ACL 2024</span> <span>Main Conference</span></div>
       <h3>Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization</h3>
       <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Pei Ke, Fei Mi, Hongning Wang, Minlie Huang.</p>
     </div>
@@ -99,7 +99,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>AAAI 2025</span><span>Oral</span></div>
+      <div class="publication-card__meta"><span>AAAI 2025</span> <span>Oral</span></div>
       <h3>When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity</h3>
       <p class="publication-card__authors">Shiyao Cui, Xijia Feng, Yingkang Wang, <strong>Junxiao Yang</strong>, Zhexin Zhang, Biplab Sikdar, Hongning Wang, Han Qiu, Minlie Huang.</p>
     </div>
@@ -115,7 +115,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ACL 2026</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ACL 2026</span> <span>Main Conference</span></div>
       <h3>How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study</h3>
       <p class="publication-card__authors">Zhexin Zhang, Xian Qi Loye, Victor Shea-Jay Huang, <strong>Junxiao Yang</strong>, Qi Zhu, Shiyao Cui, Fei Mi, Lifeng Shang, Yingkang Wang, Hongning Wang, Minlie Huang.</p>
     </div>
@@ -131,7 +131,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>ICLR 2026</span><span>Main Conference</span></div>
+      <div class="publication-card__meta"><span>ICLR 2026</span> <span>Main Conference</span></div>
       <h3>Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!</h3>
       <p class="publication-card__authors">Zhexin Zhang, Yuhao Sun, <strong>Junxiao Yang</strong>, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
     </div>
@@ -147,7 +147,7 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>NeurIPS 2025</span><span>Workshop</span></div>
+      <div class="publication-card__meta"><span>NeurIPS 2025</span> <span>Workshop</span></div>
       <h3>Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks</h3>
       <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Yida Lu, Pei Ke, Shiyao Cui, Chujie Zheng, Hongning Wang, Minlie Huang.</p>
     </div>
@@ -163,16 +163,44 @@ Working Experiences
       </div>
     </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta"><span>AAAI 2025</span><span>Workshop</span></div>
+      <div class="publication-card__meta"><span>AAAI 2025</span> <span>Workshop</span></div>
       <h3>Agent-SafetyBench: Evaluating the Safety of LLM Agents</h3>
       <p class="publication-card__authors">Zhexin Zhang, Shiyao Cui, Yida Lu, Jingzhuo Zhou, <strong>Junxiao Yang</strong>, Hongning Wang, Minlie Huang.</p>
     </div>
   </article>
 </div>
 
-<h2 class="home-section-title">Resources</h2>
+<h2 class="home-section-title">Open Source Projects</h2>
 
 <div class="resource-list">
+  <article class="resource-card">
+    <a class="resource-card__media" href="https://github.com/camel-ai/camel" aria-label="CAMEL GitHub repository">
+      <img src="https://opengraph.githubassets.com/yangjunx21-homepage/camel-ai/camel" alt="" loading="lazy">
+    </a>
+    <div class="resource-card__body">
+      <h3>CAMEL</h3>
+      <p>A multi-agent framework for building, studying, and scaling agent systems.</p>
+      <div class="resource-card__links">
+        <a href="https://github.com/camel-ai/camel">GitHub</a>
+        <img src="https://img.shields.io/github/stars/camel-ai/camel?style=social" alt="GitHub stars">
+      </div>
+    </div>
+  </article>
+
+  <article class="resource-card">
+    <a class="resource-card__media" href="https://github.com/OpenCoworkAI/open-cowork" aria-label="Open Cowork GitHub repository">
+      <img src="/images/resource-thumbnails/open-cowork.png" alt="" loading="lazy">
+    </a>
+    <div class="resource-card__body">
+      <h3>Open Cowork</h3>
+      <p>Open-source AI agent desktop app for Windows and macOS.</p>
+      <div class="resource-card__links">
+        <a href="https://github.com/OpenCoworkAI/open-cowork">GitHub</a>
+        <img src="https://img.shields.io/github/stars/OpenCoworkAI/open-cowork?style=social" alt="GitHub stars">
+      </div>
+    </div>
+  </article>
+
   <article class="resource-card">
     <a class="resource-card__media" href="https://github.com/thu-coai/AISafetyLab" aria-label="AISafetyLab GitHub repository">
       <img src="/images/resource-thumbnails/aisafetylab.png" alt="" loading="lazy">
@@ -188,15 +216,29 @@ Working Experiences
   </article>
 
   <article class="resource-card">
-    <a class="resource-card__media" href="https://github.com/OpenCoworkAI/open-cowork" aria-label="Open Cowork GitHub repository">
-      <img src="/images/resource-thumbnails/open-cowork.png" alt="" loading="lazy">
+    <a class="resource-card__media" href="https://github.com/camel-ai/loong" aria-label="Loong GitHub repository">
+      <img src="https://opengraph.githubassets.com/yangjunx21-homepage/camel-ai/loong" alt="" loading="lazy">
     </a>
     <div class="resource-card__body">
-      <h3>Open Cowork</h3>
-      <p>Open-source Claude Cowork for Windows and macOS.</p>
+      <h3>Loong</h3>
+      <p>Synthesize long chain-of-thought data at scale through verifiers.</p>
       <div class="resource-card__links">
-        <a href="https://github.com/OpenCoworkAI/open-cowork">GitHub</a>
-        <img src="https://img.shields.io/github/stars/OpenCoworkAI/open-cowork?style=social" alt="GitHub stars">
+        <a href="https://github.com/camel-ai/loong">GitHub</a>
+        <img src="https://img.shields.io/github/stars/camel-ai/loong?style=social" alt="GitHub stars">
+      </div>
+    </div>
+  </article>
+
+  <article class="resource-card">
+    <a class="resource-card__media" href="https://github.com/OpenCoworkAI/open-codesign" aria-label="Open Codesign GitHub repository">
+      <img src="https://opengraph.githubassets.com/yangjunx21-homepage/OpenCoworkAI/open-codesign" alt="" loading="lazy">
+    </a>
+    <div class="resource-card__body">
+      <h3>Open Codesign</h3>
+      <p>Open-source design agent for turning prompts into prototypes, slides, and PDFs.</p>
+      <div class="resource-card__links">
+        <a href="https://github.com/OpenCoworkAI/open-codesign">GitHub</a>
+        <img src="https://img.shields.io/github/stars/OpenCoworkAI/open-codesign?style=social" alt="GitHub stars">
       </div>
     </div>
   </article>
