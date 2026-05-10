@@ -26,128 +26,146 @@ Working Experiences
 
 <div class="publication-list">
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2604.12710" aria-label="LASA paper">
-      <img src="/images/paper-thumbnails/lasa.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety</h3>
-      <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Haoran Liu, Jinzhe Tu, Jiale Cheng, Zhexin Zhang, Shiyao Cui, Jiaqi Weng, Jialing Tao, Hui Xue, Hongning Wang, Han Qiu, Minlie Huang</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2604.12710" aria-label="LASA paper">
+        <img src="/images/paper-thumbnails/lasa.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2604.12710">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>ACL 2026</span><span>Main Conference</span></div>
+      <h3>LASA: Language-Agnostic Semantic Alignment at the Semantic Bottleneck for LLM Safety</h3>
+      <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Haoran Liu, Jinzhe Tu, Jiale Cheng, Zhexin Zhang, Shiyao Cui, Jiaqi Weng, Jialing Tao, Hui Xue, Hongning Wang, Han Qiu, Minlie Huang</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.13529" aria-label="BARREL paper">
-      <img src="/images/paper-thumbnails/barrel.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs</h3>
-      <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Jinzhe Tu, Haoran Liu, Xiaoce Wang, Chujie Zheng, Zhexin Zhang, Shiyao Cui, Caishun Chen, Tiantian He, Hongning Wang, Yew-Soon Ong, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.13529" aria-label="BARREL paper">
+        <img src="/images/paper-thumbnails/barrel.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2505.13529">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>ICLR 2026</span><span>Main Conference</span></div>
+      <h3>BARREL: Boundary-Aware Reasoning for Factual and Reliable LRMs</h3>
+      <p class="publication-card__authors"><strong>Junxiao Yang</strong>, Jinzhe Tu, Haoran Liu, Xiaoce Wang, Chujie Zheng, Zhexin Zhang, Shiyao Cui, Caishun Chen, Tiantian He, Hongning Wang, Yew-Soon Ong, Minlie Huang.</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2503.01865" aria-label="Guiding not Forcing paper">
-      <img src="/images/paper-thumbnails/guiding-not-forcing.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints</h3>
-      <p class="publication-card__authors"><strong>Junxiao Yang*</strong>, Zhexin Zhang*, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2503.01865" aria-label="Guiding not Forcing paper">
+        <img src="/images/paper-thumbnails/guiding-not-forcing.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2503.01865">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>ACL 2025</span><span>Main Conference</span></div>
+      <h3>Guiding not Forcing: Enhancing the Transferability of Jailbreaking Attacks on LLMs via Removing Superfluous Constraints</h3>
+      <p class="publication-card__authors"><strong>Junxiao Yang*</strong>, Zhexin Zhang*, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2311.09096" aria-label="Goal Prioritization paper">
-      <img src="/images/paper-thumbnails/goal-prioritization.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization</h3>
-      <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Pei Ke, Fei Mi, Hongning Wang, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2311.09096" aria-label="Goal Prioritization paper">
+        <img src="/images/paper-thumbnails/goal-prioritization.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2311.09096">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>ACL 2024</span><span>Main Conference</span></div>
+      <h3>Defending Large Language Models Against Jailbreaking Attacks Through Goal Prioritization</h3>
+      <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Pei Ke, Fei Mi, Hongning Wang, Minlie Huang.</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2509.11141" aria-label="Emoji toxicity paper">
-      <img src="/images/paper-thumbnails/emoji-toxicity.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Oral</div>
-      <h3>When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity</h3>
-      <p class="publication-card__authors">Shiyao Cui, Xijia Feng, Yingkang Wang, <strong>Junxiao Yang</strong>, Zhexin Zhang, Biplab Sikdar, Hongning Wang, Han Qiu, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2509.11141" aria-label="Emoji toxicity paper">
+        <img src="/images/paper-thumbnails/emoji-toxicity.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2509.11141">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>AAAI 2025</span><span>Oral</span></div>
+      <h3>When Smiley Turns Hostile: Interpreting How Emojis Trigger LLMs' Toxicity</h3>
+      <p class="publication-card__authors">Shiyao Cui, Xijia Feng, Yingkang Wang, <strong>Junxiao Yang</strong>, Zhexin Zhang, Biplab Sikdar, Hongning Wang, Han Qiu, Minlie Huang.</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.15404" aria-label="Large Reasoning Models safety study paper">
-      <img src="/images/paper-thumbnails/lrm-safety-study.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study</h3>
-      <p class="publication-card__authors">Zhexin Zhang, Xian Qi Loye, Victor Shea-Jay Huang, <strong>Junxiao Yang</strong>, Qi Zhu, Shiyao Cui, Fei Mi, Lifeng Shang, Yingkang Wang, Hongning Wang, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.15404" aria-label="Large Reasoning Models safety study paper">
+        <img src="/images/paper-thumbnails/lrm-safety-study.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2505.15404">Paper</a>
       </div>
     </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>ACL 2026</span><span>Main Conference</span></div>
+      <h3>How Should We Enhance the Safety of Large Reasoning Models: An Empirical Study</h3>
+      <p class="publication-card__authors">Zhexin Zhang, Xian Qi Loye, Victor Shea-Jay Huang, <strong>Junxiao Yang</strong>, Qi Zhu, Shiyao Cui, Fei Mi, Lifeng Shang, Yingkang Wang, Hongning Wang, Minlie Huang.</p>
+    </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.15656" aria-label="Fine-tuning data stealing paper">
-      <img src="/images/paper-thumbnails/data-stealing.png" alt="" loading="lazy">
-    </a>
-    <div class="publication-card__body">
-      <div class="publication-card__meta">Main Conference</div>
-      <h3>Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!</h3>
-      <p class="publication-card__authors">Zhexin Zhang, Yuhao Sun, <strong>Junxiao Yang</strong>, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2505.15656" aria-label="Fine-tuning data stealing paper">
+        <img src="/images/paper-thumbnails/data-stealing.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2505.15656">Paper</a>
       </div>
     </div>
-  </article>
-
-  <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2407.02855" aria-label="Safe Unlearning paper">
-      <img src="/images/paper-thumbnails/safe-unlearning.png" alt="" loading="lazy">
-    </a>
     <div class="publication-card__body">
-      <div class="publication-card__meta">Workshop</div>
-      <h3>Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks</h3>
-      <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Yida Lu, Pei Ke, Shiyao Cui, Chujie Zheng, Hongning Wang, Minlie Huang.</p>
-      <div class="publication-card__links">
-        <a href="https://arxiv.org/abs/2407.02855">Paper</a>
-      </div>
+      <div class="publication-card__meta"><span>ICLR 2026</span><span>Main Conference</span></div>
+      <h3>Be Careful When Fine-tuning On Open-Source LLMs: Your Fine-tuning Data Could Be Secretly Stolen!</h3>
+      <p class="publication-card__authors">Zhexin Zhang, Yuhao Sun, <strong>Junxiao Yang</strong>, Shiyao Cui, Hongning Wang, Minlie Huang.</p>
     </div>
   </article>
 
   <article class="publication-card">
-    <a class="publication-card__thumb" href="https://arxiv.org/abs/2412.14470" aria-label="Agent-SafetyBench paper">
-      <img src="/images/paper-thumbnails/agent-safetybench.png" alt="" loading="lazy">
-    </a>
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2407.02855" aria-label="Safe Unlearning paper">
+        <img src="/images/paper-thumbnails/safe-unlearning.png" alt="" loading="lazy">
+      </a>
+      <div class="publication-card__links">
+        <a href="https://arxiv.org/abs/2407.02855">Paper</a>
+      </div>
+    </div>
     <div class="publication-card__body">
-      <div class="publication-card__meta">Workshop</div>
-      <h3>Agent-SafetyBench: Evaluating the Safety of LLM Agents</h3>
-      <p class="publication-card__authors">Zhexin Zhang, Shiyao Cui, Yida Lu, Jingzhuo Zhou, <strong>Junxiao Yang</strong>, Hongning Wang, Minlie Huang.</p>
+      <div class="publication-card__meta"><span>NeurIPS 2025</span><span>Workshop</span></div>
+      <h3>Safe Unlearning: A Surprisingly Effective and Generalizable Solution to Defend Against Jailbreak Attacks</h3>
+      <p class="publication-card__authors">Zhexin Zhang*, <strong>Junxiao Yang*</strong>, Yida Lu, Pei Ke, Shiyao Cui, Chujie Zheng, Hongning Wang, Minlie Huang.</p>
+    </div>
+  </article>
+
+  <article class="publication-card">
+    <div class="publication-card__side">
+      <a class="publication-card__thumb" href="https://arxiv.org/abs/2412.14470" aria-label="Agent-SafetyBench paper">
+        <img src="/images/paper-thumbnails/agent-safetybench.png" alt="" loading="lazy">
+      </a>
       <div class="publication-card__links">
         <a href="https://arxiv.org/abs/2412.14470">Paper</a>
       </div>
+    </div>
+    <div class="publication-card__body">
+      <div class="publication-card__meta"><span>AAAI 2025</span><span>Workshop</span></div>
+      <h3>Agent-SafetyBench: Evaluating the Safety of LLM Agents</h3>
+      <p class="publication-card__authors">Zhexin Zhang, Shiyao Cui, Yida Lu, Jingzhuo Zhou, <strong>Junxiao Yang</strong>, Hongning Wang, Minlie Huang.</p>
     </div>
   </article>
 </div>
