@@ -10,7 +10,7 @@ author_profile: true
 
 <section class="daily-news-hero">
   <p class="daily-news-kicker">AI research, safety, product, and engineering links</p>
-  <h2>Daily News</h2>
+  <h2>Latest AI Reading</h2>
   {% if site.data.daily_news.window_days %}
     <p class="daily-news-window">Source-dated posts from the last {{ site.data.daily_news.window_days }} days</p>
   {% endif %}
@@ -36,9 +36,12 @@ author_profile: true
           <div class="timeline-items">
         {% assign current_day = item_day %}
       {% endif %}
-          <article class="daily-news-card">
+          <article class="daily-news-card daily-news-card--{{ item.source_tone | default: 'default' }}">
             <div class="daily-news-card__meta">
-              <a href="{{ item.source_url }}">{{ item.source }}</a>
+              <a class="source-badge source-badge--{{ item.source_tone | default: 'default' }}" href="{{ item.source_url }}">{{ item.source }}</a>
+              {% if item.source_group %}
+                <span>{{ item.source_group }}</span>
+              {% endif %}
             </div>
             <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
             {% if item.summary %}

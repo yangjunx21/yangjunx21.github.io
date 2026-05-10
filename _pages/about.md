@@ -196,6 +196,7 @@ Working Experiences
       <p>Open-source AI agent desktop app for Windows and macOS.</p>
       <div class="resource-card__links">
         <a href="https://github.com/OpenCoworkAI/open-cowork">GitHub</a>
+        <span class="resource-card__role">Core Lead</span>
         <img src="https://img.shields.io/github/stars/OpenCoworkAI/open-cowork?style=social" alt="GitHub stars">
       </div>
     </div>
@@ -210,6 +211,7 @@ Working Experiences
       <p>A comprehensive framework for AI safety evaluation and improvement.</p>
       <div class="resource-card__links">
         <a href="https://github.com/thu-coai/AISafetyLab">GitHub</a>
+        <span class="resource-card__role">Core Lead</span>
         <img src="https://img.shields.io/github/stars/thu-coai/AISafetyLab?style=social" alt="GitHub stars">
       </div>
     </div>
@@ -224,6 +226,7 @@ Working Experiences
       <p>Synthesize long chain-of-thought data at scale through verifiers.</p>
       <div class="resource-card__links">
         <a href="https://github.com/camel-ai/loong">GitHub</a>
+        <span class="resource-card__role">Core Lead</span>
         <img src="https://img.shields.io/github/stars/camel-ai/loong?style=social" alt="GitHub stars">
       </div>
     </div>
@@ -238,6 +241,7 @@ Working Experiences
       <p>Open-source design agent for turning prompts into prototypes, slides, and PDFs.</p>
       <div class="resource-card__links">
         <a href="https://github.com/OpenCoworkAI/open-codesign">GitHub</a>
+        <span class="resource-card__role">Core Lead</span>
         <img src="https://img.shields.io/github/stars/OpenCoworkAI/open-codesign?style=social" alt="GitHub stars">
       </div>
     </div>

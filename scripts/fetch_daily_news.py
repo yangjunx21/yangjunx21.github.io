@@ -35,6 +35,14 @@ TIMEOUT = 8
 MAX_SOURCES = 160
 MAX_WORKERS = 12
 
+TONE_BY_GROUP = {
+    "Frontier Labs": "frontier",
+    "AI Safety and Governance": "safety",
+    "AI Companies and Research Labs": "industry",
+    "Academic Labs": "community",
+    "Personal Blogs and Newsletters": "community",
+}
+
 COMMON_FEED_PATHS = (
     "feed",
     "feed.xml",
@@ -64,6 +72,8 @@ class FeedItem:
     url: str
     source: str
     source_url: str
+    source_group: str
+    source_tone: str
     published_at: str | None
     timestamp: float
     summary: str
@@ -242,6 +252,8 @@ def parse_feed(xml_text: str, source: dict, feed_url: str) -> list[FeedItem]:
                 url=link,
                 source=source["name"],
                 source_url=normalize_url(source["url"]),
+                source_group=source.get("group", ""),
+                source_tone=TONE_BY_GROUP.get(source.get("group", ""), "default"),
                 published_at=published_at,
                 timestamp=timestamp,
                 summary=clean_summary(summary),
@@ -327,6 +339,8 @@ def write_output(items: list[FeedItem], failures: list[str], days: int) -> None:
                 "url": item.url,
                 "source": item.source,
                 "source_url": item.source_url,
+                "source_group": item.source_group,
+                "source_tone": item.source_tone,
                 "published_at": item.published_at,
                 "summary": item.summary,
             }

@@ -243,7 +243,8 @@
 
   .publication-card__links a,
   .resource-card__links a,
-  .publication-card__status {
+  .publication-card__status,
+  .resource-card__role {
     display: inline-flex;
     align-items: center;
     min-height: 1.85em;
@@ -270,7 +271,8 @@
     background: $info-color;
   }
 
-  .publication-card__status {
+  .publication-card__status,
+  .resource-card__role {
     color: mix(#fff, $text-color, 15%);
     border-color: mix(#fff, $gray, 70%);
     background: mix(#fff, $gray, 92%);
@@ -311,17 +313,18 @@
   }
 
   .daily-news-hero {
-    margin: 0 0 1.25em;
-    padding: 1.1em 1.2em;
+    margin: 0 0 1.1em;
+    padding: 0.95em 1.05em;
     border: 1px solid mix(#fff, $border-color, 20%);
     border-radius: 8px;
-    background: linear-gradient(135deg, mix(#fff, $info-color, 94%) 0%, #fff 64%);
+    background: linear-gradient(135deg, #f8fbfc 0%, #fff 72%);
 
     h2 {
       margin: 0.1em 0 0.15em;
       padding: 0;
       border: 0;
       color: $darker-gray;
+      font-size: 1.2em;
     }
 
     p {
@@ -347,55 +350,64 @@
   .daily-news-timeline {
     display: flex;
     flex-direction: column;
-    gap: 1.1em;
-    margin: 1.1em 0 2em;
+    gap: 1em;
+    margin: 1em 0 2em;
   }
 
   .timeline-day {
-    display: grid;
-    grid-template-columns: 112px minmax(0, 1fr);
-    gap: 0.9em;
+    display: block;
   }
 
   .timeline-date {
-    padding-top: 0.35em;
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin: 0 0 0.55em;
     color: $darker-gray;
-    font-size: 0.78em;
+    font-size: 0.8em;
     font-weight: 800;
     letter-spacing: 0;
     text-transform: uppercase;
+  }
+
+  .timeline-date:after {
+    flex: 1 1 auto;
+    height: 1px;
+    background: mix(#fff, $border-color, 10%);
+    content: "";
   }
 
   .timeline-items {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 0.72em;
+    gap: 0.65em;
+    margin-left: 0.65em;
     padding-left: 1em;
-    border-left: 2px solid mix(#fff, $info-color, 76%);
+    border-left: 2px solid mix(#fff, $gray, 82%);
   }
 
   .daily-news-card,
   .source-card {
     position: relative;
-    padding: 0.85em;
+    padding: 0.78em 0.85em;
     border: 1px solid mix(#fff, $border-color, 20%);
     border-radius: 8px;
     background: #fff;
     box-shadow: 0 8px 20px rgba(#1f2933, 0.06);
 
     h3 {
-      margin: 0 0 0.35em;
+      margin: 0 0 0.3em;
       color: $darker-gray;
-      font-size: 0.95em;
+      font-size: 0.9em;
       line-height: 1.32;
     }
 
     p {
       margin: 0;
       color: mix(#fff, $text-color, 12%);
-      font-size: 0.82em;
-      line-height: 1.45;
+      font-size: 0.78em;
+      line-height: 1.42;
     }
 
     a {
@@ -407,16 +419,52 @@
     }
   }
 
+  .daily-news-card {
+    --source-color: #52adc8;
+    --source-bg: #edf8fb;
+    --source-text: #2e7f95;
+    --source-ring: #d7edf4;
+    border-left: 3px solid var(--source-color);
+  }
+
+  .daily-news-card--frontier {
+    --source-color: #4e79a7;
+    --source-bg: #edf4fb;
+    --source-text: #2b5b84;
+    --source-ring: #d9e7f4;
+  }
+
+  .daily-news-card--safety {
+    --source-color: #4f9368;
+    --source-bg: #eef8f2;
+    --source-text: #2f704a;
+    --source-ring: #d8eddf;
+  }
+
+  .daily-news-card--industry {
+    --source-color: #b9792a;
+    --source-bg: #fff6e8;
+    --source-text: #875719;
+    --source-ring: #f3dfbd;
+  }
+
+  .daily-news-card--community {
+    --source-color: #8568aa;
+    --source-bg: #f6f1fb;
+    --source-text: #654b8c;
+    --source-ring: #e6daf2;
+  }
+
   .daily-news-card:before {
     position: absolute;
     top: 1.05em;
-    left: calc(-1em - 6px);
+    left: calc(-1em - 6.5px);
     width: 10px;
     height: 10px;
     border: 2px solid #fff;
     border-radius: 50%;
-    background: $info-color;
-    box-shadow: 0 0 0 2px mix(#fff, $info-color, 76%);
+    background: var(--source-color);
+    box-shadow: 0 0 0 2px var(--source-ring);
     content: "";
   }
 
@@ -431,7 +479,7 @@
     text-transform: uppercase;
 
     a,
-    time {
+    span {
       display: inline-flex;
       align-items: center;
       min-height: 1.65em;
@@ -441,8 +489,8 @@
     }
 
     a {
-      color: $link-color-hover;
-      background: mix(#fff, $info-color, 90%);
+      color: var(--source-text);
+      background: var(--source-bg);
     }
   }
 
