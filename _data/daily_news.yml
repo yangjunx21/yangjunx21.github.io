@@ -1,6 +1,102 @@
-updated_at: '2026-05-23T00:09:50.572621Z'
+updated_at: '2026-05-26T00:08:16.193035Z'
 window_days: 14
 items:
+- title: Pope Leo’s First AI Encyclical – Summary and Commentary
+  url: https://www.lesswrong.com/posts/CdhrAFXDjrrpX48pG/pope-leo-s-first-ai-encyclical-summary-and-commentary
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T23:48:46Z'
+  summary: (Adapted from a post on my Substack.) Today, Pope Leo XIV released his long-awaited encyclical letter about artificial intelligence, addressed not just to the Catholic Church, but to all people of good will, all over th...
+- title: Cognitive Security as an AI Safety Cause Area
+  url: https://www.lesswrong.com/posts/KGcE7eAdfxHchk25X/cognitive-security-as-an-ai-safety-cause-area
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T18:30:15Z'
+  summary: As AI systems become more capable, the cognitive security of humans will be increasingly at risk. By cognitive security, I mean the ability of humans to maintain control over their beliefs and actions. Cognitive securit...
+- title: Sentient Welfare Across Three Futures
+  url: https://www.lesswrong.com/posts/N7sCXKfJ7RCJ9toyK/sentient-welfare-across-three-futures
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T16:22:55Z'
+  summary: 'Cross-posted from my website . Three categories of futures, depending on how AI goes: ASI timelines are long. ASI timelines are short, and we''re on track to solving AI alignment. ASI timelines are short, and we''re not o...'
+- title: 'Linkpost: New Vatican Encyclical on AI Governance'
+  url: https://www.lesswrong.com/posts/ehdv7z7L7ESxtKL4j/linkpost-new-vatican-encyclical-on-ai-governance
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T15:40:59Z'
+  summary: Pope Leo XIV has released a new, 42k-word encyclical laying out the Vatican's position on many AI safety topics. You can read the full thing here , or read the Vatican's press release here , or coverage in the NY Times,...
+- title: How AI Will Save Prediction Markets
+  url: https://www.lesswrong.com/posts/Ab3NKBkrLhm6ssszH/how-ai-will-save-prediction-markets
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T14:24:33Z'
+  summary: The first fully-developed formulation of general-purpose prediction markets originated with Robin Hanson's Idea Futures (1990) , a technology "intended to aid the evolution of a wide range of ideas, from public policy t...
+- title: Character-trained models can struggle to generalise
+  url: https://www.lesswrong.com/posts/EWsLQbGCfuCpXaBiP/character-trained-models-can-struggle-to-generalise-1
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T12:58:20Z'
+  summary: TL;DR Character training holds up in chat but degrades in agentic settings. Wrapping the same checkpoint in a tool-use loop instead of a chat turn weakens persona expression, suggesting the training only partly transfer...
+- title: Applications open for the Secure Program Synthesis Fellowship
+  url: https://www.lesswrong.com/posts/RmKGiB8xmPK2hGmB9/applications-open-for-the-secure-program-synthesis
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T10:04:06Z'
+  summary: 'TL;DR: Applications are now open for the Secure Program Synthesis Fellowship , powered by Apart Research and Atlas computing . Apply by Sunday the 31st of May . This fellowship offers part-time research opportunities on...'
+- title: Announcing the Frontier Biodefense Fellowship (deadline 2 June)
+  url: https://www.lesswrong.com/posts/D2BkWLA5mfhxTnHCW/announcing-the-frontier-biodefense-fellowship-deadline-2
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-25T07:58:28Z'
+  summary: 'August 3 to October 2, 2026 in London | Applications close June 2 (AoE) TL;DR: We''re running our first Frontier Biodefense Fellowship at pivotal . Nine weeks, fully funded, 1:1 mentorship from Blueprint, SecureBio, SynX...'
+- title: Harness, Scaffold, and the AI Agent Terms Worth Getting Right
+  url: https://huggingface.co/blog/agent-glossary
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-25T00:00:00Z'
+  summary: ''
+- title: Taxing Small Cars To Improve MPG
+  url: https://www.lesswrong.com/posts/7K8Bnn6Pwh5ciXpKR/taxing-small-cars-to-improve-mpg
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-24T21:50:06Z'
+  summary: Cars and trucks are getting bigger, and I had a vague sense that fuel economy regulations were partly to blame. Looking into it, it's hard to say how much is regulations vs people wanting to buy vehicles that look rugge...
+- title: A (Slightly) Mechanistic Theory for Exponentially Increasing AI Time Horizons?
+  url: https://www.lesswrong.com/posts/zT76JcomKkdqo8tC6/a-slightly-mechanistic-theory-for-exponentially-increasing
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-24T15:52:15Z'
+  summary: AI ‘time horizons’ are mostly not about time (I think it’s mostly ‘data’, but you’ll see where I’m unsure). One chart from 2025 has become perhaps the most (in)famous in modern AI commentary. For those in the know, ‘ th...
+- title: '[AINews] All Model Labs are now Agent Labs'
+  url: https://www.latent.space/p/ainews-all-model-labs-are-now-agent
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-05-23T04:21:17Z'
+  summary: a quiet day lets us tie together a few quotes as all model labs become agent labs
 - title: Towards Speed-of-Light Text Generation with Nemotron-Labs Diffusion Language Models
   url: https://huggingface.co/blog/nvidia/nemotron-labs-diffusion
   source: Hugging Face Blog
@@ -9,38 +105,6 @@ items:
   source_tone: industry
   published_at: '2026-05-23T00:02:03Z'
   summary: ''
-- title: Will we really put data centers in space?
-  url: https://www.lesswrong.com/posts/65ECgHzWxTRvt8XWK/will-we-really-put-data-centers-in-space
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T23:51:44Z'
-  summary: 'Abstract Several major technology companies have announced plans to operate AI data centers in orbit. Elon Musk recently claimed : “the lowest-cost place to put AI will be space […] within two years, maybe three.” If a...'
-- title: We made a map of the doom debate
-  url: https://www.lesswrong.com/posts/dZZD5Lviid2mALAZL/we-made-a-map-of-the-doom-debate
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T23:24:09Z'
-  summary: This was produced as a part of the AI Safety Camp 2026 "Assumptions of the Doom Debate" project, led by Sean Herrington, who was also the lead author on this post. The other participants have equal contributions and are...
-- title: Which technical AI safety fields are going to be automated first?
-  url: https://www.lesswrong.com/posts/EnBCpnZooXdMaERbZ/which-technical-ai-safety-fields-are-going-to-be-automated
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T17:56:31Z'
-  summary: I’m transitioning into technical AI safety, and I find myself thinking a lot about what fields I want to research and where I’ll have the biggest impact. One thing I’ve found myself thinking about a lot recently is what...
-- title: Gemini 3.5 Flash Looks Good For How Fast It Is
-  url: https://www.lesswrong.com/posts/WMZpPxqWEkZBBcaxf/gemini-3-5-flash-looks-good-for-how-fast-it-is
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T17:30:15Z'
-  summary: Google once again has a model worth at least some consideration. Gemini 3.5 Flash is likely the best model out there at its particular speed point, as long as you don’t mind that it is a Gemini model. So for cases where...
 - title: NVIDIA-Verified Agent Skills Provide Capability Governance for AI Agents
   url: https://developer.nvidia.com/blog/nvidia-verified-agent-skills-provide-capability-governance-for-ai-agents/
   source: NVIDIA Technical Blog
@@ -57,14 +121,6 @@ items:
   source_tone: industry
   published_at: '2026-05-22T16:46:50Z'
   summary: Agent harnesses like Claude Code, Codex, and LangChain Deep Agents are excellent orchestrators. They manage sessions, chain tools, execute code, and respond to...
-- title: 'The AI Industrial Explosion — Part 3: Going faster'
-  url: https://www.lesswrong.com/posts/drvdPzHysdiDEpoQE/the-ai-industrial-explosion-part-3-going-faster
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T16:38:57Z'
-  summary: In Part 1 , I found that a fully automated economy using today's production methods could double roughly every year. In Part 2 , I modeled the transition from today's economy to that maximum-growth composition and found...
 - title: Synthesize Realistic 3D Medical Images at Scale to Ship Pre‑Trained Models
   url: https://developer.nvidia.com/blog/synthesize-realistic-3d-medical-images-at-scale-to-ship-pre-trained-models/
   source: NVIDIA Technical Blog
@@ -81,14 +137,6 @@ items:
   source_tone: safety
   published_at: '2026-05-22T16:07:36Z'
   summary: View the official memo here. An internal model at OpenAI has autonomously disproved a central conjecture in discrete geometry, a mathematical field with applications in cryptography, wireless device communication, and m...
-- title: Notes on Collaborating with Claude Opus
-  url: https://www.lesswrong.com/posts/5abm94pmRn8pXiHtw/notes-on-collaborating-with-claude-opus
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T15:35:34Z'
-  summary: 'INTENT : Share elements of my mental model regarding collaboration with Claude Opus models. Not intentionally scoped to a specific model version, but my experience is generally with the latest model version available (4...'
 - title: 'Specialization Beats Scale: A Strategic Variable Most AI Procurement Decisions Overlook'
   url: https://huggingface.co/blog/Dharma-AI/specialization-beats-scale
   source: Hugging Face Blog
@@ -97,38 +145,6 @@ items:
   source_tone: industry
   published_at: '2026-05-22T15:25:59Z'
   summary: ''
-- title: 'Proposal for "Timelines to what": DIAL distribution'
-  url: https://www.lesswrong.com/posts/tXyu3kFkXdhP8jJKB/proposal-for-timelines-to-what-dial-distribution
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T14:40:47Z'
-  summary: This is a linkpost for my post on the Coefficient Giving Substack today, which bundles a few points about AI timelines that I think are important to keep in mind when making decisions. TLDR, when making decisions with r...
-- title: Insurance Premiums To The Moon
-  url: https://www.lesswrong.com/posts/4qHAarKCr3ANpAAgj/insurance-premiums-to-the-moon
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T12:06:51Z'
-  summary: '(This post does not belabor why most people want or need insurance. That has been extensively discussed: What makes buying insurance rational? , When Is Insurance Worth It? , Money threshold Trigger Action Patterns .) W...'
-- title: AI is Not Normal Technology
-  url: https://www.lesswrong.com/posts/F2mwKxFRhjqizA89p/ai-is-not-normal-technology
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T10:27:48Z'
-  summary: Last year, Arvind Narayanan and Sayash Kapoor published a now well-circulated essay, AI as Normal Technology . The essay is still popular, I think, primarily because people would like it to be true, myself included. It...
-- title: Counting Arguments in AI Safety
-  url: https://www.lesswrong.com/posts/jkrSyy3pC6eDrurDQ/counting-arguments-in-ai-safety
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T08:43:47Z'
-  summary: cf. https://www.lesswrong.com/posts/YsFZF3K9tuzbfrLxo/counting-arguments-provide-no-evidence-for-ai-doom , https://www.lesswrong.com/posts/yQSmcfN4kA7rATHGK/many-arguments-for-ai-x-risk-are-wrong A counting argument is...
 - title: '[AINews] New AI Infra unicorns: Exa, Modal, TurboPuffer'
   url: https://www.latent.space/p/ainews-new-ai-infra-unicorns-exa
   source: Latent Space
@@ -593,14 +609,6 @@ items:
   source_tone: community
   published_at: '2026-05-15T00:30:21Z'
   summary: an ultra quiet day lets us highlight a smaller trend.
-- title: 'AI-Native Healthcare: 100M Doctor Visits, 10–20 Hours Saved, Prior Auth in Minutes — Janie Lee & Chai Asawa, Abridge'
-  url: https://www.latent.space/p/abridge
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-14T22:05:31Z'
-  summary: How Abridge is quietly turning the patient and clinician conversation into the operating system of healthcare
 - title: How the NVIDIA Vera Rubin Platform is Solving Agentic AI’s Scale-Up Problem
   url: https://developer.nvidia.com/blog/how-the-nvidia-vera-rubin-platform-is-solving-agentic-ais-scale-up-problem/
   source: NVIDIA Technical Blog
@@ -633,35 +641,27 @@ items:
   source_tone: industry
   published_at: '2026-05-14T00:00:00Z'
   summary: ''
-- title: Verbalized Eval Awareness Inflates Measured Safety
-  url: https://www.goodfire.ai/research/verbalized-eval-awareness-inflates-measured-safety
-  source: Goodfire Research
-  source_url: https://www.goodfire.ai/research
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-13T22:16:54Z'
-  summary: ''
 unavailable_sources:
 - AI Alignment Forum
 - AI Alignment
 - Anthropic Alignment Science
-- FAR.AI Blog
 - Epoch AI Blog
-- CAIS Blog
 - Epoch AI Latest
-- Apple Machine Learning Research
+- FAR.AI Blog
 - Hugging Face Daily Papers
-- xAI News
+- CAIS Blog
+- Apple Machine Learning Research
 - Apollo Research Blog
-- Goodfire Blog
+- xAI News
+- Cohere Research
 - MIT LINGO Blog
 - Stanford HAI News
-- Import AI Substack
 - Amazon Science Blog
-- Cohere Research
-- DeepLearning.AI - The Batch
+- Import AI Substack
+- Goodfire Blog
 - Cohere Blog
-- Anthropic Engineering
-- Meta AI Blog
+- DeepLearning.AI - The Batch
 - Mistral AI News
+- Meta AI Blog
 - Anthropic Research
+- Anthropic Engineering
