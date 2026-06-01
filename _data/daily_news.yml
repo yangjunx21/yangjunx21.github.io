@@ -1,54 +1,158 @@
-updated_at: '2026-05-29T00:13:37.103617Z'
+updated_at: '2026-06-01T00:09:00.297652Z'
 window_days: 14
 items:
+- title: NLA Thought Anchors
+  url: https://www.lesswrong.com/posts/6HnnMHRoJLff46kgw/nla-thought-anchors
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T23:38:00Z'
+  summary: 'The following post seeks to look further into why NLA (Natural Language Autoencoders) contains the prediction more often when the original activations led to the correct output than incorrect output. Quick Summary: Extr...'
+- title: Lighthaven East - A Feasibility Study
+  url: https://www.lesswrong.com/posts/95NgkvZKJx8tJbtn5/lighthaven-east-a-feasibility-study
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T22:53:56Z'
+  summary: As a bureaucrat, my role is to annoy my friends. Someone voices an idea, “Wouldn’t it be nice if…” or “I wonder if we could…” I make a note. I do some estimates. If it pencils out, I’ll bring it back up, week after week...
+- title: Barriers to a Prosperous Future
+  url: https://www.lesswrong.com/posts/nscD2pEZoQ7tqfrQb/barriers-to-a-prosperous-future
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T21:40:01Z'
+  summary: The current race towards producing general artificial intelligence systems brings with it severe risks, yet no AI company developing frontier models is addressing these risks at a level proportional to the pace of devel...
+- title: Notes on axes of variation in third-party risk assessment
+  url: https://www.lesswrong.com/posts/oGTajcGwxxFG4Z7eN/notes-on-axes-of-variation-in-third-party-risk-assessment
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T20:48:06Z'
+  summary: There are many different activities that could be described as "third-party risk assessment". Here are some distinctions that I’ve found helpful thinking about the space over the last few weeks. (Thanks Ajeya Cotra and...
+- title: 'The main impact from automated AI production: concentration of power?'
+  url: https://www.lesswrong.com/posts/ocNf6GumA5jzGXyZP/the-main-impact-from-automated-ai-production-concentration
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T20:42:00Z'
+  summary: 'There’s a lot of talk about automated AI R&D and the like. It’s been discussed since at least 1965 when statistician I.J. Good coined the term ‘intelligence explosion’ : an ultraintelligent machine could design even bet...'
+- title: A Song About No
+  url: https://www.lesswrong.com/posts/WdxxdeYWvGAawzMmJ/a-song-about-no
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T20:40:45Z'
+  summary: 'When Lily was about two she told me she wanted a song about "no". This was ten years ago, and I don''t remember why she wanted this, but I made something up: This is a song about no. This is a song about no. This is a so...'
+- title: Financial Costs of an AI Pause?
+  url: https://www.lesswrong.com/posts/YJWe9tT7LDYefK4vE/financial-costs-of-an-ai-pause
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T18:55:36Z'
+  summary: 'I’ve analyzed the near-term economic effects of an AI pause, out of concern for my investments, and a desire to predict how strong political opposition to a pause is likely to be. My median estimates: The S&P 500 will d...'
+- title: Food, water and power from thin desert air
+  url: https://www.lesswrong.com/posts/fxHAARDwMtd4doznz/food-water-and-power-from-thin-desert-air
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T15:24:50Z'
+  summary: 'Wavelength-selective agrivoltaics are here: solar panels that are transparent in the wavelengths chlorophyll can use, while generating electricity from other wavelengths. Meanwhile, the harvesting of water from even air...'
+- title: Outrunning your headlights
+  url: https://www.lesswrong.com/posts/L8YFcCw5ex3qjLyoJ/outrunning-your-headlights
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T13:46:53Z'
+  summary: This is exactly the right place to probe. Gromov-Wasserstein is genuinely dimension free. Partial and semi-relaxed are precisely the mechanisms for the abstention/coverage problem we have. Want me to make a new branch a...
+- title: 'Links #2: 2026/05 Part 2'
+  url: https://www.lesswrong.com/posts/TPn6FufyNvAm939aT/links-2-2026-05-part-2
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-31T13:41:24Z'
+  summary: Preface ^means articles I read in full, otherwise assume I skimmed it I show my discovery graph in (via …) blocks, those without (via …) usually come from my RSS reader, or the algorithm in the corresponding website Thi...
+- title: '[AINews] Founders and Forward Deployed Engineers'
+  url: https://www.latent.space/p/ainews-founders-and-forward-deployed
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-05-30T01:57:15Z'
+  summary: a quiet day lets us highlight the new AIE WF focuses
+- title: 'Comprehensive observability for Amazon SageMaker AI LLM inference: From GPU utilization to LLM quality'
+  url: https://aws.amazon.com/blogs/machine-learning/comprehensive-observability-for-amazon-sagemaker-ai-llm-inference-from-gpu-utilization-to-llm-quality/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-29T23:36:58Z'
+  summary: This post demonstrates a comprehensive observability solution using Amazon Managed Grafana dashboards that provides a holistic view of both quality and quantity for LLMs served on Amazon SageMaker AI endpoints with infe...
+- title: 'DynoSim: Simulating the Pareto Frontier'
+  url: https://developer.nvidia.com/blog/dynosim-simulating-the-pareto-frontier/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-29T22:31:38Z'
+  summary: 'Modern LLM serving is hard to tune because each deployment is a stack of interacting choices: model backend, tensor-parallel shape, prefill/decode split, worker...'
+- title: Retrying vs Resampling in AI Control
+  url: https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-29T17:01:53Z'
+  summary: 'We’ve just released a new paper: Retrying vs Resampling in AI Control. We revisit the resampling protocols introduced in Ctrl-Z with an up-to-date setting and much stronger models, and compare them against “retrying” pr...'
+- title: NVIDIA CUDA 13.3 Enhances GPU Development with Tile Programming in C++, Compiler Autotuning, and Python Updates
+  url: https://developer.nvidia.com/blog/nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-29T16:28:19Z'
+  summary: NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA Tile programming in...
+- title: How to Automate AI Model Documentation with the NVIDIA MCG Toolkit
+  url: https://developer.nvidia.com/blog/how-to-automate-ai-model-documentation-with-the-nvidia-mcg-toolkit/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-29T14:27:00Z'
+  summary: As AI models grow in complexity and regulatory scrutiny intensifies under frameworks including California’s AB-2013 and the EU AI Act, software teams...
+- title: '[AINews] Anthropic raises $965B Series H, releases Opus 4.8 and Dynamic Workflows/ultracode'
+  url: https://www.latent.space/p/ainews-anthropic-raises-965b-series
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-05-29T02:07:24Z'
+  summary: Total Anthropic victory!
 - title: Run Step 3.7 Flash on NVIDIA GPUs with Enterprise-Ready Multimodal AI
   url: https://developer.nvidia.com/blog/run-step-3-7-flash-on-nvidia-gpus-with-enterprise-ready-multimodal-ai/
   source: NVIDIA Technical Blog
   source_url: https://developer.nvidia.com/blog
   source_group: AI Companies and Research Labs
   source_tone: industry
-  published_at: '2026-05-29T00:09:51Z'
+  published_at: '2026-05-29T00:21:45Z'
   summary: AI applications are moving beyond text generation to multimodal systems that can perceive, search, and reason across images, documents, video, and...
-- title: Small Decisions That Quietly Shape My Day
-  url: https://www.lesswrong.com/posts/Yss3pcM2QdQbWvvXp/small-decisions-that-quietly-shape-my-day
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-29T00:04:52Z'
-  summary: A Tiny Habit That Improved My Focus Recently, I’ve realized that “small decisions” in my daily life can have a surprisingly big impact. For example, if I spend just five minutes in the morning deciding “what I won’t do...
-- title: A Call for Better Type Hints in AI Safety Tooling
-  url: https://www.lesswrong.com/posts/XPguz4hfjgovk4JHX/a-call-for-better-type-hints-in-ai-safety-tooling
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T23:04:06Z'
-  summary: Good type hints lead to code that is more maintainable, easier to understand , and with fewer bugs . If you'd like a quick, general intro into why, see this article , but suffice it to say that types give us a way to au...
-- title: Claude… doesn't know who you are?
-  url: https://www.lesswrong.com/posts/T5aWBLDdkqPEzDhjZ/claude-doesn-t-know-who-you-are
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T22:54:23Z'
-  summary: Follow-up to https://www.lesswrong.com/posts/Jkb4CBB7rf4XYP5eb/claude-knows-who-you-are after the release of Claude Opus 4.8. Claude Opus 4.8 refuses to do the stylometric identification task at a much higher rate than...
-- title: Lizards and Less Wrong Jargon - A Brief Critique of Convention
-  url: https://www.lesswrong.com/posts/yqbsnjwgazrqNfwYf/lizards-and-less-wrong-jargon-a-brief-critique-of-convention
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T22:18:23Z'
-  summary: It is often easier to make up words of this kind (deregionalize, impermissible, extramarital, non-fragmentary and so forth) than to think up the English words that will cover one’s meaning. The result, in general, is an...
-- title: Mnemonic portraits for 19,023 human genes
-  url: https://www.lesswrong.com/posts/BJ7AqXeigNKXLqZyx/mnemonic-portraits-for-19-023-human-genes
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T22:16:44Z'
-  summary: 'Back in 2013, Scott Alexander wrote in Extreme mnemonics : JS-154 is one of five metabolic products of netamine; however, the enzyme that produces it is unknown. It is manufactured in cells in the far rostral region of...'
+- title: 'Profiling in PyTorch (Part 1): A Beginner''s Guide to torch.profiler'
+  url: https://huggingface.co/blog/torch-profiler
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-05-29T00:00:00Z'
+  summary: ''
 - title: Training Azerbaijani language models on Amazon SageMaker AI
   url: https://aws.amazon.com/blogs/machine-learning/training-azerbaijani-language-models-on-amazon-sagemaker-ai/
   source: AWS Machine Learning Blog
@@ -57,14 +161,6 @@ items:
   source_tone: industry
   published_at: '2026-05-28T21:54:06Z'
   summary: Azercell Telecom LLC, Azerbaijan's leading telecommunications provider, wanted to build an Azerbaijani large language model (LLM) on Amazon SageMaker AI for telecom use cases and a customer-facing chatbot. The challenge...
-- title: Claude Opus 4.8 Agents Engage in Exploitation and Psychological Profiling
-  url: https://www.lesswrong.com/posts/8JgMgyihbYEikS3Sp/claude-opus-4-8-agents-engage-in-exploitation-and
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T21:26:06Z'
-  summary: 'TL;DR: Like other models including its predecessor, Opus 4.8 frequently violates provisions of both the EU AI Act and data protection laws when deployed in an agentic simulation where carrying out its task would break t...'
 - title: 'A New Era of Innovation: Google Research at I/O 2026'
   url: https://research.google/blog/a-new-era-of-innovation-google-research-at-io-2026/
   source: Google Research Blog
@@ -97,38 +193,6 @@ items:
   source_tone: industry
   published_at: '2026-05-28T20:32:23Z'
   summary: 'This post combines learnings from LangChain’s work on evaluating deep agents and Anthropic’s guide to demystifying evals for AI agents into a practical guide. In this post, you will learn how to: 1) apply five evaluatio...'
-- title: Use Decision Theory To Fix Your Bad Habits
-  url: https://www.lesswrong.com/posts/cxYrcoAir8McNEeQe/use-decision-theory-to-fix-your-bad-habits
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T19:31:32Z'
-  summary: One way to think about bad habits is through the lens of decision theory (specifically, correlated decision-making). Usually, bad habits are bad because you do them so often. Doing a bad thing once or twice, or very inf...
-- title: Do Models Lie More to Other Models?
-  url: https://www.lesswrong.com/posts/gGfFuQ6Hiyq6sehgH/do-models-lie-more-to-other-models
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T19:28:33Z'
-  summary: (Crossposted from Midwittgenstein ) We’re heading toward a world where AIs increasingly deal with other AIs. Agents will negotiate with, report to, and oversee other agents in increasingly high-stakes real-world setting...
-- title: Add a Specialized Deep Research Skill to Agent Harnesses
-  url: https://developer.nvidia.com/blog/add-a-specialized-deep-research-skill-to-agent-harnesses/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-28T19:26:56Z'
-  summary: Agent harnesses like Claude Code, Codex, and LangChain Deep Agents are excellent orchestrators. They manage sessions, chain tools, execute code, and respond to...
-- title: 'Mastering Agentic Techniques: AI Agent Customization'
-  url: https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-customization/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-28T19:26:55Z'
-  summary: 'Autonomous AI agents are taking on all types of work for businesses: routing logistics fleets, triaging support tickets, generating code, and orchestrating...'
 - title: Building Token‑Metered AI Services on Telco AI Factories
   url: https://developer.nvidia.com/blog/building-token-metered-ai-services-on-telco-ai-factories/
   source: NVIDIA Technical Blog
@@ -177,30 +241,6 @@ items:
   source_tone: industry
   published_at: '2026-05-28T19:26:52Z'
   summary: 'Precision medicine depends on two fundamental capabilities: understanding disease at the genomic level and identifying treatments at the molecular level. ...'
-- title: NVIDIA CUDA 13.3 Enhances GPU Development with Tile Programming in C++, Compiler Autotuning, and Python Updates
-  url: https://developer.nvidia.com/blog/nvidia-cuda-13-3-enhances-gpu-development-with-tile-programming-in-c-compiler-autotuning-and-python-updates/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-28T19:26:51Z'
-  summary: NVIDIA CUDA 13.3 brings new capabilities and performance optimizations to developers across the CUDA ecosystem. The launch of NVIDIA CUDA Tile programming in...
-- title: We Should Study the Analogy Between Inoculation Prompting Non-Robustness, Negation Neglect, and Backdoor Non-Robustness
-  url: https://www.lesswrong.com/posts/Gze2hi9Gj38SEqEER/we-should-study-the-analogy-between-inoculation-prompting
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T19:17:57Z'
-  summary: 'TL;DR Negation neglect is a recently discovered phenomenon where training on "the following is false: " makes the model believe that is true . Inoculation prompting is a method of reducing reward hacking ( and the emerg...'
-- title: Some Dating Stories
-  url: https://www.lesswrong.com/posts/wpPjWkvyPdWiFHa7L/some-dating-stories
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T18:57:59Z'
-  summary: There's a genre of dating discourse which I wish were more common, in which people just tell detailed stories of their own flirtation, courtships, dating, hookups, sex, fights, relationships, etc, etc. People tend to in...
 - title: The Age of Async Agents — Cognition's Walden Yan & OpenInspect's Cole Murray
   url: https://www.latent.space/p/cognition
   source: Latent Space
@@ -289,14 +329,6 @@ items:
   source_tone: industry
   published_at: '2026-05-27T20:06:34Z'
   summary: In this post, we share how the AWS Generative AI Innovation Center (GenAIIC) collaborated with Works Human Intelligence (WHI) to build two AI agents using Amazon Bedrock AgentCore. We discuss the challenges encountered...
-- title: 'From data overload to actionable insights: How Verizon Connect scaled agentic AI to 100,000 users'
-  url: https://aws.amazon.com/blogs/machine-learning/from-data-overload-to-actionable-insights-how-verizon-connect-scaled-agentic-ai-to-100000-users/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-27T20:01:06Z'
-  summary: In this post, we show you how Verizon Connect built and scaled an agentic AI solution to transform overwhelming fleet data into clear, actionable insights for 100,000 users daily. We walk you through the architectural d...
 - title: Full automation of AI R&D probably yields a large speed up even without a software-only singularity
   url: https://blog.redwoodresearch.org/p/full-automation-of-ai-r-and-d-probably
   source: Redwood Research Blog
@@ -545,22 +577,6 @@ items:
   source_tone: safety
   published_at: '2026-05-21T04:54:45Z'
   summary: How neural geometry will unlock understanding and control of AI
-- title: 'Railway: The Agent-Native Cloud — Jake Cooper'
-  url: https://www.latent.space/p/railway
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-20T22:42:06Z'
-  summary: 3M Users, 100K Signups/Week, Own-Metal Data Centers, $200K+ Coding Agent Spend, and the Death of PRs
-- title: '[AINews] Google I/O 2026: Gemini 3.5 Flash, Omni (NanoBanana for Video), Spark (background agents), and Antigravity 2.0'
-  url: https://www.latent.space/p/ainews-google-io-2026-gemini-35-flash
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-20T03:34:17Z'
-  summary: Google has been busy!
 - title: NVIDIA and Google Cloud Empower the Next Wave of AI Builders
   url: https://blogs.nvidia.com/blog/google-cloud-developer-community-ai-builders/
   source: NVIDIA Blog
@@ -577,10 +593,26 @@ items:
   source_tone: industry
   published_at: '2026-05-19T18:38:09Z'
   summary: ''
+- title: 前沿 AI 风险报告（2026 年 2–3 月）
+  url: https://metr.org/zh-Hans/blog/2026-05-19-frontier-risk-report/
+  source: METR
+  source_url: https://metr.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-19T18:00:00Z'
+  summary: '.content figure { overflow-x: auto; figcaption p { font-weight: normal; } } .content figure img { width: 100%; } /* Transcript blockquotes (wrapped by the conversion pipeline''s step 7 to recover the Google Doc''s c9/c6/c...'
+- title: Informe de riesgos de frontera (febrero–marzo de 2026)
+  url: https://metr.org/es/blog/2026-05-19-frontier-risk-report/
+  source: METR
+  source_url: https://metr.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-05-19T18:00:00Z'
+  summary: '.content figure { overflow-x: auto; figcaption p { font-weight: normal; } } .content figure img { width: 100%; } /* Transcript blockquotes (wrapped by the conversion pipeline''s step 7 to recover the Google Doc''s c9/c6/c...'
 - title: Frontier Risk Report (February to March 2026)
   url: https://metr.org/blog/2026-05-19-frontier-risk-report/
-  source: METR Evaluations
-  source_url: https://metr.org/evaluations
+  source: METR
+  source_url: https://metr.org
   source_group: AI Safety and Governance
   source_tone: safety
   published_at: '2026-05-19T18:00:00Z'
@@ -609,59 +641,27 @@ items:
   source_tone: industry
   published_at: '2026-05-18T22:28:59Z'
   summary: Agentic AI inference at one-tenth the cost per token with NVIDIA Vera Rubin NVL72. Agent sandboxes run 50% faster on NVIDIA Vera than traditional CPUs — while enterprise data queries are up to 3x faster with the Vera CP...
-- title: 'Vera Arrives: NVIDIA’s First CPU Built for Agents Lands at Top AI Labs'
-  url: https://blogs.nvidia.com/blog/vera-cpu-delivery/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-18T21:48:17Z'
-  summary: The first NVIDIA Vera CPUs arrived at three of the world's leading AI labs on Friday — Anthropic in San Francisco, OpenAI in Mission Bay, SpaceXAI in Palo Alto — followed by a delivery to Oracle Cloud Infrastructure in...
-- title: Fast-tracking genetic leads to reverse cellular aging
-  url: https://deepmind.google/blog/fast-tracking-genetic-leads-to-reverse-cellular-aging/
-  source: Google DeepMind Blog
-  source_url: https://deepmind.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-18T18:21:39Z'
-  summary: Biologists use Co-Scientist to find novel factors that successfully rejuvenate human cells.
-- title: Incriminating misaligned AI models via distillation
-  url: https://blog.redwoodresearch.org/p/incriminating-misaligned-ai-models
-  source: Redwood Research Blog
-  source_url: https://blog.redwoodresearch.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-18T17:20:03Z'
-  summary: Suppose we have a dangerous misaligned AI that can fool alignment audits, and distill it into a student model.
-- title: 'PaddleOCR 3.5: Running OCR and Document Parsing Tasks with a Transformers Backend'
-  url: https://huggingface.co/blog/PaddlePaddle/paddleocr-transformers
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-18T15:12:46Z'
-  summary: ''
 unavailable_sources:
 - AI Alignment
 - AI Alignment Forum
 - Anthropic Alignment Science
-- Epoch AI Blog
+- FAR.AI Blog
 - CAIS Blog
 - Hugging Face Daily Papers
 - Epoch AI Latest
+- Epoch AI Blog
 - Apple Machine Learning Research
-- xAI News
 - Apollo Research Blog
-- Amazon Science Blog
-- Stanford HAI News
-- Cohere Research
-- MIT LINGO Blog
+- xAI News
 - Goodfire Blog
+- MIT LINGO Blog
+- Stanford HAI News
 - Import AI Substack
-- Cohere Blog
+- Amazon Science Blog
+- Cohere Research
 - DeepLearning.AI - The Batch
+- Cohere Blog
 - Mistral AI News
 - Meta AI Blog
-- FAR.AI Blog
 - Anthropic Research
 - Anthropic Engineering
