@@ -174,20 +174,6 @@ Working Experiences
 
 <div class="resource-list">
   <article class="resource-card">
-    <a class="resource-card__media" href="https://github.com/camel-ai/camel" aria-label="CAMEL GitHub repository">
-      <img src="https://opengraph.githubassets.com/yangjunx21-homepage/camel-ai/camel" alt="" loading="lazy">
-    </a>
-    <div class="resource-card__body">
-      <h3>CAMEL</h3>
-      <p>A multi-agent framework for building, studying, and scaling agent systems.</p>
-      <div class="resource-card__links">
-        <a href="https://github.com/camel-ai/camel">GitHub</a>
-        <img src="https://img.shields.io/github/stars/camel-ai/camel?style=social" alt="GitHub stars">
-      </div>
-    </div>
-  </article>
-
-  <article class="resource-card">
     <a class="resource-card__media" href="https://github.com/OpenCoworkAI/open-cowork" aria-label="Open Cowork GitHub repository">
       <img src="/images/resource-thumbnails/open-cowork.png" alt="" loading="lazy">
     </a>
