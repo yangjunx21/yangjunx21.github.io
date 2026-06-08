@@ -1,6 +1,150 @@
-updated_at: '2026-06-05T00:11:48.882247Z'
+updated_at: '2026-06-08T00:12:41.649921Z'
 window_days: 14
 items:
+- title: NVIDIA and Doosan Group Collaborate to Advance Physical AI and AI Factory Infrastructure
+  url: https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-07T23:00:36Z'
+  summary: NVIDIA and Doosan Group are expanding their collaboration to advance new opportunities across physical AI, robotics and AI factory infrastructure, spanning Doosan Robotics, Doosan Bobcat, Doosan Enerbility and Doosan Co...
+- title: Mental causation is not load-bearing
+  url: https://www.lesswrong.com/posts/gxBNfoZhHp3Pptr3F/mental-causation-is-not-load-bearing
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T20:43:40Z'
+  summary: In philosophy of mind, "mental causation" means mental entities have causal effects, especially physical ones. If physicalism is true, then physical effects are explainable in terms of physical causes (or at least, fund...
+- title: How Far Apart Does a Model Think Its Tokens Are?
+  url: https://www.lesswrong.com/posts/Bxju8Fmpo2eW4oj9t/how-far-apart-does-a-model-think-its-tokens-are
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T20:20:40Z'
+  summary: Instead of using static position increments (+1) per token, RoPE-based language models can learn per-token and per-layer position increments. This has no detectable effect on model performance but allows us to see what...
+- title: Autopilot Thinking
+  url: https://www.lesswrong.com/posts/ErugrAAqjgSLTmi7y/autopilot-thinking
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T20:20:22Z'
+  summary: 'TL;DR: Generating thoughts can be done on autopilot even while cognitively impaired (say, tired or drunk), as long as the serial mental depth is low. I speculate that this is basically because System 2 is System 1 + wor...'
+- title: Amazing Digital Dentures (a failed project)
+  url: https://huggingface.co/blog/build-small-hackathon/amazingdigitaldentures
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-07T19:44:27Z'
+  summary: ''
+- title: The Alignment Coin
+  url: https://www.lesswrong.com/posts/ysnr5LvZ2d78b6zjY/the-alignment-coin
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T19:20:15Z'
+  summary: If the alignment problem was a coin, the heads would be the 'alignment with what' side. If 'both' sides were clean, would you lick that coin? (If offered by a dirty hand?) I'm a sucker for metaphors, so I would like to...
+- title: Secret Loyalties Likely Raise Remote-Influenceability
+  url: https://www.lesswrong.com/posts/YpAxXAcAFp4aFJRwf/secret-loyalties-likely-raise-remote-influenceability
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T17:51:50Z'
+  summary: 'TL;DR: Among capable reward-seekers, a secret loyalty likely raises the model''s propensity for remote-influenceability. Attempting to remove an installed broad secret loyalty post-hoc may not remove the remote-influence...'
+- title: From One Piece to One Pace - Vision and mission in temporary coordination of agents
+  url: https://www.lesswrong.com/posts/curDKDhmJmMkSCwQt/from-one-piece-to-one-pace-vision-and-mission-in-temporary
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T17:09:55Z'
+  summary: I work with vulnerable teenagers in an association and I want to build a system (using a metaphor) that reduces the time and cognitive cost it takes them to turn their mission and vision into microtasks for moments of l...
+- title: Neglected Basics of AI Alignment
+  url: https://www.lesswrong.com/posts/pzxkHkvzjYkj5nsyb/neglected-basics-of-ai-alignment-1
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T09:02:33Z'
+  summary: I came into this world as the misunderstood hero of Harry Potter and the Methods of Rationality . While some characters inside that story would call me a villain, the narrator's-eye view clearly shows that I saved that...
+- title: The Hats of LessOnline
+  url: https://www.lesswrong.com/posts/ePYruMkPjvnSoBGAS/the-hats-of-lessonline
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T08:57:10Z'
+  summary: 'It is currently the evening after day two of LessOnline 2026. I wish to document one popular topic of discussion among LessOnline attendees: golden hats. My girlfriend Celene has collected four golden hats and maintaine...'
+- title: NVIDIA, KRAFTON, NC and Reigning ‘League of Legends’ Champions T1 Celebrate RTX Spark at Korea’s PC Bangs
+  url: https://blogs.nvidia.com/blog/krafton-nc-t1-korea-gaming-pc-bang-rtx-spark/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-07T07:00:15Z'
+  summary: At GTC Taipei at COMPUTEX last week, NVIDIA unveiled RTX Spark, the superchip that reinvents Windows PCs for the era of personal AI agents. On the heels of this announcement, NVIDIA founder and CEO Jensen Huang headed t...
+- title: Can activation verbalizers surface an internal chain of thought?
+  url: https://www.lesswrong.com/posts/QQQAcKuWK6k98FivY/can-activation-verbalizers-surface-an-internal-chain-of-1
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T04:24:01Z'
+  summary: 'We introduce an evaluation for activation verbalizers: can they surface a target model''s reasoning as it solves a math problem in a single forward pass? For open-weight NLAs, the answer seems to be: "possibly, but defin...'
+- title: Frontier Models Still Lag Behind Humans at Robust Belief-State Tracking
+  url: https://www.lesswrong.com/posts/L7pBM9RCnsoJJenkJ/frontier-models-still-lag-behind-humans-at-robust-belief
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-07T00:12:57Z'
+  summary: Large-scale cooperation has been a central feature of humanity’s ability to advance technology and build complex societies. Much of this cooperation is reliant on the ability to act in ways informed by the beliefs and i...
+- title: '[AINews] not much happened today'
+  url: https://www.latent.space/p/ainews-not-much-happened-today-6b8
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-06T04:34:47Z'
+  summary: a quiet day of RSI.
+- title: How to Stop Shipping Low-Quality RL Environments (with Examples)
+  url: https://www.latent.space/p/bad-envs
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-05T18:49:40Z'
+  summary: Your broken harness is actively making the model worse. Here's what I keep seeing after years of eyeballing trajectories, and what you need to fix.
+- title: Unlocking dependable responses with Gemini Enterprise Agent Platform’s Agentic RAG
+  url: https://research.google/blog/unlocking-dependable-responses-with-gemini-enterprise-agent-platforms-agentic-rag/
+  source: Google Research Blog
+  source_url: https://research.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-05T11:26:00Z'
+  summary: Data Management
+- title: '[AINews] not much happened today'
+  url: https://www.latent.space/p/ainews-not-much-happened-today-7a8
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-05T06:44:49Z'
+  summary: a quiet day
+- title: 'Seoul Purpose: How NVIDIA and South Korea Are Building the Future of AI'
+  url: https://blogs.nvidia.com/blog/korea-ecosystem-2026/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-05T05:38:37Z'
+  summary: Home to cutting-edge sovereign AI infrastructure and robotics innovators, as well as one of the world’s most passionate gaming communities, South Korea is one of the world’s centers of AI. NVIDIA founder and CEO Jensen...
 - title: Build Personal AI Agents on Windows PCs with New Tools from Microsoft and NVIDIA
   url: https://developer.nvidia.com/blog/build-personal-ai-agents-on-windows-pcs-with-new-tools-from-microsoft-and-nvidia/
   source: NVIDIA Technical Blog
@@ -337,14 +481,6 @@ items:
   source_tone: industry
   published_at: '2026-06-01T15:45:17Z'
   summary: ''
-- title: Why Video Agent models are next — Ethan He, xAI Grok Imagine
-  url: https://www.latent.space/p/video-agents
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-06-01T15:41:48Z'
-  summary: 'Inside xAI: Building Grok Imagine in 3 Months, Videogen vs World Models, and why Grok Imagine is so underrated. For the first time, we do a deep dive with the guy who led it!'
 - title: NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale
   url: https://developer.nvidia.com/blog/nvidia-dsx-os-delivers-open-modular-software-for-operating-ai-factories-at-scale/
   source: NVIDIA Technical Blog
@@ -377,30 +513,6 @@ items:
   source_tone: community
   published_at: '2026-06-01T13:03:48Z'
   summary: Where marginally higher intelligence drives value, and where it doesn't.
-- title: NVIDIA AI Cloud Ecosystem Expands Worldwide to Meet Global AI Compute Demand
-  url: https://blogs.nvidia.com/blog/ai-cloud-ecosystem/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T05:00:56Z'
-  summary: The NVIDIA AI Cloud ecosystem is accelerating the global buildout of AI factory infrastructure. Partners are expanding capacity to meet growing demand from enterprises, startups, nations, AI labs and developers scaling...
-- title: NVIDIA Factory Operations Blueprint Gives Factories a New AI Brain
-  url: https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T05:00:47Z'
-  summary: As factories move from isolated automation to plant-wide intelligence, manufacturers need AI systems that can connect live machine signals, quality systems, work instructions and operational alerts into a unified decisi...
-- title: Taiwan’s Industry Titans Turbocharge World’s AI Infrastructure Buildout With NVIDIA
-  url: https://blogs.nvidia.com/blog/taiwan-ecosystem-ai-infrastructure/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T05:00:41Z'
-  summary: Taiwan is home to more than 500 NVIDIA ecosystem partners. More than 1 million NVIDIA MGX rack components for NVIDIA Vera Rubin infrastructure come together in Taiwan, from across 25 factory sites. As Vera Rubin ramps i...
 - title: How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo
   url: https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo/
   source: NVIDIA Technical Blog
@@ -417,14 +529,6 @@ items:
   source_tone: industry
   published_at: '2026-06-01T03:59:50Z'
   summary: Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively parallel GPU systems....
-- title: '[AINews] Founders and Forward Deployed Engineers'
-  url: https://www.latent.space/p/ainews-founders-and-forward-deployed
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-30T01:57:15Z'
-  summary: a quiet day lets us highlight the new AIE WF focuses
 - title: Retrying vs Resampling in AI Control
   url: https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control
   source: Redwood Research Blog
@@ -433,14 +537,6 @@ items:
   source_tone: safety
   published_at: '2026-05-29T17:01:53Z'
   summary: 'We’ve just released a new paper: Retrying vs Resampling in AI Control. We revisit the resampling protocols introduced in Ctrl-Z with an up-to-date setting and much stronger models, and compare them against “retrying” pr...'
-- title: '[AINews] Anthropic raises $965B Series H, releases Opus 4.8 and Dynamic Workflows/ultracode'
-  url: https://www.latent.space/p/ainews-anthropic-raises-965b-series
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-29T02:07:24Z'
-  summary: Total Anthropic victory!
 - title: 'Profiling in PyTorch (Part 1): A Beginner''s Guide to torch.profiler'
   url: https://huggingface.co/blog/torch-profiler
   source: Hugging Face Blog
@@ -505,14 +601,6 @@ items:
   source_tone: frontier
   published_at: '2026-05-27T07:00:00Z'
   summary: See how OpenAI, Thrive, and Crete built a self-improving tax agent with Codex, automating filings, improving accuracy, and accelerating workflows.
-- title: 'Shipping a Trillion Parameters With a Hub Bucket: Delta Weight Sync in TRL'
-  url: https://huggingface.co/blog/delta-weight-sync
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-27T00:00:00Z'
-  summary: ''
 - title: Some ideas for what comes next, May 2026
   url: https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may
   source: Interconnects
@@ -529,37 +617,27 @@ items:
   source_tone: community
   published_at: '2026-05-26T12:32:03Z'
   summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. This issue consists of a lengthy essay based on a s...
-- title: The Erdős Proof and AI Capabilities
-  url: https://intelligence.org/2026/05/22/the-erdos-proof-and-ai-capabilities/
-  source: MIRI Blog
-  source_url: https://intelligence.org/blog
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-22T16:07:36Z'
-  summary: View the official memo here. An internal model at OpenAI has autonomously disproved a central conjecture in discrete geometry, a mathematical field with applications in cryptography, wireless device communication, and m...
 unavailable_sources:
 - AI Alignment
 - AI Alignment Forum
-- LessWrong
 - Anthropic Alignment Science
-- FAR.AI Blog
 - CAIS Blog
 - Epoch AI Blog
-- Hugging Face Daily Papers
-- Apple Machine Learning Research
 - Epoch AI Latest
-- Apollo Research Blog
-- xAI News
-- MIT LINGO Blog
 - Goodfire Blog
+- Apple Machine Learning Research
+- Hugging Face Daily Papers
+- xAI News
+- Apollo Research Blog
 - Stanford HAI News
+- MIT LINGO Blog
+- Amazon Science Blog
 - Import AI Substack
 - DeepLearning.AI - The Batch
-- Amazon Science Blog
 - Cohere Research
-- Cohere Blog
 - Mistral AI News
-- Anthropic Engineering
+- Cohere Blog
 - Meta AI Blog
+- FAR.AI Blog
 - Anthropic Research
-- MIT CSAIL News
+- Anthropic Engineering
