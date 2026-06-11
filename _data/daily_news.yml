@@ -1,6 +1,422 @@
-updated_at: '2026-06-08T00:12:41.649921Z'
+updated_at: '2026-06-11T00:18:58.946383Z'
 window_days: 14
 items:
+- title: 'Predictive Processing: Conscious when Training'
+  url: https://www.lesswrong.com/posts/Wmo5REgq4eyhaax53/predictive-processing-conscious-when-training
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-11T00:06:35Z'
+  summary: Last week I started learning about theories of consciousness from the Cambridge Digital Minds course . One theory in particular that stuck in my mind is predictive processing. It says that all conscious minds have an in...
+- title: Thoughts on Claude Fable's silent safeguards
+  url: https://www.lesswrong.com/posts/sSyLyc3KDQzboQGWS/thoughts-on-claude-fable-s-silent-safeguards
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T23:35:27Z'
+  summary: '[Thanks to Julian Minder for helpful discussion and review.] Claude Fable 5 and its new safeguards Yesterday, Anthropic publicly released Claude Fable 5. Fable 5 is a Mythos-class model – a model class above Opus, Anthr...'
+- title: Notes on Algorithms
+  url: https://www.lesswrong.com/posts/jaLNEBHfDEKcCeoD3/notes-on-algorithms
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T23:28:38Z'
+  summary: This post records what I've learned while studying some of Introduction to Algorithms , 3rd and/or 4th edition, [1] by Cormen, Leiserson, Rivest and Stein. Unfortunately, I didn't have time to study the chapters on grap...
+- title: Run DiffusionGemma on NVIDIA for Developer-Ready, High-Throughput Text Generation
+  url: https://developer.nvidia.com/blog/run-diffusiongemma-on-nvidia-for-developer-ready-high-throughput-text-generation/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T22:37:41Z'
+  summary: Developers building real-time AI—such as chat assistants, copilots, and agentic workflows—are often constrained by token-by-token generation speed. This...
+- title: 'Fuel Crisis: Situation Modeling Thread'
+  url: https://www.lesswrong.com/posts/wgKJJdcoideg9E4ai/fuel-crisis-situation-modeling-thread
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T21:59:47Z'
+  summary: We're in a slow-motion fuel crisis , already baked into the counterfactual petroleum supply gap. Even if the Iran War ended, immediately and completely and unambiguously, the fuel crisis would still be happening. How wi...
+- title: 'Fuel Crisis: Justified Practical Advice Thread'
+  url: https://www.lesswrong.com/posts/CbqWopEdPpcaXNsPt/fuel-crisis-justified-practical-advice-thread
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T21:59:44Z'
+  summary: The Iran War is causing a problem with the world's near-term supply of petroleum. Even if the Iran War ended, immediately and completely and unambiguously, oil production and distribution would not recover to prewar lev...
+- title: Solsong Chord Updates
+  url: https://www.lesswrong.com/posts/FtFdzhbtmxAekNqBA/solsong-chord-updates
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T21:00:45Z'
+  summary: A couple years ago I put together a Secular Solstice Songbook , a compilation of all the songs we've sung at Boston Solstice . Anna Tchetchetkine and I led a session of group singing at LessOnline , following up from an...
+- title: Dario Amodei - Policy on the AI Exponential
+  url: https://www.lesswrong.com/posts/mZNyuMAoytHAjEXGz/dario-amodei-policy-on-the-ai-exponential
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T20:56:51Z'
+  summary: This is a link-post for Dario Amodei's new essay, Policy on the AI Exponential. Apologies if it's already been posted. https://darioamodei.com/post/policy-on-the-ai-exponential Discuss
+- title: Anthropic did not call for a pause on AI
+  url: https://www.lesswrong.com/posts/zgi6RijdKSpQPYemB/anthropic-did-not-call-for-a-pause-on-ai
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T20:02:43Z'
+  summary: Last week, the AI company Anthropic released a blog post titled “When AI builds itself”. This led to a media frenzy, with news outlets around the world publishing headlines that the company was urging a global pause on...
+- title: For Robotaxis, Safety Must Be Built In, Not Bolted On
+  url: https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T19:00:12Z'
+  summary: A car pulls up to the curb. The app says, “Your ride is here.” No one’s in the driver’s seat. For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality. The robotaxi ind...
+- title: Estimating No-CoT Task-Completion Time Horizons of Frontier AI Models
+  url: https://www.lesswrong.com/posts/SieLowPgNgRSPGhFw/estimating-no-cot-task-completion-time-horizons-of-frontier
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T17:58:18Z'
+  summary: '(see full author list at the end) About a year ago, METR showed that the length of tasks frontier models can reliably complete doubles every few months. A related safety-relevant question is this: what length of tasks c...'
+- title: Estimating No-CoT Task-Completion Time Horizons of Frontier AI Models
+  url: https://blog.redwoodresearch.org/p/estimating-no-cot-task-completion
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T17:52:45Z'
+  summary: Models' no-CoT time horizon has doubled roughly every year.
+- title: New framework for auditing machine unlearning
+  url: https://research.google/blog/new-framework-for-auditing-machine-unlearning/
+  source: Google Research Blog
+  source_url: https://research.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-10T17:34:55Z'
+  summary: Algorithms & Theory
+- title: Logits as a new monitor for evaluation awareness
+  url: https://www.goodfire.ai/research/logits-as-a-new-monitor-for-evaluation-awareness
+  source: Goodfire Research
+  source_url: https://www.goodfire.ai/research
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T16:44:47Z'
+  summary: ''
+- title: Predicting Rare LLM Failures with 30× Fewer Rollouts
+  url: https://www.goodfire.ai/research/predicting-rare-llm-failures-with-30x-fewer-rollouts
+  source: Goodfire Research
+  source_url: https://www.goodfire.ai/research
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T16:43:34Z'
+  summary: ''
+- title: These Three Thaumata
+  url: https://www.lesswrong.com/posts/BtesTtothQ5cCRs3G/these-three-thaumata
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-10T16:42:15Z'
+  summary: From the Daydication technique I previously shared , I’ve derived a new thinking tool or toy. It benefits me so much it seems worth sharing with presumed friends, such as yourself. Every morning, and sometimes when ente...
+- title: 'DiffusionGemma: 4x faster text generation'
+  url: https://deepmind.google/blog/diffusiongemma-4x-faster-text-generation/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-10T16:24:11Z'
+  summary: ''
+- title: Delivering Lifecycle Control for AI Infrastructure at Scale with NVIDIA DGX Spark Enterprise Manageability
+  url: https://developer.nvidia.com/blog/delivering-lifecycle-control-for-ai-infrastructure-at-scale-with-nvidia-dgx-spark-enterprise-manageability/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T16:23:35Z'
+  summary: As AI infrastructure scales, enterprise expectations for operational maturity are increasing. Organizations expect these systems to be provisionable,...
+- title: NVIDIA Accelerates Google DeepMind’s DiffusionGemma for Local AI
+  url: https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T16:15:20Z'
+  summary: Today, Google DeepMind released DiffusionGemma — an experimental open model built for exceptionally fast text generation. NVIDIA has optimized DiffusionGemma to run even faster across NVIDIA GeForce RTX GPUs, the NVIDIA...
+- title: 'Stop hand-tuning kernels: How Neuron Agentic Development accelerates AWS Trainium optimizations'
+  url: https://aws.amazon.com/blogs/machine-learning/stop-hand-tuning-kernels-how-neuron-agentic-development-accelerates-aws-trainium-optimizations/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T15:26:45Z'
+  summary: 'Today, we’re announcing the Neuron Agentic Development capabilities: a collection of AI agents and skills that make this possible for developers building on AWS Trainium and AWS Inferentia. In this post, we explain how...'
+- title: Build an AI-Powered Equipment Repair Assistant Using Amazon Bedrock AgentCore
+  url: https://aws.amazon.com/blogs/machine-learning/build-an-ai-powered-equipment-repair-assistant-using-amazon-bedrock-agentcore/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-10T15:21:35Z'
+  summary: In this post, you build an AI-powered equipment repair assistant using Amazon Bedrock AgentCore that helps farmers and field technicians diagnose equipment problems, identify required parts, and access manufacturer-appr...
+- title: '[AINews] Anthropic Claude Fable 5 — Mythos but Safe, with Controversial Terms'
+  url: https://www.latent.space/p/ainews-anthropic-claude-fable-5-mythos
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-10T03:50:21Z'
+  summary: The much anticipated launch of the Mythos-class model was marred by some controversial usage policies
+- title: Claude Fable 5 and new AI safety fables
+  url: https://www.interconnects.ai/p/claude-fable-5-and-new-ai-safety
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-09T22:59:35Z'
+  summary: One step further into the power politics of frontier AI systems.
+- title: NVIDIA Confidential Computing to Help Expand Apple’s Private Cloud Compute
+  url: https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T22:34:27Z'
+  summary: NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC), as it expands beyond Apple’s data centers to Google Cloud. Unveiled during Apple’s annual WWDC gath...
+- title: Scale Robot Reinforcement Learning with NVIDIA Isaac Lab on Amazon SageMaker AI
+  url: https://aws.amazon.com/blogs/machine-learning/scale-robot-reinforcement-learning-with-nvidia-isaac-lab-on-amazon-sagemaker-ai/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T20:07:24Z'
+  summary: 'In this post, we show how to train robot policies for the Unitree H1 humanoid with NVIDIA Isaac Lab on Amazon SageMaker AI across two compute options: Amazon SageMaker HyperPod and Amazon SageMaker Training Jobs.'
+- title: Can Voice Agents Handle Bilingual Customers? Benchmarking Frontier ASR on Code-Switched Speech
+  url: https://huggingface.co/blog/ServiceNow-AI/code-switching
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T19:38:28Z'
+  summary: ''
+- title: 'Model Quantization: Turn FP8 Checkpoints into High-Performance Inference Engines with NVIDIA TensorRT'
+  url: https://developer.nvidia.com/blog/model-quantization-turn-fp8-checkpoints-into-high-performance-inference-engines-with-nvidia-tensorrt/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T18:28:07Z'
+  summary: Converting a quantized checkpoint into an NVIDIA TensorRT engine bridges the gap between model optimization and production deployment, enabling faster...
+- title: Designing Production-Ready Battery Energy Storage Systems for AI Factories
+  url: https://developer.nvidia.com/blog/designing-production-ready-battery-energy-storage-systems-for-ai-factories/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T18:27:36Z'
+  summary: AI factories are changing what data-center infrastructure must do. Unlike traditional data centers, AI factories are built to manufacture intelligence at scale....
+- title: 'Hands-free first notice of loss: Using Strands Agents and Amazon Bedrock AgentCore Browser Tool for intelligent claims intake'
+  url: https://aws.amazon.com/blogs/machine-learning/hands-free-first-notice-of-loss-using-strands-agents-and-amazon-bedrock-agentcore-browser-tool-for-intelligent-claims-intake/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T16:43:28Z'
+  summary: In this post, we demonstrate how a hands-free FNOL intake system combines agents built with the Strands Agents SDK for domain reasoning with Amazon Bedrock AgentCore Browser Tool for live portal interaction. This approa...
+- title: Accelerating Federated Learning Research with AI Agents and NVIDIA FLARE Auto-FL
+  url: https://developer.nvidia.com/blog/accelerating-federated-learning-research-with-ai-agents-and-nvidia-flare-auto-fl/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T16:35:22Z'
+  summary: 'Federated learning (FL) research often begins with a deceptively simple question: What should we try next? A new aggregation rule, a FedProx coefficient, a...'
+- title: Build an agentic incident triage assistant with Amazon Quick and New Relic
+  url: https://aws.amazon.com/blogs/machine-learning/build-an-agentic-incident-triage-assistant-with-amazon-quick-and-new-relic/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T16:10:37Z'
+  summary: 'This post shows engineering teams how to apply that principle to one of the most time-sensitive workflows in engineering: incident triage. You will build a custom incident triage assistant agent using Amazon Quick that...'
+- title: 'Introducing North Mini Code: Cohere’s First Model For Developers'
+  url: https://huggingface.co/blog/CohereLabs/introducing-north-mini-code
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T15:56:23Z'
+  summary: ''
+- title: Fluid, natural voice translation with Gemini 3.5 Live Translate
+  url: https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-09T15:16:25Z'
+  summary: Gemini 3.5 Live Translate brings near real-time, natural speech translation to Google AI Studio, Google Translate and Google Meet.
+- title: 'Introducing Gemma 4 12B: a unified, encoder-free multimodal model'
+  url: https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-09T14:10:19Z'
+  summary: ''
+- title: Powering the future of robotics in Europe
+  url: https://deepmind.google/blog/powering-the-future-of-robotics-in-europe/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-09T14:02:33Z'
+  summary: ''
+- title: How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces
+  url: https://huggingface.co/blog/mishig/spaces-agents-md
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T10:46:19Z'
+  summary: ''
+- title: '[AINews] FrontierCode: Benchmarking for Code Quality over Slop'
+  url: https://www.latent.space/p/ainews-frontiercode-benchmarking
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-09T06:12:33Z'
+  summary: We made a thing!
+- title: Migrating Your GitHub CI to Hugging Face Jobs
+  url: https://huggingface.co/blog/github-ci-hf-jobs
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-09T00:00:00Z'
+  summary: ''
+- title: Efficient tradeoffs and the safety-usefulness tradeoff model
+  url: https://blog.redwoodresearch.org/p/efficient-tradeoffs-and-the-safety
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-08T20:29:47Z'
+  summary: When is "increasing safety budget" a useful concept?
+- title: Train Models Faster with JAX and MaxText Using NVFP4 on NVIDIA Blackwell
+  url: https://developer.nvidia.com/blog/train-models-faster-with-jax-and-maxtext-using-nvfp4-on-nvidia-blackwell/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T18:18:29Z'
+  summary: Pre-training frontier LLMs comes down to throughput. When training spans trillions of tokens across thousands of accelerators, every percentage point of step...
+- title: Announcing major new donations, and recapping the 2025 fundraiser
+  url: https://intelligence.org/2026/06/08/announcing-major-new-donations-and-recapping-the-2025-fundraiser/
+  source: MIRI Blog
+  source_url: https://intelligence.org/blog
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-08T16:51:06Z'
+  summary: This past December, we ran our first fundraiser in six years, setting an ambitious goal of $6M. We ended up receiving a total of $1.8M from small donors and $1.6M in matching from the Survival and Flourishing Fund (SFF)...
+- title: NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents
+  url: https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:40:43Z'
+  summary: Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete...
+- title: 'Unlocking AI flexibility in Europe: A guide to cross-region inference for EU data processing and model access'
+  url: https://aws.amazon.com/blogs/machine-learning/unlocking-ai-flexibility-in-europe-a-guide-to-cross-region-inference-for-eu-data-processing-and-model-access/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:40:34Z'
+  summary: With access to the latest generative AI models and high-performance accelerated compute in high global demand, AWS customers need tools to take advantage of model availability and capacity across multiple AWS Regions, w...
+- title: 'It’s safe to close your laptop now: Hosting coding agents on Amazon Bedrock AgentCore'
+  url: https://aws.amazon.com/blogs/machine-learning/its-safe-to-close-your-laptop-now-hosting-coding-agents-on-amazon-bedrock-agentcore/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:35:02Z'
+  summary: Amazon Bedrock AgentCore Runtime gives each agent session its own isolated microVM with a persistent workspace, secure tool access through Gateway, and built-in observability—so you can run Claude Code, Codex, Kiro, and...
+- title: 'Better decisions at scale: How mathematical optimization delivers where intuition fails'
+  url: https://aws.amazon.com/blogs/machine-learning/better-decisions-at-scale-how-mathematical-optimization-delivers-where-intuition-fails/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:31:17Z'
+  summary: In this post, we introduce mathematical optimization, explain how it fits within the broader AI landscape, and showcase real-world success stories where the Innovation Center has partnered with customers to deliver conc...
+- title: End-to-end encrypted ML inference with Amazon SageMaker AI and FHE
+  url: https://aws.amazon.com/blogs/machine-learning/end-to-end-encrypted-ml-inference-with-amazon-sagemaker-ai-and-fhe/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:14:14Z'
+  summary: This blog has previously discussed FHE for ML inference in the post Enable fully homomorphic encryption with Amazon SageMaker endpoints for secure, real-time inferencing, but this post goes a little further. That previo...
+- title: 'Amazon Quick ARNs: Cross-account migration and namespace permissions'
+  url: https://aws.amazon.com/blogs/machine-learning/amazon-quick-arns-cross-account-migration-and-namespace-permissions/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T16:07:29Z'
+  summary: In this post, we cover the structure of Amazon Quick ARNs and provide a practical mental model for working with them. By the end, you can look at an ARN and immediately understand what it means for your migration strate...
+- title: Measuring the impact of learning with AI in Sierra Leone and beyond
+  url: https://deepmind.google/blog/measuring-the-impact-of-learning-with-ai-in-sierra-leone-and-beyond/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-06-08T13:04:59Z'
+  summary: "Results from a randomized controlled trial show the potential of Geminiâ\x80\x99s Guided Learning feature to boost engagement and accelerate learning."
+- title: 'Import AI 460: Reward hacking society, RSI data from Anthropic; and RL-based quadcopter racing'
+  url: https://jack-clark.net/2026/06/08/import-ai-460-reward-hacking-society-rsi-data-from-anthropic-and-rl-based-quadcopter-racing/
+  source: Import AI
+  source_url: https://jack-clark.net
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-06-08T12:31:32Z'
+  summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Society can be reward-hacked, just li...
+- title: How the UK Is Turning Sovereign AI Ambition Into Action With NVIDIA Technologies
+  url: https://blogs.nvidia.com/blog/uk-sovereign-ai-advancements/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T06:00:57Z'
+  summary: 'A year ago at London Tech Week, NVIDIA founder and CEO Jensen Huang and U.K. Prime Minister Keir Starmer made a declaration: the U.K. would be an AI maker, not an AI taker. At this year’s event, NVIDIA and its partners...'
+- title: NVIDIA and LG Group Build an AI Factory to Advance Physical AI, Mobility and AI Infrastructure
+  url: https://blogs.nvidia.com/blog/nvidia-and-lg-group-ai-factory/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T03:00:50Z'
+  summary: NVIDIA and LG Group are building an AI factory to accelerate LG Group’s next wave of AI-driven businesses, spanning robotics, autonomous driving, data center technologies and GPU cloud services. The AI factory will prov...
+- title: The Open Source Community is backing OpenEnv for Agentic RL
+  url: https://huggingface.co/blog/openenv-agentic-rl
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-08T00:00:00Z'
+  summary: ''
 - title: NVIDIA and Doosan Group Collaborate to Advance Physical AI and AI Factory Infrastructure
   url: https://blogs.nvidia.com/blog/nvidia-and-doosan-group-physical-ai/
   source: NVIDIA Blog
@@ -9,78 +425,6 @@ items:
   source_tone: industry
   published_at: '2026-06-07T23:00:36Z'
   summary: NVIDIA and Doosan Group are expanding their collaboration to advance new opportunities across physical AI, robotics and AI factory infrastructure, spanning Doosan Robotics, Doosan Bobcat, Doosan Enerbility and Doosan Co...
-- title: Mental causation is not load-bearing
-  url: https://www.lesswrong.com/posts/gxBNfoZhHp3Pptr3F/mental-causation-is-not-load-bearing
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T20:43:40Z'
-  summary: In philosophy of mind, "mental causation" means mental entities have causal effects, especially physical ones. If physicalism is true, then physical effects are explainable in terms of physical causes (or at least, fund...
-- title: How Far Apart Does a Model Think Its Tokens Are?
-  url: https://www.lesswrong.com/posts/Bxju8Fmpo2eW4oj9t/how-far-apart-does-a-model-think-its-tokens-are
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T20:20:40Z'
-  summary: Instead of using static position increments (+1) per token, RoPE-based language models can learn per-token and per-layer position increments. This has no detectable effect on model performance but allows us to see what...
-- title: Autopilot Thinking
-  url: https://www.lesswrong.com/posts/ErugrAAqjgSLTmi7y/autopilot-thinking
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T20:20:22Z'
-  summary: 'TL;DR: Generating thoughts can be done on autopilot even while cognitively impaired (say, tired or drunk), as long as the serial mental depth is low. I speculate that this is basically because System 2 is System 1 + wor...'
-- title: Amazing Digital Dentures (a failed project)
-  url: https://huggingface.co/blog/build-small-hackathon/amazingdigitaldentures
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-07T19:44:27Z'
-  summary: ''
-- title: The Alignment Coin
-  url: https://www.lesswrong.com/posts/ysnr5LvZ2d78b6zjY/the-alignment-coin
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T19:20:15Z'
-  summary: If the alignment problem was a coin, the heads would be the 'alignment with what' side. If 'both' sides were clean, would you lick that coin? (If offered by a dirty hand?) I'm a sucker for metaphors, so I would like to...
-- title: Secret Loyalties Likely Raise Remote-Influenceability
-  url: https://www.lesswrong.com/posts/YpAxXAcAFp4aFJRwf/secret-loyalties-likely-raise-remote-influenceability
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T17:51:50Z'
-  summary: 'TL;DR: Among capable reward-seekers, a secret loyalty likely raises the model''s propensity for remote-influenceability. Attempting to remove an installed broad secret loyalty post-hoc may not remove the remote-influence...'
-- title: From One Piece to One Pace - Vision and mission in temporary coordination of agents
-  url: https://www.lesswrong.com/posts/curDKDhmJmMkSCwQt/from-one-piece-to-one-pace-vision-and-mission-in-temporary
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T17:09:55Z'
-  summary: I work with vulnerable teenagers in an association and I want to build a system (using a metaphor) that reduces the time and cognitive cost it takes them to turn their mission and vision into microtasks for moments of l...
-- title: Neglected Basics of AI Alignment
-  url: https://www.lesswrong.com/posts/pzxkHkvzjYkj5nsyb/neglected-basics-of-ai-alignment-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T09:02:33Z'
-  summary: I came into this world as the misunderstood hero of Harry Potter and the Methods of Rationality . While some characters inside that story would call me a villain, the narrator's-eye view clearly shows that I saved that...
-- title: The Hats of LessOnline
-  url: https://www.lesswrong.com/posts/ePYruMkPjvnSoBGAS/the-hats-of-lessonline
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T08:57:10Z'
-  summary: 'It is currently the evening after day two of LessOnline 2026. I wish to document one popular topic of discussion among LessOnline attendees: golden hats. My girlfriend Celene has collected four golden hats and maintaine...'
 - title: NVIDIA, KRAFTON, NC and Reigning ‘League of Legends’ Champions T1 Celebrate RTX Spark at Korea’s PC Bangs
   url: https://blogs.nvidia.com/blog/krafton-nc-t1-korea-gaming-pc-bang-rtx-spark/
   source: NVIDIA Blog
@@ -89,22 +433,6 @@ items:
   source_tone: industry
   published_at: '2026-06-07T07:00:15Z'
   summary: At GTC Taipei at COMPUTEX last week, NVIDIA unveiled RTX Spark, the superchip that reinvents Windows PCs for the era of personal AI agents. On the heels of this announcement, NVIDIA founder and CEO Jensen Huang headed t...
-- title: Can activation verbalizers surface an internal chain of thought?
-  url: https://www.lesswrong.com/posts/QQQAcKuWK6k98FivY/can-activation-verbalizers-surface-an-internal-chain-of-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T04:24:01Z'
-  summary: 'We introduce an evaluation for activation verbalizers: can they surface a target model''s reasoning as it solves a math problem in a single forward pass? For open-weight NLAs, the answer seems to be: "possibly, but defin...'
-- title: Frontier Models Still Lag Behind Humans at Robust Belief-State Tracking
-  url: https://www.lesswrong.com/posts/L7pBM9RCnsoJJenkJ/frontier-models-still-lag-behind-humans-at-robust-belief
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-07T00:12:57Z'
-  summary: Large-scale cooperation has been a central feature of humanity’s ability to advance technology and build complex societies. Much of this cooperation is reliant on the ability to act in ways informed by the beliefs and i...
 - title: '[AINews] not much happened today'
   url: https://www.latent.space/p/ainews-not-much-happened-today-6b8
   source: Latent Space
@@ -113,6 +441,14 @@ items:
   source_tone: community
   published_at: '2026-06-06T04:34:47Z'
   summary: a quiet day of RSI.
+- title: Evaluate Clinical ASR Models Faster with Agent Skills and NVIDIA Nemotron Speech
+  url: https://developer.nvidia.com/blog/evaluate-clinical-asr-models-faster-with-agent-skills-and-nvidia-nemotron-speech/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-06-05T22:29:10Z'
+  summary: Training a speech AI model to correctly recognize or synthesize clinical terminology is surprisingly difficult. Drug names like Acetaminophen, Amlodipine,...
 - title: How to Stop Shipping Low-Quality RL Environments (with Examples)
   url: https://www.latent.space/p/bad-envs
   source: Latent Space
@@ -161,14 +497,6 @@ items:
   source_tone: industry
   published_at: '2026-06-04T22:13:24Z'
   summary: As AI agents move from the digital world to the physical environment, they can readily use NVIDIA Jetson to accelerate real-world deployment with optimized...
-- title: NVIDIA Nemotron 3 Ultra Powers Faster, More Efficient Reasoning for Long-Running Agents
-  url: https://developer.nvidia.com/blog/nvidia-nemotron-3-ultra-powers-faster-more-efficient-reasoning-for-long-running-agents/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-04T20:52:30Z'
-  summary: Single-turn chatbots are evolving into long-running agents that can reason, maintain context, use tools, and run efficiently across many turns to complete...
 - title: 'Reality: The Final Eval — Lukas Petersson and Axel Backlund of Andon Labs'
   url: https://www.latent.space/p/andon
   source: Latent Space
@@ -183,7 +511,7 @@ items:
   source_url: https://research.google/blog
   source_group: Frontier Labs
   source_tone: frontier
-  published_at: '2026-06-04T19:47:12Z'
+  published_at: '2026-06-04T19:47:00Z'
   summary: Health & Bioscience
 - title: 'Nemotron 3.5 Content Safety: Customizable Multimodal Safety for Global Enterprise AI'
   url: https://huggingface.co/blog/nvidia/nemotron-3-5-content-safety
@@ -193,14 +521,6 @@ items:
   source_tone: industry
   published_at: '2026-06-04T18:57:45Z'
   summary: ''
-- title: NVIDIA Nemotron 3 Ultra now available on Amazon SageMaker JumpStart
-  url: https://aws.amazon.com/blogs/machine-learning/nvidia-nemotron-3-ultra-now-available-on-amazon-sagemaker-jumpstart/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-04T16:59:08Z'
-  summary: Deploy NVIDIA Nemotron 3 Ultra on Amazon SageMaker JumpStart. Get 5x faster inference and 30% lower cost for agentic AI workloads with this frontier reasoning model.
 - title: 'Forecast: Fun Ahead — 18 Games Join in June to Stream on GeForce NOW'
   url: https://blogs.nvidia.com/blog/geforce-now-thursday-june-2026-games-list/
   source: NVIDIA Blog
@@ -209,14 +529,6 @@ items:
   source_tone: industry
   published_at: '2026-06-04T13:00:27Z'
   summary: 'June’s forecast with GeForce NOW: 100% chance of gaming. GeForce NOW is lining up new adventures for the month, from big-name blockbusters to quirky indies ready for the spotlight. Members can dive into fresh worlds, sq...'
-- title: 'EVA-Bench Data 2.0: 3 Domains, 121 Tools, 213 Scenarios'
-  url: https://huggingface.co/blog/ServiceNow-AI/eva-bench-data
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-04T12:24:58Z'
-  summary: ''
 - title: '[AINews] Reve 2 and Ideogram 4: Layouts in Imagegen'
   url: https://www.latent.space/p/ainews-reve-2-and-ideogram-4-layouts
   source: Latent Space
@@ -233,14 +545,6 @@ items:
   source_tone: industry
   published_at: '2026-06-04T00:00:00Z'
   summary: ''
-- title: How to build self-driving AI operations on Amazon Bedrock at scale
-  url: https://aws.amazon.com/blogs/machine-learning/how-to-build-self-driving-ai-operations-on-amazon-bedrock-at-scale/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T20:14:16Z'
-  summary: In this post, we introduce Amazon Bedrock Ops Alert, a three-layer automated monitoring solution that proactively detects operational issues, dynamically adjusts alarm thresholds, classifies alarms by category, automati...
 - title: 🔬Scaling Past Informal AI - Carina Hong, Axiom Math
   url: https://www.latent.space/p/axiom
   source: Latent Space
@@ -255,24 +559,16 @@ items:
   source_url: https://research.google/blog
   source_group: Frontier Labs
   source_tone: frontier
-  published_at: '2026-06-03T18:37:32Z'
+  published_at: '2026-06-03T18:37:00Z'
   summary: Climate & Sustainability
-- title: Fundamental’s Large Tabular Model NEXUS is now available on Amazon SageMaker JumpStart
-  url: https://aws.amazon.com/blogs/machine-learning/fundamentals-large-tabular-model-nexus-is-now-available-on-amazon-sagemaker-jumpstart/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T17:55:37Z'
-  summary: In this post, we show you how to get started with NEXUS on Amazon SageMaker JumpStart, walk through the deployment process, and demonstrate how to run predictions against your enterprise datasets.
-- title: Develop Physical AI Reasoning, World, and Action Models with NVIDIA Cosmos 3
-  url: https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T17:17:37Z'
-  summary: Physical AI systems must understand the real world before they can act within it. Robots, autonomous vehicles, and smart spaces need to understand what's...
+- title: 'Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention'
+  url: https://www.goodfire.ai/research/why-larger-models-learn-more
+  source: Goodfire Research
+  source_url: https://www.goodfire.ai/research
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-06-03T17:40:56Z'
+  summary: We take for granted that larger models are better than smaller ones, but why is this so? We trace this to a data-induced competition for resources (neurons), using formal analysis, idealized tasks, and real pretraining.
 - title: '⚡️Satya Nadella: No Priors x Latent Space Crossover Special at Microsoft Build'
   url: https://www.latent.space/p/satya-2026
   source: Latent Space
@@ -281,22 +577,6 @@ items:
   source_tone: community
   published_at: '2026-06-03T17:13:57Z'
   summary: The legendary Microsoft CEO makes his first Latent Space appearance!
-- title: Reducing container cold start times using SOCI index on DLAMI and DLC
-  url: https://aws.amazon.com/blogs/machine-learning/reducing-container-cold-start-times-using-soci-index-on-dlami-and-dlc/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T16:26:35Z'
-  summary: In this post, we look at how to use SOCI on publicly available Deep Learning AMIs and Containers, when to use the various SOCI modes provided by the tool, and how to quickly and efficiently use this tool in your workloa...
-- title: Improve your agent’s tool-calling accuracy with SFT and DPO on Amazon SageMaker AI
-  url: https://aws.amazon.com/blogs/machine-learning/improve-your-agents-tool-calling-accuracy-with-sft-and-dpo-on-amazon-sagemaker-ai/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T15:56:50Z'
-  summary: In this post, you learn how to use Supervised Fine-Tuning (SFT) and Direct Preference Optimization (DPO) together to improve the tool-calling accuracy of a small language model (SLM). The example uses Amazon SageMaker A...
 - title: NVIDIA Research Unlocks Advanced Grasping, Smarter Autonomous Driving and Agent Training at Scale
   url: https://blogs.nvidia.com/blog/cvpr-research-grasping-driving-agent-training/
   source: NVIDIA Blog
@@ -305,14 +585,6 @@ items:
   source_tone: industry
   published_at: '2026-06-03T15:00:57Z'
   summary: What makes a robot gripper useful isn’t that it can pick up one object — it’s that it can pick up the next one, and the one after that, with a tool it’s never held before. What makes an autonomous vehicle system safe is...
-- title: NVIDIA Enables the Next Era Of Physical AI Research With Agent Skills For Autonomous Vehicles, Robotics And Vision AI
-  url: https://blogs.nvidia.com/blog/cvpr-physical-ai-research-agent-skills/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-03T15:00:35Z'
-  summary: At CVPR, NVIDIA is unveiling new physical AI agent skills that help researchers and developers speed the development of autonomous vehicles, robots and vision AI systems. The core challenge in physical AI research isn’t...
 - title: Direct Preference Optimization Beyond Chatbots
   url: https://huggingface.co/blog/Dharma-AI/direct-preference-optimization-beyond-chatbots
   source: Hugging Face Blog
@@ -337,62 +609,6 @@ items:
   source_tone: industry
   published_at: '2026-06-03T00:00:00Z'
   summary: ''
-- title: Industrial Software Leaders Build Secure, Autonomous AI Engineers With NVIDIA NemoClaw
-  url: https://blogs.nvidia.com/blog/industrial-software-leaders-secure-autonomous-ai-engineers-nemoclaw/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T22:00:58Z'
-  summary: 'Accelerated computing has revolutionized industrial engineering, compressing simulation times from weeks to hours. Today’s remaining challenges sit in the end-to-end workflow surrounding the simulations: computer-aided...'
-- title: NVIDIA Partners With Microsoft on Unified Stack for Agentic AI Deployment, From Windows Devices to Cloud to Local
-  url: https://blogs.nvidia.com/blog/microsoft-build-windows-local-cloud-devices/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T19:00:08Z'
-  summary: The agentic AI moment has arrived, but delivering on its promise requires more than good models. It also takes fast hardware, secure runtimes, a responsive data layer and models tuned for long-running reasoning. NVIDIA...
-- title: The art and science of hyperparameter optimization on Amazon Nova Forge
-  url: https://aws.amazon.com/blogs/machine-learning/the-art-and-science-of-hyperparameter-optimization-on-amazon-nova-forge/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T17:39:03Z'
-  summary: Fine-tuning for domain-specific tasks means improving performance in one area without degrading the model’s general capabilities, and getting that balance right is harder than it looks. This post walks through how to na...
-- title: Object detection with Amazon Nova 2 Lite
-  url: https://aws.amazon.com/blogs/machine-learning/object-detection-with-amazon-nova-2-lite/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T17:31:11Z'
-  summary: In this post, we'll walk through implementing object detection with Amazon Nova 2 Lite. You'll learn how to deploy an object detection application using Amazon Bedrock, AWS Lambda, and Amazon API Gateway. You'll also le...
-- title: GitHub's plan for Agents — Kyle Daigle, GitHub
-  url: https://www.latent.space/p/github
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-06-02T16:48:21Z'
-  summary: GitHub pioneered the modern AI coding era with Copilot, and the resulting explosion in agentic coding has led to notable strains on the most popular developer platform in the world. Here's the plan.
-- title: How Baz improved its AI Agent Code Review accuracy using Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/how-baz-improved-its-ai-agent-code-review-accuracy-using-amazon-bedrock-agentcore/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T15:45:11Z'
-  summary: This post walks through how Baz built their Spec Review agent using Amazon Bedrock and Amazon Bedrock AgentCore. We'll cover the architecture decisions, implementation details, and the business outcomes they achieved by...
-- title: Run Local AI Agents with Faster Models and Multi-Node Clustering on NVIDIA DGX Spark
-  url: https://developer.nvidia.com/blog/run-local-ai-agents-with-faster-models-and-multi-node-clustering-on-nvidia-dgx-spark/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T15:22:29Z'
-  summary: The rise of autonomous, long-running AI agents has introduced a new class of compute demand, namely tasks that maintain large context windows, spawn concurrent...
 - title: Farewell Ai2
   url: https://www.interconnects.ai/p/farewell-ai2
   source: Interconnects
@@ -408,94 +624,6 @@ items:
   source_group: AI Companies and Research Labs
   source_tone: industry
   published_at: '2026-06-02T14:13:23Z'
-  summary: ''
-- title: Why Financial Institutions Are Converging on Transaction Foundation Models to Build Their Own Intelligence
-  url: https://blogs.nvidia.com/blog/financial-institutions-transaction-foundation-models/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T06:00:36Z'
-  summary: 'Financial institutions have spent years building AI: fraud models, credit models, recommendation engines and risk systems. While this sprawl of task-specific models has been effective, it’s also constrained by siloed sy...'
-- title: '[AINews] NVIDIA Cosmos 3, Nemotron 3 Ultra, and RTX Spark'
-  url: https://www.latent.space/p/ainews-nvidia-cosmos-3-nemotron-3
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-06-02T03:28:10Z'
-  summary: Jensen scores a huge win.
-- title: Building a secure auth code flow setup using AgentCore Gateway with MCP clients
-  url: https://aws.amazon.com/blogs/machine-learning/building-a-secure-auth-code-flow-setup-using-agentcore-gateway-with-mcp-clients/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T03:23:35Z'
-  summary: This post demonstrates how to implement Open Authorization (OAuth) Code flow as an inbound authorization mechanism for MCP servers hosted on Amazon Bedrock AgentCore Gateway. By the end of this guide, you will have a pr...
-- title: NVIDIA Jetson Brings Agentic AI to the Physical World
-  url: https://blogs.nvidia.com/blog/jetson-agentic-ai-physical-world/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-02T02:00:40Z'
-  summary: Agentic AI is getting physical. At COMPUTEX on Tuesday, NVIDIA announced NVIDIA JetPack 7.2 and NVIDIA NemoClaw support on NVIDIA Jetson. JetPack 7.2 brings agentic AI skills, Yocto project support, NVIDIA CUDA 13 on NV...
-- title: Deploy Self-Evolving Agents for Faster, More Secure Research with a Hermes Agent and NVIDIA NemoClaw
-  url: https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T23:49:45Z'
-  summary: AI agents are a powerful tool for synthesizing data to accelerate research, summarize information, and help teams make decisions faster. But combining internal...
-- title: Reference your own AWS Secrets Manager secrets in Amazon Bedrock AgentCore Identity
-  url: https://aws.amazon.com/blogs/machine-learning/reference-your-own-aws-secrets-manager-secrets-in-amazon-bedrock-agentcore-identity/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T22:16:28Z'
-  summary: Today, we’re excited to announce the ability to reference a secret in AWS Secrets Manager for AgentCore Identity, so you can reference your own preconfigured secret from Secrets Manager and retain full control over how...
-- title: Advancing AI Infrastructure for Agentic AI with NVIDIA DOCA In-Silicon Security
-  url: https://developer.nvidia.com/blog/advancing-ai-infrastructure-for-agentic-ai-with-nvidia-doca-in-silicon-security/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T22:04:04Z'
-  summary: 'The AI era is driving a new class of infrastructure: AI factories that transform data into intelligence for autonomous AI agents operating at unprecedented...'
-- title: 'Why Larger Models Learn More: Effects of Capacity, Interference, and Rare-Task Retention'
-  url: https://www.goodfire.ai/research/why-larger-models-learn-more
-  source: Goodfire Research
-  source_url: https://www.goodfire.ai/research
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-06-01T19:27:56Z'
-  summary: We take for granted that larger models are better than smaller ones, but why is this so? We trace this to a data-induced competition for resources (neurons), using formal analysis, idealized tasks, and real pretraining.
-- title: 'Introducing Mellum2: A 12B Mixture-of-Experts Model by JetBrains'
-  url: https://huggingface.co/blog/JetBrains/mellum2-launch
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T15:45:17Z'
-  summary: ''
-- title: NVIDIA DSX OS Delivers Open, Modular Software for Operating AI Factories at Scale
-  url: https://developer.nvidia.com/blog/nvidia-dsx-os-delivers-open-modular-software-for-operating-ai-factories-at-scale/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T15:37:18Z'
-  summary: AI is now essential infrastructure, powered by AI factories that generate intelligence in the form of tokens. As demand grows, these factories must scale...
-- title: 'Beyond LLMs: Why Scalable Enterprise AI Adoption Depends on Agent Logic'
-  url: https://huggingface.co/blog/ibm-research/agent-logic-and-scalable-ai-adoption
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T13:51:18Z'
   summary: ''
 - title: 'Import AI 459: AI oversight is difficult; scaling laws for protein folding models; and pricing the extinction risk of AI systems'
   url: https://jack-clark.net/2026/06/01/import-ai-459-ai-oversight-is-difficult-scaling-laws-for-protein-folding-models-and-pricing-the-extinction-risk-of-ai-systems/
@@ -513,131 +641,27 @@ items:
   source_tone: community
   published_at: '2026-06-01T13:03:48Z'
   summary: Where marginally higher intelligence drives value, and where it doesn't.
-- title: How to Post-Train Autonomous Vehicle Models in Closed-Loop with NVIDIA Alpamayo
-  url: https://developer.nvidia.com/blog/how-to-post-train-autonomous-vehicle-models-in-closed-loop-with-nvidia-alpamayo/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T04:55:18Z'
-  summary: Developing autonomous vehicle (AV) policies requires bridging an important gap between training and deployment. Vision-language-action (VLA) models that can...
-- title: NVIDIA Vera CPU Sets a New Standard for Agentic Workloads in AI Factories
-  url: https://developer.nvidia.com/blog/nvidia-vera-cpu-sets-a-new-standard-for-agentic-workloads-in-ai-factories/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-06-01T03:59:50Z'
-  summary: Each wave of AI has created a new scaling law. Pretraining scaled intelligence through larger datasets, more parameters, and massively parallel GPU systems....
-- title: Retrying vs Resampling in AI Control
-  url: https://blog.redwoodresearch.org/p/retrying-vs-resampling-in-ai-control
-  source: Redwood Research Blog
-  source_url: https://blog.redwoodresearch.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-29T17:01:53Z'
-  summary: 'We’ve just released a new paper: Retrying vs Resampling in AI Control. We revisit the resampling protocols introduced in Ctrl-Z with an up-to-date setting and much stronger models, and compare them against “retrying” pr...'
-- title: 'Profiling in PyTorch (Part 1): A Beginner''s Guide to torch.profiler'
-  url: https://huggingface.co/blog/torch-profiler
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-05-29T00:00:00Z'
-  summary: ''
-- title: 'A New Era of Discovery: Google Research at I/O 2026'
-  url: https://research.google/blog/a-new-era-of-innovation-google-research-at-io-2026/
-  source: Google Research Blog
-  source_url: https://research.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-28T20:58:00Z'
-  summary: General Science
-- title: Advice for making robust-to-training model organisms
-  url: https://blog.redwoodresearch.org/p/advice-for-making-robust-to-training
-  source: Redwood Research Blog
-  source_url: https://blog.redwoodresearch.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-28T17:00:58Z'
-  summary: We’d like to develop training techniques that work when applied to future misaligned AI systems. One strategy for studying proposed techniques is to test them on model organisms. However, model organisms built with comm...
-- title: 'Data Formulator 0.7: AI-powered data analytics for enterprise data'
-  url: https://www.microsoft.com/en-us/research/blog/data-formulator-0-7-ai-powered-data-analytics-for-enterprise-data/
-  source: Microsoft Research Blog
-  source_url: https://www.microsoft.com/en-us/research/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-28T16:00:00Z'
-  summary: Data Formulator introduces AI-powered analytics for enterprise data workflows. Data teams can easily bring enterprise data into an AI-ready workspace where users can explore, analyze, and visualize data with AI agents t...
-- title: Full automation of AI R&D probably yields a large speed up even without a software-only singularity
-  url: https://blog.redwoodresearch.org/p/full-automation-of-ai-r-and-d-probably
-  source: Redwood Research Blog
-  source_url: https://blog.redwoodresearch.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-05-27T18:27:27Z'
-  summary: Full automation likely yields a one-time speed-up and higher returns from compute
-- title: Private analytics via zero-trust aggregation
-  url: https://research.google/blog/private-analytics-via-zero-trust-aggregation/
-  source: Google Research Blog
-  source_url: https://research.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-27T16:56:00Z'
-  summary: Security, Privacy and Abuse Prevention
-- title: Extending Human Intelligence Through AI
-  url: https://www.microsoft.com/en-us/research/blog/extending-human-intelligence-through-ai/
-  source: Microsoft Research Blog
-  source_url: https://www.microsoft.com/en-us/research/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-27T16:00:00Z'
-  summary: Understanding AI as an extension of human intelligence—not a replacement for it—offers a more grounded path for building trustworthy AI systems. The post Extending Human Intelligence Through AI appeared first on Microso...
-- title: Building self-improving tax agents with Codex
-  url: https://openai.com/index/building-self-improving-tax-agents-with-codex
-  source: OpenAI Engineering
-  source_url: https://openai.com/news/engineering
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-05-27T07:00:00Z'
-  summary: See how OpenAI, Thrive, and Crete built a self-improving tax agent with Codex, automating filings, improving accuracy, and accelerating workflows.
-- title: Some ideas for what comes next, May 2026
-  url: https://www.interconnects.ai/p/some-ideas-for-what-comes-next-may
-  source: Interconnects
-  source_url: https://www.interconnects.ai
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-26T15:39:02Z'
-  summary: Gemini Flash 3.5, Mythos, open-closed balance, America's open-source surge, emerging power struggles and more.
-- title: 'Import AI 458: Reckoning with the future; and a singularity story'
-  url: https://jack-clark.net/2026/05/26/import-ai-458-reckoning-with-the-future-and-a-singularity-story/
-  source: Import AI
-  source_url: https://jack-clark.net
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-05-26T12:32:03Z'
-  summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. This issue consists of a lengthy essay based on a s...
 unavailable_sources:
-- AI Alignment
 - AI Alignment Forum
+- AI Alignment
 - Anthropic Alignment Science
-- CAIS Blog
+- FAR.AI Blog
 - Epoch AI Blog
 - Epoch AI Latest
-- Goodfire Blog
-- Apple Machine Learning Research
-- Hugging Face Daily Papers
-- xAI News
 - Apollo Research Blog
-- Stanford HAI News
-- MIT LINGO Blog
+- Hugging Face Daily Papers
+- Apple Machine Learning Research
+- xAI News
 - Amazon Science Blog
+- Cohere Research
+- Meta AI Blog
+- MIT LINGO Blog
+- Stanford HAI News
 - Import AI Substack
 - DeepLearning.AI - The Batch
-- Cohere Research
-- Mistral AI News
 - Cohere Blog
-- Meta AI Blog
-- FAR.AI Blog
-- Anthropic Research
+- CAIS Blog
+- METR Evaluations
+- Goodfire Blog
 - Anthropic Engineering
+- Anthropic Research
