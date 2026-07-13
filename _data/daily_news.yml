@@ -1,54 +1,190 @@
-updated_at: '2026-07-11T00:01:30.051078Z'
+updated_at: '2026-07-13T23:56:48.263415Z'
 window_days: 14
 items:
-- title: 'Plan A: Suggestions For Further Work'
-  url: https://www.lesswrong.com/posts/B4qMZnB4a5YgKiLNo/plan-a-suggestions-for-further-work
+- title: 'A short summary of AI 2040: Plan A'
+  url: https://www.lesswrong.com/posts/mWp3KBRpYagWMrGqa/a-short-summary-of-ai-2040-plan-a
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T23:02:34Z'
-  summary: 'Yesterday we released AI 2040: Plan A , but there''s lots of work left to do. We still have tons of uncertainty about the future of AI and the best strategies for how humanity can successfully chart a path through the in...'
-- title: Freeing Thucydides
-  url: https://www.lesswrong.com/posts/NDoAHbduZfqdbgNzA/freeing-thucydides
+  published_at: '2026-07-13T23:07:30Z'
+  summary: This post will only make sense if you already know about AI 2040. If you don't, consider reading the authors' announcement post ( Substack , Less Wrong ), or reading the full scenario . Alternatively, if you want to rea...
+- title: '[AI 2040] Transparency Plan'
+  url: https://www.lesswrong.com/posts/NLBmTmryqHGxmWTBR/ai-2040-transparency-plan
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T22:12:50Z'
-  summary: Prompted by discussion with Buck Shlegeris and others at the Forethought retreat. The idea that AI could bring an end to Thucydides traps is Buck’s. Speculative. I think it's plausible that we will not see sustained com...
-- title: 'An Induction Head in Disguise: Chasing Grammar in a Character-Level Transformer'
-  url: https://www.lesswrong.com/posts/x2ZdCoqAaLedpjDk3/an-induction-head-in-disguise-chasing-grammar-in-a-character
+  published_at: '2026-07-13T21:24:42Z'
+  summary: Over the next few weeks we'll cross post some of AI 2040 supplements to LessWrong for discussion; let us know if there are particular ones you think are especially useful to cross post and we'll prioritize those. AGI pr...
+- title: OpenAI GPT-5.6 Sol, Terra, and Luna are now generally available on Amazon Bedrock
+  url: https://aws.amazon.com/blogs/machine-learning/openai-gpt-5-6-sol-terra-and-luna-are-now-generally-available-on-amazon-bedrock/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-13T21:01:20Z'
+  summary: Today, GPT-5.6 Sol, Terra, and Luna from OpenAI are generally available on Amazon Bedrock, bringing the smartest family of models from OpenAI yet to Amazon Bedrock’s next-generation inference engine built for high-perfo...
+- title: Better Call Sol The Workhorse
+  url: https://www.lesswrong.com/posts/zPdDmJTovsKTvAiH2/better-call-sol-the-workhorse
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T22:05:58Z'
-  summary: Confident in the measurements — copying score, OV logits, attention patterns. More exploratory on the interpretations of what the head "knows," two of which I ended up disconfirming myself. My first mechanistic interpre...
-- title: The standard can be to admit the existence of a standard
-  url: https://www.lesswrong.com/posts/dCA2hhjJsYBGQQN7g/the-standard-can-be-to-admit-the-existence-of-a-standard-1
+  published_at: '2026-07-13T20:52:32Z'
+  summary: OpenAI’s GPT-5.6-Sol is finally here, along with the cheaper Terra and Luna. We’ve seen the early hype as reported on Thursday, but as always that is biased. As usual, the bulk of this is collecting a gestalt based on r...
+- title: Can AI be Conscious in Ohio?
+  url: https://www.lesswrong.com/posts/3KcQjNJXvzmh3gf6k/can-ai-be-conscious-in-ohio
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T21:22:56Z'
-  summary: '(The aspirant sequence (so far: Would You Work Harder In The Least Convenient Possible World? , That Which Cannot Be Poked With A Stick Is The Mind-Killer ) will be arranged into some sort of sensible order once I''m don...'
-- title: 'Persona Cartography: Charting Language Model Personality Traits in Weight Space'
-  url: https://www.lesswrong.com/posts/Rkvto5BLofzuDefyB/persona-cartography-charting-language-model-personality
+  published_at: '2026-07-13T20:01:35Z'
+  summary: 'TLDR: Several US states are considering banning legal personhood for AI systems and/or declaring that AI systems cannot be conscious. The primary motives include religious beliefs, ensuring human accountability for harm...'
+- title: When your brain works differently, AI isn’t a luxury—it’s accessibility
+  url: https://aws.amazon.com/blogs/machine-learning/when-your-brain-works-differently-ai-isnt-a-luxury-its-accessibility/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-13T17:50:16Z'
+  summary: In this post, I share how AI serves as an accessibility tool for neurodivergent professionals. The system is built on Amazon Quick on your desktop, an AI-powered desktop and web assistant that compensates for executive...
+- title: Building an agentic AI solution at Bluesight with Amazon Bedrock
+  url: https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-solution-at-bluesight-with-amazon-bedrock/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-13T17:34:38Z'
+  summary: In this post, we describe how Bluesight used two AWS engagements and Amazon Bedrock AgentCore to evolve from a single-product AI prototype to Prism, a unified agentic AI solution spanning six healthcare compliance produ...
+- title: Implement on-behalf-of token exchange for multi-tenant agents with Amazon Bedrock AgentCore Gateway
+  url: https://aws.amazon.com/blogs/machine-learning/implement-on-behalf-of-token-exchange-for-multi-tenant-agents-with-amazon-bedrock-agentcore-gateway/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-13T17:27:40Z'
+  summary: Building multi-tenant agents with Amazon Bedrock AgentCore and Apply fine-grained access control with Bedrock AgentCore Gateway interceptors establish the conceptual foundation for on-behalf-of (OBO) token exchange in a...
+- title: Pausing AI at human level seems harder than pausing ASAP
+  url: https://www.lesswrong.com/posts/tC463N9mHcmimQ5dZ/pausing-ai-at-human-level-seems-harder-than-pausing-asap
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T18:56:21Z'
-  summary: 'This post summarises the paper Persona Cartography: Charting Language Model Personality Traits in Weight Space . Paper | GitHub | HuggingFace TL;DR Understanding and controlling the character of LLMs is important for sa...'
-- title: The easiest pathway to control is through executive power
-  url: https://www.lesswrong.com/posts/Fxp9vGPw7uhkFi6SG/the-easiest-pathway-to-control-is-through-executive-power
+  published_at: '2026-07-13T17:20:07Z'
+  summary: 'Cross-posted from my website . Some people think we should pause AI, but not now. They say we should wait until AI reaches human level, [1] because: It''s not (catastrophically) dangerous until after then. Human-level AI...'
+- title: 'Oversight of automated research via summarisation: a toy model'
+  url: https://www.lesswrong.com/posts/TDaCR4NnrRHp2Whbz/oversight-of-automated-research-via-summarisation-a-toy
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-07-10T18:48:51Z'
-  summary: When people in the AI safety community outline loss-of-control scenarios, they often spend a lot of time on relatively elaborate mechanisms — scheming AIs developing nanotech, labs leveraging superintelligence into hard...
+  published_at: '2026-07-13T17:06:34Z'
+  summary: 'Executive Summary Summarisation is one approach to oversight of automated research: a non-scheming agent distils insights from a large body of research into an informative short summary for a human overseer. We investig...'
+- title: Launching UI for generative AI inference recommendations in Amazon SageMaker AI
+  url: https://aws.amazon.com/blogs/machine-learning/launching-ui-for-generative-ai-inference-recommendations-in-amazon-sagemaker-ai/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-13T16:42:15Z'
+  summary: In this post, we introduce the UI for optimized generative AI inference recommendations in Amazon SageMaker AI Studio, a low-code no-code (LCNC) experience. The API already gives you programmatic access to recommendatio...
+- title: 'Prism: Automating Science-of-Evals Research'
+  url: https://www.lesswrong.com/posts/wq5PfGiHvnx6XipDi/prism-automating-science-of-evals-research
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-13T16:30:21Z'
+  summary: 'tl;dr – we present [ Prism ], a scaffold for automating science-of-evals research: work that makes the evaluation the primary object of study. The scaffold provides Claude Code with sub-agents and resources for carrying...'
+- title: 'Prism: Automating Science-of-Evals Research'
+  url: https://www.alignmentforum.org/posts/wq5PfGiHvnx6XipDi/prism-automating-science-of-evals-research
+  source: AI Alignment Forum
+  source_url: https://www.alignmentforum.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-13T16:30:21Z'
+  summary: 'tl;dr – we present [ Prism ], a scaffold for automating science-of-evals research: work that makes the evaluation the primary object of study. The scaffold provides Claude Code with sub-agents and resources for carrying...'
+- title: The Flood, by Anton Leicht
+  url: https://www.lesswrong.com/posts/ibMkRj4mvt5AifY9Z/the-flood-by-anton-leicht
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-13T16:23:02Z'
+  summary: 'Note: I''m crossposting Anton''s newest article from his blog . Anton covers AI policy angles in a singular fashion; every article he writes is worth reading, and this one is unusually topical to Manifund. As someone who...'
+- title: 'Starting The Sequences: Some brief notes from the preface and the introduction'
+  url: https://www.lesswrong.com/posts/zRuzqcibahejJfwqn/starting-the-sequences-some-brief-notes-from-the-preface-and
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-13T16:20:14Z'
+  summary: 'Crossposted (with small tweaks) from my Substack. I have started, as a side read, Rationality: From AI to Zombies , which I believe contains the heart of the Sequences. On my e-reader, it adds up to about 1,750 pages, w...'
+- title: Verifying Rust cryptography in SymCrypt, from standards to code
+  url: https://www.microsoft.com/en-us/research/blog/verifying-rust-cryptography-in-symcrypt-from-standards-to-code/
+  source: Microsoft Research Blog
+  source_url: https://www.microsoft.com/en-us/research/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-07-13T16:00:00Z'
+  summary: Cryptographic code supports vital protections in modern computing systems. Learn how a new method helps verify code as developers write it while preserving speed and adaptability as it gets implemented and evolves. The...
+- title: The Whitney Biennial Should Admit That Emilie Gossiaux Wants to Fuck Their Dog
+  url: https://www.lesswrong.com/posts/sFkYA5CwZCWYQ9nzB/the-whitney-biennial-should-admit-that-emilie-gossiaux-wants
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-13T15:53:30Z'
+  summary: 'content warnings: depictions of human and anthro nudity, discussion of bestiality, modern art Credit where it''s due: it is genuinely, unironically baller for the Whitney museum to make the exhibit about how a disabled a...'
+- title: From wantons to moral agents
+  url: https://www.alignmentforum.org/posts/Z8kLbceGBMWB5HGfn/from-wantons-to-moral-agents
+  source: AI Alignment Forum
+  source_url: https://www.alignmentforum.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-12T17:30:31Z'
+  summary: 'Posted also on the EA Forum. Written mostly at AFFINE . Theoretical, some parts are hard to read; consider reading the next post instead. Introduction: motivation Anyone interested in creating an artificial agent that d...'
+- title: 6 months to live for open models
+  url: https://www.interconnects.ai/p/6-months-to-live-for-open-models
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-07-12T16:47:42Z'
+  summary: The most serious test to date of open source AI’s viability is happening right now.
+- title: How to Evaluate General-Purpose Robot Policies for Real-World Deployment
+  url: https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-12T01:20:49Z'
+  summary: Robotics foundation models have made remarkable progress. Today's best systems can follow natural language instructions to pick, place, sort, and manipulate a...
+- title: The current bottleneck is political will, not research
+  url: https://www.alignmentforum.org/posts/EexsebbYhbe2gXkPP/the-current-bottleneck-is-political-will-not-research
+  source: AI Alignment Forum
+  source_url: https://www.alignmentforum.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-07-11T21:56:26Z'
+  summary: 'Motivation: If we want to move from Plan D to Plan A or S, I believe the first step is to collectively agree on the problem. We are far from it, and there is a lot we can do. Abstract: We already know enough to act. I w...'
+- title: '[AINews] not much happened today'
+  url: https://www.latent.space/p/ainews-not-much-happened-today-f5c
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-07-11T02:53:08Z'
+  summary: a quiet day after a week of nonstop model releases
+- title: NVIDIA Ising Decoding Cuts Color Code Logical Error Rates by Over 300X
+  url: https://developer.nvidia.com/blog/nvidia-ising-decoding-cuts-color-code-logical-error-rates-by-over-300x/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-10T20:46:09Z'
+  summary: Useful quantum computers will require fault tolerant logical operations. Researchers are actively exploring many different quantum error correction (QEC) codes...
 - title: Reducing High-Bandwidth Memory Bottlenecks in JAX-Based LLM Training with Host Offloading
   url: https://developer.nvidia.com/blog/reducing-high-bandwidth-memory-bottlenecks-in-jax-based-llm-training-with-host-offloading/
   source: NVIDIA Technical Blog
@@ -57,22 +193,14 @@ items:
   source_tone: industry
   published_at: '2026-07-10T18:17:58Z'
   summary: Large language model (LLM) training workloads increasingly run into GPU memory limits before compute is fully used. Model weights, gradients, optimizer states,...
-- title: The Human Substitution Test as a Sanity Check for AI Evaluations
-  url: https://www.lesswrong.com/posts/B66gAyzwL8Aph6F8u/the-human-substitution-test-as-a-sanity-check-for-ai
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-10T17:27:33Z'
-  summary: 'TL;DR: We suggest a sanity check for proposed evaluation or AI oversight schemes: Imagine the AI was replaced by a competent, strategic human — someone who knows they might get evaluated and has their own agenda. Would...'
-- title: 'Cap-and-trade question: AI-2040'
-  url: https://www.lesswrong.com/posts/cdgg9fpr2sMaad7NQ/cap-and-trade-question-ai-2040
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-10T17:01:22Z'
-  summary: 'TL; DR: I find it hard to believe that сap-and-trade from AI-2040 would be effective in a context involving prohibitions. This will likely create an unsustainable structure in the long term. Every time someone tries to...'
+- title: Extreme Event Likelihoods with Guided Generative Models
+  url: https://developer.nvidia.com/blog/extreme-event-likelihoods-with-guided-generative-models/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-07-10T16:41:57Z'
+  summary: Across science, engineering, and finance, many of the most important risks come from low-likelihood, high-impact events. Estimating the probability of these...
 - title: 'Kernel Fusion in NVIDIA CUDA: Optimizing Memory Traffic and Launch Overhead'
   url: https://developer.nvidia.com/blog/kernel-fusion-in-nvidia-cuda-optimizing-memory-traffic-and-launch-overhead/
   source: NVIDIA Technical Blog
@@ -121,14 +249,6 @@ items:
   source_tone: industry
   published_at: '2026-07-10T15:28:54Z'
   summary: In this post, we show you how to combine case management with agentic automation capabilities in Quick Automate. We introduce case management and explore the lifecycle of cases in an agentic workflow from case creation...
-- title: Plan A's problem with dry tinder
-  url: https://www.lesswrong.com/posts/8iDZnQwmvwuxZo3Wx/plan-a-s-problem-with-dry-tinder
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-10T15:28:38Z'
-  summary: A group is worried about an approaching fire spreading rapidly through their city. They manage to halt the fire outside the city gates. Meanwhile they build massive physical structures to help them study and guide the f...
 - title: Deploying quantized models on Amazon SageMaker AI with Unsloth
   url: https://aws.amazon.com/blogs/machine-learning/deploying-quantized-models-on-amazon-sagemaker-ai-with-unsloth/
   source: AWS Machine Learning Blog
@@ -137,30 +257,6 @@ items:
   source_tone: industry
   published_at: '2026-07-10T15:26:05Z'
   summary: In this post, you will learn four deployment patterns for taking models that have already been quantized with Unsloth and deploying them on AWS infrastructure. The patterns use Amazon Elastic Compute Cloud (Amazon EC2)...
-- title: How KTern.AI built agentic AI for SAP on Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/how-ktern-ai-built-agentic-ai-for-sap-on-amazon-bedrock-agentcore/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-10T15:23:25Z'
-  summary: Evolving from a traditional software as a service (SaaS) platform into a next-generation agentic AI platform meant orchestrating multiple specialized agents across long-running enterprise programs. Each agent operates w...
-- title: Disaggregated prefill and decode for LLM inference on SageMaker HyperPod
-  url: https://aws.amazon.com/blogs/machine-learning/disaggregated-prefill-and-decode-for-llm-inference-on-sagemaker-hyperpod/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-10T15:20:16Z'
-  summary: In this post, we show how to implement DPD with vLLM on Amazon SageMaker HyperPod using the HyperPod Inference Operator.
-- title: 'AI #176 Part 2: Plan B'
-  url: https://www.lesswrong.com/posts/7Av7wwErwNXdM3J68/ai-176-part-2-plan-b
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-10T12:40:30Z'
-  summary: This is part 2 of the weekly, broadly covering speculation, rhetoric and policy, along with alignment research. This does not cover the release of GPT-5.6-Sol. As always, I will be taking a few days to digest what the n...
 - title: 'Value generalisation: value correction'
   url: https://www.alignmentforum.org/posts/iPyJfD9Jyxj6Jfdws/value-generalisation-value-correction
   source: AI Alignment Forum
@@ -233,30 +329,6 @@ items:
   source_tone: industry
   published_at: '2026-07-09T19:40:54Z'
   summary: Fine-tuning LLMs for financial natural language processing (NLP) is constrained by limited, imbalanced data. Real-world financial news overrepresents earnings...
-- title: 'Mastering Agentic Techniques: AI Agent Reinforcement Learning'
-  url: https://developer.nvidia.com/blog/mastering-agentic-techniques-ai-agent-reinforcement-learning/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-09T18:12:51Z'
-  summary: Reinforcement learning (RL) is central to aligning language models, from reinforcement learning with human feedback (RLHF) within AI assistants to newer...
-- title: Hardware-Rooted AI Security That Won’t Slow You Down
-  url: https://developer.nvidia.com/blog/hardware-rooted-ai-security-that-wont-slow-you-down/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-09T18:12:50Z'
-  summary: AI has transformed how organizations operate, driving unprecedented levels of productivity and innovation. However, AI adoption can be impeded by concerns...
-- title: Enhancing Goodput in Large-Scale LLM Training with Nonuniform Tensor Parallelism
-  url: https://developer.nvidia.com/blog/enhancing-goodput-in-large-scale-llm-training-with-nonuniform-tensor-parallelism/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-09T18:12:50Z'
-  summary: Training LLMs at massive scale brings unique infrastructure challenges, especially as jobs span thousands of GPUs and run for extended periods. The longer these...
 - title: 'Aurora 1.5: Extending open foundation models for weather and Earth-system applications'
   url: https://www.microsoft.com/en-us/research/blog/aurora-1-5-extending-open-foundation-models-for-weather-and-earth-system-applications/
   source: Microsoft Research Blog
@@ -265,22 +337,6 @@ items:
   source_tone: frontier
   published_at: '2026-07-09T16:46:22Z'
   summary: Aurora 1.5 adds 22 more variables, hourly temporal resolution, and probabilistic ensemble forecasting to the Aurora foundation model, making it more useful for real-world weather, climate, and energy applications. The p...
-- title: 'MCP tool design: Practical approaches and tradeoffs'
-  url: https://aws.amazon.com/blogs/machine-learning/mcp-tool-design-practical-approaches-and-tradeoffs/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-09T16:40:16Z'
-  summary: In this post, we show where MCP tool design goes wrong and how to fix it with practical context engineering approaches.
-- title: Enhancing enterprise inference on Amazon SageMaker HyperPod with data capture, Hugging Face, NVMe, and Route 53 integration
-  url: https://aws.amazon.com/blogs/machine-learning/enhancing-enterprise-inference-on-amazon-sagemaker-hyperpod-with-data-capture-hugging-face-nvme-and-route-53-integration/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-09T16:38:11Z'
-  summary: 'In this post, we walk through five capabilities now available in SageMaker HyperPod inference: multi-tier data capture for auditing and model improvement, direct deployment from Hugging Face Hub, local NVMe model loadin...'
 - title: 'AI 2040: Plan A'
   url: https://www.alignmentforum.org/posts/pFzctpJBat95SrCyC/ai-2040-plan-a
   source: AI Alignment Forum
@@ -369,14 +425,6 @@ items:
   source_tone: community
   published_at: '2026-07-08T22:55:07Z'
   summary: 2 years after our first coverage, we return with Modal's other cofounder to explore why Agent Experience is working now, and everything they have learned building the new agent cloud.
-- title: Introducing Claude apps gateway for AWS
-  url: https://aws.amazon.com/blogs/machine-learning/introducing-claude-apps-gateway-for-aws/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-08T19:49:22Z'
-  summary: Today, we're announcing the Claude apps gateway for AWS, a self-hosted control plane that gives organizations a single point of control over access, cost, and policy for Claude Code and Claude Desktop. In this post, we...
 - title: Notes on technical alignment via human-like social drives
   url: https://www.alignmentforum.org/posts/rKdS7i4StaMmFzYRo/notes-on-technical-alignment-via-human-like-social-drives
   source: AI Alignment Forum
@@ -593,72 +641,24 @@ items:
   source_tone: industry
   published_at: '2026-07-07T00:00:00Z'
   summary: Multi-domain fine-tuning of large language models requires improving performance on target domains while preserving performance on constrained domains, such as general knowledge, instruction following, or safety evaluat...
-- title: How Open Models Are Driving AI Research
-  url: https://blogs.nvidia.com/blog/open-models-icml-2026/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-06T16:00:00Z'
-  summary: 'Every year, the International Conference on Machine Learning (ICML) reveals where thousands of AI researchers have decided to put their work. This year’s accepted papers reveal a clear direction: open frontier models an...'
-- title: 'PRX Part 4: Our Data Strategy'
-  url: https://huggingface.co/blog/Photoroom/prx-part4-data
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-06T15:30:55Z'
-  summary: ''
-- title: How Nations Are Deploying AI for Strategic Priorities
-  url: https://blogs.nvidia.com/blog/nations-deploy-ai-strategic-priorities/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-06T15:00:25Z'
-  summary: Nations have long invested in domestic infrastructure to advance their economies, protect and use their data, and take advantage of technology opportunities in areas such as transportation, communications, commerce, ent...
-- title: 'Import AI 464: Fables writes GPU kernels; AI automation; and analog computation'
-  url: https://jack-clark.net/2026/07/06/import-ai-464-fables-writes-gpu-kernels-ai-automation-and-analog-computation/
-  source: Import AI
-  source_url: https://jack-clark.net
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-07-06T12:31:05Z'
-  summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Fable writes a decent GPU kernel, hin...
-- title: '🤗 Kernels: Major Updates'
-  url: https://huggingface.co/blog/revamped-kernels
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-07-06T00:00:00Z'
-  summary: ''
-- title: Harness Engineering for Self-Improvement
-  url: https://lilianweng.github.io/posts/2026-07-04-harness/
-  source: Lilian Weng - Lil'Log
-  source_url: https://lilianweng.github.io
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-07-04T00:00:00Z'
-  summary: The concept of recursive self-improvement (RSI) dates back to I. J. Good (1965) , where he defined an “ultraintelligent machine” as a system that can surpass humans in all intellectual activities and design better machi...
 unavailable_sources:
 - Anthropic Alignment Science
-- CAIS Blog
-- Apollo Research Blog
 - Goodfire Blog
-- Epoch AI Blog
 - Hugging Face Daily Papers
 - Epoch AI Latest
+- Epoch AI Blog
+- Apollo Research Blog
+- CAIS Blog
 - xAI News
-- Stanford HAI News
 - MIT LINGO Blog
-- Import AI Substack
-- Cohere Research
-- Meta AI Blog
-- DeepLearning.AI - The Batch
-- FAR.AI Blog
+- Stanford HAI News
 - Amazon Science Blog
+- Import AI Substack
+- DeepLearning.AI - The Batch
+- Cohere Research
 - Cohere Blog
+- FAR.AI Blog
+- Meta AI Blog
 - Anthropic Research
 - Anthropic Engineering
 - AI Alignment
