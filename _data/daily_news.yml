@@ -1,6 +1,94 @@
-updated_at: '2026-08-01T00:03:10.928035Z'
+updated_at: '2026-08-01T23:58:26.582593Z'
 window_days: 14
 items:
+- title: 'Existential Risk from AI: An Exposition for Mathematicians'
+  url: https://www.lesswrong.com/posts/ZLary4FDY7kQaGfc3/existential-risk-from-ai-an-exposition-for-mathematicians
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T23:16:59Z'
+  summary: Discuss
+- title: RLVR that rewards red teaming the training environment
+  url: https://www.lesswrong.com/posts/T2bzBkJuBeNNgzhbh/rlvr-that-rewards-red-teaming-the-training-environment
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T23:07:08Z'
+  summary: 'Epistemic status: throwing an idea at the wall and seeing if it sticks I''ve been thinking pretty obsessively about how to mitigate egregious reward hacking, a la the Hugging Face incident . I don''t have the resources I''...'
+- title: Mathematicians may be worried, but AI-for-science is going to be great, recursively self-improving, and we’re going to learn loads
+  url: https://www.lesswrong.com/posts/8oWjLL8HRb7SfyPYj/mathematicians-may-be-worried-but-ai-for-science-is-going-to
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T21:59:42Z'
+  summary: I have a new post on my experiments with 5.6-sol as a scientific agent; you can find the original post here . I've reproduced it below, as well. I'd be grateful for any feedback, thoughts, or to hear about experiments o...
+- title: Confirming Claims of Superposition and Adversarial Examples in Toy Models
+  url: https://www.lesswrong.com/posts/rwu73dCE3uWjieijK/confirming-claims-of-superposition-and-adversarial-examples
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T20:19:53Z'
+  summary: 'This is a replication of Adversarial Attacks Leverage Interference Between Features in Superposition , completed as part of the Second Look Summer Fellowship. tl;dr: We reproduce all three core claims of Stevinson et al...'
+- title: 'Bayeswatch: a Retrospective'
+  url: https://www.lesswrong.com/posts/EaNkLdsuDQMFCW7ow/bayeswatch-a-retrospective
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T20:13:20Z'
+  summary: Last year, in 2025, a team of forecasters published AI 2027 , a science fiction story about how and AI future might evolve under an international treaty limiting the development of powerful AI systems with the deliberat...
+- title: Using AI to analyze life patterns
+  url: https://www.lesswrong.com/posts/3RghEkCcY8749drkE/using-ai-to-analyze-life-patterns
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T18:00:28Z'
+  summary: If you’re anything like me, you may have a lot of notes from various introspective activities – annual / monthly reviews, worksheets, therapy notes, etc. Often these notes are just gathering dust in a paper folder or so...
+- title: Do your capabilities homework
+  url: https://www.lesswrong.com/posts/dYnhhTxoDj3fuCxLB/do-your-capabilities-homework
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T16:10:57Z'
+  summary: It seems to me that a lot of technical ai safety people haven't done their capabilities homework - and that's a shame! I'll try to illuminate here mainly with an example as to why I think people who care about safety sh...
+- title: Why so many therapy etc. frameworks think they're The One True Approach
+  url: https://www.lesswrong.com/posts/v58ypL2vuenDD7t27/why-so-many-therapy-etc-frameworks-think-they-re-the-one
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T09:30:07Z'
+  summary: If you spend time looking at frameworks in the therapy/meditation/self-help space, you’ll soon find lots of conflicting claims about The One Approach for solving your problems. In the therapy space, there are lots of mo...
+- title: Generalization and infinite width
+  url: https://www.lesswrong.com/posts/LwArt7JdkjoEDo5Eo/generalization-and-infinite-width
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T08:41:56Z'
+  summary: This is a post explaining my paper with Kaarel Hänni on complexity of infinite-width networks. I will explain the result, why it matters, and how the mathematical idealizations can interact with real structure in neural...
+- title: Review of Fundamental Uncertainty.
+  url: https://www.lesswrong.com/posts/tEEKbdAoe8pvwJjMm/review-of-fundamental-uncertainty
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-01T07:29:00Z'
+  summary: My Introduction. This is a review of @Gordon Seidoh Worley 's book on epistemology. I'm neither an extreme sceptic, nor an extreme realist, and for that reason, I'm going to push in one direction some of the time, and i...
+- title: '[AINews] not much happened today'
+  url: https://www.latent.space/p/ainews-not-much-happened-today-038
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-08-01T01:38:09Z'
+  summary: apart from DeepSeek V4-Flash 0731, a quiet day.
 - title: Co-Designing AI Model Attention for Fast, Interactive Long-Context Inference
   url: https://developer.nvidia.com/blog/co-designing-ai-model-attention-for-fast-interactive-long-context-inference/
   source: NVIDIA Technical Blog
@@ -17,38 +105,6 @@ items:
   source_tone: safety
   published_at: '2026-07-31T23:09:20Z'
   summary: Anthropic concluded in the April Mythos Preview alignment risk update that the model “does not possess any unknown propensities that would increase alignment risk.” The report argues that if Mythos Preview were coherent...
-- title: SOTA alignment assessments don’t strongly update us against misalignment
-  url: https://www.lesswrong.com/posts/oirrSj3itFLSyscW8/sota-alignment-assessments-don-t-strongly-update-us-against
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T22:54:27Z'
-  summary: Anthropic concluded in the April Mythos Preview alignment risk update that the model "does not possess any unknown propensities that would increase alignment risk." The report argues that if Mythos Preview were coherent...
-- title: 'The temporal lockbox: a hardened observatory for AI misalignment'
-  url: https://www.lesswrong.com/posts/tePcBicaEgDvp6DHJ/the-temporal-lockbox-a-hardened-observatory-for-ai
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T21:22:28Z'
-  summary: 'This is a linkpost for https://kmenou.github.io/aips_website/temporal_lockbox_v0.1.html Summary: Weather forecasts by AI agents can be scored against measurements that do not yet exist and cannot plausibly be influenced...'
-- title: AI safety prizes
-  url: https://www.lesswrong.com/posts/rqf9LLgPn2xTvP7m6/ai-safety-prizes
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T20:56:22Z'
-  summary: Rather than paying up front for AI safety research (push funding), perhaps we should pay after the fact for the work that made the most progress (pull funding). This way, you only pay for work that was actually valuable...
-- title: 'Taboo “equilibrium”: Less confused frames for research on AI bargaining'
-  url: https://www.lesswrong.com/posts/KDq5aXwanvH5YoZYs/taboo-equilibrium-less-confused-frames-for-research-on-ai
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T20:25:09Z'
-  summary: 'To understand why powerful AIs might get into conflict, and ways to mitigate it, we need to understand bargaining problems : situations where multiple agents have different preferences over Pareto-efficient outcomes. I’...'
 - title: Announcing the Agentic Catalog Experience in Amazon Quick
   url: https://aws.amazon.com/blogs/machine-learning/announcing-the-agentic-catalog-experience-in-amazon-quick/
   source: AWS Machine Learning Blog
@@ -57,38 +113,6 @@ items:
   source_tone: industry
   published_at: '2026-07-31T19:53:04Z'
   summary: Amazon Quick introduces the Agentic Catalog Experience, an AI-powered workflow for data curators to discover upstream catalog assets in natural language and auto-create Datasets and Topics with inherited semantics. Now...
-- title: Parallelization constraints could delay a technological singularity [Linkpost]
-  url: https://www.lesswrong.com/posts/awc78puocgEAwMhKn/parallelization-constraints-could-delay-a-technological
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T17:48:01Z'
-  summary: 'Today, I''ll be linking both a Epoch blog post and a paper called The Bounded Parallelizability of R&D: Theory and Application to AI , about how standard models of AI R&D and standard models of the possibility of an inte...'
-- title: How to Measure Intelligence Beyond Human Scale?
-  url: https://www.lesswrong.com/posts/avtquSx2PkWsxXW6T/how-to-measure-intelligence-beyond-human-scale
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T17:27:46Z'
-  summary: 'Based on the academic paper: Measuring Intelligence Beyond Human Scale [1] TLDR: Historically, intelligence benchmarks have been composed of human-generated questions. However, current techniques do not scale to AI, as...'
-- title: When you donate can matter more than where
-  url: https://www.lesswrong.com/posts/ikpNG4yYuAF6q6j9D/when-you-donate-can-matter-more-than-where
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T17:10:49Z'
-  summary: And why our 2023 regrant to Timaeus was goated We think the for-profit funding ecosystem has some cool properties. Different funders naturally come in at different stages, from angel investors who are good at spotting e...
-- title: 'Value Leakage: An LLM’s Answers Are Silently Shaped by Its Own Values'
-  url: https://www.lesswrong.com/posts/hbMw4Yqw6RnFaExDy/value-leakage-an-llm-s-answers-are-silently-shaped-by-its-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T16:32:50Z'
-  summary: 'TL;DR: LLMs should give accurate answers. Yet we find their answers are often biased to favor their own values and they don''t disclose this in their reasoning. For example, when a user asks how likely the AI bubble is t...'
 - title: 'Value Leakage: An LLM’s Answers Are Silently Shaped by Its Own Values'
   url: https://www.alignmentforum.org/posts/hbMw4Yqw6RnFaExDy/value-leakage-an-llm-s-answers-are-silently-shaped-by-its-1
   source: AI Alignment Forum
@@ -98,14 +122,6 @@ items:
   published_at: '2026-07-31T16:32:50Z'
   summary: 'TL;DR: LLMs should give accurate answers. Yet we find their answers are often biased to favor their own values and they don''t disclose this in their reasoning. For example, when a user asks how likely the AI bubble is t...'
 - title: 'AGI Safety and Alignment at Google DeepMind: A Summary of Recent Work (July 2026)'
-  url: https://www.lesswrong.com/posts/ZTdRtSWaw7JgqEtfa/agi-safety-and-alignment-at-google-deepmind-a-summary-of-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T15:57:59Z'
-  summary: Cross-posted from our new Substack It’s been nearly two years since our last major update here in August 2024 and we wanted to share another recap of our recent work with the AGI safety community. Things have changed a...
-- title: 'AGI Safety and Alignment at Google DeepMind: A Summary of Recent Work (July 2026)'
   url: https://www.alignmentforum.org/posts/ZTdRtSWaw7JgqEtfa/agi-safety-and-alignment-at-google-deepmind-a-summary-of-1
   source: AI Alignment Forum
   source_url: https://www.alignmentforum.org
@@ -113,14 +129,6 @@ items:
   source_tone: safety
   published_at: '2026-07-31T15:57:59Z'
   summary: Cross-posted from our new Substack It’s been nearly two years since our last major update here in August 2024 and we wanted to share another recap of our recent work with the AGI safety community. Things have changed a...
-- title: The AGI Safety and Alignment team at Google DeepMind is Hiring (July 2026)
-  url: https://www.lesswrong.com/posts/AyDNvb3Pw6Kgo7Dqb/the-agi-safety-and-alignment-team-at-google-deepmind-is
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-07-31T15:53:58Z'
-  summary: GDM’s AGI Safety and Alignment Team is hiring for multiple roles, across all areas in this post on our recent work . This is the team at GDM, led by Rohin Shah , that aims to reduce existential risks from AI systems. Yo...
 - title: The AGI Safety and Alignment team at Google DeepMind is Hiring (July 2026)
   url: https://www.alignmentforum.org/posts/AyDNvb3Pw6Kgo7Dqb/the-agi-safety-and-alignment-team-at-google-deepmind-is
   source: AI Alignment Forum
@@ -633,31 +641,23 @@ items:
   source_tone: industry
   published_at: '2026-07-24T04:34:27Z'
   summary: At this week’s AI Summit in San Francisco, South Korean President Jae Myung Lee and some of the country’s top business leaders and researchers are meeting with NVIDIA and ecosystem partners to chart Korea’s AI progress....
-- title: '[AINews] Black Forest Labs FLUX 3 - Multimodal Flow Models that beat Seedance 2.0, Gemini Omni and Grok Imagine, and FLUX-mimic video-action robotics model'
-  url: https://www.latent.space/p/ainews-black-forest-labs-flux-3-multimodal
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-07-24T04:30:12Z'
-  summary: A HUGE win for BFL!
 unavailable_sources:
 - Anthropic Alignment Science
-- Anthropic Research
 - Anthropic Engineering
-- CAIS Blog
-- Epoch AI Blog
+- Anthropic Research
 - Hugging Face Daily Papers
+- Epoch AI Blog
 - Epoch AI Latest
-- Goodfire Blog
-- MIT LINGO Blog
+- CAIS Blog
 - FAR.AI Blog
-- xAI News
-- Import AI Substack
 - Apollo Research Blog
-- Stanford HAI News
+- xAI News
+- MIT LINGO Blog
+- Import AI Substack
 - DeepLearning.AI - The Batch
-- Amazon Science Blog
+- Stanford HAI News
+- Goodfire Blog
 - Cohere Research
+- Amazon Science Blog
 - Cohere Blog
 - Meta AI Blog
