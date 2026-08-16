@@ -1,6 +1,86 @@
-updated_at: '2026-08-13T23:42:29.979884Z'
+updated_at: '2026-08-16T23:21:15.554001Z'
 window_days: 14
 items:
+- title: Does DiffusionGemma do latent reasoning?
+  url: https://www.alignmentforum.org/posts/QBuJ3suRZxrrxSTtv/does-diffusiongemma-do-latent-reasoning
+  source: AI Alignment Forum
+  source_url: https://www.alignmentforum.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-16T04:22:18Z'
+  summary: TL;DR Google DeepMind's recent model DiffusionGemma (DG) generates text via diffusion, meaning many diffusion steps happen before generating the final output. In particular, these diffusion steps carry vectors in additi...
+- title: 'React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue'
+  url: https://www.latent.space/p/flue-2
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-08-15T15:46:22Z'
+  summary: Flue 2 takes its inspiration from React. Creator Fred Schott, of Astro fame, tells Latent Space why he added hooks and why agents are defined by their harnesses.
+- title: 'GLM-5.3: How Chinese labs keep stride with the frontier'
+  url: https://www.interconnects.ai/p/glm-53-how-chinese-labs-keep-stride
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-08-14T21:23:35Z'
+  summary: 'Hint: It’s really not a distillation story.'
+- title: Universitas Gadjah Mada, Indosat and NVIDIA Open Indonesia’s First University AI Center to Develop Local AI Talent
+  url: https://blogs.nvidia.com/blog/ugm-indosat-nvidia-ai-technology-center/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-08-14T17:13:05Z'
+  summary: Indonesia is taking charge of its AI future. This week, the Ministry of Communication and Digital Affairs (Komdigi), Indosat Ooredoo Hutchison (Indosat or IOH), NVIDIA and Universitas Gadjah Mada (UGM) launched the UGM...
+- title: Custom reward functions for multi-turn reinforcement learning with Amazon Nova Forge
+  url: https://aws.amazon.com/blogs/machine-learning/custom-reward-functions-for-multi-turn-reinforcement-learning-with-amazon-nova-forge/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-08-14T16:02:10Z'
+  summary: In multi-turn reinforcement learning, your custom reward function decides what the model actually learns. This post shows how to design a composite multi-turn reward for Amazon Nova Forge, execute model-generated code s...
+- title: Building agentic workflows with SageMaker AI and Bedrock AgentCore
+  url: https://aws.amazon.com/blogs/machine-learning/building-agentic-workflows-with-sagemaker-ai-and-bedrock-agentcore/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-08-14T15:58:44Z'
+  summary: Learn how to combine OpenAI-compatible endpoints on Amazon SageMaker AI with Amazon Bedrock AgentCore runtime to build a multi-agent workflow where each specialized agent uses the model best suited to its job. This post...
+- title: Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72
+  url: https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-08-14T15:45:00Z'
+  summary: Alibaba released the open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), its largest open-weight model, bringing near-frontier capabilities to the open...
+- title: Have We Seen an Acceleration in Discoveries?
+  url: https://metr.org/notes/2026-08-14-llm-contribution-to-discoveries/
+  source: METR Evaluations
+  source_url: https://metr.org/evaluations
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-08-14T07:00:00Z'
+  summary: '.post-content .discovery-note { --discovery-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbo...'
+- title: '[AINews] Gemini 3.7 Flash brings GDM back to the forefront'
+  url: https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-08-14T05:30:39Z'
+  summary: Down, but not out!
+- title: 'State of Open Models: Summer 2026 Observations'
+  url: https://huggingface.co/blog/state-of-open-models-summer-2026
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-08-14T00:00:00Z'
+  summary: ''
 - title: Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets
   url: https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop
   source: Hugging Face Blog
@@ -89,14 +169,6 @@ items:
   source_tone: industry
   published_at: '2026-08-12T21:37:31Z'
   summary: 'Long-running AI agents spend most of their time on high-volume execution: tool calls, result validation, and subagent delegation. Using a frontier reasoning...'
-- title: Serve Qwen3.8-2.4T-A95B, a 2.4T-Parameter Model, with Configurable Reasoning on NVIDIA GB300 NVL72
-  url: https://developer.nvidia.com/blog/serve-qwen3-8-2-4t-a95b-a-2-4t-parameter-model-with-configurable-reasoning-on-nvidia-gb300-nvl72/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-12T18:26:18Z'
-  summary: Alibaba released the open weights for Qwen3.8-2.4T-A95B (Qwen3.8-Max), its largest open-weight model, bringing near-frontier capabilities to the open...
 - title: 'Part 2: Amazon Bedrock cost attribution with Amazon Athena and CUDOS'
   url: https://aws.amazon.com/blogs/machine-learning/part-2-amazon-bedrock-cost-attribution-with-amazon-athena-and-cudos/
   source: AWS Machine Learning Blog
@@ -241,14 +313,6 @@ items:
   source_tone: industry
   published_at: '2026-08-12T00:38:21Z'
   summary: We announced partnerships with Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs and KKR to establish independent financing platforms designed to mobilize over $500 billion of third-party capital to support the b...
-- title: 'Accelerate cyber defense with OpenAI and AWS: Daybreak Red & Daybreak Blue now available to eligible customers on Amazon Bedrock'
-  url: https://aws.amazon.com/blogs/machine-learning/accelerate-cyber-defense-with-openai-and-aws-daybreak-red-daybreak-blue-now-available-to-eligible-customers-on-amazon-bedrock/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-11T21:38:06Z'
-  summary: Daybreak Red and Daybreak Blue from OpenAI, specialized cyber defense models from OpenAI, are now available on Amazon Bedrock to eligible customers. Both models run with zero-operator access enforced at the chip, keepin...
 - title: 🔬The BioAI Phase Shift - Matthew McPartlon & Neil Patil, Chai Discovery
   url: https://www.latent.space/p/chai-discovery
   source: Latent Space
@@ -265,14 +329,6 @@ items:
   source_tone: frontier
   published_at: '2026-08-11T17:04:00Z'
   summary: Health & Bioscience
-- title: How ONESTRUCTION built the Ishigaki-IDS foundation model with AWS GenAIIC
-  url: https://aws.amazon.com/blogs/machine-learning/how-onestruction-built-the-ishigaki-ids-foundation-model-with-aws-genaiic/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-11T16:14:33Z'
-  summary: ONESTRUCTION, with technical advisory from the AWS Generative AI Innovation Center, built Ishigaki-IDS, a foundation model specialized for construction and BIM workflows. This architectural case study shows how they com...
 - title: 'Introducing CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement'
   url: https://www.microsoft.com/en-us/research/blog/introducing-care-x-towards-clinically-useful-radiology-vlms-with-auxiliary-supervision-reward-aligned-learning-and-tool-augmented-measurement/
   source: Microsoft Research Blog
@@ -561,14 +617,6 @@ items:
   source_tone: safety
   published_at: '2026-08-05T20:02:19Z'
   summary: 'TL;DR: We introduce the R-lens: a drop-in replacement for J-lens that produces clearer readouts on earlier layers. R-Lens is identical to J-Lens, except that we make minor and low-overhead changes to the backwards pass,...'
-- title: NVIDIA and Partners Build in America, for America
-  url: https://blogs.nvidia.com/blog/nvidia-and-partners-build-in-america-for-america/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-05T13:00:47Z'
-  summary: NVIDIA and its partners are investing in American manufacturing, supply chains, energy grids and skilled workforces so the U.S. can produce the infrastructure needed for better healthcare, breakthrough scientific discov...
 - title: '[AINews] Megakernels are so dead and so back'
   url: https://www.latent.space/p/ainews-megakernels-are-so-dead-and
   source: Latent Space
@@ -592,73 +640,25 @@ items:
   source_group: AI Safety and Governance
   source_tone: safety
   published_at: '2026-08-04T22:27:40Z'
-  summary: I've returned to the Alignment Research Center (ARC) as executive director. My main focus for the next six months will be driving forward ARC's research agenda—building techniques to find mechanistic explanations for ne...
-- title: 'Unpacking ChatGPT Work: the Agent for a Billion Users'
-  url: https://www.latent.space/p/unpacking-chatgpt-work
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-04T18:20:14Z'
-  summary: An external reconstruction of how Memory, Proactivity, Scheduling, Browser Use, Plugins, Skills and Tools work in the new ChatGPT Work.
-- title: Introducing Shieldstral.
-  url: https://mistral.ai/news/shieldstral/
-  source: Mistral AI News
-  source_url: https://mistral.ai/news
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-04T12:00:26Z'
-  summary: Shieldstral introduces a 3B open-weights multimodal safety classifier that outperforms models up to 7x its size.
-- title: '[AINews] Qwen 3.8 Max(2.4T) and 27B, new open weights models for Coding and Cowork'
-  url: https://www.latent.space/p/ainews-qwen-38-max24t-and-27b-new
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-04T03:49:14Z'
-  summary: Qwen is so back!
-- title: 'Orchard: An open framework for scalable agentic AI'
-  url: https://www.microsoft.com/en-us/research/blog/orchard-an-open-framework-for-scalable-agentic-ai/
-  source: Microsoft Research Blog
-  source_url: https://www.microsoft.com/en-us/research/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-03T16:00:00Z'
-  summary: Orchard is an open-source framework for the research community to train and evaluate AI agents across task types. It reduces complexity while supporting strong performance from smaller models by enabling researchers to...
-- title: Introducing our Artifacts Hub and Adoption Dashboard
-  url: https://www.interconnects.ai/p/introducing-our-artifacts-hub-and
-  source: Interconnects
-  source_url: https://www.interconnects.ai
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-03T14:03:08Z'
-  summary: Scaling our curation and measurement of the open ecosystem.
-- title: 'Import AI 467: Self-sustaining AI viruses; pacing AI progress; confusion about AI and creativity'
-  url: https://jack-clark.net/2026/08/03/import-ai-467-self-sustaining-ai-viruses-pacing-ai-progress-confusion-about-ai-and-creativity/
-  source: Import AI
-  source_url: https://jack-clark.net
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-03T13:31:22Z'
-  summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Self-sustaining and self-replicating...
+  summary: I've returned to the Alignment Research Center (ARC) as executive director. My main focus will be driving forward ARC's research agenda—building techniques to find mechanistic explanations for neural network behavior an...
 unavailable_sources:
 - LessWrong
 - Anthropic Alignment Science
 - Anthropic Research
 - Anthropic Engineering
+- Apollo Research Blog
 - Epoch AI Latest
 - Epoch AI Blog
-- Apollo Research Blog
 - CAIS Blog
 - Hugging Face Daily Papers
-- xAI News
 - MIT LINGO Blog
-- FAR.AI Blog
-- Stanford HAI News
+- xAI News
 - Import AI Substack
+- FAR.AI Blog
 - DeepLearning.AI - The Batch
+- Stanford HAI News
+- Goodfire Blog
 - Cohere Research
 - Amazon Science Blog
 - Meta AI Blog
-- Goodfire Blog
 - Cohere Blog
