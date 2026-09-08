@@ -1,6 +1,30 @@
-updated_at: '2026-09-05T00:41:18.382286Z'
+updated_at: '2026-09-08T00:59:18.848224Z'
 window_days: 14
 items:
+- title: 'The Frontier AEO Tracker: What Astra Chooses (and every other frontier model, and what you can do about it)'
+  url: https://www.latent.space/p/aeo
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-07T21:32:37Z'
+  summary: Our first Astra project dives into AEO trends, a top asked topic from founders and DX leaders we talk to.
+- title: 'Import AI 472: DeepMind’s cheating math agents; populist AI policies; and Forethought theorizes a nightwatchman'
+  url: https://jack-clark.net/2026/09/07/import-ai-472-deepminds-cheating-math-agents-populist-ai-policies-and-forethought-theorizes-a-nightwatchman/
+  source: Import AI
+  source_url: https://jack-clark.net
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-07T12:26:31Z'
+  summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Researchers discover another OpenAI a...
+- title: 'OpenClaw Power, MacBook Simplicity: Five Days With Grok Bot'
+  url: https://www.latent.space/p/grok-bot
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-05T15:01:02Z'
+  summary: SpaceXAI’s Grok Bot has the same level of programming power as OpenClaw, but it’s programmable at a different level of abstraction.
 - title: Deploy a multimodal WhatsApp ordering assistant with Amazon Bedrock AgentCore
   url: https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/
   source: AWS Machine Learning Blog
@@ -529,14 +553,6 @@ items:
   source_tone: frontier
   published_at: '2026-08-27T12:59:16Z'
   summary: Piloting the world's first double-blind AI evaluations
-- title: '[AINews] NVIDIA buys HuggingFace for $13B, as OpenAI publishes their HF incident retro'
-  url: https://www.latent.space/p/ainews-nvidia-buys-huggingface-for
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-27T01:50:54Z'
-  summary: Open Source wins!
 - title: Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
   url: https://blog.redwoodresearch.org/p/brief-independent-investigation-of
   source: Redwood Research Blog
@@ -545,14 +561,6 @@ items:
   source_tone: safety
   published_at: '2026-08-27T01:32:18Z'
   summary: We recently published the report from our brief independent investigation into this incident.
-- title: '[AINews] Hot Chips: OpenAI’s Jalapeño, Cerebras CS-5, Groq 3 LPX, Apple M6'
-  url: https://www.latent.space/p/ainews-hot-chips-openais-jalapeno
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-27T01:31:22Z'
-  summary: The conference with hot chips and even hotter companies
 - title: 'From Preferences to Principles: Rubric-Based Alignment for Grounded Knowledge Answers'
   url: https://machinelearning.apple.com/research/rubric-based-alignment
   source: Apple Machine Learning Research
@@ -633,33 +641,25 @@ items:
   source_tone: industry
   published_at: '2026-08-26T00:00:00Z'
   summary: Supervised fine-tuning on teacher-generated trajectories is the standard first stage for distilling tool-calling capabilities into deployable models. Post-training pipelines that drive shipped tool-calling agents re-run...
-- title: 'Luce: Relightable Gaussians for 3D Asset Generation'
-  url: https://machinelearning.apple.com/research/relightable-gaussians-3d-generation
-  source: Apple Machine Learning Research
-  source_url: https://machinelearning.apple.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-26T00:00:00Z'
-  summary: High-fidelity image-to-3D generation requires a 3D representation that captures both geometry and appearance. To support relighting and integration into standard rendering pipelines, the representation should include ph...
 unavailable_sources:
 - LessWrong
 - Anthropic Alignment Science
-- Anthropic Engineering
-- Anthropic Research
-- Epoch AI Blog
-- Epoch AI Latest
 - Apollo Research Blog
+- Anthropic Research
+- Anthropic Engineering
+- Epoch AI Latest
+- Epoch AI Blog
 - Hugging Face Daily Papers
 - CAIS Blog
-- xAI News
 - MIT LINGO Blog
-- Stanford HAI News
 - Goodfire Blog
 - FAR.AI Blog
 - Import AI Substack
 - DeepLearning.AI - The Batch
-- Amazon Science Blog
+- xAI News
+- Stanford HAI News
 - Cohere Research
-- Cohere Blog
+- Amazon Science Blog
 - Meta AI Blog
+- Cohere Blog
 - BAIR Blog
