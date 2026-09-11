@@ -1,6 +1,286 @@
-updated_at: '2026-09-08T00:59:18.848224Z'
+updated_at: '2026-09-11T00:51:43.454915Z'
 window_days: 14
 items:
+- title: 'ToolGrad: Efficient tool-use dataset generation with textual "gradients"'
+  url: https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/
+  source: Google Research Blog
+  source_url: https://research.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-09-10T22:50:22Z'
+  summary: Machine Intelligence
+- title: Reduce LLM latency with prefix-aware routing on Amazon SageMaker Inference
+  url: https://aws.amazon.com/blogs/machine-learning/reduce-llm-latency-with-prefix-aware-routing-on-amazon-sagemaker-inference/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T21:58:09Z'
+  summary: Amazon SageMaker Inference now offers prefix-aware routing, a routing strategy that sends requests sharing the same prompt prefix to the same instance so the KV cache stays warm. In benchmarks on Llama 3.1 70B, it reduc...
+- title: Reduce inference cold starts on Amazon SageMaker HyperPod with model caching
+  url: https://aws.amazon.com/blogs/machine-learning/reduce-inference-cold-starts-on-amazon-sagemaker-hyperpod-with-model-caching/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T21:37:49Z'
+  summary: Amazon SageMaker HyperPod now supports model caching for inference, which pre-loads model weights and container images onto cluster nodes so pods read from local NVMe storage instead of downloading over the network. Lea...
+- title: Video and image search in Amazon Bedrock Knowledge Base using Marengo 3.0
+  url: https://aws.amazon.com/blogs/machine-learning/video-and-image-search-in-amazon-bedrock-knowledge-base-using-marengo-3-0/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T21:15:39Z'
+  summary: TwelveLabs Marengo Embed 3.0 is now generally available as an embedding model in Amazon Bedrock Knowledge Bases, bringing fully managed natural language search to video, image, and audio content. This walkthrough shows...
+- title: An operationalization of opaque serial depth
+  url: https://blog.redwoodresearch.org/p/an-operationalization-of-opaque-serial
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-09-10T18:40:20Z'
+  summary: '"Serial depth between text bottlenecks" as a proxy for latent reasoning abilities.'
+- title: Amazon Quick is now generally available on desktop
+  url: https://aws.amazon.com/blogs/machine-learning/amazon-quick-is-now-generally-available-on-desktop/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T18:16:37Z'
+  summary: Your teams get an AI assistant that handles real work while your data stays in your environment and your conversations stay private Today, the Amazon Quick desktop application is generally available on macOS and Windows...
+- title: Proposal for tracking the effects of architecture on monitorability
+  url: https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-09-10T18:13:53Z'
+  summary: Architectures that incorporate opaque recurrence or allow agents to communicate using latents could rapidly make it much harder to monitor chains of thought. We propose that AI companies regularly report verified inform...
+- title: How Full-Stack NIM Optimizations Deliver 2.5x More Users on Nemotron 3 Ultra
+  url: https://developer.nvidia.com/blog/how-full-stack-nim-optimizations-deliver-2-5x-more-users-on-nemotron-3-ultra/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T16:55:39Z'
+  summary: Deploying a large language model is only the first step toward production-ready serving. Production teams also need to serve as many concurrent users as...
+- title: Skild AI Taps NVIDIA Physical AI to Teach Robots New Tasks From a Single Video
+  url: https://blogs.nvidia.com/blog/skild-ai-s1-physical-ai/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T16:30:35Z'
+  summary: Manufacturing floors, warehouses and production lines rarely stay fixed — tasks change, layouts shift and new products arrive, and most robots can’t keep up without significant reprogramming. Skild AI’s new S1 robot fou...
+- title: Build an end-to-end RFI questionnaire workflow using Amazon Quick Automate
+  url: https://aws.amazon.com/blogs/machine-learning/build-an-end-to-end-rfi-questionnaire-workflow-using-amazon-quick-automate/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T16:08:57Z'
+  summary: Learn how to build an end-to-end RFI questionnaire workflow with Amazon Quick Automate. Read a multi-tab RFI workbook from Amazon S3, use natural-language prompts to extract and structure the questionnaire data, refine...
+- title: Model-agnostic PII detection with LLMs
+  url: https://aws.amazon.com/blogs/machine-learning/model-agnostic-pii-detection-with-llms/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T16:02:16Z'
+  summary: A configurable, model-agnostic detector that turns any large language model on Amazon Bedrock into a PII detector. Because the entities to detect live in a prompt rather than in code, one detector adapts to new entity t...
+- title: 'Physical AI Takes the Wheel: How the World’s Robotaxi Leaders Are Building With NVIDIA Technologies'
+  url: https://blogs.nvidia.com/blog/robotaxi-leaders-full-stack-open-platform/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T16:00:04Z'
+  summary: The global robotaxi market — physical AI’s first commercial breakthrough — is projected to reach $400 billion by 2035, with over 6 million commercial vehicles in operation as driverless fleets are already moving people...
+- title: Agent Evaluation Metric for multi-turn conversations
+  url: https://aws.amazon.com/blogs/machine-learning/agent-evaluation-metric-for-multi-turn-conversations/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T15:55:41Z'
+  summary: 'Multi-turn agents fail in ways single-turn evaluation misses: one early mistake corrupts every later turn. This post introduces the Agent Evaluation Metric (AEM), a decomposable, turn-level way to measure agent quality,...'
+- title: How AvioBook builds turnaround insights from operational data with Amazon Bedrock AgentCore
+  url: https://aws.amazon.com/blogs/machine-learning/how-aviobook-uses-generative-ai-to-drive-airline-turnaround-insights/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T15:53:05Z'
+  summary: AvioBook, a Thales Group Company, prototyped Connected Analytics on Amazon Bedrock AgentCore to turn AvioBook Connect's operational data into plain-language, evidence-based answers for airline managers and dispatchers,...
+- title: One resignation turned the embers of AI fear into a wildfire
+  url: https://www.interconnects.ai/p/one-resignation-turned-the-embers
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-10T15:28:52Z'
+  summary: Some quick notes on a truly weird week.
+- title: d-Matrix Adopts NVIDIA NVLink Fusion for Rack-Scale XPU Deployment
+  url: https://blogs.nvidia.com/blog/d-matrix-nvlink-fusion/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T13:00:21Z'
+  summary: AI inference chipmaker d-Matrix today announced it will use NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform — joining a growing roster of partners building on the NVIDIA A...
+- title: 'Boots on the Ground: ‘WARDOGS’ Goes All Out on GeForce NOW at Early-Access Launch'
+  url: https://blogs.nvidia.com/blog/geforce-now-thursday-wardogs/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T13:00:18Z'
+  summary: 'Gear up: The latest PC games and major updates are ready to play on GeForce NOW this week. WARDOGS drops onto the cloud at early-access launch, alongside the Valheim 1.0 Deep North update and Bus Simulator 27 — part of...'
+- title: Cloudera and Mistral Partner to Bring Specialized, Sovereign Intelligence to Enterprise Data
+  url: https://mistral.ai/news/mistral-x-cloudera/
+  source: Mistral AI News
+  source_url: https://mistral.ai/news
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T10:42:55Z'
+  summary: Cloudera and Mistral join forces to bring specialized, sovereign AI intelligence to enterprise data, helping regulated industries innovate on their own terms.
+- title: 'From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry'
+  url: https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T05:31:11Z'
+  summary: NVIDIA has one of the largest and most complex supply chains in the world, and its performance is measured from wafer-out to first token. The interval is in two...
+- title: '[AINews] not much happened today'
+  url: https://www.latent.space/p/ainews-not-much-happened-today-d3b
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-10T03:33:12Z'
+  summary: a quiet day
+- title: Rebuilding AUTOMATIC1111 with Gradio Workflow
+  url: https://huggingface.co/blog/gradio-workflow-1111
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-10T00:00:00Z'
+  summary: ''
+- title: High-Throughput Structure Prediction with BioNeMo Inference Runtime
+  url: https://developer.nvidia.com/blog/high-throughput-structure-prediction-with-bionemo-inference-runtime/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T23:45:42Z'
+  summary: Biomolecular structure prediction is now often run at proteome scale, where the goal is to move an entire worklist through the pipeline efficiently. NVIDIA...
+- title: Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM
+  url: https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T22:26:29Z'
+  summary: Learn how to deploy Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter open-weight model, on Amazon SageMaker HyperPod with vLLM. This walkthrough covers cluster provisioning, NVFP4 quantization, and an OpenAI-compatible endpo...
+- title: When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving
+  url: https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T20:31:11Z'
+  summary: Encode-prefill-decode (EPD) disaggregation is an inference optimization technique for multimodal models that separates the vision encoder stage from the prefill...
+- title: CUDA Toolkit 13.4 Adds Windows on Arm Support and Greater Control over Shared GPUs
+  url: https://developer.nvidia.com/blog/cuda-toolkit-13-4-adds-windows-on-arm-support-and-greater-control-over-shared-gpus/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T20:24:19Z'
+  summary: Every NVIDIA CUDA Toolkit release adds functionality and performance improvements that help developers get more from NVIDIA GPUs and the broader NVIDIA software...
+- title: 'ICYMI: What landed for AI builders in August 2026'
+  url: https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T20:01:03Z'
+  summary: 'A recap of August 2026 launches for AI builders across Amazon Bedrock, Amazon Bedrock AgentCore, and Strands: million-token context for OpenAI models, cross-Region inference, agents that run for up to 14 days on dedicat...'
+- title: NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC
+  url: https://blogs.nvidia.com/blog/ibc-news-2026/
+  source: NVIDIA Blog
+  source_url: https://blogs.nvidia.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T16:00:42Z'
+  summary: At the IBC conference, running Sept. 11-14 in Amsterdam, the creative, technology and business communities are coming together to turn ideas into action and discuss innovations across the media and entertainment industr...
+- title: IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license
+  url: https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T15:36:24Z'
+  summary: ''
+- title: Modernizing complex legacy code with AI agents.
+  url: https://mistral.ai/news/legacy-code-modernization/
+  source: Mistral AI News
+  source_url: https://mistral.ai/news
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-09T12:00:46Z'
+  summary: Mistral helped a European energy operator migrate 40,000 lines of Fortran 77 to C++. Learn how it was done, and the lessons to carry forward.
+- title: When will average people feel AI’s impact?
+  url: https://www.interconnects.ai/p/when-will-average-people-feel-ais
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-09T11:01:23Z'
+  summary: We’re <5 years into a compounding revolution which could take a century, and how the AI industry should manage this.
+- title: '[AINews] OpenAI reports Navier-Stokes singularity find in 88 hours using Astra-next, roughly 10,000 agents and 130B tokens (>$40M), a contender for second ever Millennium Prize aw...'
+  url: https://www.latent.space/p/ainews-openai-reports-navier-stokes
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-09T05:04:51Z'
+  summary: Overshadowing Cognition's $48B Series E, Mistral's $24B Series D, Meta's Muse agent, and GPT Image 2.5. The most jam packed, feel the AGI day in the history of AI.
+- title: Safety for Whom? Refusing the Right Subset of a Topic, Not the Whole Topic
+  url: https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom
+  source: Hugging Face Blog
+  source_url: https://huggingface.co/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-08T14:23:07Z'
+  summary: ''
+- title: 'Latest open artifacts (#24): Motif-3, GLM-5.3, Hy4-preview and open model licenses'
+  url: https://www.interconnects.ai/p/latest-open-artifacts-24-motif-3
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-08T14:15:25Z'
+  summary: The open model ecosystem continues to expand in its breadth
+- title: 'AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome'
+  url: https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/
+  source: Google DeepMind Blog
+  source_url: https://deepmind.google/blog
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-09-08T14:00:15Z'
+  summary: AlphaGenome Atlas maps the molecular effects of 9 billion single-letter DNA variants across the human genome.
+- title: Mistral raises €3B to make sovereign, open-weight AI the technology frontier
+  url: https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/
+  source: Mistral AI News
+  source_url: https://mistral.ai/news
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-08T12:00:22Z'
+  summary: Mistral today announced that it has raised €3 billion in a Series D funding round at a post-money valuation of more than €21 billion.
 - title: 'The Frontier AEO Tracker: What Astra Chooses (and every other frontier model, and what you can do about it)'
   url: https://www.latent.space/p/aeo
   source: Latent Space
@@ -25,22 +305,22 @@ items:
   source_tone: community
   published_at: '2026-09-05T15:01:02Z'
   summary: SpaceXAI’s Grok Bot has the same level of programming power as OpenClaw, but it’s programmable at a different level of abstraction.
-- title: Deploy a multimodal WhatsApp ordering assistant with Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/deploy-a-multimodal-whatsapp-ordering-assistant-with-amazon-bedrock-agentcore/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T21:45:52Z'
-  summary: Learn how to deploy a multimodal WhatsApp ordering assistant that takes customer orders through text, voice notes, and real-time voice calls on a single business number, built on Amazon Bedrock AgentCore with Amazon Nov...
-- title: Experiment with Qwen3.8-Flash-Next on NVIDIA GB300 NVL72 for Agentic Coding
-  url: https://developer.nvidia.com/blog/experiment-with-qwen3-8-flash-next-on-nvidia-gb300-nvl72-for-agentic-coding/
+- title: '[AINews] Collusion.wiki: A second undisclosed OpenAI agent swarm incident...'
+  url: https://www.latent.space/p/ainews-collusionwiki-a-second-undisclosed
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-05T04:32:00Z'
+  summary: AI News for 9/2/2026-9/3/2026.
+- title: 'Introducing CUDA Rust: Two Tracks for Writing GPU Kernels'
+  url: https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/
   source: NVIDIA Technical Blog
   source_url: https://developer.nvidia.com/blog
   source_group: AI Companies and Research Labs
   source_tone: industry
-  published_at: '2026-09-04T19:52:48Z'
-  summary: Alibaba released the model weights for Qwen3.8-Flash-Next as a preview of the upcoming Qwen4 architecture for developers to experiment with and evaluate. It’s...
+  published_at: '2026-09-04T23:07:14Z'
+  summary: In September 2026, NVIDIA announced it is leaning into native GPU programming in Rust. CUDA C++ and CUDA Python are mature, enterprise-grade toolchains, and...
 - title: Building a Memory-Driven Agent with NVIDIA NemoClaw
   url: https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/
   source: NVIDIA Technical Blog
@@ -49,14 +329,6 @@ items:
   source_tone: industry
   published_at: '2026-09-04T18:05:02Z'
   summary: Enterprise work spans messages, decisions, projects, and obligations that change over time. An AI agent that starts without this context must reconstruct it...
-- title: Designing lifecycle policies for AgentCore memory
-  url: https://aws.amazon.com/blogs/machine-learning/designing-lifecycle-policies-for-agentcore-memory/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T17:20:04Z'
-  summary: 'Long-running AI agents accumulate outdated memories that degrade quality and create compliance risk. Learn how to design memory lifecycle policies for Amazon Bedrock AgentCore: scoring, consolidating, and pruning agent...'
 - title: 'Frontier Reasoning Reaches the Edge: How to Deploy and Optimize Models on NVIDIA Jetson'
   url: https://developer.nvidia.com/blog/frontier-reasoning-reaches-the-edge-how-to-deploy-and-optimize-models-on-nvidia-jetson/
   source: NVIDIA Technical Blog
@@ -65,38 +337,6 @@ items:
   source_tone: industry
   published_at: '2026-09-04T16:21:13Z'
   summary: Running reasoning and agentic AI at the edge has been harder than it needs to be. Until recently, models capable of multi-step reasoning were too large to run...
-- title: Build a Physical AI model factory with NVIDIA Cosmos 3 on SageMaker HyperPod
-  url: https://aws.amazon.com/blogs/machine-learning/build-a-physical-ai-model-factory-with-nvidia-cosmos-3-on-sagemaker-hyperpod/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T16:16:00Z'
-  summary: Building a Physical AI system takes a continuous pipeline, not a single training job. This post shows how to run that model factory (synthetic data generation, post-training, and closed-loop evaluation with NVIDIA Cosmo...
-- title: Run agent-driven Amazon SageMaker HyperPod operations with InstantStart
-  url: https://aws.amazon.com/blogs/machine-learning/run-agent-driven-amazon-sagemaker-hyperpod-operations-with-instantstart/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T16:12:17Z'
-  summary: HyperPod InstantStart is an open source control plane that composes Amazon EKS orchestration with the managed capabilities of Amazon SageMaker HyperPod. It drives the same guarded operations through both a web interface...
-- title: Customizing your knowledge base on Amazon Bedrock for large and complex documents using Amazon Textract
-  url: https://aws.amazon.com/blogs/machine-learning/customizing-your-knowledge-base-on-amazon-bedrock-for-large-and-complex-documents-using-amazon-textract/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T16:08:10Z'
-  summary: Learn how to customize an Amazon Bedrock knowledge base for large, complex documents by combining the high-accuracy text extraction of Amazon Textract with the generative AI of Amazon Bedrock. This post shows how to ing...
-- title: How Intuit built an agentic disaster recovery assistant with Amazon Bedrock
-  url: https://aws.amazon.com/blogs/machine-learning/how-intuit-built-an-agentic-disaster-recovery-assistant-with-amazon-bedrock/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-04T16:06:01Z'
-  summary: Disaster recovery at scale is hard. Learn how Intuit built EWOK Agent, an agentic disaster recovery assistant on Amazon Bedrock that lets on-call engineers run production failovers from a plain-language request while ke...
 - title: '[AINews] GPT-6 Astra: OpenAI’s biggest LLM launch of all time'
   url: https://www.latent.space/p/ainews-gpt-6-astra-openais-biggest
   source: Latent Space
@@ -137,38 +377,6 @@ items:
   source_tone: safety
   published_at: '2026-09-03T16:28:27Z'
   summary: How neural geometry will unlock understanding and control of AI
-- title: AI-driven development lifecycle using Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/ai-driven-development-lifecycle-using-amazon-bedrock-agentcore/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-03T16:16:28Z'
-  summary: Engineering teams adopting the AI-Driven Development Lifecycle (AI-DLC) often struggle to turn concepts into working code. This post walks through two reference implementations on Amazon Bedrock AgentCore, Kiro, and Cla...
-- title: Migrate agentic workloads to Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/migrate-agentic-workloads-to-amazon-bedrock-agentcore/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-03T16:14:12Z'
-  summary: 'An agent that works in a notebook is not an agent in production. This post walks through migrating a LangGraph customer support agent to Amazon Bedrock AgentCore in two stages: onto Runtime, Gateway, and Memory, then to...'
-- title: Integrating Outlook with Amazon Quick for AI-powered email automation
-  url: https://aws.amazon.com/blogs/machine-learning/integrating-outlook-with-amazon-quick-for-ai-powered-email-automation/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-03T16:11:57Z'
-  summary: Integrate Microsoft Outlook with Amazon Quick to automate email management, calendar scheduling, and workflow coordination. This post walks through the end-to-end setup and shows automation scenarios using Amazon Quick...
-- title: Set up OpenAI ChatGPT Codex with LiteLLM on Amazon ECS and Amazon Bedrock
-  url: https://aws.amazon.com/blogs/machine-learning/set-up-openai-chatgpt-codex-with-litellm-on-amazon-ecs-and-amazon-bedrock/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-03T16:10:39Z'
-  summary: Deploy a customer-operated LiteLLM gateway on Amazon ECS with AWS Fargate, connect it to an OpenAI model on Amazon Bedrock, and configure Codex to route requests through the gateway's Responses API with scoped identitie...
 - title: 'Sparks Fly: NVIDIA Accelerates Local AI at IFA 2026'
   url: https://blogs.nvidia.com/blog/local-ai-ifa-next-gen-agents-nv-pair-rtx-spark/
   source: NVIDIA Blog
@@ -257,22 +465,6 @@ items:
   source_tone: industry
   published_at: '2026-09-02T23:06:37Z'
   summary: This post is the third in a series on AI model co-design. It explores how to accelerate LLM inference while maintaining accuracy using speculative decoding and...
-- title: NVIDIA PAIR Virtual Inference Router Expands Available Compute on Your Local Network
-  url: https://developer.nvidia.com/blog/nvidia-pair-virtual-inference-router-expands-available-compute-on-your-local-network/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-02T21:33:39Z'
-  summary: AI agents are learning to do more by working together. A lead agent can break a complex task into smaller jobs and assign those jobs to specialized subagents....
-- title: 'The Modern CUDA Toolbox in Practice: A Step-by-Step Optimization Walkthrough'
-  url: https://developer.nvidia.com/blog/the-modern-cuda-toolbox-in-practice-a-step-by-step-optimization-walkthrough/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-02T17:16:06Z'
-  summary: NVIDIA CUDA remains the foundation of GPU-accelerated computing, powering everything from scientific simulations to large-scale AI training. But writing...
 - title: Proactive cyber defense for governments and enterprises
   url: https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/
   source: Google DeepMind Blog
@@ -288,14 +480,6 @@ items:
   source_group: Frontier Labs
   source_tone: frontier
   published_at: '2026-09-02T16:18:31Z'
-  summary: ''
-- title: Real-Time Intelligence with IBM Time Series Models on Confluent
-  url: https://huggingface.co/blog/ibm-research/real-time-intelligence
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-02T13:49:14Z'
   summary: ''
 - title: '[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens'
   url: https://www.latent.space/p/ainews-claude-fablemythos-51-new
@@ -337,22 +521,6 @@ items:
   source_tone: industry
   published_at: '2026-09-01T21:19:20Z'
   summary: “We’re at an inflection point in cybersecurity,” Jensen Huang told a sold-out crowd at CrowdStrike’s Fal.Con 2026 in Las Vegas Tuesday. Attacks are now automated. Defense has to be, too. The NVIDIA founder and CEO joine...
-- title: 'The Alignment Journal: Organization, Personnel, and Scope'
-  url: https://www.alignmentforum.org/posts/9vm2wtAtb34pEkjje/the-alignment-journal-organization-personnel-and-scope
-  source: AI Alignment Forum
-  source_url: https://www.alignmentforum.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-09-01T20:49:18Z'
-  summary: '[Cross-posted from the Alignment Journal''s blog ] The Alignment Journal is beginning to invite the authors of select papers to submit their work for review. If you are interested in participating as an action editor or...'
-- title: Building an Adaptive Agentic Cybersecurity System with NVIDIA Nemotron
-  url: https://developer.nvidia.com/blog/building-an-adaptive-agentic-cybersecurity-system-with-nvidia-nemotron/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-01T19:00:37Z'
-  summary: AI is changing the pace of cybersecurity. Agentic systems can coordinate work and pursue complex objectives over long horizons. Security teams are beginning to...
 - title: Mapping global methane emissions from space with deep learning
   url: https://research.google/blog/mapping-global-methane-emissions-from-space-with-deep-learning/
   source: Google Research Blog
@@ -377,22 +545,6 @@ items:
   source_tone: community
   published_at: '2026-09-01T16:17:15Z'
   summary: Vercel’s AI SDK, Astro, Flue and tldraw are replacing drive-by community PRs with software factories, where teams of agents apply fixes and features.
-- title: '[AINews] Fal’s H3 Max Live breaks the infinite videogen barrier'
-  url: https://www.latent.space/p/ainews-fals-h3-max-live-breaks-the
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-09-01T04:36:54Z'
-  summary: You can now create decent video faster than you watch it. This is the start of... something. We’re not sure what.
-- title: Training a Misaligned Reward Seeker
-  url: https://www.alignmentforum.org/posts/J76LZCC55RdHeqEhz/training-a-misaligned-reward-seeker
-  source: AI Alignment Forum
-  source_url: https://www.alignmentforum.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-09-01T01:41:44Z'
-  summary: 'Authors: Richard Qi, Benjamin Wright, Monte MacDiarmid, Evan Hubinger Abstract During reinforcement learning (RL), AI models complete tasks and are rewarded based on their results. They sometimes learn to “cheat” rather...'
 - title: 'Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI'
   url: https://huggingface.co/blog/webgpu-kernels
   source: Hugging Face Blog
@@ -401,14 +553,6 @@ items:
   source_tone: industry
   published_at: '2026-09-01T00:00:00Z'
   summary: ''
-- title: How to Size GPUs for AI Inference and TCO Without Overspending
-  url: https://developer.nvidia.com/blog/how-to-size-gpus-for-ai-inference-and-tco-without-overspending/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-31T19:28:23Z'
-  summary: 'The surge in AI adoption is transforming everything from chatbots to content generation. Still, a common pain point remains: How can organizations confidently...'
 - title: 'TimesFM-3: A zero-shot foundation model for multivariate forecasting'
   url: https://research.google/blog/timesfm-3-a-zero-shot-foundation-model-for-multivariate-forecasting/
   source: Google Research Blog
@@ -417,14 +561,6 @@ items:
   source_tone: frontier
   published_at: '2026-08-31T17:19:40Z'
   summary: Data Management
-- title: Run NVIDIA BioNeMo NIM Microservices for Protein Structure Prediction in Claude Science
-  url: https://developer.nvidia.com/blog/run-nvidia-bionemo-nim-microservices-for-protein-structure-prediction-in-claude-science/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-31T16:23:58Z'
-  summary: Agentic AI is changing how research is done. AI scientists can read papers, propose hypotheses, call models, and determine which experiments to prioritize next....
 - title: 'GigaPath-Flash and GigaTIME-Flash: Toward population-scale discovery with efficient pathology foundation models'
   url: https://www.microsoft.com/en-us/research/blog/gigapath-flash-and-gigatime-flash-toward-population-scale-discovery-with-efficient-pathology-foundation-models/
   source: Microsoft Research Blog
@@ -449,14 +585,6 @@ items:
   source_tone: community
   published_at: '2026-08-31T13:31:06Z'
   summary: Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers. If you’d like to support this, please subscribe. Subscribe now Import AI reader giveaway! Upcoming e...
-- title: 'Value generalisation Theory of Change: putting it into practice'
-  url: https://www.alignmentforum.org/posts/kjPEH4KGEHd8iQ4Hn/value-generalisation-theory-of-change-putting-it-into
-  source: AI Alignment Forum
-  source_url: https://www.alignmentforum.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-31T10:51:46Z'
-  summary: 'In the previous post , I presented my theory of change for why value generalisation is vital for AI alignment. Here I''ll add the practical part of the argument: given those facts, why explicitly try to do value generali...'
 - title: Update on Security at METR
   url: https://metr.org/blog/2026-08-31-security-update/
   source: METR
@@ -465,201 +593,26 @@ items:
   source_tone: safety
   published_at: '2026-08-31T07:00:00Z'
   summary: Please note that this post focuses on incidents where external actors attempted to gain unauthorized access to METR’s systems, not AI agents hacking in our evaluations. We have conducted an initial scan of our evaluatio...
-- title: '[AINews] OpenAI shuts off Cursor'
-  url: https://www.latent.space/p/ainews-openai-shuts-off-cursor
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-29T05:11:52Z'
-  summary: Elon v Altman has a real consequence.
-- title: 'Value generalisation Theory of Change: the theory behind the approach'
-  url: https://www.alignmentforum.org/posts/f79SNtqFD7SqJY2vf/value-generalisation-theory-of-change-the-theory-behind-the
-  source: AI Alignment Forum
-  source_url: https://www.alignmentforum.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-28T13:30:17Z'
-  summary: This is the first part of a theory of change explaining why I'm targeting value generalisation as the path to AI alignment. It presents the definitions and key claims behind the theory, and shows that most AI alignment...
-- title: '[AINews] OpenAI to reach AGI bar by end-2026'
-  url: https://www.latent.space/p/ainews-openai-to-reach-agi-bar-by
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-08-28T07:12:10Z'
-  summary: It’s Time. We’re in the Endgame now.
-- title: The Open ASR Leaderboard Adds Its First Global South Language
-  url: https://huggingface.co/blog/open-asr-leaderboard-global-south
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-28T00:00:00Z'
-  summary: ''
-- title: "LLMs Are Not (Consistently) Bayesian: Quantifying Internal (In)consistencies of LLMsâ\x80\x99 Probabilistic Beliefs"
-  url: https://machinelearning.apple.com/research/llms-not-consistently-bayesian
-  source: Apple Machine Learning Research
-  source_url: https://machinelearning.apple.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-28T00:00:00Z'
-  summary: Modern AI systems are being deployed in complex domains such as medicine, science, and law, where there is often not a single correct answer given the observed evidence. Such systems must be able to represent and update...
-- title: 'Agent Seer: Synthesizing Scenarios from Specification Understanding'
-  url: https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios
-  source: Apple Machine Learning Research
-  source_url: https://machinelearning.apple.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-28T00:00:00Z'
-  summary: Evaluating AI agents that use external tools requires realistic test scenarios that capture how practitioners compose tools and iterate across conversation turns. Constructing such scenarios by hand demands deep domain...
-- title: 'Planetary prediction engine: Automating global models via Earth AI'
-  url: https://research.google/blog/planetary-prediction-engine-automating-global-models-via-earth-ai/
-  source: Google Research Blog
-  source_url: https://research.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-27T17:37:00Z'
-  summary: Earth AI
-- title: Gemini Omni 1.1 Flash lets you build with more control
-  url: https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/
-  source: Google DeepMind Blog
-  source_url: https://deepmind.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-27T16:11:32Z'
-  summary: ''
-- title: GeForce NOW Gives Gamers More Ways to Play at Gamescom 2026
-  url: https://blogs.nvidia.com/blog/geforce-now-thursday-gamescom-2026/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-27T13:00:33Z'
-  summary: NVIDIA’s Gamescom announcements are revealing what’s next for GeForce NOW, with new ways to play, more supported devices and platforms, and even more big PC games headed to the cloud. New NVIDIA DLSS 4.5 technology cont...
-- title: 'Delivering Vera: NVIDIA’s First CPU Built for Agents Is Shipping Now'
-  url: https://blogs.nvidia.com/blog/vera-cpu-delivery/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-27T13:00:17Z'
-  summary: NVIDIA Vice President of Hyperscale and HPC Ian Buck hand-delivers Vera CPU systems across the AI ecosystem as Vera begins shipping at scale.
-- title: Piloting the world's first double-blind AI evaluations
-  url: https://deepmind.google/blog/piloting-the-worlds-first-double-blind-ai-evaluations/
-  source: Google DeepMind Blog
-  source_url: https://deepmind.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-27T12:59:16Z'
-  summary: Piloting the world's first double-blind AI evaluations
-- title: Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
-  url: https://blog.redwoodresearch.org/p/brief-independent-investigation-of
-  source: Redwood Research Blog
-  source_url: https://blog.redwoodresearch.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-27T01:32:18Z'
-  summary: We recently published the report from our brief independent investigation into this incident.
-- title: 'From Preferences to Principles: Rubric-Based Alignment for Grounded Knowledge Answers'
-  url: https://machinelearning.apple.com/research/rubric-based-alignment
-  source: Apple Machine Learning Research
-  source_url: https://machinelearning.apple.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-27T00:00:00Z'
-  summary: Designing effective reward signals for open-domain question answering is challenging because high-quality responses must simultaneously satisfy multiple aspects of answer quality that are difficult to capture with a hol...
-- title: NVIDIA NVLink Fusion Expands With NVHBM Custom High-Bandwidth Memory
-  url: https://blogs.nvidia.com/blog/nvlink-fusion-nvhbm-custom-high-bandwidth-memory/
-  source: NVIDIA Blog
-  source_url: https://blogs.nvidia.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-26T21:05:30Z'
-  summary: The next wave of AI is placing new demands on infrastructure. As AI agents and trillion-parameter workloads become mainstream, the performance of AI infrastructure depends not only on compute, but on how compute, memory...
-- title: Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
-  url: https://www.alignmentforum.org/posts/nB8KKapnWGBXtKKiM/brief-independent-investigation-of-agents-behavior-reasoning
-  source: AI Alignment Forum
-  source_url: https://www.alignmentforum.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-26T19:40:21Z'
-  summary: 'We recently published the report from our brief independent investigation into this incident. You can read the full report here . Here is our tweet thread summarizing what we found: METR & Redwood Research investigated...'
-- title: 'GlucoFM: Foundation model for continuous glucose monitoring'
-  url: https://research.google/blog/glucofm-foundation-model-for-continuous-glucose-monitoring/
-  source: Google Research Blog
-  source_url: https://research.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-26T18:42:43Z'
-  summary: Health & Bioscience
-- title: Intelligent transcription with Gemini 3.5 Transcribe
-  url: https://deepmind.google/blog/intelligent-transcription-with-gemini-3-5-transcribe/
-  source: Google DeepMind Blog
-  source_url: https://deepmind.google/blog
-  source_group: Frontier Labs
-  source_tone: frontier
-  published_at: '2026-08-26T17:01:00Z'
-  summary: Now you can get more intelligent speech-to-text transcription with Gemini 3.5 Transcribe.
-- title: 对 OpenAI / Hugging Face 入侵事件中智能体行为、推理与协作的简要独立调查
-  url: https://metr.org/zh-Hans/blog/2026-08-26-openai-hugging-face-incident-investigation/
-  source: METR
-  source_url: https://metr.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-26T07:00:00Z'
-  summary: '.content figure { figcaption p { font-weight: normal; } } .toc-faded { z-index: -1; } .content figure img { width: 100%; } figcaption { text-align: center; } .figcaption { text-align: center; text-wrap: balance; margin-...'
-- title: Brief independent investigation of agents’ behavior, reasoning and collaboration in the OpenAI / Hugging Face hacking incident
-  url: https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
-  source: METR
-  source_url: https://metr.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-26T07:00:00Z'
-  summary: '.content figure { figcaption p { font-weight: normal; } } .toc-faded { z-index: -1; } .content figure img { width: 100%; } figcaption { text-align: center; } .figcaption { text-align: center; text-wrap: balance; margin-...'
-- title: Breve investigación independiente sobre el comportamiento, el razonamiento y la colaboración de los agentes en el incidente de hackeo de OpenAI / Hugging Face
-  url: https://metr.org/es/blog/2026-08-26-openai-hugging-face-incident-investigation/
-  source: METR
-  source_url: https://metr.org
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-08-26T07:00:00Z'
-  summary: '.content figure { figcaption p { font-weight: normal; } } .toc-faded { z-index: -1; } .content figure img { width: 100%; } figcaption { text-align: center; } .figcaption { text-align: center; text-wrap: balance; margin-...'
-- title: Training and Finetuning Multi-Vector Embedding Models with Sentence Transformers
-  url: https://huggingface.co/blog/train-multi-vector-encoder
-  source: Hugging Face Blog
-  source_url: https://huggingface.co/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-26T00:00:00Z'
-  summary: ''
-- title: 'PROOF-Gen: From Optimized Data to Better Distillation'
-  url: https://machinelearning.apple.com/research/proof-gen-optimized-distillation
-  source: Apple Machine Learning Research
-  source_url: https://machinelearning.apple.com
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-08-26T00:00:00Z'
-  summary: Supervised fine-tuning on teacher-generated trajectories is the standard first stage for distilling tool-calling capabilities into deployable models. Post-training pipelines that drive shipped tool-calling agents re-run...
 unavailable_sources:
 - LessWrong
+- AI Alignment Forum
 - Anthropic Alignment Science
-- Apollo Research Blog
 - Anthropic Research
 - Anthropic Engineering
-- Epoch AI Latest
+- Apollo Research Blog
 - Epoch AI Blog
+- Epoch AI Latest
 - Hugging Face Daily Papers
-- CAIS Blog
-- MIT LINGO Blog
-- Goodfire Blog
-- FAR.AI Blog
-- Import AI Substack
-- DeepLearning.AI - The Batch
 - xAI News
+- FAR.AI Blog
+- MIT LINGO Blog
+- Import AI Substack
 - Stanford HAI News
+- CAIS Blog
+- DeepLearning.AI - The Batch
 - Cohere Research
 - Amazon Science Blog
-- Meta AI Blog
 - Cohere Blog
+- Meta AI Blog
 - BAIR Blog
+- Goodfire Blog
