@@ -1,6 +1,102 @@
-updated_at: '2026-09-11T00:51:43.454915Z'
+updated_at: '2026-09-14T00:48:50.309173Z'
 window_days: 14
 items:
+- title: The Rise of the Forward Deployed Engineer — and How To Do the Job Right
+  url: https://www.latent.space/p/forward-deployed-engineer-best-practices
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-12T15:01:19Z'
+  summary: Before co-founding Kepler, Vinoo Ganesh led Spark at Palantir and built Project Frontline — a pioneering program for Forward Deployed Engineers. He takes us through the best practices of FDEs.
+- title: '[AINews] DeepSeek v4.1-Flash: 763B-P8B-D16B novel causal Encoder–Decoder architecture with vision marks the Return of the Whale'
+  url: https://www.latent.space/p/ainews-deepseek-v41-flash-763b-p8b
+  source: Latent Space
+  source_url: https://www.latent.space
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-12T05:56:05Z'
+  summary: 'We agree with Sebastian: this should have been DeepSeek v5'
+- title: 'From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry'
+  url: https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/
+  source: NVIDIA Technical Blog
+  source_url: https://developer.nvidia.com/blog
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T23:57:34Z'
+  summary: NVIDIA has one of the largest and most complex supply chains in the world, and its performance is measured from wafer-out to first token. The interval is in two...
+- title: Monitoring production agent lifecycle with AWS DevOps Agent and AgentCore Evaluations
+  url: https://aws.amazon.com/blogs/machine-learning/monitoring-production-agent-lifecycle-with-aws-devops-agent-and-agentcore-evaluations/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T18:26:38Z'
+  summary: 'Multi-agent systems fail in ways traditional monitoring misses. This post presents a dual-layer approach to monitoring production agents: Amazon Bedrock AgentCore Evaluations for continuous quality scoring and AWS DevOp...'
+- title: 'Beyond the price per token: Choosing the right OpenAI model on Amazon Bedrock for your workload'
+  url: https://aws.amazon.com/blogs/machine-learning/beyond-the-price-per-token-choosing-the-right-openai-model-on-amazon-bedrock-for-your-workload/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T18:24:38Z'
+  summary: 'Comparing models on dollars per million tokens misses what production workloads actually pay for: outcomes. This post shares an open-source benchmarking harness that measures cost per correct answer, agent trajectory co...'
+- title: Build interactive MCP Apps using Amazon Bedrock AgentCore
+  url: https://aws.amazon.com/blogs/machine-learning/build-interactive-mcp-apps-using-amazon-bedrock-agentcore/
+  source: AWS Machine Learning Blog
+  source_url: https://aws.amazon.com/blogs/machine-learning
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T18:23:17Z'
+  summary: Learn how to build and deploy an MCP App with interactive HTML widgets on Amazon Bedrock AgentCore. Because MCP Apps is a host-agnostic standard, the same server delivers the same rich experience across AI hosts like Ch...
+- title: CoT controllability evals seem very under-elicited
+  url: https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very
+  source: Redwood Research Blog
+  source_url: https://blog.redwoodresearch.org
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-09-11T17:12:25Z'
+  summary: Simple prompt optimizations can improve model capability to control their reasoning
+- title: Open-Source AI & Open Models Reading List
+  url: https://www.interconnects.ai/p/open-source-ai-reading-list
+  source: Interconnects
+  source_url: https://www.interconnects.ai
+  source_group: Personal Blogs and Newsletters
+  source_tone: community
+  published_at: '2026-09-11T12:36:25Z'
+  summary: How to get up to speed on open models and their implications.
+- title: Rapidly scaling online storage to serve over 1 billion ChatGPT users
+  url: https://openai.com/index/scaling-storage-one-billion-users-part-one
+  source: OpenAI Engineering
+  source_url: https://openai.com/news/engineering
+  source_group: Frontier Labs
+  source_tone: frontier
+  published_at: '2026-09-11T10:00:00Z'
+  summary: Learn how OpenAI evolved Habitat from a Python library into a globally distributed storage platform serving 1 billion ChatGPT users and 22M requests per second.
+- title: 'SimpleDesign: A Joint Model for Protein Sequence and Structure Codesign'
+  url: https://machinelearning.apple.com/research/simpledesign-protein-codesign
+  source: Apple Machine Learning Research
+  source_url: https://machinelearning.apple.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T00:00:00Z'
+  summary: Proteins are fundamental to biological processes, with their function determined by the complex interplay between the amino acid sequence and the three-dimensional structure. Developing generative models capable of unde...
+- title: 'Putting Captions to the Test: Evaluating Video Caption Quality through Multiple-Choice Question Answering'
+  url: https://machinelearning.apple.com/research/video-caption-quality
+  source: Apple Machine Learning Research
+  source_url: https://machinelearning.apple.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T00:00:00Z'
+  summary: Evaluating video captioning remains a critical challenge for Visual Large Language Models (VLLMs). Existing metrics primarily rely on matching generated text against ground-truth references. This paradigm suffers from t...
+- title: 'DiscoSign: Discourse-Aware Text to Sign Language Gloss Translation'
+  url: https://machinelearning.apple.com/research/discosign-gloss-translation
+  source: Apple Machine Learning Research
+  source_url: https://machinelearning.apple.com
+  source_group: AI Companies and Research Labs
+  source_tone: industry
+  published_at: '2026-09-11T00:00:00Z'
+  summary: Sign language processing systems have traditionally operated at the sentence level, ignoring critical discourse phenomena fundamental to sign language comprehension. We introduce DiscoSign, a computational approach for...
 - title: 'ToolGrad: Efficient tool-use dataset generation with textual "gradients"'
   url: https://research.google/blog/toolgrad-efficient-tool-use-dataset-generation-with-textual-gradients/
   source: Google Research Blog
@@ -105,14 +201,6 @@ items:
   source_tone: industry
   published_at: '2026-09-10T15:55:41Z'
   summary: 'Multi-turn agents fail in ways single-turn evaluation misses: one early mistake corrupts every later turn. This post introduces the Agent Evaluation Metric (AEM), a decomposable, turn-level way to measure agent quality,...'
-- title: How AvioBook builds turnaround insights from operational data with Amazon Bedrock AgentCore
-  url: https://aws.amazon.com/blogs/machine-learning/how-aviobook-uses-generative-ai-to-drive-airline-turnaround-insights/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-10T15:53:05Z'
-  summary: AvioBook, a Thales Group Company, prototyped Connected Analytics on Amazon Bedrock AgentCore to turn AvioBook Connect's operational data into plain-language, evidence-based answers for airline managers and dispatchers,...
 - title: One resignation turned the embers of AI fear into a wildfire
   url: https://www.interconnects.ai/p/one-resignation-turned-the-embers
   source: Interconnects
@@ -128,7 +216,7 @@ items:
   source_group: AI Companies and Research Labs
   source_tone: industry
   published_at: '2026-09-10T13:00:21Z'
-  summary: AI inference chipmaker d-Matrix today announced it will use NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform — joining a growing roster of partners building on the NVIDIA A...
+  summary: AI inference chipmaker d-Matrix today announced it will use NVLink Fusion to connect its next-generation Raptor XPUs to NVIDIA’s AI infrastructure platform — joining a growing roster of ecosystem partners. By connecting...
 - title: 'Boots on the Ground: ‘WARDOGS’ Goes All Out on GeForce NOW at Early-Access Launch'
   url: https://blogs.nvidia.com/blog/geforce-now-thursday-wardogs/
   source: NVIDIA Blog
@@ -145,14 +233,6 @@ items:
   source_tone: industry
   published_at: '2026-09-10T10:42:55Z'
   summary: Cloudera and Mistral join forces to bring specialized, sovereign AI intelligence to enterprise data, helping regulated industries innovate on their own terms.
-- title: 'From Wafer-Out to First Token: Codifying Supply Chain Expertise with Nemotron and Palantir Foundry'
-  url: https://developer.nvidia.com/blog/from-wafer-out-to-first-token-codifying-supply-chain-expertise-with-nemotron-and-palantir-foundry/
-  source: NVIDIA Technical Blog
-  source_url: https://developer.nvidia.com/blog
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-10T05:31:11Z'
-  summary: NVIDIA has one of the largest and most complex supply chains in the world, and its performance is measured from wafer-out to first token. The interval is in two...
 - title: '[AINews] not much happened today'
   url: https://www.latent.space/p/ainews-not-much-happened-today-d3b
   source: Latent Space
@@ -177,14 +257,6 @@ items:
   source_tone: industry
   published_at: '2026-09-09T23:45:42Z'
   summary: Biomolecular structure prediction is now often run at proteome scale, where the goal is to move an entire worklist through the pipeline efficiently. NVIDIA...
-- title: Deploying Qwen3.8-2.4T-A95B on Amazon SageMaker HyperPod with vLLM
-  url: https://aws.amazon.com/blogs/machine-learning/deploying-qwen3-8-2-4t-a95b-on-amazon-sagemaker-hyperpod-with-vllm/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-09T22:26:29Z'
-  summary: Learn how to deploy Qwen3.8-2.4T-A95B, a 2.4-trillion-parameter open-weight model, on Amazon SageMaker HyperPod with vLLM. This walkthrough covers cluster provisioning, NVFP4 quantization, and an OpenAI-compatible endpo...
 - title: When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving
   url: https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/
   source: NVIDIA Technical Blog
@@ -201,14 +273,6 @@ items:
   source_tone: industry
   published_at: '2026-09-09T20:24:19Z'
   summary: Every NVIDIA CUDA Toolkit release adds functionality and performance improvements that help developers get more from NVIDIA GPUs and the broader NVIDIA software...
-- title: 'ICYMI: What landed for AI builders in August 2026'
-  url: https://aws.amazon.com/blogs/machine-learning/icymi-what-landed-for-ai-builders-in-august-2026/
-  source: AWS Machine Learning Blog
-  source_url: https://aws.amazon.com/blogs/machine-learning
-  source_group: AI Companies and Research Labs
-  source_tone: industry
-  published_at: '2026-09-09T20:01:03Z'
-  summary: 'A recap of August 2026 launches for AI builders across Amazon Bedrock, Amazon Bedrock AgentCore, and Strands: million-token context for OpenAI models, cross-Region inference, agents that run for up to 14 days on dedicat...'
 - title: NVIDIA Brings Real-Time AI to Broadcast, Sports and Global Streaming at IBC
   url: https://blogs.nvidia.com/blog/ibc-news-2026/
   source: NVIDIA Blog
@@ -481,14 +545,6 @@ items:
   source_tone: frontier
   published_at: '2026-09-02T16:18:31Z'
   summary: ''
-- title: '[AINews] Claude Fable/Mythos 5.1: new SOTA model, 75% cache price cut but 70% more output tokens'
-  url: https://www.latent.space/p/ainews-claude-fablemythos-51-new
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-09-02T07:46:08Z'
-  summary: Queue the usual rush of model launches...
 - title: 'REFACTOR-VLA: Unsupervised Library Learning of Typed Motor Programs'
   url: https://machinelearning.apple.com/research/refactor-vla-motor-programs
   source: Apple Machine Learning Research
@@ -537,14 +593,6 @@ items:
   source_tone: frontier
   published_at: '2026-09-01T17:08:51Z'
   summary: ''
-- title: 'PRs NOT Welcome: How Top AI Open Source Projects Are Managing Thousands of Contributors'
-  url: https://www.latent.space/p/pr-not-welcome
-  source: Latent Space
-  source_url: https://www.latent.space
-  source_group: Personal Blogs and Newsletters
-  source_tone: community
-  published_at: '2026-09-01T16:17:15Z'
-  summary: Vercel’s AI SDK, Astro, Flue and tldraw are replacing drive-by community PRs with software factories, where teams of agents apply fixes and features.
 - title: 'Introducing @huggingface/kernels: 200+ WebGPU Kernels for Local AI'
   url: https://huggingface.co/blog/webgpu-kernels
   source: Hugging Face Blog
@@ -597,22 +645,22 @@ unavailable_sources:
 - LessWrong
 - AI Alignment Forum
 - Anthropic Alignment Science
-- Anthropic Research
-- Anthropic Engineering
 - Apollo Research Blog
+- Anthropic Engineering
+- Anthropic Research
 - Epoch AI Blog
 - Epoch AI Latest
 - Hugging Face Daily Papers
+- CAIS Blog
 - xAI News
 - FAR.AI Blog
 - MIT LINGO Blog
-- Import AI Substack
 - Stanford HAI News
-- CAIS Blog
+- Import AI Substack
 - DeepLearning.AI - The Batch
 - Cohere Research
 - Amazon Science Blog
+- Goodfire Blog
 - Cohere Blog
 - Meta AI Blog
 - BAIR Blog
-- Goodfire Blog
