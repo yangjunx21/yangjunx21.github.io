@@ -1,23 +1,18 @@
 # 写博客
 
-公开博客位于 [yangjunx21.github.io/blog/](https://yangjunx21.github.io/blog/)。写作入口是 [yangjunx21.github.io/write/](https://yangjunx21.github.io/write/)，不需要 Pages CMS。
+公开博客在 [yangjunx21.github.io/blog/](https://yangjunx21.github.io/blog/)。从 [写文章](https://yangjunx21.github.io/write/) 打开 GitHub 文章表单。
 
-## 写作与发布
+## 写一篇文章
 
-1. 在写作页填写标题和正文。日期、网址名称会自动准备好；摘要和标签可选。正文使用 Markdown，顶部工具栏能插入常用格式。
-2. 草稿会自动保存在当前浏览器。需要备份时点击“下载 Markdown 备份”；换浏览器或清除网站数据前也请先下载。
-3. 想让读者在博客看到文章，勾选“公开发布”。未完成的文章可先留在浏览器中，或下载到本机备份。本仓库公开，提交到 GitHub 的文件即使设置 `published: false` 也可被他人看到。
-4. 点击“复制文章内容”，再点击“在 GitHub 新建文件”。把写作页显示的文件名填在 GitHub 顶部，将文章内容粘贴到编辑框。
-5. 点击 **Commit changes**，提交到 `master`。公开文章稍后会出现在 `/blog/`。
+1. 在 GitHub 表单里填写标题、正文；摘要和标签可选。正文框有格式工具栏和 **Preview**。
+2. 截图可以直接粘贴到正文框，图片也可以拖入。等 GitHub 完成上传，正文里出现图片链接后再提交。
+3. 准备发布时勾选“同步到个人博客”，然后提交 Issue。GitHub Actions 会自动生成 `_posts/` 中的文章，并请求 GitHub Pages 更新网站。
+4. 之后直接编辑这条 Issue，就能更新文章。取消勾选“同步到个人博客”后，文章会从博客撤下。
 
-文章文件保存在 `_posts/`，文件名为 `YYYY-MM-DD-slug.md`。博客地址形如 `/blog/年/月/日/slug/`。发布后尽量不改文件名中的 slug，以免旧链接失效。
+文章网址使用 Issue 编号，例如 `/blog/2026/09/25/post-123/`，修改标题不会破坏旧链接。若同步失败，打开仓库的 **Actions → Publish blog issue** 查看原因。
 
-## 修改文章或发布草稿
+## 公开范围
 
-打开 GitHub 仓库的 [`_posts/` 目录](https://github.com/yangjunx21/yangjunx21.github.io/tree/master/_posts)，选择文章，点击铅笔图标编辑并提交。要发布草稿，将文件顶部的 `published: false` 改成 `published: true`。
-
-## 图片
-
-在 [`images/blog/`](https://github.com/yangjunx21/yangjunx21.github.io/tree/master/images/blog) 中通过 GitHub 的 **Add file → Upload files** 上传图片，然后在文章中写 `![图片描述](/images/blog/图片名.png)`。也可以在写作页使用“图片”按钮，再将示例网址替换为图片网址。
+这个仓库是公开的。Issue、粘贴上传的图片和已生成的文章文件都可以被他人查看；不勾选“同步到个人博客”只会阻止文章显示在个人主页，并不会把 Issue 变为私密。私密草稿请先保存在自己设备上的编辑器里。
 
 订阅地址：[feed.xml](https://yangjunx21.github.io/feed.xml)。

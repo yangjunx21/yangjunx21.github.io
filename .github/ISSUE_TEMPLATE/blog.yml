@@ -1,0 +1,41 @@
+name: 写博客文章
+description: 在 GitHub 写文章，可直接粘贴或拖入图片；勾选发布后自动同步到个人博客。
+title: "[Blog] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        正文框支持 Markdown、预览、粘贴截图和拖入图片。图片会由 GitHub 上传并插入正文。
+        仓库是公开的，提交的 Issue 和图片都可被他人看到，请不要在这里写私密内容。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 摘要
+      description: 可选，会显示在博客列表中。
+      placeholder: 用一两句话介绍文章。
+    validations:
+      required: false
+  - type: input
+    id: tags
+    attributes:
+      label: 标签
+      description: 可选，用逗号隔开。
+      placeholder: 研究, 随笔
+    validations:
+      required: false
+  - type: textarea
+    id: article
+    attributes:
+      label: 文章正文
+      description: 在这里直接粘贴截图，或拖入图片。提交前可以点击 Preview 检查排版。
+      placeholder: 从这里开始写……
+    validations:
+      required: true
+  - type: checkboxes
+    id: publish
+    attributes:
+      label: 发布设置
+      description: 勾选后提交或编辑 Issue，会自动同步到博客。取消勾选可以从博客撤下文章。
+      options:
+        - label: 同步到个人博客
+          required: false
