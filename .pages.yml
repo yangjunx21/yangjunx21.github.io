@@ -1,0 +1,63 @@
+settings:
+  content:
+    merge: true
+
+media:
+  input: images/blog
+  output: /images/blog
+  rename: safe
+
+content:
+  - name: posts
+    label: Blog posts
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{fields.slug}.md"
+    view:
+      fields: [title, date, published]
+      primary: title
+      sort: [date, title]
+      search: [title, excerpt, tags]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        description: "Short lowercase English words joined with hyphens, for example my-first-post. Keep this stable after publishing."
+        pattern: "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: published
+        label: Published
+        type: boolean
+        default: false
+        description: "Leave off while drafting; turn on and save when ready for the public site."
+      - name: excerpt
+        label: Summary
+        type: text
+        description: "Optional short description shown on the blog index and in search results."
+        options:
+          maxlength: 280
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+      - name: body
+        label: Article
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true

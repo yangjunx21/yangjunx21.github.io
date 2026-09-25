@@ -1,3 +1,7 @@
+# Junxiao Yang's Website
+
+To write and publish blog posts, see [BLOGGING.md](BLOGGING.md).
+
 # Academic Pages
 **Academic Pages is a Github Pages template for academic websites.**
 
