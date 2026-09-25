@@ -4,6 +4,15 @@
 
 {% include seo.html %}
 
+{% if page.source_issue %}
+  {% assign translations = site.posts | where: 'source_issue', page.source_issue %}
+  {% if translations.size > 1 %}
+    {% for translation in translations %}
+      <link rel="alternate" hreflang="{{ translation.lang | default: 'zh-CN' }}" href="{{ translation.url | absolute_url }}">
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
 <!-- http://t.co/dKP3o1e -->

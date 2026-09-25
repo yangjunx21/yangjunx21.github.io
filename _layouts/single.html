@@ -44,7 +44,17 @@ layout: default
         </header>
       {% endunless %}
 
-      <section class="page__content" itemprop="text">
+      <section class="page__content{% if page.source_issue %} page__content--blog-issue{% endif %}" itemprop="text">
+        {% if page.source_issue %}
+          {% assign translations = site.posts | where: 'source_issue', page.source_issue %}
+          {% if translations.size > 1 %}
+            <nav class="post-language-switch" aria-label="Article language">
+              {% for translation in translations %}
+                <a href="{{ translation.url | relative_url }}" lang="{{ translation.lang | default: 'zh-CN' }}"{% if translation.url == page.url %} aria-current="page"{% endif %}>{% if translation.lang == 'en' %}English{% else %}中文{% endif %}</a>
+              {% endfor %}
+            </nav>
+          {% endif %}
+        {% endif %}
         {{ content }}
 
         {% if page.citation and page.paperurl and page.slidesurl %}

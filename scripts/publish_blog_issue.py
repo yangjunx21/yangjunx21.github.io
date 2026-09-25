@@ -69,6 +69,7 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
         "---",
         f"title: {json.dumps(title, ensure_ascii=False)}",
         f"date: {date}",
+        "lang: zh-CN",
         f"published: {str(published).lower()}",
     ]
     summary = optional_value(sections["摘要"])

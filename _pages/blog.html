@@ -30,6 +30,10 @@ redirect_from:
         <article class="blog-index__post" data-search="{{ post.title | append: ' ' | append: summary | append: ' ' | append: search_tags | downcase | escape }}">
           <div class="blog-index__meta">
             <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+            {% if post.source_issue %}
+              {% assign translations = site.posts | where: 'source_issue', post.source_issue %}
+              {% if translations.size > 1 %}<span class="blog-index__tag" lang="{{ post.lang | default: 'zh-CN' }}">{% if post.lang == 'en' %}English{% else %}中文{% endif %}</span>{% endif %}
+            {% endif %}
             {% for tag in post.tags limit: 3 %}<span class="blog-index__tag">{{ tag | escape }}</span>{% endfor %}
           </div>
           <h2 class="blog-index__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>

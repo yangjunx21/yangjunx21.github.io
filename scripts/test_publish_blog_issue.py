@@ -37,6 +37,7 @@ class BlogIssueTest(unittest.TestCase):
         self.assertEqual(path.name, "2026-09-25-post-123.md")
         self.assertIn('title: "标题: \\"测试\\""', content)
         self.assertIn("published: true", content)
+        self.assertIn("lang: zh-CN", content)
         self.assertIn('  - "研究"\n  - "随笔"', content)
         self.assertIn("![图](https://github.com/user-attachments/assets/example)", content)
         self.assertIn("### 发布设置\n\n这只是正文中的标题。", content)
