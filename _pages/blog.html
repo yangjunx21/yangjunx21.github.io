@@ -8,7 +8,10 @@ redirect_from:
 ---
 
 <div class="blog-index">
-  <p class="blog-index__intro">Notes, essays, and research thoughts.</p>
+  <div class="blog-index__heading">
+    <p class="blog-index__intro">Notes, essays, and research thoughts.</p>
+    <a class="blog-index__write" href="{{ '/write/' | relative_url }}">写文章 ↗</a>
+  </div>
 
   {% assign posts = site.posts | sort: 'date' | reverse %}
   {% if posts.size > 0 %}
@@ -47,7 +50,9 @@ redirect_from:
 
 <style>
 .blog-index { max-width: 48rem; }
+.blog-index__heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
 .blog-index__intro { margin: 0 0 1.5rem; color: #555; font-size: 1.1rem; line-height: 1.6; }
+.blog-index__write { flex: none; font-size: .8rem; }
 .blog-index__tools { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
 .blog-index__count { margin: 0; color: #666; font-size: .8rem; }
 .blog-index__rss, .blog-index__read { font-size: .8rem; }
@@ -66,7 +71,7 @@ redirect_from:
 .blog-index__empty h2 { margin-top: 0; font-size: 1.2rem; }
 .blog-index__empty p { font-size: .9rem; line-height: 1.6; }
 .blog-index__no-results { padding: 1.5rem 0; color: #555; }
-@media (max-width: 480px) { .blog-index__tools { align-items: flex-start; flex-direction: column; gap: .3rem; } }
+@media (max-width: 480px) { .blog-index__tools { align-items: flex-start; flex-direction: column; gap: .3rem; } .blog-index__heading { align-items: flex-start; } }
 </style>
 
 <script>

@@ -1,0 +1,99 @@
+---
+layout: archive
+title: "写文章"
+permalink: /write/
+author_profile: false
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/blog-writer.css' | relative_url }}">
+
+<div class="blog-writer" data-repo="yangjunx21/yangjunx21.github.io" data-branch="master">
+  <div class="blog-writer__intro">
+    <p>在这里写好文章，再用 GitHub 提交到博客。草稿只保存在当前浏览器中，不会自动上传。</p>
+    <a href="{{ '/blog/' | relative_url }}">返回博客 →</a>
+  </div>
+
+  <div class="blog-writer__grid">
+    <form id="blog-writer-form" class="blog-writer__form" novalidate>
+      <div class="blog-writer__row">
+        <label for="post-title">标题 <span aria-hidden="true">*</span></label>
+        <input id="post-title" name="title" type="text" autocomplete="off" placeholder="这篇文章想叫什么？" required>
+      </div>
+
+      <div class="blog-writer__pair">
+        <div class="blog-writer__row">
+          <label for="post-date">日期 <span aria-hidden="true">*</span></label>
+          <input id="post-date" name="date" type="date" required>
+        </div>
+        <div class="blog-writer__row">
+          <label for="post-slug">网址名称 <span aria-hidden="true">*</span></label>
+          <input id="post-slug" name="slug" type="text" inputmode="url" spellcheck="false" placeholder="my-first-post" pattern="[a-z0-9]+(-[a-z0-9]+)*" required>
+        </div>
+      </div>
+      <p class="blog-writer__hint">英文标题会自动生成网址名称；中文标题会得到一个短的默认名称。发布后请保持网址名称不变。</p>
+
+      <div class="blog-writer__row">
+        <label for="post-excerpt">摘要 <span class="blog-writer__optional">可选</span></label>
+        <textarea id="post-excerpt" name="excerpt" rows="2" maxlength="280" placeholder="用一两句话介绍文章"></textarea>
+      </div>
+      <div class="blog-writer__row">
+        <label for="post-tags">标签 <span class="blog-writer__optional">可选</span></label>
+        <input id="post-tags" name="tags" type="text" placeholder="研究, 随笔, 阅读笔记">
+        <p class="blog-writer__hint">用逗号隔开。</p>
+      </div>
+
+      <div class="blog-writer__row blog-writer__body-row">
+        <div class="blog-writer__body-header">
+          <label for="post-body">正文 <span aria-hidden="true">*</span></label>
+          <span id="post-word-count" class="blog-writer__word-count">0 字</span>
+        </div>
+        <div class="blog-writer__toolbar" role="toolbar" aria-label="Markdown 格式">
+          <button type="button" data-format="heading" title="插入二级标题">标题</button>
+          <button type="button" data-format="bold" title="加粗选中文字">加粗</button>
+          <button type="button" data-format="link" title="插入链接">链接</button>
+          <button type="button" data-format="image" title="插入图片网址">图片</button>
+          <button type="button" data-format="list" title="插入列表">列表</button>
+          <button type="button" data-format="quote" title="插入引用">引用</button>
+          <button type="button" data-format="code" title="插入代码块">代码</button>
+        </div>
+        <textarea id="post-body" name="body" rows="18" placeholder="从这里开始写。支持 Markdown，例如 ## 小标题、**加粗** 和 [链接](https://example.com)。" required></textarea>
+      </div>
+
+      <label class="blog-writer__publish">
+        <input id="post-published" name="published" type="checkbox">
+        <span><strong>公开发布</strong><small>关闭时会作为草稿提交，博客读者看不到。</small></span>
+      </label>
+    </form>
+
+    <aside class="blog-writer__side" aria-label="保存与发布">
+      <div class="blog-writer__card">
+        <p class="blog-writer__eyebrow">保存与发布</p>
+        <h2>写好后交给 GitHub</h2>
+        <p class="blog-writer__filename-label">文章文件名</p>
+        <code id="post-filename" class="blog-writer__filename">YYYY-MM-DD-slug.md</code>
+        <p id="post-draft-status" class="blog-writer__save-status" role="status">草稿保存在此浏览器</p>
+        <p id="post-message" class="blog-writer__message" role="status" aria-live="polite"></p>
+        <div class="blog-writer__actions">
+          <button id="post-copy" class="blog-writer__primary" type="button">① 复制文章内容</button>
+          <a id="post-github" class="blog-writer__secondary" href="https://github.com/yangjunx21/yangjunx21.github.io/new/master/_posts" target="_blank" rel="noopener noreferrer">② 在 GitHub 新建文件 ↗</a>
+          <button id="post-copy-filename" class="blog-writer__quiet" type="button">复制文件名</button>
+          <button id="post-download" class="blog-writer__quiet" type="button">下载 Markdown 备份</button>
+        </div>
+        <ol class="blog-writer__steps">
+          <li>先复制文章内容。</li>
+          <li>打开 GitHub，把上面的文件名填到顶部，粘贴文章内容。</li>
+          <li>点击 <strong>Commit changes</strong>，选择提交到 <strong>master</strong>。</li>
+        </ol>
+        <p class="blog-writer__note">勾选“公开发布”的文章，提交后会出现在 <a href="{{ '/blog/' | relative_url }}">博客列表</a>。你也可以先提交草稿，之后在 GitHub 把 <code>published</code> 改为 <code>true</code>。</p>
+      </div>
+      <p class="blog-writer__media">需要图片？先在 <a href="https://github.com/yangjunx21/yangjunx21.github.io/tree/master/images/blog" target="_blank" rel="noopener noreferrer">images/blog</a> 上传，再用工具栏插入图片网址。</p>
+    </aside>
+  </div>
+
+  <details class="blog-writer__source">
+    <summary>查看生成的 Markdown</summary>
+    <pre id="post-output" aria-live="off"></pre>
+  </details>
+</div>
+
+<script src="{{ '/assets/js/blog-writer.js' | relative_url }}" defer></script>
