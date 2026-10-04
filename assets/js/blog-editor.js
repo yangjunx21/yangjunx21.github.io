@@ -55,7 +55,9 @@
 
   function updateOutline() {
     outline.replaceChildren();
-    var headings = editor.querySelectorAll('h2, h3');
+    var headings = Array.prototype.filter.call(editor.querySelectorAll('h2, h3'), function (heading) {
+      return heading.textContent.trim();
+    });
     if (!headings.length) {
       var empty = document.createElement('li');
       empty.className = 'blog-editor__outline-empty';
@@ -317,8 +319,22 @@
 
   document.getElementById('prepare-publish').addEventListener('click', preparePublish);
   document.getElementById('prepare-publish-bottom').addEventListener('click', preparePublish);
-  document.getElementById('clear-draft').addEventListener('click', function () {
-    if (!window.confirm('确定清空当前浏览器里的草稿吗？此操作无法撤销。')) return;
+  var clearButton = document.getElementById('clear-draft');
+  var clearArmed = false;
+  var clearTimer;
+  clearButton.addEventListener('click', function () {
+    if (!clearArmed) {
+      clearArmed = true;
+      clearButton.textContent = '再次点击，确认清空';
+      clearTimer = setTimeout(function () {
+        clearArmed = false;
+        clearButton.textContent = '清空草稿';
+      }, 6000);
+      return;
+    }
+    clearTimeout(clearTimer);
+    clearArmed = false;
+    clearButton.textContent = '清空草稿';
     title.value = '';
     summary.value = '';
     tags.value = '';
