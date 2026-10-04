@@ -15,7 +15,7 @@ def issue(checked: bool) -> dict:
         "body": (
             "### 摘要\n\n一句话摘要。\n\n"
             "### 标签\n\n研究，随笔, 研究\n\n"
-            "### 文章正文\n\n正文。\n\n![图](https://github.com/user-attachments/assets/example)\n\n"
+            "### 文章正文\n\n> Junxiao Yang\n\n正文。\n\n![图](https://github.com/user-attachments/assets/example)\n\n"
             "### 发布设置\n\n这只是正文中的标题。\n\n"
             f"### 发布设置\n\n- [{box}] 同步到个人博客\n"
         ),
@@ -40,6 +40,7 @@ class BlogIssueTest(unittest.TestCase):
         self.assertIn("lang: zh-CN", content)
         self.assertIn('  - "研究"\n  - "随笔"', content)
         self.assertIn("![图](https://github.com/user-attachments/assets/example)", content)
+        self.assertNotIn("> Junxiao Yang", content)
         self.assertIn("### 发布设置\n\n这只是正文中的标题。", content)
 
     def test_unchecked_new_issue_does_not_create_article(self):

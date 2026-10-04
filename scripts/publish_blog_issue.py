@@ -50,6 +50,7 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
 
     title = re.sub(r"^\[Blog\]\s*", "", issue.get("title", ""), flags=re.IGNORECASE).strip()
     article = optional_value(sections["文章正文"])
+    article = re.sub(r"\A>\s*Junxiao Yang[ \t]*(?:\r?\n){1,2}", "", article)
     if not title or not article:
         raise ValueError("Blog issue needs a title and article body")
 

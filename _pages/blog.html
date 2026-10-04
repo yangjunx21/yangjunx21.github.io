@@ -1,92 +1,82 @@
 ---
-layout: archive
+layout: default
 title: "Blog"
 permalink: /blog/
-author_profile: true
+blog_style: true
 redirect_from:
   - /posts/
 ---
 
-<div class="blog-index">
-  <div class="blog-index__heading">
-    <p class="blog-index__intro">Notes, essays, and research thoughts.</p>
-    <a class="blog-index__write" href="{{ '/write/' | relative_url }}">站长写文章 ↗</a>
-  </div>
+<main class="blog-list" id="main">
+  <header class="blog-list__hero">
+    <div class="blog-list__hero-inner">
+      <p class="blog-kicker">Writing / Research notes</p>
+      <h1>Blog</h1>
+      <p>Notes and essays on agents, language models, and the questions behind them.</p>
+    </div>
+  </header>
 
-  {% assign posts = site.posts | sort: 'date' | reverse %}
-  {% if posts.size > 0 %}
-    <div class="blog-index__tools">
-      <p class="blog-index__count" id="blog-count">{{ posts.size }} {% if posts.size == 1 %}post{% else %}posts{% endif %}</p>
-      <a class="blog-index__rss" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
+  <section class="blog-list__entries" aria-label="Articles">
+    <div class="blog-list__tools">
+      <label for="blog-search" class="sr-only">Search articles</label>
+      <input id="blog-search" type="search" placeholder="Search articles / 搜索文章" autocomplete="off">
+      <div class="blog-list__actions">
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+        <a href="{{ '/write/' | relative_url }}">写文章 ↗</a>
+      </div>
     </div>
 
-    <label class="blog-index__search-label" id="blog-search-label" for="blog-search" hidden>Search articles</label>
-    <input class="blog-index__search" id="blog-search" type="search" placeholder="Search titles, summaries, or tags" autocomplete="off" hidden>
-
-    <div id="blog-posts">
-      {% for post in posts %}
-        {% assign summary = post.excerpt | default: post.content | strip_html | normalize_whitespace | truncate: 220 %}
-        {% assign search_tags = post.tags | join: ' ' %}
-        <article class="blog-index__post" data-search="{{ post.title | append: ' ' | append: summary | append: ' ' | append: search_tags | downcase | escape }}">
-          <div class="blog-index__meta">
-            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %-d, %Y' }}</time>
+    {% assign posts = site.posts | sort: 'date' | reverse %}
+    {% if posts.size > 0 %}
+      <div id="blog-posts">
+        {% assign rendered_keys = '' %}
+        {% for post in posts %}
+          {% assign post_key = post.source_issue | default: post.url %}
+          {% capture marker %}|{{ post_key }}|{% endcapture %}
+          {% unless rendered_keys contains marker %}
+            {% assign rendered_keys = rendered_keys | append: marker %}
+            {% assign display_post = post %}
+            {% assign variants = '' | split: ',' %}
             {% if post.source_issue %}
-              {% assign translations = site.posts | where: 'source_issue', post.source_issue %}
-              {% if translations.size > 1 %}<span class="blog-index__tag" lang="{{ post.lang | default: 'zh-CN' }}">{% if post.lang == 'en' %}English{% else %}中文{% endif %}</span>{% endif %}
+              {% assign variants = site.posts | where: 'source_issue', post.source_issue %}
+              {% assign english_post = variants | where: 'lang', 'en' | first %}
+              {% if english_post %}{% assign display_post = english_post %}{% endif %}
             {% endif %}
-            {% for tag in post.tags limit: 3 %}<span class="blog-index__tag">{{ tag | escape }}</span>{% endfor %}
-          </div>
-          <h2 class="blog-index__title"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-          <p class="blog-index__summary">{{ summary | escape }}</p>
-          <a class="blog-index__read" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">Read article <span aria-hidden="true">→</span></a>
-        </article>
-      {% endfor %}
-    </div>
-    <p class="blog-index__no-results" id="blog-no-results" hidden>No articles match that search.</p>
-  {% else %}
-    <div class="blog-index__empty">
-      <h2>New writing is on its way.</h2>
-      <p>Published articles will appear here. You can subscribe now to be notified when the first one arrives.</p>
-      <a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a>
-    </div>
-  {% endif %}
-</div>
-
-<style>
-.blog-index { max-width: 48rem; }
-.blog-index__heading { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-.blog-index__intro { margin: 0 0 1.5rem; color: #555; font-size: 1.1rem; line-height: 1.6; }
-.blog-index__write { flex: none; font-size: .8rem; }
-.blog-index__tools { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.2rem; }
-.blog-index__count { margin: 0; color: #666; font-size: .8rem; }
-.blog-index__rss, .blog-index__read { font-size: .8rem; }
-.blog-index__search-label { display: block; margin-bottom: .4rem; font-size: .8rem; font-weight: 600; }
-.blog-index__search { width: 100%; margin-bottom: 1rem; padding: .7rem .8rem; border: 1px solid #bbb; border-radius: .4rem; background: #fff; color: #222; font: inherit; font-size: .9rem; }
-.blog-index__search:focus { outline: 2px solid #3568a8; outline-offset: 2px; }
-.blog-index__post { padding: 1.5rem 0; border-top: 1px solid #ddd; }
-.blog-index__meta { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem .55rem; color: #666; font-size: .72rem; }
-.blog-index__tag { padding: .1rem .45rem; border-radius: 1rem; background: #f0f2f4; color: #4b5563; }
-.blog-index__title { margin: .55rem 0 .45rem; font-size: 1.4rem; line-height: 1.3; }
-.blog-index__title a { text-decoration: none; }
-.blog-index__title a:hover, .blog-index__title a:focus { text-decoration: underline; }
-.blog-index__summary { margin: 0 0 .5rem; color: #4c4c4c; font-size: .9rem; line-height: 1.6; }
-.blog-index__read { display: inline-block; }
-.blog-index__empty { padding: 1.5rem; border: 1px solid #ddd; border-radius: .5rem; background: #fafafa; }
-.blog-index__empty h2 { margin-top: 0; font-size: 1.2rem; }
-.blog-index__empty p { font-size: .9rem; line-height: 1.6; }
-.blog-index__no-results { padding: 1.5rem 0; color: #555; }
-@media (max-width: 480px) { .blog-index__tools { align-items: flex-start; flex-direction: column; gap: .3rem; } .blog-index__heading { align-items: flex-start; } }
-</style>
+            {% assign summary = display_post.excerpt | default: display_post.content | strip_html | normalize_whitespace | truncate: 220 %}
+            {% capture search_text %}{{ display_post.title }} {{ summary }} {% for variant in variants %}{{ variant.excerpt | strip_html }} {% endfor %}{% endcapture %}
+            <article class="blog-list__item" data-search="{{ search_text | downcase | escape }}">
+              <div class="blog-list__meta">
+                <time datetime="{{ display_post.date | date: '%Y-%m-%d' }}">{{ display_post.date | date: '%b %-d, %Y' }}</time>
+                {% for tag in display_post.tags limit: 3 %}<span>{{ tag | escape }}</span>{% endfor %}
+              </div>
+              <h2><a href="{{ display_post.url | relative_url }}">{{ display_post.title | escape }}</a></h2>
+              <p>{{ summary | escape }}</p>
+              <div class="blog-list__links">
+                {% if variants.size > 1 %}
+                  {% for variant in variants %}
+                    <a href="{{ variant.url | relative_url }}" lang="{{ variant.lang | default: 'zh-CN' }}">{% if variant.lang == 'en' %}READ IN ENGLISH{% else %}阅读中文版{% endif %} <span aria-hidden="true">→</span></a>
+                  {% endfor %}
+                {% else %}
+                  <a href="{{ display_post.url | relative_url }}">{% if display_post.lang == 'zh-CN' %}阅读文章{% else %}READ ARTICLE{% endif %} <span aria-hidden="true">→</span></a>
+                {% endif %}
+              </div>
+            </article>
+          {% endunless %}
+        {% endfor %}
+      </div>
+      <p class="blog-list__no-results" id="blog-no-results" hidden>No articles match that search.</p>
+    {% else %}
+      <p class="blog-list__empty">New writing is on its way.</p>
+    {% endif %}
+  </section>
+</main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var search = document.getElementById('blog-search');
-  if (!search) return;
-  var posts = Array.prototype.slice.call(document.querySelectorAll('#blog-posts .blog-index__post'));
-  var count = document.getElementById('blog-count');
+  var posts = Array.prototype.slice.call(document.querySelectorAll('#blog-posts .blog-list__item'));
   var empty = document.getElementById('blog-no-results');
-  search.hidden = false;
-  document.getElementById('blog-search-label').hidden = false;
+  if (!search || !posts.length) return;
   search.addEventListener('input', function () {
     var query = search.value.trim().toLocaleLowerCase();
     var visible = 0;
@@ -95,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
       post.hidden = !matches;
       if (matches) visible += 1;
     });
-    count.textContent = visible + (visible === 1 ? ' post' : ' posts');
     empty.hidden = visible !== 0;
   });
 });

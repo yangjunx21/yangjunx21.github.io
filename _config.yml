@@ -229,7 +229,8 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
+      layout: blog-post
+      blog_style: true
       author_profile: true
       read_time: true
       comments: true

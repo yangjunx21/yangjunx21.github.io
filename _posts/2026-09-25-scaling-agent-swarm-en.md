@@ -7,8 +7,6 @@ excerpt: "Recent work on scaling agent swarms, and my thoughts and judgments abo
 source_issue: "https://github.com/yangjunx21/yangjunx21.github.io/issues/1"
 ---
 
-> Junxiao Yang
-
 One starting point for this line of work is [OpenAI's Navier–Stokes result](https://openai.com/index/navier-stokes-solution/). The exact solution process has not been disclosed, but the blog briefly describes the approach as follows:
 
 > Agents were subdivided into groups with the ability to communicate within the group. The groups varied in size, and the group that produced the Navier–Stokes resolution involved on the order of 10,000 concurrent agents.  ... For each problem, we prompted different groups of agents with different variants of the problem statement, covering all variants of the problem. For the Navier–Stokes problem, we suggested versions “A” and “B” (particular forms of the Navier–Stokes problem which would result in a proof) and versions “C” and “D” (which would result in a disproof) to separate groups of agents. ... We encouraged different groups of agents to explore a diversity of approaches. After some time, we cross-pollinated the agent groups by using Codex to consolidate the most useful insights from each agent group. These follow-up prompts drew on the agents’ own intermediate results. The group that found the solution to Navier–Stokes was guided in such a way.

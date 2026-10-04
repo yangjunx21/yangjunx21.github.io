@@ -11,19 +11,29 @@ layout: compress
     {% include head/custom.html %}
   </head>
 
-  <body>
+  <body{% if page.blog_style %} class="blog-surface"{% endif %}>
 
     {% include browser-upgrade.html %}
     {% include masthead.html %}
 
     {{ content }}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
+    {% if page.blog_style %}
+      <footer class="blog-footer">
+        <div class="blog-footer__inner">
+          <span>{{ site.name | default: site.title }}</span>
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+          <span>© {{ site.time | date: '%Y' }}</span>
+        </div>
       </footer>
-    </div>
+    {% else %}
+      <div class="page__footer">
+        <footer>
+          {% include footer/custom.html %}
+          {% include footer.html %}
+        </footer>
+      </div>
+    {% endif %}
 
     {% include scripts.html %}
 

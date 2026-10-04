@@ -1,28 +1,22 @@
 ---
-layout: archive
+layout: default
 title: "写文章"
 permalink: /write/
-author_profile: false
+blog_style: true
 ---
 
-<div class="blog-write-guide">
-  <p class="blog-write-guide__lead">直接在 GitHub 的文章表单里写。正文框支持粘贴截图、拖入图片、格式工具栏和预览；提交后会自动同步到这个博客。</p>
-  <a class="blog-write-guide__button" href="https://github.com/yangjunx21/yangjunx21.github.io/issues/new?template=blog.yml">打开文章编辑器 ↗</a>
+<main class="blog-writing" id="main">
+  <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+    <a href="{{ '/blog/' | relative_url }}">Blog</a><span aria-hidden="true">›</span><span>写文章</span>
+  </nav>
+  <p class="blog-kicker">Writing desk</p>
+  <h1>写文章</h1>
+  <p class="blog-writing__lead">在 GitHub 的文章表单里写作，直接粘贴截图或拖入图片。提交后，文章会自动同步到这个博客。</p>
+  <a class="blog-writing__button" href="https://github.com/yangjunx21/yangjunx21.github.io/issues/new?template=blog.yml">打开文章编辑器 ↗</a>
   <ol>
-    <li>写标题、正文。图片直接粘贴到正文框，等待 GitHub 上传完成。</li>
-    <li>点击 <strong>Preview</strong> 看排版。准备公开时勾选“同步到个人博客”。</li>
-    <li>提交 Issue。博客文章会自动生成；之后编辑这条 Issue，文章也会同步更新。</li>
+    <li>填写标题和正文，图片可直接粘贴到正文框。</li>
+    <li>用 Preview 检查排版；需要目录时，用 Markdown 的 <code>##</code> 和 <code>###</code> 写小标题。</li>
+    <li>勾选“同步到个人博客”并提交。之后编辑这条 Issue，中文版文章也会更新。</li>
   </ol>
-  <p class="blog-write-guide__note">这个仓库和 Issue 都是公开的，提交后即使没有勾选同步，内容也能在 GitHub 被看到。请勿在表单里保存私密草稿。</p>
-  <p><a href="{{ '/blog/' | relative_url }}">← 返回博客</a></p>
-</div>
-
-<style>
-.blog-write-guide { max-width: 43rem; }
-.blog-write-guide__lead { font-size: 1.06rem; line-height: 1.75; color: #3b4b58; }
-.blog-write-guide__button { display: inline-block; margin: .25rem 0 1rem; padding: .75rem 1.1rem; border-radius: .42rem; background: #166b52; color: #fff !important; font-size: .9rem; font-weight: 700; text-decoration: none !important; }
-.blog-write-guide__button:hover { background: #12563f; }
-.blog-write-guide ol { margin: 1rem 0 1.5rem; padding-left: 1.4rem; line-height: 1.8; }
-.blog-write-guide li { margin-bottom: .55rem; }
-.blog-write-guide__note { padding: .85rem 1rem; border-left: 3px solid #d29d4f; background: #fbf8f1; color: #695a3f; font-size: .82rem; line-height: 1.65; }
-</style>
+  <p class="blog-writing__note">仓库与 Issue 均公开，未勾选同步的内容也能在 GitHub 被看到。请勿在这里保存私密草稿。</p>
+</main>
