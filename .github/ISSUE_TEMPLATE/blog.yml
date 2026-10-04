@@ -31,6 +31,14 @@ body:
       placeholder: 从这里开始写……
     validations:
       required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: 图片上传区
+      description: 如果从博客写作页带来图片，请按该页面标出的顺序逐张粘贴到这里，等上传链接出现后再提交。图片会自动放回正文位置。
+      placeholder: 没有图片可留空。
+    validations:
+      required: false
   - type: checkboxes
     id: publish
     attributes:

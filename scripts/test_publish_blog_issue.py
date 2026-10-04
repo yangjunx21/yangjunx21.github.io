@@ -46,6 +46,28 @@ class BlogIssueTest(unittest.TestCase):
     def test_unchecked_new_issue_does_not_create_article(self):
         self.assertIsNone(writer.render_post(issue(False)))
 
+    def test_editor_images_are_placed_in_article_order(self):
+        source = issue(True)
+        source["body"] = source["body"].replace(
+            "正文。",
+            "第一张 <!-- BLOG_IMAGE_1 -->\n\n第二张 <!-- BLOG_IMAGE_2 -->",
+        ).replace(
+            "### 发布设置\n\n- [x] 同步到个人博客",
+            "### 图片上传区\n\n![一](https://github.com/user-attachments/assets/one)\n"
+            "![二](https://github.com/user-attachments/assets/two)\n\n"
+            "### 发布设置\n\n- [x] 同步到个人博客",
+        )
+        _, content = writer.render_post(source)
+        self.assertIn("第一张 ![配图 1](https://github.com/user-attachments/assets/one)", content)
+        self.assertIn("第二张 ![配图 2](https://github.com/user-attachments/assets/two)", content)
+        self.assertNotIn("BLOG_IMAGE", content)
+
+    def test_missing_editor_image_prevents_broken_publication(self):
+        source = issue(True)
+        source["body"] = source["body"].replace("正文。", "正文 <!-- BLOG_IMAGE_1 -->")
+        with self.assertRaisesRegex(ValueError, "only 0 uploaded images"):
+            writer.render_post(source)
+
     def test_unchecking_existing_issue_unpublishes_article(self):
         path = writer.ROOT / "_posts" / "2026-09-25-post-123.md"
         path.parent.mkdir()

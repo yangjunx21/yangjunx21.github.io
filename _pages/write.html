@@ -5,18 +5,95 @@ permalink: /write/
 blog_style: true
 ---
 
-<main class="blog-writing" id="main">
-  <nav class="blog-breadcrumb" aria-label="Breadcrumb">
-    <a href="{{ '/blog/' | relative_url }}">Blog</a><span aria-hidden="true">›</span><span>写文章</span>
-  </nav>
-  <p class="blog-kicker">Writing desk</p>
-  <h1>写文章</h1>
-  <p class="blog-writing__lead">在 GitHub 的文章表单里写作，直接粘贴截图或拖入图片。提交后，文章会自动同步到这个博客。</p>
-  <a class="blog-writing__button" href="https://github.com/yangjunx21/yangjunx21.github.io/issues/new?template=blog.yml">打开文章编辑器 ↗</a>
-  <ol>
-    <li>填写标题和正文，图片可直接粘贴到正文框。</li>
-    <li>用 Preview 检查排版；需要目录时，用 Markdown 的 <code>##</code> 和 <code>###</code> 写小标题。</li>
-    <li>勾选“同步到个人博客”并提交。之后编辑这条 Issue，中文版文章也会更新。</li>
-  </ol>
-  <p class="blog-writing__note">仓库与 Issue 均公开，未勾选同步的内容也能在 GitHub 被看到。请勿在这里保存私密草稿。</p>
+<main class="blog-editor" id="main">
+  <div class="blog-editor__wrap">
+    <nav class="blog-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/blog/' | relative_url }}">Blog</a><span aria-hidden="true">›</span><span>写文章</span>
+    </nav>
+
+    <div class="blog-editor__top">
+      <div>
+        <p class="blog-kicker">Writing desk</p>
+        <h1>写文章</h1>
+        <p>在文章的样子里写文章。草稿自动保存在当前浏览器。</p>
+      </div>
+      <div class="blog-editor__top-actions">
+        <span id="draft-status" role="status" aria-live="polite">正在载入草稿…</span>
+        <button type="button" class="blog-editor__publish" id="prepare-publish">去 GitHub 发布 ↗</button>
+      </div>
+    </div>
+
+    <div class="blog-editor__grid">
+      <aside class="blog-editor__aside" aria-label="写作辅助">
+        <div class="blog-editor__aside-inner">
+          <h2>本文目录</h2>
+          <ol id="editor-outline"><li class="blog-editor__outline-empty">添加小标题后显示</li></ol>
+          <p class="blog-editor__aside-tip">小标题会自动成为正式文章的目录。</p>
+        </div>
+      </aside>
+
+      <div class="blog-editor__paper">
+        <div class="blog-editor__eyebrow"><span>未发布的草稿</span><span id="draft-date"></span></div>
+        <label class="sr-only" for="editor-title">文章标题</label>
+        <input id="editor-title" class="blog-editor__title" type="text" placeholder="文章标题" maxlength="200" autocomplete="off">
+        <label class="sr-only" for="editor-summary">文章摘要</label>
+        <textarea id="editor-summary" class="blog-editor__summary" rows="2" placeholder="用一两句话介绍这篇文章（可选）"></textarea>
+        <div class="blog-article__author">
+          <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="34" height="34">
+          <span>作者 {{ site.author.name }}</span>
+        </div>
+
+        <div class="blog-editor__toolbar" role="toolbar" aria-label="文章格式">
+          <button type="button" data-format="h2" title="二级标题">H2</button>
+          <button type="button" data-format="h3" title="三级标题">H3</button>
+          <span class="blog-editor__tool-divider" aria-hidden="true"></span>
+          <button type="button" data-command="bold" title="加粗"><strong>B</strong></button>
+          <button type="button" data-command="italic" title="斜体"><em>I</em></button>
+          <button type="button" data-action="link" title="插入链接">链接</button>
+          <span class="blog-editor__tool-divider" aria-hidden="true"></span>
+          <button type="button" data-command="insertUnorderedList" title="无序列表">• 列表</button>
+          <button type="button" data-command="insertOrderedList" title="有序列表">1. 列表</button>
+          <button type="button" data-format="blockquote" title="引用">引用</button>
+          <span class="blog-editor__tool-divider" aria-hidden="true"></span>
+          <button type="button" data-action="image" title="插入图片">＋ 图片</button>
+          <input id="editor-image-picker" class="sr-only" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple>
+        </div>
+
+        <div id="editor-body" class="blog-article__body blog-editor__body" contenteditable="true" role="textbox" aria-label="文章正文" aria-multiline="true" data-placeholder="从这里开始写。可以直接粘贴或拖入图片…"></div>
+
+        <div class="blog-editor__details">
+          <label for="editor-tags">标签 <span>可选，用逗号隔开</span></label>
+          <input id="editor-tags" type="text" placeholder="例如：研究, 随笔" autocomplete="off">
+        </div>
+
+        <div class="blog-editor__bottom">
+          <button type="button" class="blog-editor__publish" id="prepare-publish-bottom">去 GitHub 发布 ↗</button>
+          <button type="button" class="blog-editor__text-button" id="copy-markdown">复制 Markdown</button>
+          <button type="button" class="blog-editor__text-button" id="clear-draft">清空草稿</button>
+        </div>
+        <p class="blog-editor__privacy">草稿只保存在这个浏览器。GitHub 仓库及提交的 Issue 均公开；未提交前不会出现在博客上。</p>
+      </div>
+    </div>
+
+    <section class="blog-editor__handoff" id="publish-handoff" aria-labelledby="handoff-title" hidden>
+      <div class="blog-editor__handoff-inner">
+        <p class="blog-kicker">Ready to publish</p>
+        <h2 id="handoff-title">最后一步：在 GitHub 确认</h2>
+        <p id="handoff-description">标题和正文会带到 GitHub 表单。检查后勾选“同步到个人博客”并提交。</p>
+        <div id="image-transfer" hidden>
+          <h3>上传配图</h3>
+          <p>在 GitHub 表单的“图片上传区”，按下方顺序逐张粘贴图片；等图片链接出现后再提交。同步脚本会把图片放回正文原来的位置。</p>
+          <ol id="image-transfer-list"></ol>
+        </div>
+        <div class="blog-editor__handoff-actions">
+          <a id="github-publish-link" class="blog-editor__publish" href="https://github.com/yangjunx21/yangjunx21.github.io/issues/new?template=blog.yml" target="_blank" rel="noopener noreferrer">打开 GitHub 表单 ↗</a>
+          <button type="button" class="blog-editor__text-button" id="copy-handoff-markdown">复制正文 Markdown</button>
+        </div>
+        <textarea id="markdown-fallback" class="blog-editor__markdown-fallback" aria-label="文章 Markdown，可手动复制" readonly hidden></textarea>
+        <p class="blog-editor__handoff-note" id="handoff-note"></p>
+      </div>
+    </section>
+  </div>
 </main>
+
+<script src="{{ '/assets/js/blog-editor.js' | relative_url }}" defer></script>

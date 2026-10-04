@@ -13,8 +13,10 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SECTION_RE = re.compile(r"(?m)^### (摘要|标签|文章正文|发布设置)\s*$")
+SECTION_RE = re.compile(r"(?m)^### (摘要|标签|文章正文|图片上传区|发布设置)\s*$")
 PUBLISH_RE = re.compile(r"(?m)^- \[[xX]\] 同步到个人博客\s*$")
+IMAGE_PLACEHOLDER_RE = re.compile(r"<!-- BLOG_IMAGE_(\d+) -->")
+UPLOADED_IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\((https?://[^\s)]+)\)")
 
 
 def get_sections(issue_body: str) -> dict[str, str]:
@@ -31,6 +33,9 @@ def get_sections(issue_body: str) -> dict[str, str]:
     final = next((item for item in reversed(matches) if item.start() >= cursor and item.group(1) == "发布设置"), None)
     if final is None:
         return {}
+    uploads = next((item for item in reversed(matches) if cursor <= item.start() < final.start() and item.group(1) == "图片上传区"), None)
+    if uploads is not None:
+        selected.append(uploads)
     selected.append(final)
     sections = {}
     for index, match in enumerate(selected):
@@ -65,6 +70,16 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
     published = bool(PUBLISH_RE.search(sections["发布设置"]))
     if not published and not post_path.exists():
         return None
+
+    if published and IMAGE_PLACEHOLDER_RE.search(article):
+        uploaded = UPLOADED_IMAGE_RE.findall(sections.get("图片上传区", ""))
+        needed = max(int(number) for number in IMAGE_PLACEHOLDER_RE.findall(article))
+        if len(uploaded) < needed:
+            raise ValueError(f"Article has {needed} image placeholders but only {len(uploaded)} uploaded images")
+        article = IMAGE_PLACEHOLDER_RE.sub(
+            lambda match: f"![配图 {match.group(1)}]({uploaded[int(match.group(1)) - 1]})",
+            article,
+        )
 
     lines = [
         "---",
