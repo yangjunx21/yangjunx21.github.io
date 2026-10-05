@@ -21,6 +21,12 @@
   var linkRemove = $('link-remove');
   var linkError = $('link-error');
   var figureTools = $('figure-tools');
+  var tableTools = $('table-tools');
+  var codeTools = $('code-tools');
+  var codeLanguage = $('code-language');
+  var mathPanel = $('math-panel');
+  var mathSource = $('math-source');
+  var mathPreview = $('math-preview');
   var publishButton = $('prepare-publish');
   var toolbarButtons = Array.prototype.slice.call(document.querySelectorAll('.blog-editor__toolbar button'));
 
@@ -32,6 +38,10 @@
   var imageSelection = null;
   var linkRange = null;
   var activeFigure = null;
+  var activeTable = null;
+  var activeCode = null;
+  var editingMath = null;
+  var editingMathIsNew = false;
   var handoffMarkdown = '';
 
   document.execCommand('defaultParagraphSeparator', false, 'p');
@@ -50,6 +60,19 @@
     var p = el('p');
     p.appendChild(el('br'));
     return p;
+  }
+
+  // Formulas render as MathJax markup without text, so "empty" checks look for them too.
+  function hasContent(node) {
+    return Boolean(node.textContent.replace(/\u200b/g, '').trim() || (node.querySelector && node.querySelector('img, [data-tex], table, hr')));
+  }
+
+  function isMath(node) {
+    return Boolean(node && node.nodeType === 1 && node.hasAttribute('data-tex'));
+  }
+
+  function isPreview(node) {
+    return Boolean(node && node.nodeType === 1 && node.hasAttribute('data-preview'));
   }
 
   function closestInEditor(node, tag) {
@@ -135,9 +158,21 @@
       title: title.value,
       summary: summary.value,
       tags: tags.value,
-      html: editor.innerHTML.replace(/ data-selected=""/g, ''),
+      html: serializeEditor(),
       updated: Date.now()
     };
+  }
+
+  // Save formulas as their TeX source and drop generated previews and selection marks.
+  function serializeEditor() {
+    var clone = editor.cloneNode(true);
+    clone.querySelectorAll('[data-tex]').forEach(function (node) {
+      node.textContent = mathFallback(node.getAttribute('data-tex'), isBlockMath(node));
+      node.classList.remove('is-rendered', 'tex2jax_process');
+    });
+    clone.querySelectorAll('[data-preview]').forEach(function (node) { node.parentNode.removeChild(node); });
+    clone.querySelectorAll('[data-selected]').forEach(function (node) { node.removeAttribute('data-selected'); });
+    return clone.innerHTML;
   }
 
   function saveDraft() {
@@ -175,7 +210,11 @@
 
   function isStray(node) {
     if (node.nodeType === 3) return node.data.trim() !== '';
-    return node.nodeType === 1 && INLINE_TAG.test(node.tagName);
+    return node.nodeType === 1 && INLINE_TAG.test(node.tagName) && !isBlockMath(node);
+  }
+
+  function isPlainDiv(node) {
+    return node.nodeType === 1 && node.tagName === 'DIV' && !isMath(node) && !isPreview(node);
   }
 
   function withCaret(fn) {
@@ -199,16 +238,20 @@
 
   var NESTED_BLOCK = /^(P|DIV|UL|OL|BLOCKQUOTE|PRE|H[1-6]|FIGURE|HR|TABLE)$/;
 
+  function isNestedBlock(node) {
+    return node.nodeType === 1 && (NESTED_BLOCK.test(node.tagName) || isBlockMath(node)) && !(isMath(node) && !isBlockMath(node));
+  }
+
   // Chrome nests new lists (and the paragraphs after them) inside the paragraph they started
   // from. Split such paragraphs so every block sits directly in the editor again.
   function liftBlocks() {
     var changed = false;
     Array.prototype.slice.call(editor.children).forEach(function (block) {
       if (!/^(P|H[1-6])$/.test(block.tagName)) return;
-      if (!Array.prototype.some.call(block.children, function (child) { return NESTED_BLOCK.test(child.tagName); })) return;
+      if (!Array.prototype.some.call(block.children, isNestedBlock)) return;
       var run = null;
       Array.prototype.slice.call(block.childNodes).forEach(function (child) {
-        if (child.nodeType === 1 && NESTED_BLOCK.test(child.tagName)) {
+        if (isNestedBlock(child)) {
           run = null;
           editor.insertBefore(child, block);
         } else {
@@ -224,14 +267,14 @@
     });
     Array.prototype.slice.call(editor.children).forEach(function (block) {
       if (block.tagName === 'P' && !block.firstChild) block.appendChild(el('br'));
-      if (block.tagName === 'P' && !block.textContent.trim() && !block.querySelector('br, img, caret-mark')) editor.removeChild(block);
+      if (block.tagName === 'P' && !hasContent(block) && !block.querySelector('br, caret-mark')) editor.removeChild(block);
     });
     return changed;
   }
 
   function hasNestedBlocks() {
     return Array.prototype.some.call(editor.children, function (block) {
-      return /^(P|H[1-6])$/.test(block.tagName) && Array.prototype.some.call(block.children, function (child) { return NESTED_BLOCK.test(child.tagName); });
+      return /^(P|H[1-6])$/.test(block.tagName) && Array.prototype.some.call(block.children, isNestedBlock);
     });
   }
 
@@ -240,9 +283,10 @@
     for (var pass = 0; pass < 6 && liftBlocks(); pass += 1) { /* repeat until flat */ }
     if (deep) {
       editor.querySelectorAll('[style]').forEach(function (node) {
-        if (!node.closest('figure')) node.removeAttribute('style');
+        if (!node.closest('figure, [data-tex]')) node.removeAttribute('style');
       });
-      editor.querySelectorAll('span, font').forEach(function (node) {
+      editor.querySelectorAll('span:not([data-tex]), font').forEach(function (node) {
+        if (node.closest('[data-tex], [data-preview]')) return;
         while (node.firstChild) node.parentNode.insertBefore(node.firstChild, node);
         node.parentNode.removeChild(node);
       });
@@ -261,20 +305,23 @@
           node = next;
         }
         next = node;
-      } else if (node.nodeType === 1 && node.tagName === 'DIV') {
+      } else if (isPlainDiv(node)) {
         var paragraph = el('p');
         while (node.firstChild) paragraph.appendChild(node.firstChild);
         editor.replaceChild(paragraph, node);
       }
       node = next;
     }
+    editor.querySelectorAll('[data-task]').forEach(function (node) {
+      if (node.tagName !== 'LI') node.removeAttribute('data-task');
+    });
     var last = editor.lastElementChild;
     if (last && last.tagName !== 'P') editor.appendChild(emptyParagraph());
   }
 
   function hasStrayNodes() {
     return hasNestedBlocks() || Array.prototype.some.call(editor.childNodes, function (node) {
-      return isStray(node) || (node.nodeType === 1 && node.tagName === 'DIV');
+      return isStray(node) || isPlainDiv(node);
     });
   }
 
@@ -310,6 +357,7 @@
   }
 
   function paragraphAfter(node) {
+    while (isPreview(node.nextElementSibling)) node = node.nextElementSibling;
     var next = node.nextElementSibling;
     if (next && next.tagName === 'P') return next;
     var p = emptyParagraph();
@@ -317,12 +365,18 @@
     return p;
   }
 
+  function wrapFragment(fragment) {
+    var holder = el('div');
+    holder.appendChild(fragment.cloneNode(true));
+    return holder;
+  }
+
   // Insert a block at the caret: split a paragraph in two, or go after the current block.
   function placeBlock(node, range) {
     var block = range ? topBlock(range.startContainer) : null;
     if (!block) {
       editor.appendChild(node);
-    } else if (block.nodeType === 1 && block.tagName === 'P' && !block.textContent.trim() && !block.querySelector('img')) {
+    } else if (block.nodeType === 1 && block.tagName === 'P' && !hasContent(block)) {
       editor.replaceChild(node, block);
     } else if (block.nodeType === 1 && block.tagName === 'P') {
       var tail = document.createRange();
@@ -330,13 +384,14 @@
       tail.setEnd(block, block.childNodes.length);
       var rest = tail.extractContents();
       editor.insertBefore(node, block.nextSibling);
-      if (rest.textContent.trim()) {
+      if (hasContent(rest.firstChild ? wrapFragment(rest) : el('p'))) {
         var after = el('p');
         after.appendChild(rest);
         editor.insertBefore(after, node.nextSibling);
       }
-      if (!block.textContent.trim()) editor.removeChild(block);
+      if (!hasContent(block)) editor.removeChild(block);
     } else {
+      while (isPreview(block.nextElementSibling)) block = block.nextElementSibling;
       editor.insertBefore(node, block.nextSibling);
     }
     return paragraphAfter(node);
@@ -352,7 +407,7 @@
       image.parentNode.removeChild(image);
       figure.setAttribute('data-upgraded', '');
       editor.insertBefore(figure, anchor);
-      if (block !== image && !block.textContent.trim() && !block.querySelector('img')) editor.removeChild(block);
+      if (block !== image && !hasContent(block)) editor.removeChild(block);
     });
     editor.querySelectorAll('[data-upgraded]').forEach(function (figure) { figure.removeAttribute('data-upgraded'); });
   }
@@ -400,6 +455,19 @@
   }
 
   editor.addEventListener('mousedown', function (event) {
+    var math = event.target.closest && event.target.closest('[data-tex]');
+    if (math && editor.contains(math)) {
+      event.preventDefault();
+      openMath(math, false);
+      return;
+    }
+    var item = event.target;
+    if (item.tagName === 'LI' && item.hasAttribute('data-task') && event.clientX < item.getBoundingClientRect().left) {
+      event.preventDefault();
+      item.setAttribute('data-task', item.getAttribute('data-task') === 'done' ? 'todo' : 'done');
+      scheduleSave();
+      return;
+    }
     var figure = event.target.closest && event.target.closest('figure');
     if (figure && event.target.tagName === 'IMG') {
       event.preventDefault();
@@ -417,6 +485,583 @@
   $('figure-up').addEventListener('click', function () { moveFigure(-1); });
   $('figure-down').addEventListener('click', function () { moveFigure(1); });
   window.addEventListener('resize', positionFigureTools);
+
+  // ------------------------------------------------------------ formulas
+
+  var mathQueue = Promise.resolve();
+  var mathReady = null;
+  var mathPreviewTimer = 0;
+
+  function isBlockMath(node) {
+    return isMath(node) && node.classList.contains('blog-math--block');
+  }
+
+  function mathFallback(tex, display) {
+    return display ? '$$' + tex + '$$' : '$' + tex + '$';
+  }
+
+  function mathElement(tex, display) {
+    var node = el(display ? 'div' : 'span');
+    node.className = display ? 'blog-math blog-math--block' : 'blog-math';
+    node.setAttribute('contenteditable', 'false');
+    node.setAttribute('data-tex', tex || '');
+    node.textContent = mathFallback(tex || '', display);
+    return node;
+  }
+
+  function whenMathJax() {
+    if (!mathReady) {
+      mathReady = new Promise(function (resolve, reject) {
+        var tries = 0;
+        (function check() {
+          var mathJax = window.MathJax;
+          if (mathJax && mathJax.typesetPromise && mathJax.startup && mathJax.startup.promise) {
+            mathJax.startup.promise.then(resolve, reject);
+          } else if ((tries += 1) > 200) {
+            reject(new Error('MathJax unavailable'));
+          } else {
+            window.setTimeout(check, 100);
+          }
+        })();
+      });
+    }
+    return mathReady;
+  }
+
+  // Typeset one element; MathJax calls are chained so they never overlap.
+  function typeset(node, tex, display) {
+    node.classList.add('tex2jax_process');
+    return whenMathJax().then(function () {
+      mathQueue = mathQueue.then(function () {
+        if (!node.isConnected) return null;
+        if (window.MathJax.typesetClear) window.MathJax.typesetClear([node]);
+        node.textContent = display ? '\\[' + tex + '\\]' : '\\(' + tex + '\\)';
+        return window.MathJax.typesetPromise([node]);
+      }).catch(function () {
+        node.textContent = mathFallback(tex, display);
+      });
+      return mathQueue;
+    });
+  }
+
+  function renderMath(node) {
+    var tex = node.getAttribute('data-tex') || '';
+    var display = isBlockMath(node);
+    node.classList.remove('is-rendered');
+    node.classList.toggle('is-empty-math', !tex.trim());
+    node.textContent = tex.trim() ? mathFallback(tex, display) : (display ? '点击输入公式' : '公式');
+    if (!tex.trim()) return;
+    typeset(node, tex, display).then(function () {
+      if (node.getAttribute('data-tex') === tex) node.classList.add('is-rendered');
+    }, function () { /* keep the TeX source visible */ });
+  }
+
+  function renderPendingMath() {
+    editor.querySelectorAll('[data-tex]:not(.is-rendered)').forEach(renderMath);
+  }
+
+  // Chrome's insertHTML splits paragraphs around contenteditable=false spans and strips
+  // attributes from plain spans, so inline formulas go in as <x-math> and are swapped after.
+  function mathPlaceholder(tex) {
+    return '<x-math data-tex="' + escapeHtml(tex) + '">' + escapeHtml(mathFallback(tex, false)) + '</x-math>';
+  }
+
+  function insertableHtml(holder) {
+    holder.querySelectorAll('span[data-tex]').forEach(function (math) {
+      var placeholder = el('x-math');
+      placeholder.setAttribute('data-tex', math.getAttribute('data-tex'));
+      placeholder.textContent = mathFallback(math.getAttribute('data-tex'), false);
+      math.parentNode.replaceChild(placeholder, math);
+    });
+    return holder.innerHTML;
+  }
+
+  function hydrateMath() {
+    editor.querySelectorAll('x-math').forEach(function (placeholder) {
+      placeholder.parentNode.replaceChild(mathElement(placeholder.getAttribute('data-tex') || '', false), placeholder);
+    });
+    renderPendingMath();
+  }
+
+  function openMath(node, isNew) {
+    if (editingMath && editingMath !== node) commitMath();
+    hideFigureTools();
+    hideBlockTools();
+    var display = isBlockMath(node);
+    editingMath = node;
+    editingMathIsNew = Boolean(isNew);
+    node.setAttribute('data-selected', '');
+    mathSource.value = node.getAttribute('data-tex') || '';
+    $('math-mode').textContent = display ? '独立公式' : '行内公式';
+    $('math-toggle').textContent = display ? '改为行内' : '改为独立';
+    $('math-hint').textContent = display ? (isMac ? '⌘↵' : 'Ctrl+↵') + ' 完成 · Esc 取消' : '↵ 完成 · Esc 取消';
+    mathPanel.classList.toggle('is-block', display);
+    mathPanel.hidden = false;
+    autosize(mathSource);
+    positionMathPanel();
+    mathSource.focus({ preventScroll: true });
+    mathSource.setSelectionRange(mathSource.value.length, mathSource.value.length);
+    previewMath();
+  }
+
+  function positionMathPanel() {
+    if (!editingMath) return;
+    var rect = editingMath.getBoundingClientRect();
+    var left = Math.min(Math.max(12, rect.left), document.documentElement.clientWidth - mathPanel.offsetWidth - 12);
+    mathPanel.style.top = Math.round(rect.bottom + window.scrollY + 8) + 'px';
+    mathPanel.style.left = Math.round(left + window.scrollX) + 'px';
+  }
+
+  function previewMath() {
+    clearTimeout(mathPreviewTimer);
+    mathPreviewTimer = setTimeout(function () {
+      var tex = mathSource.value.trim();
+      mathPreview.classList.toggle('is-placeholder', !tex);
+      if (!tex) { mathPreview.textContent = '预览'; return; }
+      typeset(mathPreview, tex, Boolean(editingMath && isBlockMath(editingMath))).then(positionMathPanel, function () {});
+    }, 120);
+  }
+
+  function closeMath() {
+    mathPanel.hidden = true;
+    if (editingMath) editingMath.removeAttribute('data-selected');
+    editingMath = null;
+    editingMathIsNew = false;
+  }
+
+  function caretAfterMath(node) {
+    if (!node.isConnected) return;
+    if (isBlockMath(node)) { caretInto(paragraphAfter(node), false); return; }
+    var range = document.createRange();
+    range.setStartAfter(node);
+    range.collapse(true);
+    editor.focus({ preventScroll: true });
+    selectRange(range);
+  }
+
+  function removeMath(node) {
+    if (!node.isConnected) return;
+    var display = isBlockMath(node);
+    var next = display ? (node.nextElementSibling || node.previousElementSibling) : null;
+    var range = document.createRange();
+    range.setStartBefore(node);
+    range.collapse(true);
+    node.parentNode.removeChild(node);
+    tidy(false);
+    if (next && next.isConnected) caretInto(next, false);
+    else if (!display) { editor.focus({ preventScroll: true }); selectRange(range); }
+    scheduleSave();
+  }
+
+  function commitMath() {
+    var node = editingMath;
+    if (!node) return;
+    var tex = mathSource.value.trim();
+    closeMath();
+    if (!tex) { removeMath(node); return; }
+    if (tex !== node.getAttribute('data-tex')) {
+      node.setAttribute('data-tex', tex);
+      renderMath(node);
+    }
+    caretAfterMath(node);
+    scheduleSave();
+  }
+
+  function cancelMath() {
+    var node = editingMath;
+    var isNew = editingMathIsNew;
+    closeMath();
+    if (!node) return;
+    if (isNew || !node.getAttribute('data-tex')) removeMath(node);
+    else caretAfterMath(node);
+  }
+
+  function toggleMathDisplay() {
+    var node = editingMath;
+    if (!node) return;
+    var isNew = editingMathIsNew;
+    var display = !isBlockMath(node);
+    var replacement = mathElement(mathSource.value.trim(), display);
+    node.removeAttribute('data-selected');
+    editingMath = null;
+    if (display) {
+      var range = document.createRange();
+      range.setStartAfter(node);
+      range.collapse(true);
+      node.parentNode.removeChild(node);
+      placeBlock(replacement, range);
+    } else {
+      var paragraph = el('p');
+      paragraph.appendChild(replacement);
+      editor.replaceChild(paragraph, node);
+    }
+    tidy(false);
+    renderMath(replacement);
+    openMath(replacement, isNew);
+    scheduleSave();
+  }
+
+  function insertMath() {
+    focusBody();
+    var selection = selectionInBody();
+    var text = selection && !selection.isCollapsed ? selection.toString().trim() : '';
+    if (text) {
+      exec('insertHTML', mathPlaceholder(text) + '\u200b');
+      withCaret(function () { tidy(true); });
+      hydrateMath();
+      scheduleSave();
+      return;
+    }
+    var node = mathElement('', true);
+    placeBlock(node, selectionRange());
+    renderMath(node);
+    openMath(node, true);
+    scheduleSave();
+  }
+
+  mathSource.addEventListener('input', function () {
+    autosize(mathSource);
+    previewMath();
+  });
+  mathSource.addEventListener('keydown', function (event) {
+    if (event.isComposing || event.keyCode === 229) return;
+    var mod = isMac ? event.metaKey : event.ctrlKey;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      cancelMath();
+    } else if (event.key === 'Enter' && (mod || (!event.shiftKey && editingMath && !isBlockMath(editingMath)))) {
+      event.preventDefault();
+      commitMath();
+    }
+  });
+  mathPanel.addEventListener('mousedown', function (event) {
+    if (event.target !== mathSource) event.preventDefault();
+  });
+  $('math-done').addEventListener('click', commitMath);
+  $('math-toggle').addEventListener('click', toggleMathDisplay);
+  $('math-delete').addEventListener('click', function () {
+    var node = editingMath;
+    closeMath();
+    if (node) removeMath(node);
+  });
+  document.addEventListener('mousedown', function (event) {
+    if (!editingMath || mathPanel.contains(event.target)) return;
+    if (event.target.closest && event.target.closest('[data-tex]') === editingMath) return;
+    commitMath();
+  });
+  window.addEventListener('resize', positionMathPanel);
+
+  // -------------------------------------------------------------- tables
+
+  function makeTable(rows, columns, header) {
+    var table = el('table');
+    var head = el('thead');
+    var body = el('tbody');
+    for (var r = 0; r < rows; r += 1) {
+      var row = el('tr');
+      for (var c = 0; c < columns; c += 1) {
+        var cell = el(r === 0 ? 'th' : 'td');
+        if (r === 0 && header && header[c]) cell.textContent = header[c];
+        else cell.appendChild(el('br'));
+        row.appendChild(cell);
+      }
+      (r === 0 ? head : body).appendChild(row);
+    }
+    table.appendChild(head);
+    table.appendChild(body);
+    return table;
+  }
+
+  function insertTable(header) {
+    focusBody();
+    var table = makeTable(header ? 2 : 3, header ? header.length : 3, header);
+    placeBlock(table, selectionRange());
+    caretInto(header ? table.rows[1].cells[0] : table.rows[0].cells[0], false);
+    scheduleSave();
+  }
+
+  function currentCell() {
+    var selection = selectionInBody();
+    return selection ? closestInEditor(selection.anchorNode, 'TD') || closestInEditor(selection.anchorNode, 'TH') : null;
+  }
+
+  function cellAt(table, rowIndex, columnIndex) {
+    var row = table.rows[rowIndex];
+    return row ? row.cells[Math.max(0, Math.min(columnIndex, row.cells.length - 1))] : null;
+  }
+
+  function addRow(table, afterIndex) {
+    var row = el('tr');
+    Array.prototype.forEach.call(table.rows[0].cells, function (headerCell) {
+      var cell = el('td');
+      if (headerCell.getAttribute('align')) cell.setAttribute('align', headerCell.getAttribute('align'));
+      cell.appendChild(el('br'));
+      row.appendChild(cell);
+    });
+    var body = table.tBodies[0] || table.appendChild(el('tbody'));
+    var reference = table.rows[afterIndex];
+    if (reference && reference.parentNode === body) body.insertBefore(row, reference.nextSibling);
+    else body.insertBefore(row, body.firstChild);
+    return row;
+  }
+
+  function removeTable(table) {
+    var next = paragraphAfter(table);
+    table.parentNode.removeChild(table);
+    hideBlockTools();
+    caretInto(next, false);
+    scheduleSave();
+  }
+
+  function tableAction(action) {
+    var cell = currentCell() || (activeTable && activeTable.isConnected ? activeTable.rows[0].cells[0] : null);
+    if (!cell) return;
+    var table = cell.closest('table');
+    var rowIndex = cell.parentNode.rowIndex;
+    var columnIndex = cell.cellIndex;
+    var target = cell;
+    if (action === 'delete') { removeTable(table); return; }
+    if (action === 'row') {
+      target = addRow(table, rowIndex).cells[columnIndex];
+    } else if (action === 'column') {
+      Array.prototype.forEach.call(table.rows, function (row) {
+        var added = el(row.parentNode.tagName === 'THEAD' ? 'th' : 'td');
+        added.appendChild(el('br'));
+        row.insertBefore(added, row.cells[columnIndex] ? row.cells[columnIndex].nextSibling : null);
+      });
+      target = cellAt(table, rowIndex, columnIndex + 1);
+    } else if (action === 'delete-row') {
+      if (rowIndex === 0) { setStatus('表头行不能单独删除，可以删除整个表格', 'idle'); return; }
+      if (table.rows.length <= 2) {
+        Array.prototype.forEach.call(table.rows[1].cells, function (item) { item.replaceChildren(el('br')); });
+      } else {
+        table.rows[rowIndex].parentNode.removeChild(table.rows[rowIndex]);
+        target = cellAt(table, Math.min(rowIndex, table.rows.length - 1), columnIndex);
+      }
+    } else if (action === 'delete-column') {
+      if (table.rows[0].cells.length <= 1) { removeTable(table); return; }
+      Array.prototype.forEach.call(table.rows, function (row) {
+        if (row.cells[columnIndex]) row.removeChild(row.cells[columnIndex]);
+      });
+      target = cellAt(table, rowIndex, columnIndex - 1);
+    } else if (action === 'align') {
+      var order = ['', 'left', 'center', 'right'];
+      var labels = { '': '默认', left: '左对齐', center: '居中', right: '右对齐' };
+      var next = order[(order.indexOf(table.rows[0].cells[columnIndex].getAttribute('align') || '') + 1) % order.length];
+      Array.prototype.forEach.call(table.rows, function (row) {
+        var item = row.cells[columnIndex];
+        if (!item) return;
+        if (next) item.setAttribute('align', next);
+        else item.removeAttribute('align');
+      });
+      setStatus('本列' + labels[next], 'idle');
+    }
+    caretInto(target, true);
+    showTableTools(table);
+    scheduleSave();
+  }
+
+  function moveInTable(cell, step) {
+    var table = cell.closest('table');
+    var cells = Array.prototype.slice.call(table.querySelectorAll('th, td'));
+    var next = cells[cells.indexOf(cell) + step];
+    if (!next && step > 0) next = addRow(table, table.rows.length - 1).cells[0];
+    if (next) caretInto(next, true);
+    scheduleSave();
+  }
+
+  function leaveTable(table, backward) {
+    var target = backward ? table.previousElementSibling : paragraphAfter(table);
+    if (target) caretInto(target, Boolean(backward));
+    hideBlockTools();
+  }
+
+  // Enter moves down a row; on an empty last row it removes that row and leaves the table.
+  function moveDownInTable(cell) {
+    var table = cell.closest('table');
+    var row = cell.parentNode;
+    var rowIndex = row.rowIndex;
+    if (!table.rows[rowIndex + 1]) {
+      if (rowIndex > 1 && !hasContent(row)) {
+        row.parentNode.removeChild(row);
+        leaveTable(table, false);
+        scheduleSave();
+        return;
+      }
+      addRow(table, rowIndex);
+    }
+    caretInto(cellAt(table, rowIndex + 1, cell.cellIndex), true);
+    scheduleSave();
+  }
+
+  function placeTool(tool, rect, inside) {
+    tool.hidden = false;
+    var top = inside ? rect.top + 6 : rect.top - tool.offsetHeight - 6;
+    tool.style.top = Math.round(Math.max(top, 76) + window.scrollY) + 'px';
+    tool.style.left = Math.round(rect.right - tool.offsetWidth - (inside ? 6 : 0) + window.scrollX) + 'px';
+  }
+
+  function showTableTools(table) {
+    activeTable = table;
+    placeTool(tableTools, table.getBoundingClientRect(), false);
+  }
+
+  function showCodeTools(pre) {
+    if (activeCode !== pre) codeLanguage.value = pre.getAttribute('data-lang') || '';
+    activeCode = pre;
+    placeTool(codeTools, pre.getBoundingClientRect(), true);
+  }
+
+  function hideBlockTools() {
+    activeTable = null;
+    activeCode = null;
+    tableTools.hidden = true;
+    codeTools.hidden = true;
+  }
+
+  function updateBlockTools() {
+    var selection = selectionInBody();
+    var cell = selection && (closestInEditor(selection.anchorNode, 'TD') || closestInEditor(selection.anchorNode, 'TH'));
+    var pre = selection && closestInEditor(selection.anchorNode, 'PRE');
+    if (cell) showTableTools(cell.closest('table'));
+    else if (!tableTools.contains(document.activeElement)) { activeTable = null; tableTools.hidden = true; }
+    if (pre) showCodeTools(pre);
+    else if (document.activeElement !== codeLanguage) { activeCode = null; codeTools.hidden = true; }
+  }
+
+  tableTools.addEventListener('mousedown', function (event) { event.preventDefault(); });
+  tableTools.querySelectorAll('[data-table-action]').forEach(function (button) {
+    button.addEventListener('click', function () { tableAction(button.getAttribute('data-table-action')); });
+  });
+  codeLanguage.addEventListener('input', function () {
+    if (!activeCode) return;
+    var language = codeLanguage.value.trim().toLowerCase().replace(/[^\w+#.-]/g, '');
+    if (language) activeCode.setAttribute('data-lang', language);
+    else activeCode.removeAttribute('data-lang');
+    scheduleSave();
+  });
+  codeLanguage.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== 'Escape') return;
+    event.preventDefault();
+    if (activeCode) caretInto(activeCode, true);
+  });
+  codeLanguage.addEventListener('blur', function () {
+    window.setTimeout(updateBlockTools, 0);
+  });
+  window.addEventListener('resize', updateBlockTools);
+
+  // ------------------------------------------------- mermaid previews
+
+  var mermaidLoader = null;
+  var diagramTimer = 0;
+  var diagramCount = 0;
+
+  function loadMermaid() {
+    if (!mermaidLoader) {
+      mermaidLoader = import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs').then(function (module) {
+        module.default.initialize({ startOnLoad: false, securityLevel: 'strict', theme: 'neutral' });
+        return module.default;
+      });
+    }
+    return mermaidLoader;
+  }
+
+  function syncDiagrams() {
+    editor.querySelectorAll('[data-preview]').forEach(function (preview) {
+      var pre = preview.previousElementSibling;
+      if (!pre || pre.tagName !== 'PRE' || pre.getAttribute('data-lang') !== 'mermaid') preview.parentNode.removeChild(preview);
+    });
+    clearTimeout(diagramTimer);
+    if (editor.querySelector('pre[data-lang="mermaid"]')) diagramTimer = setTimeout(renderDiagrams, 450);
+  }
+
+  function renderDiagrams() {
+    var blocks = Array.prototype.filter.call(editor.querySelectorAll('pre[data-lang="mermaid"]'), function (pre) {
+      return pre.parentNode === editor;
+    });
+    loadMermaid().then(function (mermaid) {
+      blocks.forEach(function (pre) {
+        if (pre.parentNode !== editor || pre.getAttribute('data-lang') !== 'mermaid') return;
+        var source = (pre.innerText || pre.textContent).replace(/\u200b/g, '').trim();
+        var preview = isPreview(pre.nextElementSibling) ? pre.nextElementSibling : null;
+        if (!preview) {
+          preview = el('figure');
+          preview.className = 'blog-editor__diagram';
+          preview.setAttribute('contenteditable', 'false');
+          preview.setAttribute('data-preview', '');
+          editor.insertBefore(preview, pre.nextSibling);
+        }
+        if (preview.getAttribute('data-source') === source) return;
+        preview.setAttribute('data-source', source);
+        if (!source) { preview.textContent = '输入 mermaid 代码后在这里预览'; return; }
+        diagramCount += 1;
+        var id = 'blog-diagram-' + diagramCount;
+        mermaid.render(id, source).then(function (result) {
+          if (preview.getAttribute('data-source') === source) preview.innerHTML = result.svg;
+        }, function () {
+          ['d' + id, id].forEach(function (stray) {
+            var node = document.getElementById(stray);
+            if (node && !editor.contains(node)) node.parentNode.removeChild(node);
+          });
+          if (preview.getAttribute('data-source') === source) preview.textContent = '图表语法有误，发布后会显示为代码';
+        });
+      });
+    }, function () {
+      blocks.forEach(function (pre) {
+        if (isPreview(pre.nextElementSibling)) pre.nextElementSibling.textContent = '图表预览加载失败';
+      });
+    });
+  }
+
+  // -------------------------------------------------- tasks & highlight
+
+  function currentItem() {
+    var selection = selectionInBody();
+    return selection ? closestInEditor(selection.anchorNode, 'LI') : null;
+  }
+
+  function toggleTaskList() {
+    focusBody();
+    var item = currentItem();
+    if (!item) {
+      listCommand('insertUnorderedList');
+      item = currentItem();
+      if (item) item.setAttribute('data-task', 'todo');
+      scheduleSave();
+      return;
+    }
+    var enable = !item.hasAttribute('data-task');
+    Array.prototype.forEach.call(item.parentNode.children, function (sibling) {
+      if (sibling.tagName !== 'LI') return;
+      if (enable) sibling.setAttribute('data-task', sibling.getAttribute('data-task') || 'todo');
+      else sibling.removeAttribute('data-task');
+    });
+    scheduleSave();
+  }
+
+  function toggleMark() {
+    focusBody();
+    var selection = window.getSelection();
+    var mark = closestInEditor(selection.anchorNode, 'MARK');
+    if (mark) {
+      var range = document.createRange();
+      range.selectNode(mark);
+      selectRange(range);
+      var inner = el('div');
+      inner.innerHTML = mark.innerHTML;
+      exec('insertHTML', insertableHtml(inner));
+    } else if (selection.isCollapsed) {
+      setStatus('先选中要高亮的文字，或输入 ==文字==', 'idle');
+      return;
+    } else {
+      var holder = el('div');
+      holder.appendChild(selection.getRangeAt(0).cloneContents());
+      exec('insertHTML', '<mark>' + insertableHtml(holder) + '</mark>\u200b');
+    }
+    withCaret(function () { tidy(true); });
+    hydrateMath();
+    scheduleSave();
+  }
 
   // ------------------------------------------------------------- images
 
@@ -509,6 +1154,28 @@
     var paragraph = null;
     var pending = [];
 
+    // Formulas from this editor, KaTeX (ChatGPT, Claude) or MathML with a TeX annotation (Wikipedia).
+    function mathFrom(node) {
+      if (node.hasAttribute('data-tex') && /\bblog-math\b/.test(node.className)) {
+        return { tex: node.getAttribute('data-tex'), display: /blog-math--block/.test(node.className) };
+      }
+      var classes = node.classList;
+      if (classes.contains('katex') || classes.contains('katex-display') || classes.contains('mwe-math-element') || node.localName === 'math') {
+        var annotation = node.querySelector('annotation[encoding="application/x-tex"]');
+        if (!annotation) return null;
+        var display = classes.contains('katex-display') || Boolean(node.closest('.katex-display')) ||
+          node.getAttribute('display') === 'block' || Boolean(node.querySelector('math[display="block"]'));
+        var tex = annotation.textContent.trim().replace(/^\{\\displaystyle\s*([\s\S]*)\}$/, '$1').replace(/^\\displaystyle\s*/, '');
+        return { tex: tex, display: display };
+      }
+      return null;
+    }
+
+    function skipped(node) {
+      return SKIP_TAGS.test(node.tagName) || /^MJX-/.test(node.tagName) || node.hasAttribute('data-preview') ||
+        /\b(katex-html|mwe-math-fallback)/.test(typeof node.className === 'string' ? node.className : '');
+    }
+
     function figureFrom(image, caption) {
       var src = safeUrl(image.getAttribute('src'), true);
       return src ? makeFigure(src, (caption || image.getAttribute('title') || '').trim(), image.getAttribute('alt') || '') : null;
@@ -550,7 +1217,13 @@
         target.appendChild(document.createTextNode(node.data.replace(/[\s\u00a0]+/g, ' ')));
         return;
       }
-      if (node.nodeType !== 1 || SKIP_TAGS.test(node.tagName)) return;
+      if (node.nodeType !== 1 || skipped(node)) return;
+      var math = mathFrom(node);
+      if (math) {
+        if (math.display) pending.push(mathElement(math.tex, true));
+        else target.appendChild(mathElement(math.tex, false));
+        return;
+      }
       var tag = node.tagName;
       var style = (node.getAttribute('style') || '').toLowerCase();
       var wrapper = null;
@@ -573,6 +1246,8 @@
         wrapper = el('em');
       } else if (/^(S|DEL|STRIKE)$/.test(tag)) {
         wrapper = el('s');
+      } else if (tag === 'MARK') {
+        wrapper = el('mark');
       } else if (tag === 'SPAN') {
         if (/font-weight\s*:\s*(bold|[6-9]00)/.test(style)) wrapper = el('strong');
         else if (/font-style\s*:\s*italic/.test(style)) wrapper = el('em');
@@ -610,6 +1285,9 @@
 
     function listItem(source) {
       var item = el('li');
+      var checkbox = source.querySelector(':scope > input[type="checkbox"], :scope > p > input[type="checkbox"]');
+      var task = source.getAttribute('data-task') || (checkbox ? (checkbox.hasAttribute('checked') ? 'done' : 'todo') : '');
+      if (task === 'todo' || task === 'done') item.setAttribute('data-task', task);
       Array.prototype.forEach.call(source.childNodes, function (child) {
         if (child.nodeType === 1 && (child.tagName === 'UL' || child.tagName === 'OL')) {
           var nested = list(child);
@@ -642,8 +1320,14 @@
           if (node.data.trim() || paragraph) appendInline(currentParagraph(), node);
           return;
         }
-        if (node.nodeType !== 1 || SKIP_TAGS.test(node.tagName)) return;
+        if (node.nodeType !== 1 || skipped(node)) return;
         var tag = node.tagName;
+        var math = mathFrom(node);
+        if (math) {
+          if (math.display) { endParagraph(); out.appendChild(mathElement(math.tex, true)); }
+          else currentParagraph().appendChild(mathElement(math.tex, false));
+          return;
+        }
         if (tag === 'IMG') {
           var image = figureFrom(node, '');
           if (image) { endParagraph(); out.appendChild(image); }
@@ -661,6 +1345,10 @@
         } else if (tag === 'PRE') {
           block = el('pre');
           block.textContent = node.textContent.replace(/\n+$/, '');
+          var languageSource = [node.getAttribute('data-lang') || '', node.className, node.parentNode && node.parentNode.className,
+            (node.querySelector('code') || node).className].join(' ');
+          var language = (node.getAttribute('data-lang') || (languageSource.match(/(?:language|lang|highlight-source)-([\w+#.-]+)/) || [])[1] || '').toLowerCase();
+          if (language && language !== 'plaintext') block.setAttribute('data-lang', language);
         } else if (tag === 'BLOCKQUOTE') {
           block = inlineBlock('blockquote', node);
         } else if (tag === 'UL' || tag === 'OL') {
@@ -677,21 +1365,37 @@
           block = figureImage ? figureFrom(figureImage, caption ? caption.textContent : '') : null;
           if (!block) walk(node);
         } else if (tag === 'TABLE') {
-          node.querySelectorAll('tr').forEach(function (row) {
-            var cells = Array.prototype.map.call(row.children, function (cell) { return cell.textContent.trim(); }).filter(Boolean);
-            if (!cells.length) return;
-            var line = el('p');
-            line.textContent = cells.join(' · ');
-            out.appendChild(line);
-          });
+          block = tableFrom(node);
         } else if (node.querySelector(BLOCK_SELECTOR)) {
           walk(node);
         } else {
           block = inlineBlock('p', node);
         }
-        if (block && (block.textContent.trim() || block.tagName === 'FIGURE')) out.appendChild(block);
+        if (block && (hasContent(block) || block.tagName === 'FIGURE')) out.appendChild(block);
         flushPending();
       });
+    }
+
+    function tableFrom(source) {
+      var rows = Array.prototype.filter.call(source.querySelectorAll('tr'), function (row) { return row.closest('table') === source; });
+      var width = rows.reduce(function (max, row) { return Math.max(max, row.cells.length); }, 0);
+      if (!rows.length || !width) return null;
+      var table = makeTable(rows.length, width);
+      rows.forEach(function (row, rowIndex) {
+        for (var c = 0; c < width; c += 1) {
+          var cell = table.rows[rowIndex].cells[c];
+          var original = row.cells[c];
+          cell.replaceChildren();
+          if (original) {
+            inlineChildren(cell, original);
+            trimBlock(cell);
+            var align = original.getAttribute('align') || ((original.getAttribute('style') || '').match(/text-align:\s*(left|center|right)/) || [])[1];
+            if (align) cell.setAttribute('align', align);
+          }
+          if (!cell.firstChild) cell.appendChild(el('br'));
+        }
+      });
+      return table;
     }
 
     walk(doc.body);
@@ -699,14 +1403,22 @@
     return out;
   }
 
+  // Inline math in pasted Markdown: $$x$$, \(x\), and Typora/Pandoc-style $x$.
+  var INLINE_MATH = /\$\$([^$]+?)\$\$|\\\((.+?)\\\)|(^|[^\\$\w])\$([^\s$](?:[^$\n]*?[^\s$\\])?)\$(?!\d)/g;
+
   function inlineMarkdown(text) {
-    var escapes = [];
-    text = text.replace(/\\([\\`*_{}\[\]()#+\-.!>~|])/g, function (_, character) {
-      escapes.push(character);
-      return '\u0000' + (escapes.length - 1) + '\u0000';
-    });
-    var html = text.split(/(`+[^`]+?`+)/).map(function (part, index) {
+    return text.split(/(`+[^`]+?`+)/).map(function (part, index) {
       if (index % 2) return '<code>' + escapeHtml(part.replace(/^`+\s?|\s?`+$/g, '')) + '</code>';
+      var held = [];
+      function hold(html) {
+        held.push(html);
+        return '\u0000' + (held.length - 1) + '\u0000';
+      }
+      part = part
+        .replace(INLINE_MATH, function (_, double, paren, lead, single) {
+          return (lead || '') + hold(mathElement(double || paren || single, false).outerHTML);
+        })
+        .replace(/\\([\\`*_{}\[\]()#+\-.!>~|$=])/g, function (_, character) { return hold(escapeHtml(character)); });
       return escapeHtml(part)
         .replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/g, '$1')
         .replace(/\[([^\]]+)\]\(((?:https?:|mailto:)[^)\s]+)(?:\s+&quot;[^&]*&quot;)?\)/g, '<a href="$2">$1</a>')
@@ -714,9 +1426,16 @@
         .replace(/\*\*([^*]+?)\*\*|__([^_]+?)__/g, function (_, a, b) { return '<strong>' + (a || b) + '</strong>'; })
         .replace(/(^|[^*\w])\*([^*\s](?:[^*]*?[^*\s])?)\*(?!\w)/g, '$1<em>$2</em>')
         .replace(/(^|[^_\w])_([^_\s](?:[^_]*?[^_\s])?)_(?!\w)/g, '$1<em>$2</em>')
-        .replace(/~~([^~]+)~~/g, '<s>$1</s>');
+        .replace(/~~([^~]+)~~/g, '<s>$1</s>')
+        .replace(/==([^=\s](?:[^=]*?[^=\s])?)==/g, '<mark>$1</mark>')
+        .replace(/\u0000(\d+)\u0000/g, function (_, at) { return held[Number(at)]; });
     }).join('');
-    return html.replace(/\u0000(\d+)\u0000/g, function (_, index) { return escapeHtml(escapes[Number(index)]); });
+  }
+
+  function splitRow(line) {
+    return line.trim().replace(/^\|/, '').replace(/\|$/, '').split(/(?<!\\)\|/).map(function (cell) {
+      return cell.trim().replace(/\\\|/g, '|');
+    });
   }
 
   function markdownToHtml(markdown) {
@@ -730,18 +1449,34 @@
       }).join('').replace(/\n$/, '') + '</p>');
       paragraph = [];
     }
+    function displayMath(tex) {
+      html.push(mathElement(tex.trim(), true).outerHTML);
+    }
     for (var i = 0; i < lines.length; i += 1) {
       var line = lines[i];
-      if ((match = line.match(/^\s*(```+|~~~+)/))) {
+      var trimmed = line.trim();
+      if ((match = line.match(/^\s*(```+|~~~+)\s*([\w+#.-]*)/))) {
         flush();
         var fence = match[1];
+        var language = match[2].toLowerCase();
         var code = [];
         for (i += 1; i < lines.length && lines[i].trim().indexOf(fence) !== 0; i += 1) code.push(lines[i]);
-        html.push('<pre>' + escapeHtml(code.join('\n')) + '</pre>');
-      } else if (!line.trim()) {
+        if (language === 'math') displayMath(code.join('\n'));
+        else html.push('<pre' + (language ? ' data-lang="' + escapeHtml(language) + '"' : '') + '>' + escapeHtml(code.join('\n')) + '</pre>');
+      } else if (!trimmed) {
         flush();
-      } else if (/^<!--\s*BLOG_IMAGE_\d+/.test(line.trim())) {
+      } else if (/^<!--\s*BLOG_IMAGE_\d+/.test(trimmed)) {
         flush();
+      } else if ((match = trimmed.match(/^\$\$([^$]+)\$\$$/)) || (match = trimmed.match(/^\\\[(.+)\\\]$/))) {
+        flush();
+        displayMath(match[1]);
+      } else if (/^(\$\$|\\\[)/.test(trimmed)) {
+        flush();
+        var closing = trimmed.indexOf('$$') === 0 ? /\$\$\s*$/ : /\\\]\s*$/;
+        var tex = [trimmed.slice(2)];
+        for (i += 1; i < lines.length && !closing.test(lines[i]); i += 1) tex.push(lines[i]);
+        if (i < lines.length) tex.push(lines[i].replace(closing, ''));
+        displayMath(tex.join('\n'));
       } else if ((match = line.match(/^\s{0,3}(#{1,6})\s+(.*?)\s*#*\s*$/))) {
         flush();
         var level = match[1].length <= 2 ? 'h2' : 'h3';
@@ -749,6 +1484,23 @@
       } else if (/^\s{0,3}([-*_])(\s*\1){2,}\s*$/.test(line)) {
         flush();
         html.push('<hr>');
+      } else if (/\|/.test(line) && i + 1 < lines.length && /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/.test(lines[i + 1]) && lines[i + 1].indexOf('-') !== -1) {
+        flush();
+        var aligns = splitRow(lines[i + 1]).map(function (cell) {
+          return /^:-+:$/.test(cell) ? 'center' : /^:/.test(cell) ? 'left' : /:$/.test(cell) ? 'right' : '';
+        });
+        var rows = [splitRow(line)];
+        for (i += 2; i < lines.length && /\|/.test(lines[i]) && lines[i].trim(); i += 1) rows.push(splitRow(lines[i]));
+        i -= 1;
+        var width = rows[0].length;
+        html.push('<table>' + rows.map(function (cells, rowIndex) {
+          var tag = rowIndex ? 'td' : 'th';
+          var row = '';
+          for (var c = 0; c < width; c += 1) {
+            row += '<' + tag + (aligns[c] ? ' align="' + aligns[c] + '"' : '') + '>' + inlineMarkdown(cells[c] || '') + '</' + tag + '>';
+          }
+          return (rowIndex ? '' : '<thead>') + '<tr>' + row + '</tr>' + (rowIndex ? '' : '</thead><tbody>');
+        }).join('') + '</tbody></table>');
       } else if (/^\s{0,3}>/.test(line)) {
         flush();
         var quote = [];
@@ -776,17 +1528,20 @@
             }
             html.push('</li>');
           }
-          html.push('<li>' + inlineMarkdown(item[3]));
+          var task = item[3].match(/^\[([ xX])\]\s+(.*)$/);
+          html.push(task
+            ? '<li data-task="' + (task[1] === ' ' ? 'todo' : 'done') + '">' + inlineMarkdown(task[2])
+            : '<li>' + inlineMarkdown(item[3]));
           openItem = true;
         }
         while (stack.length) html.push('</li></' + stack.pop().tag + '>');
         i -= 1;
-      } else if ((match = line.trim().match(/^!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)$/))) {
+      } else if ((match = trimmed.match(/^!\[([^\]]*)\]\((\S+?)(?:\s+"([^"]*)")?\)$/))) {
         flush();
         html.push('<figure><img src="' + escapeHtml(match[2]) + '" alt="' + escapeHtml(match[1]) + '"><figcaption>' + escapeHtml((match[3] || '').replace(/&quot;/g, '"')) + '</figcaption></figure>');
-      } else if (/^<img\s[^>]*>$/i.test(line.trim())) {
+      } else if (/^<img\s[^>]*>$/i.test(trimmed)) {
         flush();
-        html.push(line.trim());
+        html.push(trimmed);
       } else {
         paragraph.push(line);
       }
@@ -810,8 +1565,8 @@
   }
 
   function looksLikeMarkdown(text) {
-    return /(^|\n)\s{0,3}(#{1,6}\s|[-*+]\s+\S|\d+[.)]\s+\S|>|```|~~~|!\[[^\]]*\]\()/.test(text) ||
-      /\*\*[^*\n]+\*\*|\[[^\]\n]+\]\((https?:|mailto:)[^)\s]+\)|`[^`\n]+`/.test(text);
+    return /(^|\n)\s{0,3}(#{1,6}\s|[-*+]\s+\S|\d+[.)]\s+\S|>|```|~~~|!\[[^\]]*\]\(|\$\$|\\\[|\|.*\|)/.test(text) ||
+      /\*\*[^*\n]+\*\*|\[[^\]\n]+\]\((https?:|mailto:)[^)\s]+\)|`[^`\n]+`|==[^=\s][^=\n]*==|\\\(.+?\\\)|(^|[^\\$\w])\$[^\s$][^$\n]*[^\s$\\]?\$(?!\d)/.test(text);
   }
 
   function insertFragment(fragment) {
@@ -819,7 +1574,7 @@
     var holder = el('div');
     if (blocks.length === 1 && blocks[0].tagName === 'P') holder.innerHTML = blocks[0].innerHTML;
     else holder.appendChild(fragment);
-    exec('insertHTML', holder.innerHTML);
+    exec('insertHTML', insertableHtml(holder));
     withCaret(function () { tidy(true); });
   }
 
@@ -841,6 +1596,12 @@
       exec('insertText', plainHost.tagName === 'FIGCAPTION' ? text.replace(/\s+/g, ' ') : text);
       return;
     }
+    var selection = selectionInBody();
+    if (selection && !selection.isCollapsed && /^(https?:\/\/|mailto:)\S+$/.test(text.trim())) {
+      exec('createLink', text.trim());
+      scheduleSave();
+      return;
+    }
     var front = parseFrontMatter(text.replace(/\r\n?/g, '\n'));
     if (front) {
       if (!title.value.trim() && front.fields.title) title.value = String(front.fields.title);
@@ -852,23 +1613,28 @@
       html = '';
     }
     var richHtml = html && /<(a|h[1-6]|li|strong|b|em|blockquote|img|table|p)\b/i.test(html);
-    var strongMarkdown = /(^|\n)\s{0,3}(#{1,6}\s|```)|\*\*[^*\n]+\*\*|\]\((https?:|mailto:)/.test(text);
+    var strongMarkdown = /(^|\n)\s{0,3}(#{1,6}\s|```|\$\$)|\*\*[^*\n]+\*\*|\]\((https?:|mailto:)/.test(text);
     var fragment = null;
     if (looksLikeMarkdown(text) && (!richHtml || strongMarkdown)) fragment = sanitizeHtml(markdownToHtml(text));
     else if (html) fragment = sanitizeHtml(html);
     if (fragment && fragment.childNodes.length) insertFragment(fragment);
     else exec('insertText', text);
+    hydrateMath();
     scheduleSave();
   });
 
   // ------------------------------------------------------------- export
 
+  // Footnote references [^1] and callout markers [!NOTE] stay unescaped so Markdown sees them.
   function escapeText(value) {
-    return value
-      .replace(/\u200b/g, '')
-      .replace(/\u00a0/g, ' ')
-      .replace(/([\\`*_[\]])/g, '\\$1')
-      .replace(/<(?=[A-Za-z\/!?])/g, '&lt;');
+    return value.split(/(\[\^[^\]\s]+\]|\[!(?:NOTE|TIP|IMPORTANT|WARNING|CAUTION)\])/i).map(function (part, index) {
+      if (index % 2) return part;
+      return part
+        .replace(/\u200b/g, '')
+        .replace(/\u00a0/g, ' ')
+        .replace(/([\\`*_[\]$])/g, '\\$1')
+        .replace(/<(?=[A-Za-z\/!?])/g, '&lt;');
+    }).join('');
   }
 
   function escapeLineStarts(text) {
@@ -901,9 +1667,17 @@
     return Array.prototype.map.call(node.childNodes, function (child) { return inlineMarkdownFrom(child, context); }).join('');
   }
 
+  function texOf(node) {
+    return (node.getAttribute('data-tex') || '').trim();
+  }
+
   function inlineMarkdownFrom(node, context) {
     if (node.nodeType === 3) return escapeText(node.data);
-    if (node.nodeType !== 1) return '';
+    if (node.nodeType !== 1 || isPreview(node)) return '';
+    if (isMath(node)) {
+      if (!texOf(node)) return '';
+      return isBlockMath(node) ? '$$' + texOf(node).replace(/\s*\n\s*/g, ' ') + '$$' : '$' + texOf(node).replace(/\s*\n\s*/g, ' ') + '$';
+    }
     var tag = node.tagName;
     if (tag === 'BR') return '  \n';
     if (tag === 'IMG') return imageMarkdown(node, node.getAttribute('title'), context);
@@ -916,6 +1690,7 @@
     if (tag === 'STRONG' || tag === 'B') return wrapMarks(content, '**');
     if (tag === 'EM' || tag === 'I') return wrapMarks(content, '*');
     if (tag === 'S' || tag === 'DEL' || tag === 'STRIKE') return wrapMarks(content, '~~');
+    if (tag === 'MARK') return wrapMarks(content, '==');
     if (tag === 'A') {
       var href = node.getAttribute('href') || '';
       if (!/^(https?:|mailto:)/i.test(href) || !content.trim()) return content;
@@ -941,7 +1716,8 @@
         if (child.nodeType === 1 && /^(P|DIV)$/.test(child.tagName)) return inlineChildrenMarkdown(child, context) + '  \n';
         return inlineMarkdownFrom(child, context);
       }).join('').trim();
-      var output = marker + escapeLineStarts(text).replace(/\n/g, '\n' + pad);
+      var task = item.getAttribute('data-task');
+      var output = marker + (task ? (task === 'done' ? '[x] ' : '[ ] ') : '') + escapeLineStarts(text).replace(/\n/g, '\n' + pad);
       nested.forEach(function (block) {
         output += '\n' + block.split('\n').map(function (line) { return line ? pad + line : line; }).join('\n');
       });
@@ -949,10 +1725,34 @@
     }).filter(Boolean).join('\n');
   }
 
+  function tableMarkdown(table, context) {
+    var rows = Array.prototype.slice.call(table.rows);
+    var width = rows.reduce(function (max, row) { return Math.max(max, row.cells.length); }, 0);
+    if (!width) return '';
+    function cell(item) {
+      if (!item) return '';
+      return inlineChildrenMarkdown(item, context).replace(/^(?: {2}\n)+|(?: {2}\n)+$/g, '').replace(/ {2}\n/g, '<br>')
+        .replace(/\s*\n\s*/g, ' ').trim().replace(/\|/g, '\\|');
+    }
+    function line(row) {
+      var cells = [];
+      for (var c = 0; c < width; c += 1) cells.push(cell(row.cells[c]));
+      return '| ' + cells.join(' | ') + ' |';
+    }
+    var aligns = [];
+    for (var c = 0; c < width; c += 1) {
+      var align = rows[0].cells[c] ? rows[0].cells[c].getAttribute('align') : '';
+      aligns.push(align === 'center' ? ':---:' : align === 'right' ? '---:' : align === 'left' ? ':---' : '---');
+    }
+    return [line(rows[0]), '| ' + aligns.join(' | ') + ' |'].concat(rows.slice(1).map(line)).join('\n');
+  }
+
   function blockMarkdown(node, context) {
     if (node.nodeType === 3) return escapeLineStarts(escapeText(node.data).trim());
-    if (node.nodeType !== 1) return '';
+    if (node.nodeType !== 1 || isPreview(node)) return '';
+    if (isBlockMath(node)) return texOf(node) ? '$$\n' + texOf(node) + '\n$$' : '';
     var tag = node.tagName;
+    if (tag === 'TABLE') return tableMarkdown(node, context);
     if (/^H[1-6]$/.test(tag)) {
       var heading = inlineChildrenMarkdown(node, context).replace(/\s*\n\s*/g, ' ').trim();
       return heading ? (tag === 'H1' || tag === 'H2' ? '## ' : '### ') + heading : '';
@@ -969,7 +1769,7 @@
       var code = (node.innerText || node.textContent).replace(/\u200b/g, '').replace(/\n+$/, '');
       if (!code.trim()) return '';
       var fence = code.indexOf('```') === -1 ? '```' : '~~~';
-      return fence + '\n' + code + '\n' + fence;
+      return fence + (node.getAttribute('data-lang') || '') + '\n' + code + '\n' + fence;
     }
     if (tag === 'HR') return '---';
     if (tag === 'FIGURE') {
@@ -995,7 +1795,7 @@
     var parts = [];
     var walker = document.createTreeWalker(editor, NodeFilter.SHOW_TEXT);
     while (walker.nextNode()) {
-      if (!walker.currentNode.parentNode.closest('figcaption')) parts.push(walker.currentNode.data);
+      if (!walker.currentNode.parentNode.closest('figcaption, [data-tex], [data-preview]')) parts.push(walker.currentNode.data);
     }
     return parts.join(' ').replace(/\u200b/g, '');
   }
@@ -1046,8 +1846,15 @@
     var local = editor.querySelectorAll('img[data-local-image]').length;
     var images = editor.querySelectorAll('img').length;
     var tagValues = tagList();
-    editor.classList.toggle('is-empty', !text.trim() && !images);
+    editor.classList.toggle('is-empty', !hasContent(editor));
+    editor.querySelectorAll('blockquote').forEach(function (quote) {
+      var callout = quote.textContent.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+      if (callout) quote.setAttribute('data-callout', callout[1].toLowerCase());
+      else quote.removeAttribute('data-callout');
+    });
     updateOutline();
+    syncDiagrams();
+    updateBlockTools();
     $('stat-words').textContent = stats.words.toLocaleString('zh-CN');
     $('stat-minutes').textContent = stats.words ? stats.minutes + ' 分钟' : '—';
     $('stat-images').textContent = images;
@@ -1074,6 +1881,9 @@
           try { pressed = document.queryCommandState(button.getAttribute('data-command')); } catch (_) { pressed = false; }
         } else if (button.getAttribute('data-action') === 'code') pressed = Boolean(closestInEditor(selection.anchorNode, 'CODE')) && blockTag !== 'pre';
         else if (button.getAttribute('data-action') === 'link') pressed = Boolean(closestInEditor(selection.anchorNode, 'A'));
+        else if (button.getAttribute('data-action') === 'mark') pressed = Boolean(closestInEditor(selection.anchorNode, 'MARK'));
+        else if (button.getAttribute('data-action') === 'task') pressed = Boolean(currentItem() && currentItem().hasAttribute('data-task'));
+        else if (button.getAttribute('data-action') === 'table') pressed = blockTag === 'table';
       }
       if (button.hasAttribute('aria-pressed')) button.setAttribute('aria-pressed', String(pressed));
     });
@@ -1110,7 +1920,7 @@
     var block = topBlock(window.getSelection().anchorNode);
     var rule = el('hr');
     var after;
-    if (block && block.nodeType === 1 && block.tagName === 'P' && !block.textContent.trim()) {
+    if (block && block.nodeType === 1 && block.tagName === 'P' && !hasContent(block)) {
       editor.replaceChild(rule, block);
       after = paragraphAfter(rule);
     } else {
@@ -1146,6 +1956,10 @@
       if (action === 'link') { openLinkForm(); return; }
       if (action === 'code') { toggleCode(); scheduleSave(); return; }
       if (action === 'rule') { insertRule(); return; }
+      if (action === 'mark') { toggleMark(); return; }
+      if (action === 'task') { toggleTaskList(); return; }
+      if (action === 'table') { insertTable(); return; }
+      if (action === 'math') { insertMath(); return; }
       if (button.hasAttribute('data-block')) { applyBlock(button.getAttribute('data-block')); return; }
       focusBody();
       var command = button.getAttribute('data-command');
@@ -1156,9 +1970,11 @@
   });
 
   document.querySelectorAll('[data-mod]').forEach(function (key) { key.textContent = isMac ? '⌘' : 'Ctrl'; });
+  document.querySelectorAll('[data-shift]').forEach(function (key) { key.textContent = isMac ? '⇧' : 'Shift'; });
+  document.querySelectorAll('[data-alt]').forEach(function (key) { key.textContent = isMac ? '⌥' : 'Alt'; });
   toolbarButtons.forEach(function (button) {
     var shortcut = button.getAttribute('data-shortcut');
-    if (shortcut) button.title += ' (' + (isMac ? '⌘' : 'Ctrl+') + shortcut + ')';
+    if (shortcut) button.title += ' (' + (isMac ? '⌘' : 'Ctrl+') + (isMac ? shortcut : shortcut.replace('⇧', 'Shift+')) + ')';
   });
 
   // --------------------------------------------------------------- links
@@ -1250,6 +2066,29 @@
     return false;
   }
 
+  // "[ ]" or "[x]" then space at the start of a list item (or paragraph) makes a task.
+  function taskShortcut() {
+    var selection = selectionInBody();
+    if (!selection || !selection.isCollapsed) return false;
+    var item = closestInEditor(selection.anchorNode, 'LI');
+    var prefix = item ? null : caretPrefix();
+    var host = item || (prefix && prefix.block);
+    if (!host) return false;
+    var range = document.createRange();
+    range.selectNodeContents(host);
+    range.setEnd(selection.anchorNode, selection.anchorOffset);
+    var match = range.toString().match(/^\[( |x|X)?\]$/);
+    if (!match) return false;
+    selectRange(range);
+    exec('delete');
+    if (!item) {
+      listCommand('insertUnorderedList');
+      item = currentItem();
+    }
+    if (item) item.setAttribute('data-task', match[1] && match[1] !== ' ' ? 'done' : 'todo');
+    return true;
+  }
+
   function enterShortcut() {
     var selection = selectionInBody();
     if (!selection) return false;
@@ -1259,13 +2098,27 @@
     if (quote && selection.isCollapsed) return quoteEnter(quote);
     var prefix = caretPrefix();
     if (!prefix || !prefix.atEnd) return false;
-    var text = prefix.text.trim();
-    if (/^(```|~~~)[\w+-]*$/.test(text)) {
+    var text = prefix.text.replace(/\u200b/g, '').trim();
+    var fence = text.match(/^(?:```|~~~)\s*([\w+#.-]*)$/);
+    if (fence || text === '$$' || /^\|.*\|$/.test(text)) {
       selectRange(prefix.range);
       exec('delete');
+    }
+    if (text === '$$' || (fence && fence[1].toLowerCase() === 'math')) {
+      insertMath();
+      return true;
+    }
+    if (fence) {
       exec('formatBlock', 'pre');
       var block = topBlock(window.getSelection().anchorNode);
-      if (block) paragraphAfter(block);
+      if (block) {
+        if (fence[1]) block.setAttribute('data-lang', fence[1].toLowerCase());
+        paragraphAfter(block);
+      }
+      return true;
+    }
+    if (/^\|.*\|$/.test(text)) {
+      insertTable(splitRow(text));
       return true;
     }
     if (/^(-{3,}|\*{3,}|_{3,})$/.test(text)) {
@@ -1331,6 +2184,7 @@
     return true;
   }
 
+  // Closing a Markdown span while typing turns it into formatting: `code`, **bold**, ==mark==, ~~strike~~, $math$.
   function inlineShortcut(data) {
     var selection = selectionInBody();
     if (!selection || !selection.isCollapsed) return;
@@ -1338,16 +2192,31 @@
     if (!node || node.nodeType !== 3 || closestInEditor(node, 'CODE') || closestInEditor(node, 'PRE')) return;
     var before = node.data.slice(0, selection.anchorOffset);
     var match = null;
+    var length = 0;
     var html = '';
-    if (data === '`' && (match = before.match(/`([^`\n]+)`$/))) html = '<code>' + escapeHtml(match[1]) + '</code>\u200b';
-    else if (data === '*' && (match = before.match(/\*\*([^*\n]+)\*\*$/))) html = '<strong>' + escapeHtml(match[1]) + '</strong>\u200b';
+    if (data === '`' && (match = before.match(/`([^`\n]+)`$/))) {
+      html = '<code>' + escapeHtml(match[1]) + '</code>';
+    } else if (data === '*' && (match = before.match(/\*\*([^*\n]+)\*\*$/))) {
+      html = '<strong>' + escapeHtml(match[1]) + '</strong>';
+    } else if (data === '=' && (match = before.match(/==([^=\s](?:[^=\n]*?[^=\s])?)==$/))) {
+      html = '<mark>' + escapeHtml(match[1]) + '</mark>';
+    } else if (data === '~' && (match = before.match(/~~([^~\s](?:[^~\n]*?[^~\s])?)~~$/))) {
+      html = '<s>' + escapeHtml(match[1]) + '</s>';
+    } else if (data === '$' && (match = before.match(/\$\$([^$\n]+?)\$\$$/))) {
+      html = mathPlaceholder(match[1].trim());
+    } else if (data === '$' && (match = before.match(/(^|[^\\$])\$([^\s$](?:[^$\n]*?[^\s$\\])?)\$$/))) {
+      length = match[0].length - match[1].length;
+      html = mathPlaceholder(match[2]);
+    }
     if (!html) return;
+    length = length || match[0].length;
     var range = document.createRange();
-    range.setStart(node, selection.anchorOffset - match[0].length);
+    range.setStart(node, selection.anchorOffset - length);
     range.setEnd(node, selection.anchorOffset);
     selectRange(range);
-    exec('insertHTML', html);
+    exec('insertHTML', html + '\u200b');
     withCaret(function () { tidy(true); });
+    hydrateMath();
   }
 
   editor.addEventListener('keydown', function (event) {
@@ -1368,17 +2237,45 @@
       }
       return;
     }
-    if (mod && !event.shiftKey && !event.altKey && event.key.toLowerCase() === 'k') {
+    var cell = currentCell();
+    var shortcut = mod ? (event.altKey ? 'alt+' : '') + (event.shiftKey ? 'shift+' : '') + event.code : '';
+    var actions = {
+      KeyK: openLinkForm,
+      KeyE: function () { toggleCode(); scheduleSave(); },
+      'shift+KeyM': insertMath,
+      'alt+KeyM': insertMath,
+      'alt+KeyT': function () { insertTable(); },
+      'shift+KeyK': function () { applyBlock('pre'); },
+      'shift+KeyX': function () { exec('strikeThrough'); scheduleSave(); },
+      'shift+KeyH': toggleMark,
+      'shift+Digit7': function () { listCommand('insertOrderedList'); scheduleSave(); },
+      'shift+Digit8': function () { listCommand('insertUnorderedList'); scheduleSave(); },
+      'shift+Digit9': toggleTaskList,
+      'alt+Digit0': function () { applyBlock('p'); },
+      'alt+Digit2': function () { applyBlock('h2'); },
+      'alt+Digit3': function () { applyBlock('h3'); }
+    };
+    if (actions[shortcut]) {
       event.preventDefault();
-      openLinkForm();
-    } else if (mod && event.altKey && /^Digit[023]$/.test(event.code)) {
+      actions[shortcut]();
+    } else if (cell && event.key === 'Tab') {
       event.preventDefault();
-      applyBlock({ Digit0: 'p', Digit2: 'h2', Digit3: 'h3' }[event.code]);
+      moveInTable(cell, event.shiftKey ? -1 : 1);
+    } else if (cell && event.key === 'Enter' && !event.shiftKey && !mod) {
+      event.preventDefault();
+      moveDownInTable(cell);
+    } else if (cell && !mod && !event.shiftKey && ((event.key === 'ArrowDown' && !cell.parentNode.nextElementSibling && cell.parentNode.parentNode.tagName === 'TBODY') ||
+      (event.key === 'ArrowUp' && cell.parentNode.rowIndex === 0))) {
+      event.preventDefault();
+      leaveTable(cell.closest('table'), event.key === 'ArrowUp');
+    } else if (event.key === 'Tab' && !mod && closestInEditor(selection.anchorNode, 'PRE')) {
+      event.preventDefault();
+      if (!event.shiftKey) exec('insertText', '    ');
     } else if (event.key === 'Tab' && closestInEditor(selection.anchorNode, 'LI')) {
       event.preventDefault();
       listCommand(event.shiftKey ? 'outdent' : 'indent');
       scheduleSave();
-    } else if (event.key === ' ' && !mod && !event.altKey && blockShortcut()) {
+    } else if (event.key === ' ' && !mod && !event.altKey && (taskShortcut() || blockShortcut())) {
       event.preventDefault();
       scheduleSave();
     } else if (event.key === 'Enter' && !event.shiftKey && !mod && enterShortcut()) {
@@ -1390,7 +2287,14 @@
   editor.addEventListener('input', function (event) {
     if (event.isComposing) return;
     if (hasStrayNodes()) withCaret(function () { tidy(false); });
-    if (event.inputType === 'insertText' && (event.data === '`' || event.data === '*')) inlineShortcut(event.data);
+    if (event.inputType === 'insertText' && /^[`*=~$]$/.test(event.data || '')) inlineShortcut(event.data);
+    if (event.inputType === 'insertParagraph') {
+      var item = currentItem();
+      var previous = item && item.previousElementSibling;
+      if (item && previous && previous.hasAttribute('data-task') && (!item.hasAttribute('data-task') || !hasContent(item))) {
+        item.setAttribute('data-task', 'todo');
+      }
+    }
     scheduleSave();
   });
   editor.addEventListener('compositionend', function () {
@@ -1416,7 +2320,7 @@
 
   document.addEventListener('keydown', function (event) {
     var mod = isMac ? event.metaKey : event.ctrlKey;
-    if (!mod || event.altKey || event.isComposing) return;
+    if (!mod || event.altKey || event.isComposing || event.defaultPrevented) return;
     if (event.key.toLowerCase() === 's') {
       event.preventDefault();
       saveDraft();
@@ -1604,7 +2508,8 @@
     tidy(true);
     upgradeLegacyImages();
     tidy(false);
-    if (!editor.textContent.trim() && !editor.querySelector('img')) editor.replaceChildren();
+    if (!hasContent(editor)) editor.replaceChildren();
+    renderPendingMath();
     loaded = true;
     autosize(title);
     autosize(summary);

@@ -56,6 +56,66 @@ def image_markdown(number: str, url: str, caption: str | None) -> str:
     return f'![{alt}]({url} "{title}")'
 
 
+# Typora/GitHub-style syntax that kramdown lacks, rewritten outside code and math:
+# $x$ and $`x`$ become kramdown inline math $$x$$, ```math fences become $$ blocks,
+# and ==text== becomes <mark>.
+FENCE_RE = re.compile(r"^[ \t]{0,3}(`{3,}|~{3,})[ \t]*([\w+-]*)")
+PROTECTED_INLINE_RE = re.compile(
+    r"(`+)[\s\S]*?\1|\$\$[\s\S]+?\$\$|\\\$|<!--[\s\S]*?-->|</?[A-Za-z][\w-]*(?:\s[^<>\n]*)?/?>|https?://\S+"
+)
+INLINE_MATH_RE = re.compile(r"\$(?=[^\s$])((?:\\.|[^$\\\n])*?[^\s\\$])\$(?!\d)")
+MARK_RE = re.compile(r"(?<![=\\])==(?=[^\s=])(.+?)(?<=[^\s=])==(?!=)")
+
+
+def convert_inline(text: str) -> str:
+    text = re.sub(r"\$`([^`\n]+)`\$", r"$$\1$$", text)
+    parts = []
+    cursor = 0
+    for match in PROTECTED_INLINE_RE.finditer(text):
+        parts.append(convert_plain(text[cursor : match.start()]))
+        parts.append(match.group(0))
+        cursor = match.end()
+    parts.append(convert_plain(text[cursor:]))
+    return "".join(parts)
+
+
+def convert_plain(text: str) -> str:
+    text = INLINE_MATH_RE.sub(r"$$\1$$", text)
+    return MARK_RE.sub(r'<mark markdown="span">\1</mark>', text)
+
+
+def convert_typora_syntax(article: str) -> str:
+    output = []
+    fence = None
+    math_fence = False
+    in_display_math = False
+    for line in article.splitlines(keepends=True):
+        body = line.rstrip("\r\n")
+        ending = line[len(body) :]
+        match = FENCE_RE.match(body)
+        if fence:
+            if match and match.group(1)[0] == fence[0] and len(match.group(1)) >= len(fence) and not match.group(2):
+                fence = None
+                output.append("$$" + ending if math_fence else line)
+                math_fence = False
+            else:
+                output.append(line)
+        elif in_display_math:
+            output.append(line)
+            if body.strip() == "$$" or (body.rstrip().endswith("$$") and body.strip() != "$$"):
+                in_display_math = False
+        elif match:
+            fence = match.group(1)
+            math_fence = match.group(2).lower() == "math"
+            output.append("$$" + ending if math_fence else line)
+        elif body.strip().startswith("$$") and body.strip().count("$$") == 1:
+            in_display_math = True
+            output.append(line)
+        else:
+            output.append(convert_inline(body) + ending)
+    return "".join(output)
+
+
 def optional_value(value: str) -> str:
     return "" if value.strip().casefold() in {"_no response_", "no response"} else value.strip()
 
@@ -92,6 +152,7 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
             lambda match: image_markdown(match.group(1), uploaded[int(match.group(1)) - 1], match.group(2)),
             article,
         )
+    article = convert_typora_syntax(article)
 
     lines = [
         "---",

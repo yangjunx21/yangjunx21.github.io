@@ -28,18 +28,23 @@ sitemap: false
         <div class="blog-editor__tool-group">
           <button type="button" data-command="bold" title="加粗" data-shortcut="B" aria-pressed="false"><strong>B</strong></button>
           <button type="button" data-command="italic" title="斜体" data-shortcut="I" aria-pressed="false"><em>I</em></button>
-          <button type="button" data-action="code" title="行内代码 · 输入 `代码`" aria-pressed="false"><code>&lt;/&gt;</code></button>
+          <button type="button" data-command="strikeThrough" title="删除线 · 输入 ~~文字~~" data-shortcut="⇧X" aria-pressed="false"><s>S</s></button>
+          <button type="button" data-action="mark" title="高亮 · 输入 ==文字==" data-shortcut="⇧H" aria-pressed="false"><span class="blog-editor__mark-icon">高亮</span></button>
+          <button type="button" data-action="code" title="行内代码 · 输入 `代码`" data-shortcut="E" aria-pressed="false"><code>&lt;/&gt;</code></button>
           <button type="button" data-action="link" title="链接" data-shortcut="K" aria-pressed="false">链接</button>
         </div>
         <div class="blog-editor__tool-group">
           <button type="button" data-command="insertUnorderedList" title="无序列表 · 行首输入 - 加空格" aria-pressed="false">• 列表</button>
           <button type="button" data-command="insertOrderedList" title="有序列表 · 行首输入 1. 加空格" aria-pressed="false">1. 列表</button>
+          <button type="button" data-action="task" title="任务列表 · 行首输入 [ ] 加空格" aria-pressed="false">☑ 任务</button>
           <button type="button" data-block="blockquote" title="引用 · 行首输入 &gt; 加空格" aria-pressed="false">引用</button>
-          <button type="button" data-block="pre" title="代码块 · 输入 ``` 后回车" aria-pressed="false">代码块</button>
+          <button type="button" data-block="pre" title="代码块 · 输入 ```语言 后回车" data-shortcut="⇧K" aria-pressed="false">代码块</button>
           <button type="button" data-action="rule" title="分隔线 · 输入 --- 后回车">分隔线</button>
         </div>
         <div class="blog-editor__tool-group">
           <button type="button" data-action="image" title="插入图片，也可以直接粘贴或拖入">＋ 图片</button>
+          <button type="button" data-action="table" title="表格 · 输入 | 列1 | 列2 | 后回车" aria-pressed="false">⊞ 表格</button>
+          <button type="button" data-action="math" title="公式 · 输入 $公式$ 或 $$ 后回车；选中文字点此转为行内公式" data-shortcut="⇧M">∑ 公式</button>
           <input id="editor-image-picker" type="file" accept="image/png,image/jpeg,image/gif,image/webp" multiple hidden>
         </div>
       </div>
@@ -81,7 +86,7 @@ sitemap: false
           <span>作者 {{ site.author.name }}</span>
         </div>
 
-        <div id="editor-body" class="blog-article__body blog-editor__body is-empty" contenteditable="true" role="textbox" aria-label="文章正文" aria-multiline="true" data-placeholder="从这里开始写。可以粘贴 Markdown、网页内容，或直接粘贴、拖入图片…"></div>
+        <div id="editor-body" class="blog-article__body blog-editor__body tex2jax_ignore is-empty" contenteditable="true" role="textbox" aria-label="文章正文" aria-multiline="true" data-placeholder="从这里开始写。支持 Markdown 输入、公式、表格，也可以粘贴网页、Markdown 或图片…"></div>
 
         <div class="blog-editor__details">
           <label for="editor-tags">标签 <span>可选，用逗号隔开</span></label>
@@ -106,21 +111,66 @@ sitemap: false
             <li data-check="tags" data-state="optional"><span>标签</span><em></em></li>
             <li data-check="images" data-state="optional"><span>配图</span><em></em></li>
           </ul>
-          <h2>快捷输入</h2>
+          <h2>Markdown 输入</h2>
           <dl class="blog-editor__shortcuts">
             <div><dt><kbd>##</kbd> <kbd>###</kbd></dt><dd>小标题</dd></div>
-            <div><dt><kbd>-</kbd> <kbd>1.</kbd></dt><dd>列表</dd></div>
-            <div><dt><kbd>&gt;</kbd></dt><dd>引用</dd></div>
-            <div><dt><kbd>```</kbd> <kbd>↵</kbd></dt><dd>代码块</dd></div>
+            <div><dt><kbd>-</kbd> <kbd>1.</kbd> <kbd>[ ]</kbd></dt><dd>列表 · 任务</dd></div>
+            <div><dt><kbd>&gt;</kbd> <kbd>&gt; [!NOTE]</kbd></dt><dd>引用 · 提示框</dd></div>
+            <div><dt><kbd>$x^2$</kbd></dt><dd>行内公式</dd></div>
+            <div><dt><kbd>$$</kbd> <kbd>↵</kbd></dt><dd>公式块</dd></div>
+            <div><dt><kbd>```python</kbd> <kbd>↵</kbd></dt><dd>代码块</dd></div>
+            <div><dt><kbd>```mermaid</kbd> <kbd>↵</kbd></dt><dd>流程图</dd></div>
+            <div><dt><kbd>| a | b |</kbd> <kbd>↵</kbd></dt><dd>表格</dd></div>
             <div><dt><kbd>---</kbd> <kbd>↵</kbd></dt><dd>分隔线</dd></div>
-            <div><dt><kbd>`代码`</kbd> <kbd>**加粗**</kbd></dt><dd>行内格式</dd></div>
-            <div><dt><kbd data-mod>⌘</kbd><kbd>K</kbd></dt><dd>链接</dd></div>
-            <div><dt><kbd data-mod>⌘</kbd><kbd>S</kbd></dt><dd>立即保存</dd></div>
-            <div><dt><kbd data-mod>⌘</kbd><kbd>↵</kbd></dt><dd>发布</dd></div>
+            <div><dt><kbd>**粗**</kbd> <kbd>==亮==</kbd> <kbd>~~删~~</kbd></dt><dd>行内</dd></div>
+            <div><dt><kbd>[^1]</kbd> <kbd>:smile:</kbd></dt><dd>脚注 · 表情</dd></div>
           </dl>
-          <p class="blog-editor__aside-tip">行首输入符号后按空格生效。粘贴 Markdown 会自动转成排版。</p>
+          <h2>快捷键</h2>
+          <dl class="blog-editor__shortcuts">
+            <div><dt><kbd data-mod>⌘</kbd><kbd>K</kbd> · <kbd data-mod>⌘</kbd><kbd>E</kbd></dt><dd>链接 · 代码</dd></div>
+            <div><dt><kbd data-mod>⌘</kbd><kbd data-shift>⇧</kbd><kbd>M</kbd></dt><dd>公式块</dd></div>
+            <div><dt><kbd data-mod>⌘</kbd><kbd data-alt>⌥</kbd><kbd>T</kbd></dt><dd>表格</dd></div>
+            <div><dt><kbd data-mod>⌘</kbd><kbd data-shift>⇧</kbd><kbd>H</kbd> · <kbd>X</kbd></dt><dd>高亮 · 删除线</dd></div>
+            <div><dt><kbd data-mod>⌘</kbd><kbd data-shift>⇧</kbd><kbd>7</kbd><kbd>8</kbd><kbd>9</kbd></dt><dd>编号 · 列表 · 任务</dd></div>
+            <div><dt><kbd>Tab</kbd> · <kbd>↵</kbd></dt><dd>表格内换格</dd></div>
+            <div><dt><kbd data-mod>⌘</kbd><kbd>S</kbd> · <kbd data-mod>⌘</kbd><kbd>↵</kbd></dt><dd>保存 · 发布</dd></div>
+          </dl>
+          <p class="blog-editor__aside-tip">行首符号后按空格生效。点击公式可修改；从 ChatGPT、Claude、维基百科粘贴时公式会保留。</p>
         </div>
       </aside>
+    </div>
+  </div>
+
+  <div class="blog-editor__float-tools" id="table-tools" hidden>
+    <button type="button" data-table-action="row" title="在下方插入一行">＋行</button>
+    <button type="button" data-table-action="column" title="在右侧插入一列">＋列</button>
+    <button type="button" data-table-action="delete-row" title="删除当前行">−行</button>
+    <button type="button" data-table-action="delete-column" title="删除当前列">−列</button>
+    <button type="button" data-table-action="align" title="切换当前列对齐：默认 / 左 / 中 / 右">对齐</button>
+    <button type="button" data-table-action="delete" title="删除整个表格">删除表格</button>
+  </div>
+
+  <div class="blog-editor__code-tools" id="code-tools" hidden>
+    <label for="code-language" class="sr-only">代码语言</label>
+    <input id="code-language" list="code-language-list" placeholder="语言" autocomplete="off" spellcheck="false">
+    <datalist id="code-language-list">
+      <option value="python"><option value="javascript"><option value="typescript"><option value="bash"><option value="json"><option value="yaml">
+      <option value="cpp"><option value="java"><option value="go"><option value="rust"><option value="sql"><option value="latex"><option value="mermaid">
+    </datalist>
+  </div>
+
+  <div class="blog-editor__math-panel" id="math-panel" hidden>
+    <div class="blog-editor__math-head">
+      <span id="math-mode">行内公式</span>
+      <span id="math-hint">↵ 完成 · Esc 取消</span>
+    </div>
+    <label for="math-source" class="sr-only">LaTeX 公式</label>
+    <textarea id="math-source" rows="1" spellcheck="false" autocomplete="off" placeholder="LaTeX，例如 E = mc^2"></textarea>
+    <div class="blog-editor__math-preview" id="math-preview" aria-live="polite">预览</div>
+    <div class="blog-editor__math-actions">
+      <button type="button" id="math-toggle">改为独立</button>
+      <button type="button" id="math-delete">删除</button>
+      <button type="button" id="math-done" class="is-primary">完成</button>
     </div>
   </div>
 

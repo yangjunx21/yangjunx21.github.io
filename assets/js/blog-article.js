@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
   // Plain-text URLs become links; skip code and existing links.
   var walker = document.createTreeWalker(body, NodeFilter.SHOW_TEXT, {
     acceptNode: function (node) {
-      if (!/https?:\/\//.test(node.data)) return NodeFilter.FILTER_REJECT;
-      return node.parentElement.closest('a, code, pre') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      if (!/https?:\/\//.test(node.data) || /\\[([]|\$\$/.test(node.data)) return NodeFilter.FILTER_REJECT;
+      return node.parentElement.closest('a, code, pre, mjx-container') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
     }
   });
   var textNodes = [];
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   textNodes.forEach(function (node) {
     var fragment = document.createDocumentFragment();
     var cursor = 0;
-    node.data.replace(/https?:\/\/[^\s<>"'()（）\u3000-〿！-／：-＠]+/g, function (match, offset) {
+    node.data.replace(/https?:\/\/[^\s<>"'()\uff08\uff09\u3000-\u303f\uff01-\uff0f\uff1a-\uff20]+/g, function (match, offset) {
       var url = match.replace(/[.,;:!?]+$/, '');
       fragment.appendChild(document.createTextNode(node.data.slice(cursor, offset)));
       var link = document.createElement('a');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var lightbox = document.getElementById('blog-lightbox');
   var lightboxImage = lightbox && lightbox.querySelector('img');
   var lightboxCaption = lightbox && lightbox.querySelector('.blog-lightbox__caption');
-  body.querySelectorAll('img').forEach(function (image) {
+  body.querySelectorAll('img:not(.emoji)').forEach(function (image) {
     var parent = image.parentElement;
     var caption = (image.getAttribute('title') || '').trim();
     if (parent.tagName === 'P' && parent.textContent.trim() === '' && parent.querySelectorAll('img').length === 1) {
@@ -71,6 +71,96 @@ document.addEventListener('DOMContentLoaded', function () {
     lightbox.addEventListener('click', function (event) {
       if (event.target === lightbox || event.target === lightboxImage) lightbox.close();
     });
+  }
+
+  // GitHub/Typora callouts: > [!NOTE], [!TIP], [!IMPORTANT], [!WARNING], [!CAUTION].
+  var CALLOUTS = {
+    NOTE: ['Note', '说明'],
+    TIP: ['Tip', '提示'],
+    IMPORTANT: ['Important', '重要'],
+    WARNING: ['Warning', '注意'],
+    CAUTION: ['Caution', '警告']
+  };
+  body.querySelectorAll('blockquote').forEach(function (quote) {
+    var first = quote.firstElementChild;
+    var text = first && first.tagName === 'P' ? first.firstChild : null;
+    var match = text && text.nodeType === 3 && text.data.match(/^\s*\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\][ \t]*\n?/i);
+    if (!match) return;
+    var type = match[1].toUpperCase();
+    text.data = text.data.slice(match[0].length);
+    while (first.firstChild && (first.firstChild.nodeName === 'BR' || (first.firstChild.nodeType === 3 && !first.firstChild.data.trim()))) {
+      first.removeChild(first.firstChild);
+    }
+    if (!first.firstChild) quote.removeChild(first);
+    var title = document.createElement('p');
+    title.className = 'blog-callout__title';
+    title.textContent = CALLOUTS[type][zh ? 1 : 0];
+    quote.insertBefore(title, quote.firstChild);
+    quote.classList.add('blog-callout', 'blog-callout--' + type.toLowerCase());
+  });
+
+  // Code blocks get a language label and a copy button; mermaid blocks become diagrams.
+  var diagrams = [];
+  body.querySelectorAll('pre').forEach(function (pre) {
+    var holder = pre.closest('div.highlighter-rouge, figure.highlight') || pre;
+    if (holder.parentNode.classList.contains('blog-code')) return;
+    var code = pre.querySelector('code') || pre;
+    var language = ((holder.className + ' ' + code.className).match(/language-([\w+#.-]+)/) || [])[1] || '';
+    if (language === 'mermaid') { diagrams.push({ holder: holder, source: code.textContent }); return; }
+    var wrapper = document.createElement('div');
+    wrapper.className = 'blog-code';
+    holder.parentNode.insertBefore(wrapper, holder);
+    wrapper.appendChild(holder);
+    var bar = document.createElement('div');
+    bar.className = 'blog-code__bar';
+    if (language && !/^(plaintext|text|txt)$/.test(language)) {
+      var label = document.createElement('span');
+      label.textContent = language;
+      bar.appendChild(label);
+    }
+    var copy = document.createElement('button');
+    copy.type = 'button';
+    copy.textContent = zh ? '复制' : 'Copy';
+    copy.addEventListener('click', function () {
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(code.textContent.replace(/\n$/, '')).then(function () {
+        copy.textContent = zh ? '已复制' : 'Copied';
+        window.setTimeout(function () { copy.textContent = zh ? '复制' : 'Copy'; }, 1800);
+      });
+    });
+    bar.appendChild(copy);
+    wrapper.appendChild(bar);
+  });
+  if (diagrams.length) {
+    import('https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs').then(function (module) {
+      var mermaid = module.default;
+      mermaid.initialize({
+        startOnLoad: false,
+        securityLevel: 'strict',
+        theme: 'base',
+        themeVariables: {
+          fontFamily: '-apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", sans-serif',
+          fontSize: '14px',
+          primaryColor: '#fbfaf6',
+          primaryBorderColor: '#87534e',
+          primaryTextColor: '#25221f',
+          lineColor: '#6e6861',
+          secondaryColor: '#eee9e0',
+          tertiaryColor: '#f7f5f0'
+        }
+      });
+      var nodes = diagrams.map(function (diagram) {
+        var figure = document.createElement('figure');
+        figure.className = 'blog-mermaid';
+        var graph = document.createElement('div');
+        graph.className = 'mermaid';
+        graph.textContent = diagram.source;
+        figure.appendChild(graph);
+        diagram.holder.parentNode.replaceChild(figure, diagram.holder);
+        return graph;
+      });
+      return mermaid.run({ nodes: nodes, suppressErrors: true });
+    }).catch(function () { /* leave the source visible */ });
   }
 
   // Table of contents, heading links, and the active section.

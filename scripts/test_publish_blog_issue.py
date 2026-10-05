@@ -81,6 +81,23 @@ class BlogIssueTest(unittest.TestCase):
         )
         self.assertIn("![配图 2](https://github.com/user-attachments/assets/two)", content)
 
+    def test_typora_math_and_highlight_become_kramdown(self):
+        source = (
+            "行内 $a_1 + b^*_2$ 与 $x$，价格 $5 and $10，转义 \\$y$。\n"
+            "GitHub 写法 $`\\sqrt{2}`$，已有 $$c_1$$，==重点== 和 a == b。\n"
+            "代码 `$not_math$ ==no==` 保持原样，链接 https://x.test/?a==b。\n\n"
+            "$$\n\\begin{aligned} a &= b \\\\ c &= d \\end{aligned}\n$$\n\n"
+            "```math\nE = mc^2\n```\n\n"
+            "```python\nprice = '$5' if a == b else '$x$'\n```\n"
+        )
+        converted = writer.convert_typora_syntax(source)
+        self.assertIn("行内 $$a_1 + b^*_2$$ 与 $$x$$，价格 $5 and $10，转义 \\$y$。", converted)
+        self.assertIn("GitHub 写法 $$\\sqrt{2}$$，已有 $$c_1$$，<mark markdown=\"span\">重点</mark> 和 a == b。", converted)
+        self.assertIn("代码 `$not_math$ ==no==` 保持原样，链接 https://x.test/?a==b。", converted)
+        self.assertIn("$$\n\\begin{aligned} a &= b \\\\ c &= d \\end{aligned}\n$$", converted)
+        self.assertIn("$$\nE = mc^2\n$$", converted)
+        self.assertIn("```python\nprice = '$5' if a == b else '$x$'\n```", converted)
+
     def test_missing_editor_image_prevents_broken_publication(self):
         source = issue(True)
         source["body"] = source["body"].replace("正文。", "正文 <!-- BLOG_IMAGE_1 -->")
