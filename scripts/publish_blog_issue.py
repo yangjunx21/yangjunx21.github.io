@@ -15,8 +15,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SECTION_RE = re.compile(r"(?m)^### (摘要|标签|文章正文|图片上传区|发布设置)\s*$")
 PUBLISH_RE = re.compile(r"(?m)^- \[[xX]\] 同步到个人博客\s*$")
-IMAGE_PLACEHOLDER_RE = re.compile(r"<!-- BLOG_IMAGE_(\d+) -->")
-UPLOADED_IMAGE_RE = re.compile(r"!\[[^\]\n]*\]\((https?://[^\s)]+)\)")
+IMAGE_PLACEHOLDER_RE = re.compile(r"<!-- BLOG_IMAGE_(\d+)(?:[ \t]*\|[ \t]*([^\n]*?))?[ \t]*-->")
+UPLOADED_IMAGE_RE = re.compile(
+    r"!\[[^\]\n]*\]\((https?://[^\s)]+)\)|<img\b[^>]*?\bsrc=[\"'](https?://[^\"'\s>]+)[\"'][^>]*>",
+    re.IGNORECASE,
+)
 
 
 def get_sections(issue_body: str) -> dict[str, str]:
@@ -42,6 +45,15 @@ def get_sections(issue_body: str) -> dict[str, str]:
         end = selected[index + 1].start() if index + 1 < len(selected) else len(issue_body)
         sections[match.group(1)] = issue_body[match.end() : end].strip()
     return sections
+
+
+def image_markdown(number: str, url: str, caption: str | None) -> str:
+    caption = re.sub(r"\s+", " ", caption or "").strip()
+    if not caption:
+        return f"![配图 {number}]({url})"
+    alt = re.sub(r"([\\\[\]])", r"\\\1", caption)
+    title = caption.replace('"', "&quot;")
+    return f'![{alt}]({url} "{title}")'
 
 
 def optional_value(value: str) -> str:
@@ -72,12 +84,12 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
         return None
 
     if published and IMAGE_PLACEHOLDER_RE.search(article):
-        uploaded = UPLOADED_IMAGE_RE.findall(sections.get("图片上传区", ""))
-        needed = max(int(number) for number in IMAGE_PLACEHOLDER_RE.findall(article))
+        uploaded = [match.group(1) or match.group(2) for match in UPLOADED_IMAGE_RE.finditer(sections.get("图片上传区", ""))]
+        needed = max(int(match.group(1)) for match in IMAGE_PLACEHOLDER_RE.finditer(article))
         if len(uploaded) < needed:
             raise ValueError(f"Article has {needed} image placeholders but only {len(uploaded)} uploaded images")
         article = IMAGE_PLACEHOLDER_RE.sub(
-            lambda match: f"![配图 {match.group(1)}]({uploaded[int(match.group(1)) - 1]})",
+            lambda match: image_markdown(match.group(1), uploaded[int(match.group(1)) - 1], match.group(2)),
             article,
         )
 

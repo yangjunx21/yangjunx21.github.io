@@ -7,29 +7,56 @@ redirect_from:
   - /posts/
 ---
 
+{% assign posts = site.posts | sort: 'date' | reverse %}
+{% assign article_keys = '' %}
+{% assign article_count = 0 %}
+{% for post in posts %}
+  {% assign post_key = post.source_issue | default: post.url %}
+  {% capture marker %}|{{ post_key }}|{% endcapture %}
+  {% unless article_keys contains marker %}
+    {% assign article_keys = article_keys | append: marker %}
+    {% assign article_count = article_count | plus: 1 %}
+  {% endunless %}
+{% endfor %}
+
 <main class="blog-list" id="main">
   <header class="blog-list__hero">
     <div class="blog-list__hero-inner">
       <p class="blog-kicker">Writing / Research notes</p>
       <h1>Blog</h1>
-      <p>Notes and essays on agents, language models, and the questions behind them.</p>
+      <p class="blog-list__intro">Notes and essays on agents, language models, and the questions behind them.</p>
+      <p class="blog-list__stats">
+        <span>{{ article_count }} {% if article_count == 1 %}article{% else %}articles{% endif %}</span>
+        <span aria-hidden="true">·</span>
+        <span>中文 / English</span>
+        <span aria-hidden="true">·</span>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </p>
     </div>
   </header>
 
   <section class="blog-list__entries" aria-label="Articles">
     <div class="blog-list__tools">
-      <label for="blog-search" class="sr-only">Search articles</label>
-      <input id="blog-search" type="search" placeholder="Search articles / 搜索文章" autocomplete="off">
-      <div class="blog-list__actions">
-        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-        <a href="{{ '/write/' | relative_url }}">写文章 ↗</a>
+      <div class="blog-list__search">
+        <label for="blog-search" class="sr-only">Search articles</label>
+        <input id="blog-search" type="search" placeholder="Search articles / 搜索文章" autocomplete="off">
+        <kbd aria-hidden="true">/</kbd>
       </div>
+      {% if site.tags.size > 0 %}
+        <div class="blog-list__filters" role="group" aria-label="Filter by tag">
+          <button type="button" data-tag="" aria-pressed="true">All</button>
+          {% capture tag_list %}{% for tag in site.tags %}{{ tag[0] }}{% unless forloop.last %}||{% endunless %}{% endfor %}{% endcapture %}
+          {% assign tag_names = tag_list | split: '||' | sort_natural %}
+          {% for tag in tag_names %}<button type="button" data-tag="{{ tag | downcase | escape }}" aria-pressed="false">{{ tag | escape }}</button>{% endfor %}
+        </div>
+      {% endif %}
+      <a class="blog-list__write" href="{{ '/write/' | relative_url }}">写文章</a>
     </div>
 
-    {% assign posts = site.posts | sort: 'date' | reverse %}
     {% if posts.size > 0 %}
       <div id="blog-posts">
         {% assign rendered_keys = '' %}
+        {% assign rendered_count = 0 %}
         {% for post in posts %}
           {% assign post_key = post.source_issue | default: post.url %}
           {% capture marker %}|{{ post_key }}|{% endcapture %}
@@ -43,28 +70,53 @@ redirect_from:
               {% if english_post %}{% assign display_post = english_post %}{% endif %}
             {% endif %}
             {% assign summary = display_post.excerpt | default: display_post.content | strip_html | normalize_whitespace | truncate: 220 %}
-            {% capture search_text %}{{ display_post.title }} {{ summary }} {% for variant in variants %}{{ variant.excerpt | strip_html }} {% endfor %}{% endcapture %}
-            <article class="blog-list__item" data-search="{{ search_text | downcase | escape }}">
+            {% include blog-reading-time.html text=display_post.content lang=display_post.lang %}
+
+            {% assign cover = display_post.cover | default: display_post.image %}
+            {% unless cover %}
+              {% assign image_parts = post.content | split: '<img' %}
+              {% if image_parts.size > 1 %}
+                {% assign cover = image_parts[1] | split: 'src="' | slice: 1 | first | split: '"' | first %}
+              {% endif %}
+            {% endunless %}
+
+            {% assign tag_keys = '' %}
+            {% for tag in display_post.tags %}{% capture tag_keys %}{{ tag_keys }}|{{ tag | downcase }}{% endcapture %}{% endfor %}
+            {% capture search_text %}{{ display_post.title }} {{ summary }} {{ display_post.tags | join: ' ' }} {% for variant in variants %}{{ variant.title }} {{ variant.excerpt | strip_html }} {% endfor %}{% endcapture %}
+
+            <article class="blog-list__item{% if rendered_count == 0 %} is-featured{% endif %}{% if cover %} has-cover{% endif %}" data-search="{{ search_text | downcase | escape }}" data-tags="{{ tag_keys | escape }}|">
               <div class="blog-list__meta">
                 <time datetime="{{ display_post.date | date: '%Y-%m-%d' }}">{{ display_post.date | date: '%b %-d, %Y' }}</time>
-                {% for tag in display_post.tags limit: 3 %}<span>{{ tag | escape }}</span>{% endfor %}
+                <span>{% if display_post.lang == 'zh-CN' %}{{ reading_minutes }} 分钟{% else %}{{ reading_minutes }} min read{% endif %}</span>
+                {% if variants.size > 1 %}<span>中 / EN</span>{% endif %}
               </div>
-              <h2><a href="{{ display_post.url | relative_url }}">{{ display_post.title | escape }}</a></h2>
-              <p>{{ summary | escape }}</p>
-              <div class="blog-list__links">
-                {% if variants.size > 1 %}
-                  {% for variant in variants %}
-                    <a href="{{ variant.url | relative_url }}" lang="{{ variant.lang | default: 'zh-CN' }}">{% if variant.lang == 'en' %}READ IN ENGLISH{% else %}阅读中文版{% endif %} <span aria-hidden="true">→</span></a>
-                  {% endfor %}
-                {% else %}
-                  <a href="{{ display_post.url | relative_url }}">{% if display_post.lang == 'zh-CN' %}阅读文章{% else %}READ ARTICLE{% endif %} <span aria-hidden="true">→</span></a>
+              <div class="blog-list__main">
+                <h2><a href="{{ display_post.url | relative_url }}">{{ display_post.title | escape }}</a></h2>
+                <p>{{ summary | escape }}</p>
+                {% if display_post.tags.size > 0 %}
+                  <ul class="blog-tags">{% for tag in display_post.tags limit: 4 %}<li><a href="?tag={{ tag | url_encode }}" data-tag-link="{{ tag | downcase | escape }}">{{ tag | escape }}</a></li>{% endfor %}</ul>
                 {% endif %}
+                <div class="blog-list__links">
+                  {% if variants.size > 1 %}
+                    {% for variant in variants %}
+                      <a href="{{ variant.url | relative_url }}" lang="{{ variant.lang | default: 'zh-CN' }}">{% if variant.lang == 'en' %}Read in English{% else %}阅读中文版{% endif %} <span aria-hidden="true">→</span></a>
+                    {% endfor %}
+                  {% else %}
+                    <a href="{{ display_post.url | relative_url }}">{% if display_post.lang == 'zh-CN' %}阅读文章{% else %}Read article{% endif %} <span aria-hidden="true">→</span></a>
+                  {% endif %}
+                </div>
               </div>
+              {% if cover %}
+                <a class="blog-list__cover" href="{{ display_post.url | relative_url }}" tabindex="-1" aria-hidden="true">
+                  <img src="{{ cover }}" alt="" loading="lazy" decoding="async">
+                </a>
+              {% endif %}
             </article>
+            {% assign rendered_count = rendered_count | plus: 1 %}
           {% endunless %}
         {% endfor %}
       </div>
-      <p class="blog-list__no-results" id="blog-no-results" hidden>No articles match that search.</p>
+      <p class="blog-list__no-results" id="blog-no-results" hidden>No articles match. <button type="button" id="blog-reset">Show all</button></p>
     {% else %}
       <p class="blog-list__empty">New writing is on its way.</p>
     {% endif %}
@@ -76,16 +128,54 @@ document.addEventListener('DOMContentLoaded', function () {
   var search = document.getElementById('blog-search');
   var posts = Array.prototype.slice.call(document.querySelectorAll('#blog-posts .blog-list__item'));
   var empty = document.getElementById('blog-no-results');
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.blog-list__filters button'));
   if (!search || !posts.length) return;
-  search.addEventListener('input', function () {
+  var activeTag = '';
+
+  function apply() {
     var query = search.value.trim().toLocaleLowerCase();
     var visible = 0;
     posts.forEach(function (post) {
-      var matches = post.getAttribute('data-search').indexOf(query) !== -1;
+      var matches = post.getAttribute('data-search').indexOf(query) !== -1 &&
+        (!activeTag || post.getAttribute('data-tags').indexOf('|' + activeTag + '|') !== -1);
       post.hidden = !matches;
       if (matches) visible += 1;
     });
+    document.getElementById('blog-posts').classList.toggle('is-filtered', Boolean(query || activeTag));
     empty.hidden = visible !== 0;
+  }
+
+  function setTag(tag, push) {
+    activeTag = (tag || '').toLocaleLowerCase();
+    buttons.forEach(function (button) { button.setAttribute('aria-pressed', String(button.getAttribute('data-tag') === activeTag)); });
+    if (push && window.history.replaceState) {
+      var url = new URL(window.location.href);
+      if (activeTag) url.searchParams.set('tag', tag); else url.searchParams.delete('tag');
+      window.history.replaceState(null, '', url);
+    }
+    apply();
+  }
+
+  search.addEventListener('input', apply);
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () { setTag(button.getAttribute('data-tag'), true); });
   });
+  document.querySelectorAll('[data-tag-link]').forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      setTag(link.getAttribute('data-tag-link'), true);
+      search.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+  document.getElementById('blog-reset').addEventListener('click', function () { search.value = ''; setTag('', true); });
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) || document.activeElement.isContentEditable) return;
+    event.preventDefault();
+    search.focus();
+  });
+
+  var initialTag = new URL(window.location.href).searchParams.get('tag');
+  if (initialTag) setTag(initialTag, false);
 });
 </script>

@@ -2,6 +2,12 @@
 layout: default
 ---
 
+{% assign zh = false %}{% if page.lang == 'zh-CN' %}{% assign zh = true %}{% endif %}
+{% include blog-reading-time.html text=content lang=page.lang %}
+{% assign current_key = page.source_issue | default: page.url %}
+
+<div class="blog-progress" aria-hidden="true"><span id="blog-progress-bar"></span></div>
+
 <main class="blog-article" id="main">
   <div class="blog-article__grid">
     <header class="blog-article__header" id="top">
@@ -12,11 +18,15 @@ layout: default
       </nav>
 
       <div class="blog-article__eyebrow">
-        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+        <p class="blog-article__facts">
+          <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+          <span aria-hidden="true">·</span>
+          <span>{% if zh %}{{ reading_minutes }} 分钟阅读{% else %}{{ reading_minutes }} min read{% endif %}</span>
+        </p>
         {% if page.source_issue %}
           {% assign translations = site.posts | where: 'source_issue', page.source_issue %}
           {% if translations.size > 1 %}
-            <nav class="blog-language" aria-label="Article language">
+            <nav class="blog-language" aria-label="{% if zh %}文章语言{% else %}Article language{% endif %}">
               {% for translation in translations %}
                 <a href="{{ translation.url | relative_url }}" lang="{{ translation.lang | default: 'zh-CN' }}"{% if translation.url == page.url %} aria-current="page"{% endif %}>{% if translation.lang == 'en' %}EN{% else %}中文{% endif %}</a>
               {% endfor %}
@@ -27,29 +37,95 @@ layout: default
 
       <h1>{{ page.title | escape }}</h1>
       {% if page.excerpt %}<p class="blog-article__summary">{{ page.excerpt | strip_html | escape }}</p>{% endif %}
-      <div class="blog-article__author">
-        {% if site.author.avatar contains '://' %}
-          <img src="{{ site.author.avatar }}" alt="" width="34" height="34">
-        {% else %}
-          <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="34" height="34">
+      <div class="blog-article__byline">
+        <div class="blog-article__author">
+          {% if site.author.avatar contains '://' %}
+            <img src="{{ site.author.avatar }}" alt="" width="34" height="34">
+          {% else %}
+            <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="34" height="34">
+          {% endif %}
+          <span>{% if zh %}作者{% else %}By{% endif %} <a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></span>
+        </div>
+        {% if page.tags.size > 0 %}
+          <ul class="blog-tags" aria-label="{% if zh %}标签{% else %}Tags{% endif %}">
+            {% for tag in page.tags %}<li><a href="{{ '/blog/' | relative_url }}?tag={{ tag | url_encode }}">{{ tag | escape }}</a></li>{% endfor %}
+          </ul>
         {% endif %}
-        <span>{% if page.lang == 'zh-CN' %}作者{% else %}By{% endif %} {{ site.author.name }}</span>
       </div>
     </header>
 
-    <nav class="blog-article__toc" id="blog-toc" aria-label="{% if page.lang == 'zh-CN' %}文章目录{% else %}Contents{% endif %}" hidden>
-      <h2>{% if page.lang == 'zh-CN' %}目录{% else %}Contents{% endif %}</h2>
+    <details class="blog-article__toc" id="blog-toc" open hidden>
+      <summary>{% if zh %}目录{% else %}Contents{% endif %}</summary>
       <ol id="blog-toc-list"></ol>
-    </nav>
+    </details>
 
-    <article class="blog-article__body" id="blog-post-content">
+    <article class="blog-article__body" id="blog-post-content" lang="{{ page.lang | default: 'zh-CN' }}">
       {{ content }}
     </article>
 
-    <nav class="blog-article__end" aria-label="Article navigation">
-      <a href="{{ '/blog/' | relative_url }}">{% if page.lang == 'zh-CN' %}所有文章{% else %}All posts{% endif %}</a>
-      <a href="#top">{% if page.lang == 'zh-CN' %}返回顶部{% else %}Back to top{% endif %} ↑</a>
-    </nav>
+    <footer class="blog-article__end">
+      <div class="blog-article__actions">
+        <button type="button" class="blog-action" id="blog-copy-link" data-done="{% if zh %}链接已复制{% else %}Link copied{% endif %}">{% if zh %}复制链接{% else %}Copy link{% endif %}</button>
+        {% if page.source_issue %}
+          <a class="blog-action" href="{{ page.source_issue }}" target="_blank" rel="noopener">{% if zh %}在 GitHub 讨论{% else %}Discuss on GitHub{% endif %} ↗</a>
+        {% endif %}
+        <a class="blog-action blog-action--quiet" href="#top">{% if zh %}返回顶部{% else %}Back to top{% endif %} ↑</a>
+      </div>
+
+      <section class="blog-author-card" aria-label="{% if zh %}关于作者{% else %}About the author{% endif %}">
+        {% if site.author.avatar contains '://' %}
+          <img src="{{ site.author.avatar }}" alt="" width="56" height="56" loading="lazy">
+        {% else %}
+          <img src="{{ site.author.avatar | prepend: '/images/' | relative_url }}" alt="" width="56" height="56" loading="lazy">
+        {% endif %}
+        <div>
+          <p class="blog-author-card__name"><a href="{{ '/' | relative_url }}">{{ site.author.name }}</a></p>
+          {% if site.author.bio %}<p class="blog-author-card__bio">{{ site.author.bio }}{% if site.author.location %} · {{ site.author.location }}{% endif %}</p>{% endif %}
+          <p class="blog-author-card__links">
+            <a href="{{ '/blog/' | relative_url }}">{% if zh %}所有文章{% else %}All posts{% endif %}</a>
+            <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+            {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a>{% endif %}
+          </p>
+        </div>
+      </section>
+
+      {% assign more_keys = '' %}
+      {% assign more_count = 0 %}
+      {% capture more_posts %}
+        {% for post in site.posts %}
+          {% assign post_key = post.source_issue | default: post.url %}
+          {% if post_key == current_key %}{% continue %}{% endif %}
+          {% capture marker %}|{{ post_key }}|{% endcapture %}
+          {% if more_keys contains marker %}{% continue %}{% endif %}
+          {% assign more_keys = more_keys | append: marker %}
+          {% assign shown = post %}
+          {% if post.source_issue %}
+            {% assign variants = site.posts | where: 'source_issue', post.source_issue %}
+            {% assign same_lang = variants | where: 'lang', page.lang | first %}
+            {% if same_lang %}{% assign shown = same_lang %}{% endif %}
+          {% endif %}
+          <li>
+            <time datetime="{{ shown.date | date: '%Y-%m-%d' }}">{{ shown.date | date: '%b %-d, %Y' }}</time>
+            <a href="{{ shown.url | relative_url }}">{{ shown.title | escape }}</a>
+          </li>
+          {% assign more_count = more_count | plus: 1 %}
+          {% if more_count >= 3 %}{% break %}{% endif %}
+        {% endfor %}
+      {% endcapture %}
+      {% if more_count > 0 %}
+        <section class="blog-more" aria-labelledby="blog-more-title">
+          <h2 id="blog-more-title">{% if zh %}继续阅读{% else %}Keep reading{% endif %}</h2>
+          <ol>{{ more_posts }}</ol>
+        </section>
+      {% endif %}
+    </footer>
   </div>
 </main>
-<script src="{{ '/assets/js/blog-toc.js' | relative_url }}" defer></script>
+
+<dialog class="blog-lightbox" id="blog-lightbox" aria-label="{% if zh %}查看大图{% else %}Image viewer{% endif %}">
+  <form method="dialog"><button class="blog-lightbox__close" aria-label="{% if zh %}关闭{% else %}Close{% endif %}">×</button></form>
+  <img alt="">
+  <p class="blog-lightbox__caption" hidden></p>
+</dialog>
+
+<script src="{{ '/assets/js/blog-article.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

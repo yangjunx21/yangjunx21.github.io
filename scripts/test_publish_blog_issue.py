@@ -62,6 +62,25 @@ class BlogIssueTest(unittest.TestCase):
         self.assertIn("第二张 ![配图 2](https://github.com/user-attachments/assets/two)", content)
         self.assertNotIn("BLOG_IMAGE", content)
 
+    def test_editor_image_captions_and_html_uploads(self):
+        source = issue(True)
+        source["body"] = source["body"].replace(
+            "正文。",
+            '<!-- BLOG_IMAGE_1 | 流程图 [v2] "草案" -->\n\n<!-- BLOG_IMAGE_2 -->',
+        ).replace(
+            "### 发布设置\n\n- [x] 同步到个人博客",
+            "### 图片上传区\n\n"
+            '<img width="888" height="688" alt="Image" src="https://github.com/user-attachments/assets/one" />\n'
+            "![二](https://github.com/user-attachments/assets/two)\n\n"
+            "### 发布设置\n\n- [x] 同步到个人博客",
+        )
+        _, content = writer.render_post(source)
+        self.assertIn(
+            '![流程图 \\[v2\\] "草案"](https://github.com/user-attachments/assets/one "流程图 [v2] &quot;草案&quot;")',
+            content,
+        )
+        self.assertIn("![配图 2](https://github.com/user-attachments/assets/two)", content)
+
     def test_missing_editor_image_prevents_broken_publication(self):
         source = issue(True)
         source["body"] = source["body"].replace("正文。", "正文 <!-- BLOG_IMAGE_1 -->")

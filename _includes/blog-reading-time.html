@@ -1,0 +1,12 @@
+{%- comment -%}
+  Sets `reading_minutes` from rendered text. Chinese text is counted by characters,
+  English by words. Usage: {% include blog-reading-time.html text=post.content lang=post.lang %}
+{%- endcomment -%}
+{%- assign rt_text = include.text | strip_html | normalize_whitespace -%}
+{%- if include.lang == 'en' -%}
+  {%- assign rt_units = rt_text | number_of_words -%}
+  {%- assign reading_minutes = rt_units | divided_by: 220 | plus: 1 -%}
+{%- else -%}
+  {%- assign rt_units = rt_text | remove: ' ' | size -%}
+  {%- assign reading_minutes = rt_units | divided_by: 450 | plus: 1 -%}
+{%- endif -%}
