@@ -31,6 +31,17 @@ document.addEventListener('DOMContentLoaded', function () {
     node.parentNode.replaceChild(fragment, node);
   });
 
+  // Size figures by shape: wide ones use the full column, near-square ones are capped in
+  // height, and small rasters keep their natural size instead of being stretched.
+  function sizeImage(image) {
+    if (!image.naturalWidth || !image.naturalHeight) return;
+    var ratio = image.naturalWidth / image.naturalHeight;
+    var vector = /\.svg(\?|#|$)/i.test(image.currentSrc || image.src);
+    image.classList.toggle('is-wide', ratio >= 1.6);
+    image.classList.toggle('is-tall', ratio < 1.2);
+    image.classList.toggle('is-small', !vector && image.naturalWidth < 520);
+  }
+
   // Images: give standalone images a figure, show titles as captions, open a zoomed view on click.
   var lightbox = document.getElementById('blog-lightbox');
   var lightboxImage = lightbox && lightbox.querySelector('img');
@@ -50,6 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     image.loading = 'lazy';
     image.decoding = 'async';
+    if (image.complete) sizeImage(image);
+    else image.addEventListener('load', function () { sizeImage(image); });
     if (!lightbox || !lightbox.showModal || image.closest('a')) return;
     image.classList.add('is-zoomable');
     image.tabIndex = 0;

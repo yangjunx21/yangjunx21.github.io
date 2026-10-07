@@ -356,6 +356,20 @@
     return figure;
   }
 
+  // Same shape-based sizing as the published article, so the preview matches.
+  function sizeImage(image) {
+    if (!image.naturalWidth || !image.naturalHeight) return;
+    var ratio = image.naturalWidth / image.naturalHeight;
+    var vector = /\.svg(\?|#|$)/i.test(image.currentSrc || image.src);
+    image.classList.toggle('is-wide', ratio >= 1.6);
+    image.classList.toggle('is-tall', ratio < 1.2);
+    image.classList.toggle('is-small', !vector && image.naturalWidth < 520);
+  }
+
+  editor.addEventListener('load', function (event) {
+    if (event.target.tagName === 'IMG') sizeImage(event.target);
+  }, true);
+
   function paragraphAfter(node) {
     while (isPreview(node.nextElementSibling)) node = node.nextElementSibling;
     var next = node.nextElementSibling;
@@ -2509,6 +2523,7 @@
     upgradeLegacyImages();
     tidy(false);
     if (!hasContent(editor)) editor.replaceChildren();
+    editor.querySelectorAll('img').forEach(function (image) { if (image.complete) sizeImage(image); });
     renderPendingMath();
     loaded = true;
     autosize(title);
