@@ -7,6 +7,7 @@ excerpt: "Why We Need MAS: Decomposition, Context Management and Exploration-Max
 tags:
   - "multi-agent system"
 source_issue: "https://github.com/yangjunx21/yangjunx21.github.io/issues/2"
+cover: "https://www-cdn.anthropic.com/images/4zrzovbb/website/1198befc0b33726c45692ac40f764022f4de1bf2-4584x2579.png"
 ---
 
 My [last post](https://yangjunx21.github.io/blog/2026/09/25/scaling-agent-swarm-en/) covered a few recent papers on agent swarms. Since writing it, I keep coming back to a more basic question: why do we need multi-agent systems at all, and why study them? The field has gone from ChatDev, MetaGPT and the Stanford "Smallville" agents in 2023, to last year's "Don't Build Multi-Agents", to OpenAI putting on the order of ten thousand agents on Navier–Stokes this year. As models keep getting stronger and the tasks keep getting harder, I think the answer to that question has kept changing.

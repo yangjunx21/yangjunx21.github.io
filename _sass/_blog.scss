@@ -744,7 +744,7 @@ body.blog-surface #main {
   display: block;
   align-self: start;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   border: 1px solid $blog-rule;
   border-radius: 3px;
   background: #fff;
@@ -760,7 +760,7 @@ body.blog-surface #main {
 .blog-list__item:hover .blog-list__cover img { transform: scale(1.03); }
 
 #blog-posts:not(.is-filtered) .blog-list__item.is-featured { padding: 2.6rem 0 2.8rem; }
-#blog-posts:not(.is-filtered) .blog-list__item.is-featured.has-cover { grid-template-columns: 8.5rem minmax(0, 1fr) minmax(14rem, 22rem); }
+#blog-posts:not(.is-filtered) .blog-list__item.is-featured.has-cover { grid-template-columns: 8.5rem minmax(0, 1fr) minmax(12rem, 18rem); }
 #blog-posts:not(.is-filtered) .blog-list__item.is-featured h2 { font-size: 2.45rem; line-height: 1.15; }
 #blog-posts:not(.is-filtered) .blog-list__item.is-featured .blog-list__main > p { font-size: 1.08rem; }
 
