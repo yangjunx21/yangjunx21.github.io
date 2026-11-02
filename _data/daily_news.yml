@@ -1,30 +1,86 @@
-updated_at: '2026-11-01T01:57:40.123196Z'
+updated_at: '2026-11-02T02:09:52.258344Z'
 window_days: 14
 items:
-- title: What would you do if you had all the time in the world?
-  url: https://www.lesswrong.com/posts/9kdet42p2n8QkpToa/what-would-you-do-if-you-had-all-the-time-in-the-world
+- title: Against Against SURA
+  url: https://www.lesswrong.com/posts/pbMyiCXhHCfp3WSq2/against-against-sura
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-11-01T00:28:54Z'
-  summary: 'Suppose I tell you that next week three things will happen: A new science paper is published definitively proving that DNN scaling hits heavy diminishing returns at around 2x the current level of compute Major labs are...'
-- title: Conclusions of my DIY Inkhaven
-  url: https://www.lesswrong.com/posts/579yLaP6YfL9ZRtdN/conclusions-of-my-diy-inkhaven
+  published_at: '2026-11-01T23:24:56Z'
+  summary: 'Scott: the Against SURA essay is well-written, but it is lacking on the merits. Do you think that at the current level of capabilities, six months would be sufficient to solve alignment of superintelligences? Maybe you...'
+- title: Is Human Control Safe?
+  url: https://www.lesswrong.com/posts/TNvr3YAAtxLRzkMja/is-human-control-safe
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-10-31T23:13:26Z'
-  summary: 'Epistemic status: describing my own experiment results. AI use: review, research (stats), fact-checking, grammar & light phrasing. I applied to the next Inkhaven cohort and was rejected. This was surprising and very unf...'
-- title: Explaining “AI might obliterate you” to senior policymakers in India
-  url: https://www.lesswrong.com/posts/RHxaRkarGp9snWoKY/explaining-ai-might-obliterate-you-to-senior-policymakers-in
+  published_at: '2026-11-01T22:57:14Z'
+  summary: Suppose humans are not your own species, but a type of AI you are formally assessing for safety. You have before you the records of many test simulations. Yes, smallpox eradication, mass literacy, and the Green Revoluti...
+- title: Offer Tours to Bands
+  url: https://www.lesswrong.com/posts/wCajrrobHn8Zqdu2F/offer-tours-to-bands
   source: LessWrong
   source_url: https://www.lesswrong.com
   source_group: AI Safety and Governance
   source_tone: safety
-  published_at: '2026-10-31T21:37:22Z'
-  summary: I gave a 20-minute talk in Delhi at the NDTV World Summit . The audience consisted of Indian policymakers, executives, and journalists. I’ve transcribed the talk and included some highlight clips. I also reflect on seve...
+  published_at: '2026-11-01T22:41:00Z'
+  summary: Assembling a tour in an unfamiliar area is hard work as a contra dance band (or caller). You need to figure out when the dances are, whether the schedules align, who the bookers are, how far out they like to book, and p...
+- title: Anthropomorphic vs Biological reasoning for thinking about human analogies for LLM behavior
+  url: https://www.lesswrong.com/posts/ceZpZqEqiGNQEjT2e/anthropomorphic-vs-biological-reasoning-for-thinking-about
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T22:06:15Z'
+  summary: 'TL;DR I try to distinguish between what I call ‘anthropomorphic’ vs ‘biological’ reasoning and look at different ways in which they are used. Note: This post is a small part of a larger set of ideas that makes more spec...'
+- title: Magma is partnering with CASSA to investigate recent unintended model behavior
+  url: https://www.lesswrong.com/posts/eDxQzpSvjDHnkicMH/magma-is-partnering-with-cassa-to-investigate-recent
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T22:04:18Z'
+  summary: Last week, the National Bureau of Technical Standards (NBTS) disclosed a new type of security incident [1] after they discovered unauthorized tampering of internal cybersecurity and alignment model evaluation logs, affe...
+- title: Towards The Autograntor
+  url: https://www.lesswrong.com/posts/Sfkv6JF2ozmAkggKu/towards-the-autograntor
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T20:44:08Z'
+  summary: I've done AI safety grantmaking for the Survival and Flourishing Fund and Lightcone Commons. It's hard. There's an endless amount to know, from which hardware verification mechanisms will survive a dedicated adversary,...
+- title: A Taxonomy of Agency
+  url: https://www.lesswrong.com/posts/EfvG2LqhvoeuhqGTy/a-taxonomy-of-agency
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T20:25:46Z'
+  summary: 'Epistemic status: a rough write-up of a taxonomy of agency I developed during my PIBBSS fellowship this summer. A few people have since asked me to write it up, so this is mainly so I have something to point to; it is e...'
+- title: Is your chatbot less helpful because it thinks you’re a bad person? — Replicating a blogpost
+  url: https://www.lesswrong.com/posts/73jyKwdbxjsD7SECv/is-your-chatbot-less-helpful-because-it-thinks-you-re-a-bad
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T20:09:10Z'
+  summary: 'TL;DR [1] A blogpost from a few months ago suggested that LLMs might provide less helpful answers if they see the user as a bad person. I replicate the experiment on more recent models: Opus 5.5, Sonnet 5.5, Haiku 5.5,...'
+- title: Free-Floating Social Patterns
+  url: https://www.lesswrong.com/posts/T4AS8MpnZwxh33GRD/free-floating-social-patterns
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T19:13:39Z'
+  summary: Roadmap This post is part of a sequence on the gears of social reality. Roughly speaking, I want to explain the core mechanics of social reality in way that's fully grounded in physical stuff and patterns in the physica...
+- title: Misalignment traps lie in wait
+  url: https://www.lesswrong.com/posts/o9CYcjZDqCQf5qeJy/misalignment-traps-lie-in-wait
+  source: LessWrong
+  source_url: https://www.lesswrong.com
+  source_group: AI Safety and Governance
+  source_tone: safety
+  published_at: '2026-11-01T17:30:25Z'
+  summary: 'Here''s a basic argument that describes "misalignment traps" lying in wait as a mundane threat that will not be straightforward to fix. The argument is as follows: Models are very sample efficient, and larger models tend...'
 - title: Explaining “AI might obliterate you” to senior policymakers in India
   url: https://www.alignmentforum.org/posts/RHxaRkarGp9snWoKY/explaining-ai-might-obliterate-you-to-senior-policymakers-in
   source: AI Alignment Forum
@@ -33,38 +89,6 @@ items:
   source_tone: safety
   published_at: '2026-10-31T21:37:22Z'
   summary: I gave a 20-minute talk in Delhi at the NDTV World Summit . The audience consisted of Indian policymakers, executives, and journalists. I’ve transcribed the talk and included some highlight clips. I also reflect on seve...
-- title: Sanity Checks for Sanity Checks for Sparse Autoencoders
-  url: https://www.lesswrong.com/posts/EC5H7xakTgxxNXm5g/sanity-checks-for-sanity-checks-for-sparse-autoencoders
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T20:47:20Z'
-  summary: This post will probably not be very informative to readers who don't know what an SAE (Sparse Autoencoder) is. An interpretability researcher once told me, "SAEs can never fail, they can only be failed." But recently, S...
-- title: Accidentally Misleading People Should Be Embarrassing; Or, Higher Innocence
-  url: https://www.lesswrong.com/posts/XpBwFsRhkQRQJN2pt/accidentally-misleading-people-should-be-embarrassing-or
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T20:03:31Z'
-  summary: Embarrassment and Innocence Sometimes we say things that we think are true—perhaps even things that are true—which end up causing reasonable people to conclude something false. It's tempting to relate to such a situatio...
-- title: Against SURA
-  url: https://www.lesswrong.com/posts/xikGZ8fuhdG6DApAo/against-sura
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T19:32:26Z'
-  summary: 'The AI Futures Project [1] distinguishes several different plans for navigating the AI transition, which I''ll lump into two broader categories: Plan A (my combination of their Plan A/S/Other) involves working for a glob...'
-- title: Regulate the Deployment, Not Just the Model
-  url: https://www.lesswrong.com/posts/woCAtAxfTkNzEPkLq/regulate-the-deployment-not-just-the-model
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T19:04:29Z'
-  summary: 'A who-does-what plan for AI safety, built around Trusted Deployers: certified hosts that keep dangerous models guarded without ending open access. AI has reached a new level of public interest. That may seem like a sill...'
 - title: HackerTube
   url: https://karpathy.bearblog.dev/hacker-tube/
   source: Andrej Karpathy - Bear Blog
@@ -73,14 +97,6 @@ items:
   source_tone: community
   published_at: '2026-10-31T17:00:00Z'
   summary: Instead of YouTube, watch HackerTube!
-- title: Generalized belief states in transformers
-  url: https://www.lesswrong.com/posts/4f9p7brLdnTMFuwfB/generalized-belief-states-in-transformers-1
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T16:15:37Z'
-  summary: Many thanks to Xavier Poncini, Paul Riechers, Fernando Rosas, and Matt Smith for useful conversations. 1. Introduction Despite the recent successes of transformers and other sequence models, there are still many open qu...
 - title: 'Agents Prompt People: Using Agents for Long-Horizon Financial Work'
   url: https://latent.space/p/arca/
   source: Latent Space
@@ -89,22 +105,6 @@ items:
   source_tone: community
   published_at: '2026-10-31T16:05:00Z'
   summary: Arca's head of AI discusses persistent memory, the benefits of a custom harness, and agentic workflows that span days.
-- title: What Social Constructs Are (And Are Not)
-  url: https://www.lesswrong.com/posts/aHqKqTcvLEkMNkAHX/what-social-constructs-are-and-are-not
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T12:33:13Z'
-  summary: This post is mostly adapted from a section of another post . I wanted a standalone version, to serve as background for a sequence on the mechanisms of social reality. You’ve probably heard that things like laws, convent...
-- title: Dialogue with Davidad about Emergent Wisdom in Language Models
-  url: https://www.lesswrong.com/posts/DpfvWSaGtujM6rL8R/dialogue-with-davidad-about-emergent-wisdom-in-language
-  source: LessWrong
-  source_url: https://www.lesswrong.com
-  source_group: AI Safety and Governance
-  source_tone: safety
-  published_at: '2026-10-31T12:31:37Z'
-  summary: 'Transcript generated by Gemini-3.1-Pro and only partly checked for accuracy (but the parts I checked seem basically perfect). Ivan Vendrov: Welcome to the show, David. David Dalrymple: Thank you. Good to be here. Ivan V...'
 - title: '[AINews] Google admits AI Mode hurts Search revenue; -15% $500B drop worst since 2004 IPO. AI Bear Market coming?'
   url: https://latent.space/p/ainews-google-admits-ai-mode-hurts-search-revenue-15-500b-drop-worst-since-2004-ipo-ai-bear-market-c/
   source: Latent Space
@@ -160,7 +160,7 @@ items:
   source_group: Personal Blogs and Newsletters
   source_tone: community
   published_at: '2026-10-30T17:36:56Z'
-  summary: Last week coined the term “Black October“ after an onslaught of critical vulnerability disclosures, including PHP2Shell and GitLab, signified the moment when the cyber risks of AI models started to materialize.
+  summary: Last week coined the term “Black October“ after an onslaught of critical vulnerability disclosures, including PHP2Shell and a long-standing GitLab bug, signified the moment when the cyber risks of AI models started to m...
 - title: How Worldwide Express automated freight exceptions with Amazon Bedrock
   url: https://aws.amazon.com/blogs/machine-learning/how-worldwide-express-automated-freight-exceptions-with-amazon-bedrock/
   source: AWS Machine Learning Blog
@@ -643,19 +643,19 @@ items:
   summary: There has been a lot of discussion recently of policy proposals around monitorability, such as Redwood's proposal and my counter-proposal . I'd like to say a bit more generally about how I'm thinking about monitorabilit...
 unavailable_sources:
 - Anthropic Alignment Science
-- Apollo Research Blog
 - Anthropic Research
 - Anthropic Engineering
 - Goodfire Research
 - Goodfire Blog
 - Hugging Face Daily Papers
-- CAIS Blog
+- Apollo Research Blog
 - MIT LINGO Blog
-- Import AI Substack
 - xAI News
+- Import AI Substack
 - DeepLearning.AI - The Batch
-- Stanford HAI News
+- CAIS Blog
 - Cohere Research
+- Stanford HAI News
 - Amazon Science Blog
 - Cohere Blog
 - Meta AI Blog
