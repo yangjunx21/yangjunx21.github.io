@@ -1,7 +1,7 @@
 """Turn an owner-authored GitHub blog issue into a Jekyll post.
 
 Reads the trusted GitHub event file; issue title and body are treated only as data.
-The workflow checks the actor and author before calling this script.
+Both the workflow and this script check the actor and author before publishing.
 """
 
 from __future__ import annotations
@@ -13,6 +13,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+OWNER_LOGIN = "yangjunx21"
+OWNER_ID = 111237196
+REPOSITORY = "yangjunx21/yangjunx21.github.io"
 SECTION_RE = re.compile(r"(?m)^### (摘要|标签|文章正文|图片上传区|发布设置)\s*$")
 PUBLISH_RE = re.compile(r"(?m)^- \[[xX]\] 同步到个人博客\s*$")
 IMAGE_PLACEHOLDER_RE = re.compile(r"<!-- BLOG_IMAGE_(\d+)(?:[ \t]*\|[ \t]*([^\n]*?))?[ \t]*-->")
@@ -172,9 +175,28 @@ def render_post(issue: dict) -> tuple[Path, str] | None:
     return post_path, "\n".join(lines)
 
 
+def is_authorized_event(event: dict) -> bool:
+    """Authorize trusted GitHub event metadata, never issue text or labels."""
+    issue = event.get("issue") or {}
+    author = issue.get("user") or {}
+    sender = event.get("sender") or {}
+    repository = event.get("repository") or {}
+    return (
+        event.get("action") in {"opened", "edited"}
+        and repository.get("full_name") == REPOSITORY
+        and "pull_request" not in issue
+        and author.get("login") == OWNER_LOGIN
+        and author.get("id") == OWNER_ID
+        and sender.get("login") == OWNER_LOGIN
+        and sender.get("id") == OWNER_ID
+    )
+
+
 def main() -> None:
     event_path = Path(sys.argv[1])
     event = json.loads(event_path.read_text(encoding="utf-8"))
+    if not is_authorized_event(event):
+        raise PermissionError("Only the blog owner may publish or update owner-authored issues")
     issue = event["issue"]
     result = render_post(issue)
     if result is None:

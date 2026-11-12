@@ -4,6 +4,7 @@ title: "写文章"
 permalink: /write/
 blog_style: true
 sitemap: false
+noindex: true
 ---
 
 <main class="blog-editor" id="main">
@@ -14,7 +15,7 @@ sitemap: false
       </nav>
       <div class="blog-editor__heading">
         <h1>写文章</h1>
-        <p>在文章的样子里写作。草稿自动保存在这个浏览器，发布时交给 GitHub。</p>
+        <p>博主专用写作页。草稿自动保存在这个浏览器，仅限 GitHub 账号 yangjunx21 发布。</p>
       </div>
     </header>
 
@@ -188,7 +189,7 @@ sitemap: false
       </div>
       <button type="button" class="blog-editor__dialog-close" id="publish-close" aria-label="关闭">×</button>
     </div>
-    <p class="blog-editor__dialog-lead">文章经由 GitHub Issue 发布。按顺序完成下面几步，提交后一两分钟会出现在博客上。</p>
+    <p class="blog-editor__dialog-lead">请使用 GitHub 账号 yangjunx21 发布。只有该账号创建并提交或编辑的 Issue 才会同步到博客，其他账号的提交不会发布。</p>
     <ol class="blog-editor__steps">
       <li id="step-copy" hidden>
         <h3>复制正文</h3>

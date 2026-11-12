@@ -1,6 +1,12 @@
 # 写博客
 
-公开博客在 [yangjunx21.github.io/blog/](https://yangjunx21.github.io/blog/)。在 [写文章](https://yangjunx21.github.io/write/) 页面中直接排版和预览；草稿自动保存在当前浏览器。
+公开博客在 [yangjunx21.github.io/blog/](https://yangjunx21.github.io/blog/)。写作入口不再显示在公开博客中；博主请收藏 [写文章](https://yangjunx21.github.io/write/) 页面，直接排版和预览，草稿自动保存在当前浏览器。
+
+## 发布权限
+
+只有 GitHub 账号 `yangjunx21`（用户 ID `111237196`）创建并提交或编辑的 Issue 才能发布、更新或撤下文章。GitHub Actions 工作流和发布脚本都会校验操作者与 Issue 作者，其他账号提交的 Issue 不会同步到博客。
+
+写作页已从站点地图排除，并设置 `noindex`。它仍是可通过网址访问的静态页面，不包含登录验证；移除入口只是避免向读者展示写作工具，实际发布权限由 GitHub 身份校验控制。草稿仅存于各自浏览器，读者无法通过写作页访问博主的草稿。
 
 ## 写一篇文章
 

@@ -50,7 +50,6 @@ redirect_from:
           {% for tag in tag_names %}<button type="button" data-tag="{{ tag | downcase | escape }}" aria-pressed="false">{{ tag | escape }}</button>{% endfor %}
         </div>
       {% endif %}
-      <a class="blog-list__write" href="{{ '/write/' | relative_url }}">写文章</a>
     </div>
 
     {% if posts.size > 0 %}

@@ -1,6 +1,9 @@
+import copy
+import json
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 import publish_blog_issue as writer
 
@@ -31,6 +34,97 @@ class BlogIssueTest(unittest.TestCase):
     def tearDown(self):
         writer.ROOT = self.old_root
         self.temp.cleanup()
+
+    def owner_event(self, checked=True, action="opened"):
+        source = issue(checked)
+        source["user"] = {"login": "yangjunx21", "id": 111237196}
+        return {
+            "action": action,
+            "repository": {"full_name": "yangjunx21/yangjunx21.github.io"},
+            "sender": dict(source["user"]),
+            "issue": source,
+        }
+
+    def run_event(self, event):
+        event_path = writer.ROOT / "event.json"
+        event_path.write_text(json.dumps(event), encoding="utf-8")
+        with patch("sys.argv", ["publish_blog_issue.py", str(event_path)]):
+            writer.main()
+
+    def test_owner_can_publish_update_and_unpublish_through_entrypoint(self):
+        event = self.owner_event()
+        self.run_event(event)
+        path = writer.ROOT / "_posts" / "2026-09-25-post-123.md"
+        self.assertIn("published: true", path.read_text(encoding="utf-8"))
+
+        event["action"] = "edited"
+        event["issue"]["body"] = event["issue"]["body"].replace("正文。", "更新后的正文。")
+        self.run_event(event)
+        self.assertIn("更新后的正文。", path.read_text(encoding="utf-8"))
+
+        event["issue"]["body"] = event["issue"]["body"].replace("[x] 同步", "[ ] 同步")
+        self.run_event(event)
+        self.assertIn("published: false", path.read_text(encoding="utf-8"))
+
+    def test_unauthorized_events_cannot_create_overwrite_or_unpublish(self):
+        reader = {"login": "reader", "id": 42}
+        variants = {}
+
+        event = self.owner_event()
+        event["issue"]["user"] = reader
+        event["sender"] = reader
+        event["issue"]["author_association"] = "COLLABORATOR"
+        variants["reader submits with publish checkbox"] = event
+
+        event = self.owner_event(action="edited")
+        event["issue"]["user"] = reader
+        variants["owner edits reader issue"] = event
+
+        event = self.owner_event(action="edited")
+        event["sender"] = reader
+        variants["reader edits owner issue"] = event
+
+        for field in ("sender", "author"):
+            for key, value in (("login", "reader"), ("id", 42)):
+                event = self.owner_event()
+                user = event["sender"] if field == "sender" else event["issue"]["user"]
+                user[key] = value
+                variants[f"wrong {field} {key}"] = event
+
+        for key in ("sender", "repository", "action"):
+            event = self.owner_event()
+            del event[key]
+            variants[f"missing {key}"] = event
+        event = self.owner_event()
+        del event["issue"]["user"]
+        variants["missing author"] = event
+
+        event = self.owner_event()
+        event["repository"]["full_name"] = "reader/fork"
+        variants["different repository"] = event
+        event = self.owner_event()
+        event["issue"]["pull_request"] = {"url": "https://api.github.com/repos/example/pulls/123"}
+        variants["pull request"] = event
+        variants["unsupported action"] = self.owner_event(action="closed")
+
+        path = writer.ROOT / "_posts" / "2026-09-25-post-123.md"
+        for name, source in variants.items():
+            for operation in ("create", "update", "unpublish"):
+                with self.subTest(event=name, operation=operation):
+                    event = copy.deepcopy(source)
+                    if operation == "create":
+                        path.unlink(missing_ok=True)
+                    else:
+                        path.parent.mkdir(exist_ok=True)
+                        path.write_text("existing article", encoding="utf-8")
+                    if operation == "unpublish":
+                        event["issue"]["body"] = event["issue"]["body"].replace("[x] 同步", "[ ] 同步")
+                    with self.assertRaises(PermissionError):
+                        self.run_event(event)
+                    if operation == "create":
+                        self.assertFalse(path.exists())
+                    else:
+                        self.assertEqual(path.read_text(encoding="utf-8"), "existing article")
 
     def test_published_issue_keeps_image_and_front_matter(self):
         path, content = writer.render_post(issue(True))
